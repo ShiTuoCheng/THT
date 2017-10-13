@@ -1,0 +1,147 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#dedede"
+    tools:context="tht.topu.com.tht.ui.fragment.drawFragment.DrawFragment">
+
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite"
+        android:id="@+id/drawToolBar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="抽奖"
+                android:textColor="#030303"
+                android:textSize="17sp"
+                android:textAlignment="center"
+                android:layout_marginRight="12dp"
+                android:textStyle="bold"
+                android:layout_marginTop="12dp"/>
+        </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+
+    <RelativeLayout
+        android:id="@+id/recordLayout"
+        android:layout_marginTop="1px"
+        android:background="@color/colorWhite"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_below="@id/drawToolBar"
+        android:layout_width="match_parent"
+        android:layout_height="41dp">
+
+        <ImageSwitcher
+            android:id="@+id/imageSwitcher"
+            android:layout_width="20dp"
+            android:layout_marginStart="17dp"
+            android:layout_marginTop="2dp"
+            android:layout_height="20dp"
+            android:inAnimation="@anim/in_from_down"
+            android:outAnimation="@anim/out_to_up"/>
+        
+        <TextSwitcher
+
+            android:layout_marginTop="2dp"
+            android:id="@+id/textSwitcher"
+            android:layout_width="match_parent"
+            android:layout_marginEnd="100dp"
+            android:layout_toEndOf="@id/imageSwitcher"
+            android:layout_height="20dp"
+            android:layout_marginStart="10dp"
+            android:inAnimation="@anim/in_from_down"
+            android:outAnimation="@anim/out_to_up"  />
+
+        <TextView
+
+            android:id="@+id/recordTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="30dp"
+            android:textSize="14sp"
+            android:textColor="#152024"
+            android:text="中奖纪录" />
+
+        <ImageView
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:rotation="180"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="17dp"
+            android:layout_marginTop="5dp"
+            android:src="@mipmap/back"/>
+    </RelativeLayout>
+
+    <android.support.design.widget.CoordinatorLayout
+        android:background="@color/colorWhite"
+        android:layout_below="@id/recordLayout"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <tht.topu.com.tht.utils.MyScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_below="@id/recordLayout"
+                android:orientation="vertical"
+                android:id="@+id/drawLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/drawImageView"
+                    android:scaleType="fitXY"
+                    android:layout_width="match_parent"
+                    android:layout_height="121dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/drawTextView"
+                    android:textColor="#141414"
+                    android:layout_marginTop="43dp"
+                    android:text=""
+                    android:layout_marginStart="17dp"
+                    android:layout_marginEnd="17dp"
+                    android:textSize="16sp"/>
+
+                <android.support.v7.widget.AppCompatButton
+                    android:id="@+id/drawButton"
+                    android:layout_width="100dp"
+                    android:layout_height="42dp"
+                    android:textColor="@color/colorGold"
+                    android:text="摇一摇"
+                    android:textSize="20sp"
+                    android:layout_marginTop="52dp"
+                    android:layout_gravity="center"
+                    android:background="#3c3c3c"/>
+
+                <TextView
+                    android:id="@+id/drawRulesTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="38dp"
+                    android:layout_marginBottom="50dp"
+                    android:textColor="#9b9b9b"
+                    android:text="活动规则"/>
+
+            </LinearLayout>
+
+        </tht.topu.com.tht.utils.MyScrollView>
+
+    </android.support.design.widget.CoordinatorLayout>
+
+</RelativeLayout>

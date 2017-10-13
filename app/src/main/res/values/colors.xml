@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#fff</color>
+    <color name="colorPrimaryDark">#000</color>
+    <color name="colorAccent">#E0B87A</color>
+    <color name="colorGold">#E0B87A</color>
+    <color name="colorGray">#9B9B9B</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorblack">#000000</color>
+    <color name="colorBorder">#EBEBEB</color>
+
+    <!--个人中心-->
+    <!--右侧vip文字-->
+    <color name="personal_vip_silvery">#7f7c7c</color>
+    <color name="personal_vip_black">#383838</color>
+    <!--右侧vip数量-->
+    <color name="personal_vip_num_silvery">#888585</color>
+    <color name="personal_vip_num_black">#383838</color>
+    <!--日期标题-->
+    <color name="personal_vdate_title_silvery">#8f8d8d</color>
+    <color name="personal_vdate_title_black">#aaaaab</color>
+    <!--日期值-->
+    <color name="personal_vdate_val_silvery">#8f8d8d</color>
+    <color name="personal_vdate_val_black">#aaaaab</color>
+    <!--积分标题-->
+    <color name="personal_integral_title_silvery">#949191</color>
+    <color name="personal_integral_title_black">#49494b</color>
+    <!--积分值-->
+    <color name="personal_integral_val_silvery">#949191</color>
+    <color name="personal_integral_val_black">#49494b</color>
+    <!--昵称-->
+    <color name="personal_nickname_silvery">#eeeeee</color>
+    <color name="personal_nickname_black">#f9f9f9</color>
+
+    <!--全部订单等样式-->
+    <color name="personal_adapter_grid_text_silvery">#585858</color>
+    <color name="personal_adapter_grid_text_black">#f3f3f3</color>
+
+    <!--高亮金色-->
+    <color name="gold_hignlight">#E7C483</color>
+    <!--高亮黑色-->
+    <color name="black_hignlight">#D4D4D4</color>
+    <!--高亮银色-->
+    <color name="silver_hignlight">#D2D2D2</color>
+
+</resources>

@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:id="@+id/postBlogLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="tht.topu.com.tht.ui.activity.ForumPostActivity">
+
+    <tht.topu.com.tht.utils.MyScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.v7.widget.Toolbar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/tool_bar"
+                android:id="@+id/postForumToolBar">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/forumPostBack"
+                        android:layout_width="12dp"
+                        android:layout_height="14dp"
+                        android:src="@mipmap/back"
+                        android:layout_marginTop="18dp"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="发帖"
+                        android:textColor="#030303"
+                        android:textSize="17sp"
+                        android:textAlignment="center"
+                        android:layout_marginRight="12dp"
+                        android:textStyle="bold"
+                        android:layout_marginTop="12dp"/>
+
+                    <TextView
+                        android:id="@+id/postButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="发送"
+                        android:textColor="#030303"
+                        android:textSize="17sp"
+                        android:textAlignment="center"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginRight="12dp"
+                        android:layout_marginTop="12dp"/>
+
+                </RelativeLayout>
+            </android.support.v7.widget.Toolbar>
+
+            <LinearLayout
+                android:id="@+id/tagLayout"
+                android:layout_marginTop="1dp"
+                android:layout_below="@id/postForumToolBar"
+                android:layout_width="match_parent"
+                android:background="@color/colorWhite"
+                android:layout_height="60dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="发送到:"
+                    android:layout_marginStart="26dp"
+                    android:textSize="17sp"
+                    android:textColor="#030303"/>
+
+                <android.support.v7.widget.CardView
+                    android:layout_marginStart="40dp"
+                    app:cardCornerRadius="13dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/forumPostTagTextView"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginBottom="3dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:maxWidth="80dp"
+                        android:maxLines="1"
+                        android:text="标签"/>
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:layout_marginStart="30dp"
+                    app:cardCornerRadius="13dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/forumPostCategoryTextView"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginBottom="3dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:maxWidth="80dp"
+                        android:maxLines="1"
+                        android:text="分类"/>
+                </android.support.v7.widget.CardView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/forumPostTitleLayout"
+                android:gravity="center_vertical"
+                android:background="@color/colorWhite"
+                android:layout_below="@id/tagLayout"
+                android:layout_marginTop="1dp"
+                android:layout_width="match_parent"
+                android:layout_height="60dp">
+
+                <EditText
+                    android:id="@+id/blogTitleEditText"
+                    android:paddingStart="6dp"
+                    android:paddingEnd="6dp"
+                    android:layout_marginStart="26dp"
+                    android:textColor="#AEAEAE"
+                    android:layout_marginEnd="26dp"
+                    android:layout_width="match_parent"
+                    android:hint="请输入标题"
+                    android:textSize="16sp"
+                    android:background="@drawable/edit_text_bg"
+                    android:layout_height="40dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/forumPostContent"
+                android:background="@color/colorWhite"
+                android:layout_marginTop="1dp"
+                android:layout_below="@id/forumPostTitleLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/blogContentEditText"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginBottom="160dp"
+                    android:paddingStart="6dp"
+                    android:paddingEnd="6dp"
+                    android:layout_marginStart="26dp"
+                    android:textColor="#AEAEAE"
+                    android:layout_marginEnd="26dp"
+                    android:layout_width="match_parent"
+                    android:hint="请输入正文"
+                    android:textSize="16sp"
+                    android:background="@null"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:layout_marginStart="26dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/imageRecyclerView"
+                android:layout_below="@id/forumPostContent"/>
+
+        </RelativeLayout>
+
+    </tht.topu.com.tht.utils.MyScrollView>
+
+</LinearLayout>

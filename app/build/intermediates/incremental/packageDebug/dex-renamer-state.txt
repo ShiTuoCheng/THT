@@ -1,0 +1,7 @@
+#Fri Oct 13 15:03:45 CST 2017
+base.0=/Users/shitakusei/Desktop/THT/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_a298f43ad6b276883c739d61a588cee1d848c91e
+renamed.1=classes.dex
+renamed.0=classes2.dex
+file.1=/Users/shitakusei/Desktop/THT/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_6387ff0f51a7fa6c7c24a9436a98f6b7b9fa30f2/classes.dex
+base.1=/Users/shitakusei/Desktop/THT/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_6387ff0f51a7fa6c7c24a9436a98f6b7b9fa30f2
+file.0=/Users/shitakusei/Desktop/THT/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_a298f43ad6b276883c739d61a588cee1d848c91e/classes.dex

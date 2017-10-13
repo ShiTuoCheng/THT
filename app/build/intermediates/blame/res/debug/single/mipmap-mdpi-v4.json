@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "/Users/shitakusei/Desktop/THT/app/build/intermediates/res/merged/debug/mipmap-mdpi-v4/ic_launcher.png",
+        "source": "/Users/shitakusei/Desktop/THT/app/src/main/res/mipmap-mdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/shitakusei/Desktop/THT/app/build/intermediates/res/merged/debug/mipmap-mdpi-v4/ic_keyboard_arrow_down_black_24dp.png",
+        "source": "/Users/shitakusei/Desktop/THT/app/src/main/res/mipmap-mdpi/ic_keyboard_arrow_down_black_24dp.png"
+    },
+    {
+        "merged": "/Users/shitakusei/Desktop/THT/app/build/intermediates/res/merged/debug/mipmap-mdpi-v4/ic_launcher_round.png",
+        "source": "/Users/shitakusei/Desktop/THT/app/src/main/res/mipmap-mdpi/ic_launcher_round.png"
+    }
+]

@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">THT</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+
+    <string name="hello_blank_fragment">测试测试</string>
+
+    <!-- 主页底部导航栏 -->
+    <string name="product">商品</string>
+    <string name="forum">论坛</string>
+    <string name="rank">排行</string>
+    <string name="draw">抽奖</string>
+    <string name="user">我的</string>
+
+    <!--登录名称-->
+    <string name="login_hint">手机号</string>
+    <string name="qr_code">验证码</string>
+    <string name="password_hint">登录密码</string>
+    <string name="forgotPassword">忘记密码?</string>
+
+    <string name="personal_all_order">全部订单</string>
+    <string name="personal_pending_payment">待付款</string>
+    <string name="personal_shipment_pending">待发货</string>
+    <string name="personal_shipped">已发货</string>
+</resources>

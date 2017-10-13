@@ -1,0 +1,46 @@
+[
+    {
+        "merged": "/Users/shitakusei/Desktop/THT/app/build/intermediates/res/merged/debug/color-v23/abc_tint_spinner.xml",
+        "source": "/Users/shitakusei/.android/build-cache/f7e81158ab4f78a630c4d88aff2514a225185962/output/res/color-v23/abc_tint_spinner.xml"
+    },
+    {
+        "merged": "/Users/shitakusei/Desktop/THT/app/build/intermediates/res/merged/debug/color-v23/abc_tint_seek_thumb.xml",
+        "source": "/Users/shitakusei/.android/build-cache/f7e81158ab4f78a630c4d88aff2514a225185962/output/res/color-v23/abc_tint_seek_thumb.xml"
+    },
+    {
+        "merged": "/Users/shitakusei/Desktop/THT/app/build/intermediates/res/merged/debug/color-v23/design_tint_password_toggle.xml",
+        "source": "/Users/shitakusei/.android/build-cache/106b7aeac23eec540c464e81dd7a66d14a9368c2/output/res/color-v23/design_tint_password_toggle.xml"
+    },
+    {
+        "merged": "/Users/shitakusei/Desktop/THT/app/build/intermediates/res/merged/debug/color-v23/abc_tint_switch_track.xml",
+        "source": "/Users/shitakusei/.android/build-cache/f7e81158ab4f78a630c4d88aff2514a225185962/output/res/color-v23/abc_tint_switch_track.xml"
+    },
+    {
+        "merged": "/Users/shitakusei/Desktop/THT/app/build/intermediates/res/merged/debug/color-v23/abc_color_highlight_material.xml",
+        "source": "/Users/shitakusei/.android/build-cache/f7e81158ab4f78a630c4d88aff2514a225185962/output/res/color-v23/abc_color_highlight_material.xml"
+    },
+    {
+        "merged": "/Users/shitakusei/Desktop/THT/app/build/intermediates/res/merged/debug/color-v23/abc_tint_switch_thumb.xml",
+        "source": "/Users/shitakusei/.android/build-cache/f7e81158ab4f78a630c4d88aff2514a225185962/output/res/color-v23/abc_tint_switch_thumb.xml"
+    },
+    {
+        "merged": "/Users/shitakusei/Desktop/THT/app/build/intermediates/res/merged/debug/color-v23/abc_tint_btn_checkable.xml",
+        "source": "/Users/shitakusei/.android/build-cache/f7e81158ab4f78a630c4d88aff2514a225185962/output/res/color-v23/abc_tint_btn_checkable.xml"
+    },
+    {
+        "merged": "/Users/shitakusei/Desktop/THT/app/build/intermediates/res/merged/debug/color-v23/abc_tint_default.xml",
+        "source": "/Users/shitakusei/.android/build-cache/f7e81158ab4f78a630c4d88aff2514a225185962/output/res/color-v23/abc_tint_default.xml"
+    },
+    {
+        "merged": "/Users/shitakusei/Desktop/THT/app/build/intermediates/res/merged/debug/color-v23/abc_btn_colored_text_material.xml",
+        "source": "/Users/shitakusei/.android/build-cache/f7e81158ab4f78a630c4d88aff2514a225185962/output/res/color-v23/abc_btn_colored_text_material.xml"
+    },
+    {
+        "merged": "/Users/shitakusei/Desktop/THT/app/build/intermediates/res/merged/debug/color-v23/abc_btn_colored_borderless_text_material.xml",
+        "source": "/Users/shitakusei/.android/build-cache/f7e81158ab4f78a630c4d88aff2514a225185962/output/res/color-v23/abc_btn_colored_borderless_text_material.xml"
+    },
+    {
+        "merged": "/Users/shitakusei/Desktop/THT/app/build/intermediates/res/merged/debug/color-v23/abc_tint_edittext.xml",
+        "source": "/Users/shitakusei/.android/build-cache/f7e81158ab4f78a630c4d88aff2514a225185962/output/res/color-v23/abc_tint_edittext.xml"
+    }
+]

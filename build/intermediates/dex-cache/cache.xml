@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="/Users/shitakusei/Desktop/THT/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="c33646f6e6b902d07e4a37750f528dbcf3ae27f6">
+        <dex dex="/Users/shitakusei/Desktop/THT/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_a298f43ad6b276883c739d61a588cee1d848c91e/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/shitakusei/Desktop/THT/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="3be78ebc2706b2e1fe2f12d5726887a92d6c183b">
+        <dex dex="/Users/shitakusei/Desktop/THT/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_6387ff0f51a7fa6c7c24a9436a98f6b7b9fa30f2/classes.dex" />
+    </item>
+
+</items>

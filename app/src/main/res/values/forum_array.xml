@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="MissingTranslation">
+    <string-array name="forum_array">
+        <item>知识帖</item>
+        <item>宝贝秀</item>
+        <item>问答区</item>
+        <item>活动区</item>
+        <item>管理专区</item>
+    </string-array>
+</resources>

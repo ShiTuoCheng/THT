@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="tht.topu.com.tht.ui.activity.RankDetailActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/tool_bar"
+        >
+
+        <ImageView
+            android:id="@+id/forumPostBack"
+            android:layout_width="12dp"
+            android:layout_height="14dp"
+            android:src="@mipmap/back"
+            android:layout_centerVertical="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="10dp"/>
+
+        <TextView
+            android:id="@+id/password_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="排行榜"
+            android:textColor="#030303"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:layout_centerVertical="true"
+            android:layout_centerInParent="true"
+            android:layout_centerHorizontal="true"
+            />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/loadingLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        >
+
+        <ProgressBar
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center_vertical"
+            android:progressBackgroundTint="@color/colorGold"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="正在加载..."
+            android:layout_gravity="center_vertical"/>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/personal_top_relative"
+        android:layout_width="match_parent"
+        android:layout_height="200dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:id="@+id/personal_background_ImageView"/>
+
+        <!--右侧部分-->
+        <RelativeLayout
+            android:id="@+id/personal_right_relative"
+            android:layout_width="107dp"
+            android:layout_height="40.1dp"
+            android:layout_marginTop="20dp"
+            android:layout_alignParentEnd="true"
+            android:background="@drawable/personal_right_border"
+            >
+
+            <!--右侧图标部分-->
+            <RelativeLayout
+                android:id="@+id/personal_rigint_oval"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:background="@drawable/personal_rigint_oval"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="2dp"
+                >
+
+                <ImageView
+                    android:id="@+id/personal_rigint_Icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@mipmap/logo_golden"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerInParent="true"
+                    />
+            </RelativeLayout>
+
+            <!--右侧文字-->
+            <TextView
+                android:id="@+id/personal_vip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/personal_rigint_oval"
+                android:text="VIP"
+                android:textColor="#B5975E"
+                android:textSize="16sp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                />
+
+            <TextView
+                android:id="@+id/personal_vip_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3"
+                android:textColor="#B5975E"
+                android:textSize="10sp"
+                android:layout_toRightOf="@id/personal_vip"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@+id/personal_left_top_relative"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:gravity="center"
+            >
+
+            <tht.topu.com.tht.utils.CircleImageView
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                app:border_color="@color/colorWhite"
+                android:id="@+id/personal_head_img"
+                android:src="@mipmap/login_logo"/>
+
+            <RelativeLayout
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:gravity="center"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/personal_nickname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="正在加载中..."
+                    android:textColor="#fff"
+                    android:textSize="14sp"
+                    />
+
+                <!--积分-->
+                <LinearLayout
+                    android:layout_marginStart="20dp"
+                    android:orientation="horizontal"
+                    android:id="@+id/personal_integral_relative"
+                    android:layout_width="80dp"
+                    android:layout_height="18dp"
+                    android:gravity="center"
+                    android:background="@drawable/personal_integral_border"
+                    android:layout_alignTop="@+id/personal_nickname"
+                    android:layout_toEndOf="@+id/personal_nickname">
+
+                    <LinearLayout
+                        android:layout_gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/personal_integral_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="积分:"
+                            android:textColor="#c2a874"
+                            android:textSize="12sp"
+                            android:layout_marginLeft="3dp"
+                            />
+
+                        <TextView
+                            android:id="@+id/personal_integral_val"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:textColor="#c2a874"
+                            android:textSize="12sp"
+                            android:layout_marginStart="3dp"
+                            />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:id="@+id/closeSunLayout"
+        android:visibility="gone"
+        android:gravity="center">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/eye"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#cfcfcf"
+                android:text="对不起，顽主关闭了'晒'功能"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/rankDetailRecyclerView"/>
+
+    <TextView
+        android:visibility="gone"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/blankTextView"
+        android:textSize="20sp"
+        android:textColor="#333"
+        android:text="空空如也"/>
+</LinearLayout>

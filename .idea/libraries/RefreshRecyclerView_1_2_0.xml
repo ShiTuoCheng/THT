@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="RefreshRecyclerView-1.2.0">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.android/build-cache/dd849fa844b26de8fcdd13215384b0e4d8620f42/output/res" />
+      <root url="jar://$USER_HOME$/.android/build-cache/dd849fa844b26de8fcdd13215384b0e4d8620f42/output/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/cn.lemon/RefreshRecyclerView/1.2.0/cad23268fc5a9eb4a3407a7f97d669a7282ff25a/RefreshRecyclerView-1.2.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

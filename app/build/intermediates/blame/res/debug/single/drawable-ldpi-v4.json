@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "/Users/shitakusei/Desktop/THT/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/mi_ic_previous.png",
+        "source": "/Users/shitakusei/.android/build-cache/6ad3134e7ef6a54d3b0280fed46226b3a6f2036f/output/res/drawable-ldpi-v4/mi_ic_previous.png"
+    },
+    {
+        "merged": "/Users/shitakusei/Desktop/THT/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/mi_ic_skip.png",
+        "source": "/Users/shitakusei/.android/build-cache/6ad3134e7ef6a54d3b0280fed46226b3a6f2036f/output/res/drawable-ldpi-v4/mi_ic_skip.png"
+    },
+    {
+        "merged": "/Users/shitakusei/Desktop/THT/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/mi_ic_next.png",
+        "source": "/Users/shitakusei/.android/build-cache/6ad3134e7ef6a54d3b0280fed46226b3a6f2036f/output/res/drawable-ldpi-v4/mi_ic_next.png"
+    },
+    {
+        "merged": "/Users/shitakusei/Desktop/THT/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/mi_ic_finish.png",
+        "source": "/Users/shitakusei/.android/build-cache/6ad3134e7ef6a54d3b0280fed46226b3a6f2036f/output/res/drawable-ldpi-v4/mi_ic_finish.png"
+    }
+]
