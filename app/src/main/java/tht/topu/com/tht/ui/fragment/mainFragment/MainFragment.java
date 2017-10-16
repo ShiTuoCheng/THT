@@ -25,6 +25,7 @@ import android.widget.Toast;
 
 import com.youth.banner.Banner;
 import com.youth.banner.BannerConfig;
+import com.youth.banner.listener.OnBannerListener;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -46,6 +47,7 @@ import okhttp3.Response;
 import tht.topu.com.tht.R;
 import tht.topu.com.tht.adapter.MainViewPagerAdapter;
 import tht.topu.com.tht.ui.activity.CardActivity;
+import tht.topu.com.tht.ui.activity.WebViewActivity;
 import tht.topu.com.tht.utils.API;
 import tht.topu.com.tht.utils.GlideImageLoader;
 import tht.topu.com.tht.utils.Utilities;
@@ -53,6 +55,7 @@ import tht.topu.com.tht.utils.Utilities;
 public class MainFragment extends Fragment {
 
     private List<String> bannerImages = new ArrayList<>();
+    private List<String> bannerUrls = new ArrayList<>();
     private List<String> unselectedIcons = new ArrayList<>();
     private List<String> selectedIcons = new ArrayList<>();
     private List<String> tabTexts = new ArrayList<>();
@@ -275,6 +278,7 @@ public class MainFragment extends Fragment {
 
                             JSONObject imgObj = imgArr.getJSONObject(i);
                             bannerImages.add(API.getHostName()+imgObj.getString("Pic1"));
+                            bannerUrls.add(imgObj.getString("Url"));
                         }
 
                         if (uiHandler != null){
@@ -286,6 +290,17 @@ public class MainFragment extends Fragment {
                                     banner.setImages(bannerImages);
                                     banner.setImageLoader(new GlideImageLoader());
                                     banner.setBannerStyle(BannerConfig.CIRCLE_INDICATOR);
+
+                                    banner.setOnBannerListener(new OnBannerListener() {
+                                        @Override
+                                        public void OnBannerClick(int position) {
+
+                                            Intent intent = new Intent(getActivity(), WebViewActivity.class);
+                                            intent.putExtra("url", bannerUrls.get(position));
+
+                                            startActivity(intent);
+                                        }
+                                    });
 
                                     //开始轮播
                                     banner.start();

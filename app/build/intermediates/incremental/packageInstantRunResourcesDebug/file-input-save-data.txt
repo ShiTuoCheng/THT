@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Fri Oct 13 17:26:21 CST 2017
+#Mon Oct 16 13:51:18 CST 2017
 20.base=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_
 143.base=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_
 493.base=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_
@@ -59,7 +59,7 @@
 646.set=ANDROID_RESOURCE
 490.file=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_/res/mipmap-xxxhdpi-v4/qrcode.png
 149.set=ANDROID_RESOURCE
-661.file=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_/res/drawable-xxhdpi-v4/abc_cab_background_top_mtrl_alpha.9.png
+661.file=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_/res/mipmap-xhdpi-v4/user.png
 644.base=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_
 524.set=ANDROID_RESOURCE
 156.base=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_
@@ -88,7 +88,7 @@
 130.file=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_/res/drawable/abc_textfield_search_material.xml
 480.file=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_/res/color/switch_thumb_material_dark.xml
 301.file=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_/res/drawable-xxhdpi-v4/abc_btn_check_to_on_mtrl_000.png
-651.file=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_/res/drawable-ldrtl-anydpi-v21/mi_ic_previous.xml
+651.file=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_/res/drawable-xxhdpi-v4/abc_menu_hardkey_panel_mtrl_mult.9.png
 14.base=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_
 424.set=ANDROID_RESOURCE
 163.file=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_/res/drawable/top.png
@@ -188,7 +188,7 @@
 264.set=ANDROID_RESOURCE
 24.file=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_/res/mipmap-xxhdpi-v4/personal_shipment_pending_golden.png
 497.file=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_/res/drawable/abc_cab_background_internal_bg.xml
-668.file=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_/res/mipmap-xxhdpi-v4/stone.png
+668.file=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_/res/color/abc_btn_colored_borderless_text_material.xml
 142.set=ANDROID_RESOURCE
 594.set=ANDROID_RESOURCE
 57.file=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_/res/layout/leak_canary_leak_row.xml
@@ -210,7 +210,7 @@
 137.file=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_/res/drawable/abc_seekbar_thumb_material.xml
 487.file=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_/res/drawable-v21/avd_hide_password_1.xml
 308.file=/Users/shitakusei/Desktop/THT/app/build/intermediates/assets/debug/font/Helvetica.ttf
-658.file=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_/res/layout/notification_action.xml
+658.file=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_/res/drawable-v21/avd_hide_password_3.xml
 494.set=ANDROID_RESOURCE
 47.file=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_/res/drawable-xxhdpi-v4/abc_btn_radio_to_on_mtrl_000.png
 372.set=ANDROID_RESOURCE
@@ -230,7 +230,7 @@
 471.set=ANDROID_RESOURCE
 297.file=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_/res/drawable/personal_bj_golden.png
 127.file=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_/res/anim/abc_shrink_fade_out_from_bottom.xml
-648.file=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_/res/drawable/abc_ic_go_search_api_material.xml
+648.file=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_/res/mipmap-xhdpi-v4/username.png
 272.set=ANDROID_RESOURCE
 161.base=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_
 150.set=ANDROID_RESOURCE
@@ -248,6 +248,7 @@
 172.set=ANDROID_RESOURCE
 151.base=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_
 322.base=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_
+672.base=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_
 184.base=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_
 380.set=ANDROID_RESOURCE
 381.file=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_/res/mipmap-mdpi-v4/ic_launcher.png
@@ -336,7 +337,7 @@
 272.base=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_
 102.base=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_
 436.set=ANDROID_RESOURCE
-640.file=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_/res/mipmap-xxhdpi-v4/baobei.png
+640.file=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_/res/mipmap-xxhdpi-v4/personal_all_order.png
 623.base=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_
 63.set=ANDROID_RESOURCE
 314.set=ANDROID_RESOURCE
@@ -372,7 +373,7 @@
 666.set=ANDROID_RESOURCE
 492.file=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_/res/drawable-xxhdpi-v4/abc_textfield_search_activated_mtrl_alpha.9.png
 169.set=ANDROID_RESOURCE
-663.file=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_/res/mipmap-hdpi-v4/personal_arrow_rigint.png
+663.file=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_/res/anim/abc_slide_in_top.xml
 646.base=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_
 544.set=ANDROID_RESOURCE
 158.base=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_
@@ -402,7 +403,7 @@
 132.file=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_/res/layout/activity_rank_detail.xml
 482.file=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_/res/mipmap-xxxhdpi-v4/mila.png
 303.file=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_/res/layout/activity_user_favorite.xml
-653.file=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_/res/drawable-xxhdpi-v4/abc_text_select_handle_left_mtrl_dark.png
+653.file=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_/res/mipmap-xxxhdpi-v4/good.png
 16.base=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_
 444.set=ANDROID_RESOURCE
 165.file=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_/res/mipmap-xhdpi-v4/selected_favorite.png
@@ -431,7 +432,7 @@
 376.set=ANDROID_RESOURCE
 617.base=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_
 122.file=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_/res/drawable/personal_bj_back.png
-643.file=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_/res/mipmap-xxhdpi-v4/personal_logo_silvery.png
+643.file=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_/res/drawable-xxhdpi-v4/mi_ic_finish.png
 479.base=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_
 155.file=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_/res/mipmap-xxhdpi-v4/qrcode.png
 299.set=ANDROID_RESOURCE
@@ -622,7 +623,7 @@
 150.file=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_/res/mipmap-xxhdpi-v4/delete.png
 249.set=ANDROID_RESOURCE
 321.file=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_/res/drawable-v21/design_bottom_navigation_item_background.xml
-671.file=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_/res/mipmap-hdpi-v4/login_logo.png
+671.file=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_/res/layout-v11/notification_template_big_media.xml
 34.base=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_
 624.set=ANDROID_RESOURCE
 127.set=ANDROID_RESOURCE
@@ -703,7 +704,7 @@
 21.file=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_/res/drawable/abc_dialog_material_background.xml
 144.file=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_/res/mipmap-xxxhdpi-v4/personal_shipment_pending.png
 494.file=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_/res/mipmap-hdpi-v4/selectedtotalrank.png
-665.file=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_/res/mipmap-xxhdpi-v4/personal_list_collection.png
+665.file=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_/res/layout/design_navigation_menu_item.xml
 648.base=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_
 112.set=ANDROID_RESOURCE
 564.set=ANDROID_RESOURCE
@@ -731,7 +732,7 @@
 134.file=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_/res/drawable/personal_rigint_oval.xml
 484.file=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_/res/mipmap-xxxhdpi-v4/personal_pending_payment_golden.png
 305.file=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_/res/mipmap-hdpi-v4/selected_rank.png
-655.file=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_/res/mipmap-xhdpi-v4/rank.png
+655.file=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_/res/mipmap-hdpi-v4/selected_recommend.png
 464.set=ANDROID_RESOURCE
 44.file=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_/res/anim/abc_slide_in_bottom.xml
 167.file=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_/res/mipmap-xxxhdpi-v4/personal_list_post.png
@@ -758,7 +759,7 @@
 396.set=ANDROID_RESOURCE
 619.base=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_
 124.file=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_/res/drawable/personal_integral_border_silvery.xml
-645.file=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_/res/drawable-xxhdpi-v4/abc_ic_star_half_black_48dp.png
+645.file=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_/res/drawable-xxhdpi-v4/design_ic_visibility.png
 157.file=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_/res/color/abc_primary_text_material_light.xml
 328.file=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_/res/mipmap-xxhdpi-v4/no2.png
 242.set=ANDROID_RESOURCE
@@ -822,7 +823,7 @@
 25.set=ANDROID_RESOURCE
 118.file=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_/res/mipmap-xxhdpi-v4/selectedmonthrank.png
 468.file=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_/res/drawable-v21/abc_ratingbar_small_material.xml
-639.file=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_/res/mipmap-xxhdpi-v4/personal_all_order.png
+639.file=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_/res/layout/activity_web_view.xml
 606.set=ANDROID_RESOURCE
 28.file=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_/res/drawable/password_btn_border.xml
 640.base=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_
@@ -898,7 +899,7 @@
 122.base=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_
 636.set=ANDROID_RESOURCE
 139.set=ANDROID_RESOURCE
-660.file=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_/res/mipmap-xhdpi-v4/user.png
+660.file=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_/res/drawable-xxhdpi-v4/abc_ic_star_black_16dp.png
 643.base=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_
 514.set=ANDROID_RESOURCE
 155.base=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_
@@ -923,7 +924,7 @@
 282.base=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_
 453.base=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_
 300.file=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_/res/drawable-xxhdpi-v4/abc_list_pressed_holo_light.9.png
-650.file=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_/res/drawable-xxhdpi-v4/abc_menu_hardkey_panel_mtrl_mult.9.png
+650.file=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_/res/layout/activity_main.xml
 13.base=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_
 414.set=ANDROID_RESOURCE
 162.file=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_/res/drawable-v21/notification_action_background.xml
@@ -1032,7 +1033,7 @@
 23.file=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_/res/mipmap-xxxhdpi-v4/monthrank.png
 146.file=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_/res/drawable/abc_btn_borderless_material.xml
 496.file=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_/res/drawable-xhdpi-v4/notification_bg_low_pressed.9.png
-667.file=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_/res/color/abc_btn_colored_borderless_text_material.xml
+667.file=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_/res/drawable-xxhdpi-v4/abc_list_focused_holo.9.png
 132.set=ANDROID_RESOURCE
 584.set=ANDROID_RESOURCE
 56.file=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_/res/drawable/text_selected.xml
@@ -1057,7 +1058,7 @@
 136.file=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_/res/layout/activity_draw_rules.xml
 486.file=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_/res/color/abc_tint_edittext.xml
 307.file=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_/res/layout/fragment_personal.xml
-657.file=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_/res/drawable-v21/avd_hide_password_3.xml
+657.file=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_/res/color/abc_tint_btn_checkable.xml
 484.set=ANDROID_RESOURCE
 46.file=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_/res/layout/design_navigation_item_subheader.xml
 169.file=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_/res/layout/activity_intro.xml
@@ -1081,7 +1082,7 @@
 279.base=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_
 296.file=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_/res/mipmap-xxxhdpi-v4/selected_user.png
 126.file=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_/res/mipmap-xhdpi-v4/recommend.png
-647.file=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_/res/mipmap-xhdpi-v4/username.png
+647.file=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_/res/drawable/abc_ratingbar_indicator_material.xml
 159.file=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_/res/drawable/abc_seekbar_tick_mark_material.xml
 262.set=ANDROID_RESOURCE
 160.base=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_
@@ -1224,7 +1225,7 @@
 656.set=ANDROID_RESOURCE
 491.file=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_/res/color/switch_thumb_material_light.xml
 159.set=ANDROID_RESOURCE
-662.file=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_/res/anim/abc_slide_in_top.xml
+662.file=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_/res/drawable-xxhdpi-v4/abc_cab_background_top_mtrl_alpha.9.png
 645.base=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_
 534.set=ANDROID_RESOURCE
 157.base=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_
@@ -1252,7 +1253,7 @@
 131.file=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_/res/layout/abc_action_mode_bar.xml
 481.file=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_/res/color-v11/abc_background_cache_hint_selector_material_light.xml
 302.file=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_/res/drawable-xhdpi-v4/notification_bg_low_normal.9.png
-652.file=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_/res/mipmap-xxxhdpi-v4/good.png
+652.file=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_/res/drawable-ldrtl-anydpi-v21/mi_ic_previous.xml
 15.base=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_
 434.set=ANDROID_RESOURCE
 164.file=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_/res/layout/fragment_rank_content.xml
@@ -1277,7 +1278,7 @@
 366.set=ANDROID_RESOURCE
 616.base=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_
 121.file=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_/res/mipmap-xxhdpi-v4/user.png
-642.file=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_/res/drawable-xxhdpi-v4/mi_ic_finish.png
+642.file=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_/res/mipmap-hdpi-v4/personal_list_cart.png
 478.base=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_
 154.file=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_/res/mipmap-xxhdpi-v4/personal_list_share.png
 289.set=ANDROID_RESOURCE
@@ -1337,6 +1338,7 @@
 297.set=ANDROID_RESOURCE
 510.base=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_
 220.set=ANDROID_RESOURCE
+672.set=ANDROID_RESOURCE
 372.base=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_
 550.set=ANDROID_RESOURCE
 202.base=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_
@@ -1352,7 +1354,7 @@
 274.set=ANDROID_RESOURCE
 25.file=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_/res/layout/notification_template_part_time.xml
 498.file=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_/res/mipmap-hdpi-v4/qrcode.png
-669.file=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_/res/layout-v11/notification_template_big_media_narrow_custom.xml
+669.file=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_/res/mipmap-xxhdpi-v4/stone.png
 152.set=ANDROID_RESOURCE
 58.file=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_/res/mipmap-xhdpi-v4/personal_list_post.png
 6.set=ANDROID_RESOURCE
@@ -1374,7 +1376,7 @@
 174.set=ANDROID_RESOURCE
 138.file=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_/res/mipmap-xxhdpi-v4/selected_diamond.png
 488.file=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_/res/mipmap-hdpi-v4/no3.png
-659.file=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_/res/drawable-xxhdpi-v4/abc_ic_star_black_16dp.png
+659.file=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_/res/layout/notification_action.xml
 48.file=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_/res/drawable-xxhdpi-v4/mi_ic_next.png
 660.base=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_
 382.set=ANDROID_RESOURCE
@@ -1393,7 +1395,7 @@
 481.set=ANDROID_RESOURCE
 298.file=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_/res/anim/out_to_up.xml
 128.file=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_/res/drawable-xxhdpi-v4/abc_scrubber_control_off_mtrl_alpha.png
-649.file=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_/res/layout/activity_main.xml
+649.file=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_/res/drawable/abc_ic_go_search_api_material.xml
 300.base=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_
 650.base=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_
 282.set=ANDROID_RESOURCE
@@ -1460,7 +1462,7 @@
 473.base=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_
 320.file=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_/res/drawable-v21/abc_action_bar_item_background_material.xml
 239.set=ANDROID_RESOURCE
-670.file=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_/res/layout-v11/notification_template_big_media.xml
+670.file=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_/res/layout-v11/notification_template_big_media_narrow_custom.xml
 33.base=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_
 117.set=ANDROID_RESOURCE
 182.file=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_/res/mipmap-xxhdpi-v4/zisha.png
@@ -1511,7 +1513,7 @@
 103.base=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_
 470.file=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_/res/drawable/abc_ic_clear_material.xml
 446.set=ANDROID_RESOURCE
-641.file=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_/res/mipmap-hdpi-v4/personal_list_cart.png
+641.file=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_/res/mipmap-xxhdpi-v4/baobei.png
 624.base=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_
 73.set=ANDROID_RESOURCE
 324.set=ANDROID_RESOURCE
@@ -1552,7 +1554,7 @@
 20.file=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_/res/mipmap-xxhdpi-v4/selected_user.png
 143.file=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_/res/drawable-xxhdpi-v4/mi_ic_skip.png
 493.file=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_/res/layout/fragment_product.xml
-664.file=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_/res/layout/design_navigation_menu_item.xml
+664.file=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_/res/mipmap-hdpi-v4/personal_arrow_rigint.png
 647.base=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_
 102.set=ANDROID_RESOURCE
 554.set=ANDROID_RESOURCE
@@ -1583,7 +1585,7 @@
 133.file=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_/res/layout/abc_alert_dialog_title_material.xml
 483.file=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_/res/drawable-v21/abc_ratingbar_material.xml
 304.file=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_/res/layout-v21/notification_template_icon_group.xml
-654.file=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_/res/mipmap-hdpi-v4/selected_recommend.png
+654.file=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_/res/drawable-xxhdpi-v4/abc_text_select_handle_left_mtrl_dark.png
 454.set=ANDROID_RESOURCE
 166.file=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_/res/mipmap-xxhdpi-v4/product.png
 149.base=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_
@@ -1610,7 +1612,7 @@
 386.set=ANDROID_RESOURCE
 618.base=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_
 123.file=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_/res/drawable-xxhdpi-v4/abc_text_select_handle_right_mtrl_dark.png
-644.file=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_/res/drawable-xxhdpi-v4/design_ic_visibility.png
+644.file=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_/res/mipmap-xxhdpi-v4/personal_logo_silvery.png
 156.file=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_/res/mipmap-hdpi-v4/card3.png
 327.file=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_/res/drawable/design_bottom_navigation_item_background.xml
 232.set=ANDROID_RESOURCE
@@ -1733,7 +1735,7 @@
 527.set=ANDROID_RESOURCE
 394.file=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_/res/mipmap-hdpi-v4/personal_pending_payment.png
 548.base=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_
-count=672
+count=673
 257.file=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_/res/layout/abc_activity_chooser_view.xml
 428.file=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_/res/color-v23/abc_tint_seek_thumb.xml
 77.set=ANDROID_RESOURCE
@@ -1788,6 +1790,7 @@ count=672
 151.file=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_/res/mipmap-xxxhdpi-v4/silver_background.png
 259.set=ANDROID_RESOURCE
 322.file=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_/res/layout-v21/activity_draw_rules.xml
+672.file=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_/res/mipmap-hdpi-v4/login_logo.png
 35.base=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_
 634.set=ANDROID_RESOURCE
 137.set=ANDROID_RESOURCE
@@ -1866,7 +1869,7 @@ count=672
 22.file=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_/res/layout-land/mi_fragment_simple_slide.xml
 145.file=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_/res/mipmap-xxxhdpi-v4/selected_product.png
 495.file=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_/res/drawable-v21/mi_button_background.xml
-666.file=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_/res/drawable-xxhdpi-v4/abc_list_focused_holo.9.png
+666.file=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_/res/mipmap-xxhdpi-v4/personal_list_collection.png
 649.base=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_
 122.set=ANDROID_RESOURCE
 574.set=ANDROID_RESOURCE
@@ -1893,7 +1896,7 @@ count=672
 135.file=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_/res/layout/activity_user_forum_blog.xml
 485.file=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_/res/mipmap-hdpi-v4/passwords.png
 306.file=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_/res/layout/activity_login.xml
-656.file=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_/res/color/abc_tint_btn_checkable.xml
+656.file=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_/res/mipmap-xhdpi-v4/rank.png
 474.set=ANDROID_RESOURCE
 45.file=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_/res/mipmap-xxhdpi-v4/selected_favorite.png
 168.file=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_/res/mipmap-hdpi-v4/hot.png
@@ -1919,7 +1922,7 @@ count=672
 278.base=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_
 449.base=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_
 125.file=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_/res/drawable/round_button.xml
-646.file=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_/res/drawable/abc_ratingbar_indicator_material.xml
+646.file=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_/res/drawable-xxhdpi-v4/abc_ic_star_half_black_48dp.png
 158.file=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_/res/layout/abc_screen_content_include.xml
 329.file=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_/res/mipmap-xxxhdpi-v4/selectedweekrank.png
 252.set=ANDROID_RESOURCE

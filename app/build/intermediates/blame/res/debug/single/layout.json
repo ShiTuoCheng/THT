@@ -188,6 +188,10 @@
         "source": "/Users/shitakusei/.android/build-cache/f7e81158ab4f78a630c4d88aff2514a225185962/output/res/layout/select_dialog_multichoice_material.xml"
     },
     {
+        "merged": "/Users/shitakusei/Desktop/THT/app/build/intermediates/res/merged/debug/layout/activity_web_view.xml",
+        "source": "/Users/shitakusei/Desktop/THT/app/src/main/res/layout/activity_web_view.xml"
+    },
+    {
         "merged": "/Users/shitakusei/Desktop/THT/app/build/intermediates/res/merged/debug/layout/notification_template_media.xml",
         "source": "/Users/shitakusei/.android/build-cache/f7e81158ab4f78a630c4d88aff2514a225185962/output/res/layout/notification_template_media.xml"
     },

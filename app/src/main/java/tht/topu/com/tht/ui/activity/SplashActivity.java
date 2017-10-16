@@ -6,7 +6,6 @@ import android.os.Handler;
 import android.os.Looper;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -14,7 +13,6 @@ import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 
-import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -81,8 +79,8 @@ public class SplashActivity extends AppCompatActivity {
             }
         };
 
+//        定时器开始倒计时
         countDownTimer.start();
-
         skipTextView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -93,6 +91,14 @@ public class SplashActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+        //页面恢复继续倒计时
+        countDownTimer.start();
     }
 
     @Override
@@ -161,12 +167,26 @@ public class SplashActivity extends AppCompatActivity {
 
                         JSONObject jsonObj = new JSONObject(response.body().string());
                         final String imageUrl = jsonObj.getJSONArray("result").getJSONObject(0).getJSONObject("detail").getString("Pic1");
+                        final String url = jsonObj.getJSONArray("result").getJSONObject(0).getJSONObject("detail").getString("Url");
 
                         uiHandler.post(new Runnable() {
                             @Override
                             public void run() {
 
                                 Glide.with(SplashActivity.this).load(API.getHostName()+imageUrl).into(imageView);
+
+                                imageView.setOnClickListener(new View.OnClickListener() {
+                                    @Override
+                                    public void onClick(View view) {
+
+                                        Intent intent = new Intent(SplashActivity.this, WebViewActivity.class);
+                                        intent.putExtra("url", url);
+
+                                        //定时器取消
+                                        countDownTimer.cancel();
+                                        startActivity(intent);
+                                    }
+                                });
                             }
                         });
                     } catch (JSONException e) {

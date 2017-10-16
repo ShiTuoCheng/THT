@@ -43,4 +43,6 @@
     <!--高亮银色-->
     <color name="silver_hignlight">#D2D2D2</color>
 
+    <!--红色-->
+    <color name="colorRed">#ff0000</color>
 </resources>
