@@ -83,7 +83,8 @@
             android:name=".ui.activity.UserForumBlogActivity"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
-        <activity android:name=".ui.activity.ProductDetailActivity"></activity>
+        <activity android:name=".ui.activity.ProductDetailActivity" />
+        <activity android:name=".ui.activity.SplashActivity"></activity>
     </application>
 
 </manifest>

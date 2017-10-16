@@ -850,6 +850,8 @@ public class DrawFragment extends Fragment {
 
                             int randomNum=(int)(Math.random()*100);
 
+                            Log.d("drawRandom", String.valueOf(randomNum));
+
                             //如果用户随机到指定数内则开始抽奖
                             if (randomNum <= 100 - repeatMid.size() * 25){
 

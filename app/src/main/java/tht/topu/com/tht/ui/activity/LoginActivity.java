@@ -74,7 +74,7 @@ public class LoginActivity extends BaseActivity {
         if (!sharedPreferences.getString(TOKEN_KEY, "").equals("")){
 
             LoginActivity.this.finish();
-            Utilities.jumpToActivity(LoginActivity.this, MainActivity.class);
+            Utilities.jumpToActivity(LoginActivity.this, SplashActivity.class);
         }
 
         super.onCreate(savedInstanceState);
@@ -269,7 +269,7 @@ public class LoginActivity extends BaseActivity {
                                         }else {
 
                                             LoginActivity.this.finish();
-                                            Utilities.jumpToActivity(LoginActivity.this, MainActivity.class);
+                                            Utilities.jumpToActivity(LoginActivity.this, SplashActivity.class);
                                         }
                                     }
                                 });

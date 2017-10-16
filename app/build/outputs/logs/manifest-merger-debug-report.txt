@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:2:1-89:12
+ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:2:1-90:12
 	package
 		ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:3:5-31
 		INJECTED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml
@@ -32,7 +32,7 @@ MERGED from [com.squareup.leakcanary:leakcanary-android:1.5.4] /Users/shitakusei
 	android:name
 		ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:8:22-77
 application
-ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:10:5-87:19
+ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:10:5-88:19
 MERGED from [com.android.support:design:26.0.0-alpha1] /Users/shitakusei/.android/build-cache/106b7aeac23eec540c464e81dd7a66d14a9368c2/output/AndroidManifest.xml:29:5-20
 MERGED from [com.android.support:transition:26.0.0-alpha1] /Users/shitakusei/.android/build-cache/99642e97839c0ebf6010a314c81f5d3abe0b4beb/output/AndroidManifest.xml:26:5-20
 MERGED from [com.android.support:cardview-v7:26.0.0-alpha1] /Users/shitakusei/.android/build-cache/2fb2ddf4f4ae665a0885ef28e1d7fb4592a4f442/output/AndroidManifest.xml:26:5-20
@@ -198,9 +198,13 @@ ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:82:9-8
 	android:name
 		ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:83:13-62
 activity#tht.topu.com.tht.ui.activity.ProductDetailActivity
-ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:86:9-80
+ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:86:9-71
 	android:name
 		ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:86:19-68
+activity#tht.topu.com.tht.ui.activity.SplashActivity
+ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:87:9-73
+	android:name
+		ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:87:19-61
 uses-sdk
 INJECTED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 MERGED from [com.android.support:design:26.0.0-alpha1] /Users/shitakusei/.android/build-cache/106b7aeac23eec540c464e81dd7a66d14a9368c2/output/AndroidManifest.xml:21:5-23:62

@@ -40,6 +40,8 @@ public class ChangePasswordActivity extends BaseActivity {
     private TextView password_phone;
     private EditText newPasswordEditText;
 
+    private CountDownTimer countDownTimer;
+
     private EditText qrcodeEditText;
     private Button getCodeButton;
 
@@ -116,6 +118,16 @@ public class ChangePasswordActivity extends BaseActivity {
     }
 
     @Override
+    protected void onDestroy() {
+        super.onDestroy();
+
+        if (countDownTimer != null){
+
+            countDownTimer.cancel();
+        }
+    }
+
+    @Override
     public void initView() {
 
         saveButton = (TextView)findViewById(R.id.password_keep);
@@ -130,7 +142,7 @@ public class ChangePasswordActivity extends BaseActivity {
 
         getVaild(code);
 
-        CountDownTimer countDownTimer = new CountDownTimer(60000, 1000) {
+        countDownTimer = new CountDownTimer(60000, 1000) {
             @Override
             public void onTick(long l) {
 

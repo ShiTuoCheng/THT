@@ -94,6 +94,7 @@
             android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity android:name="tht.topu.com.tht.ui.activity.ProductDetailActivity" />
+        <activity android:name="tht.topu.com.tht.ui.activity.SplashActivity" />
 
         <service
             android:name="com.squareup.leakcanary.internal.HeapAnalyzerService"

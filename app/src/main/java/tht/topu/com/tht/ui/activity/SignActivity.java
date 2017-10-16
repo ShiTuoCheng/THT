@@ -46,6 +46,8 @@ public class SignActivity extends BaseActivity {
     private EditText qrCodeInput;
     private EditText passwordInput;
 
+    private CountDownTimer countDownTimer;
+
     public static final MediaType JSON = MediaType
             .parse("application/json; charset=utf-8");
 
@@ -156,13 +158,18 @@ public class SignActivity extends BaseActivity {
 
             uiHandler = null;
         }
+
+        if (countDownTimer != null){
+
+            countDownTimer.cancel();
+        }
     }
 
     private void qrCodeHandler(final String code){
 
         getVaild(code);
 
-        CountDownTimer countDownTimer = new CountDownTimer(60000, 1000) {
+        countDownTimer = new CountDownTimer(60000, 1000) {
             @Override
             public void onTick(long l) {
 
@@ -582,4 +589,6 @@ public class SignActivity extends BaseActivity {
             }
         });
     }
+
+
 }
