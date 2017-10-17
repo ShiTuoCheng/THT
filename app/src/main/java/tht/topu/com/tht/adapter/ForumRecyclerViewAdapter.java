@@ -38,13 +38,18 @@ public class ForumRecyclerViewAdapter extends CommonBaseAdapter<Forum>{
         holder.setText(R.id.replyNumTextView, ""+data.getReplyNum());
         holder.setText(R.id.goodNumTextView, ""+data.getLikeNum());
         holder.setText(R.id.forumVipTextView, data.getVip());
+
         Glide.with(context).load(data.getAvatarIcon()).apply(RequestOptions.bitmapTransform(new CropCircleTransformation())).into((ImageView)holder.getView(R.id.userImageView));
-        if (data.isFavorite()){
+        if (data.isFavorite() && !data.isTop()){
 
             ((ImageView)holder.getView(R.id.cornerImageView)).setImageDrawable(context.getResources().getDrawable(R.mipmap.jing));
-        }else if (data.isTop()){
+        }else if (data.isTop() && !data.isFavorite()){
 
-            ((ImageView)holder.getView(R.id.cornerImageView)).setImageDrawable(context.getResources().getDrawable(R.mipmap.ding));
+            ((ImageView)holder.getView(R.id.cornerImageView1)).setImageDrawable(context.getResources().getDrawable(R.mipmap.ding));
+        }else if (data.isTop() && data.isFavorite()){
+
+            ((ImageView)holder.getView(R.id.cornerImageView1)).setImageDrawable(context.getResources().getDrawable(R.mipmap.ding));
+            ((ImageView)holder.getView(R.id.cornerImageView)).setImageDrawable(context.getResources().getDrawable(R.mipmap.jing));
         }
 
         if (data.isDel()){

@@ -70,6 +70,7 @@ public class RankContentFragment extends BaseFragment {
     private TextView rankNumTextView;
     private TextView userPointTextView;
     private ImageView userImageView;
+    private ImageView cupImageView;
 
     private List<Rank> ranks = new ArrayList<>();
     private List<Rank> loadMoreRanks = new ArrayList<>();
@@ -196,6 +197,7 @@ public class RankContentFragment extends BaseFragment {
         userImageView = v.findViewById(R.id.userImageView);
         userPointTextView = v.findViewById(R.id.pointTextView);
         rankNumTextView = v.findViewById(R.id.rankNum);
+        cupImageView = v.findViewById(R.id.cupImageView);
     }
 
     //设置为金色
@@ -321,6 +323,17 @@ public class RankContentFragment extends BaseFragment {
                             public void run() {
 
                                 rankNumTextView.setText(rank);
+
+                                if (rank.equals("1")){
+
+                                    cupImageView.setImageDrawable(getActivity().getResources().getDrawable(R.mipmap.no1));
+                                }else if (rank.equals("2")){
+
+                                    cupImageView.setImageDrawable(getActivity().getResources().getDrawable(R.mipmap.no2));
+                                }else if (rank.equals("3")){
+
+                                    cupImageView.setImageDrawable(getActivity().getResources().getDrawable(R.mipmap.no3));
+                                }
                             }
                         });
 

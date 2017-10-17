@@ -138,4 +138,13 @@
         android:layout_height="wrap_content"
         android:id="@+id/cornerImageView"/>
 
+    <ImageView
+
+        android:layout_marginTop="14dp"
+        android:layout_marginStart="6dp"
+        android:layout_toEndOf="@id/cornerImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/cornerImageView1"/>
+
 </RelativeLayout>

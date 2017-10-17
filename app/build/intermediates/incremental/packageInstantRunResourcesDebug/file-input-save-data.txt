@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Mon Oct 16 13:51:18 CST 2017
+#Mon Oct 16 15:02:46 CST 2017
 20.base=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_
 143.base=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_
 493.base=/Users/shitakusei/Desktop/THT/app/build/intermediates/res/resources-debug.ap_

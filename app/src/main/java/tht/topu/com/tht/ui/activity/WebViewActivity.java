@@ -7,6 +7,7 @@ import android.view.View;
 import android.webkit.WebChromeClient;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -19,6 +20,7 @@ public class WebViewActivity extends AppCompatActivity {
     private LinearLayout loadingLayout;
 
     private TextView password_title;
+    private ImageView forumPostBack;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,6 +57,13 @@ public class WebViewActivity extends AppCompatActivity {
             }
         });
 
+        forumPostBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                WebViewActivity.this.finish();
+            }
+        });
     }
 
     private void initView(){
@@ -62,5 +71,6 @@ public class WebViewActivity extends AppCompatActivity {
         webView = (WebView)findViewById(R.id.webView);
         loadingLayout = (LinearLayout)findViewById(R.id.loadingLayout);
         password_title = (TextView)findViewById(R.id.password_title);
+        forumPostBack = (ImageView)findViewById(R.id.forumPostBack);
     }
 }

@@ -53,12 +53,12 @@ public class ProductRecyclerViewAdapter extends CommonBaseAdapter<Product> {
 
         if (!data.isRecommend()){
 
-            (holder.getView(R.id.productRecommend)).setVisibility(View.INVISIBLE);
+            (holder.getView(R.id.productRecommend)).setVisibility(View.GONE);
         }
 
         if (!data.isHot()){
 
-            (holder.getView(R.id.productHot)).setVisibility(View.INVISIBLE);
+            (holder.getView(R.id.productHot)).setVisibility(View.GONE);
         }
 
         (holder.getView(R.id.productImageView)).setOnClickListener(new View.OnClickListener() {

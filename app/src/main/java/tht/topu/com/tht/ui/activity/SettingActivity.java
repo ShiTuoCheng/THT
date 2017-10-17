@@ -12,6 +12,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -32,6 +33,7 @@ public class SettingActivity extends AppCompatActivity {
     private ProgressDialog progressDialog;
 
     private TextView cacheTextView;
+    private ImageView forumPostBack;
 
     private static final String TOKEN_KEY = "0x01";
     private static final String MID_KEY = "1x11";
@@ -55,6 +57,8 @@ public class SettingActivity extends AppCompatActivity {
         clearCacheLayout = (RelativeLayout)findViewById(R.id.clearCacheLayout);
         exitLoginLayout = (RelativeLayout)findViewById(R.id.exitLoginLayout);
         cacheTextView = (TextView)findViewById(R.id.cacheTextView);
+
+        forumPostBack = (ImageView)findViewById(R.id.forumPostBack);
 
         progressDialog = new ProgressDialog(this);
         progressDialog.setTitle("正在清理...");
@@ -124,6 +128,14 @@ public class SettingActivity extends AppCompatActivity {
                                                 }).create();
 
                 alertDialog.show();
+            }
+        });
+
+        forumPostBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                SettingActivity.this.finish();
             }
         });
     }

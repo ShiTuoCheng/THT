@@ -72,12 +72,12 @@
         "source": "/Users/shitakusei/.android/build-cache/f7e81158ab4f78a630c4d88aff2514a225185962/output/res/layout/abc_list_menu_item_icon.xml"
     },
     {
-        "merged": "/Users/shitakusei/Desktop/THT/app/build/intermediates/res/merged/debug/layout/layout_rank_detail_item.xml",
-        "source": "/Users/shitakusei/Desktop/THT/app/src/main/res/layout/layout_rank_detail_item.xml"
-    },
-    {
         "merged": "/Users/shitakusei/Desktop/THT/app/build/intermediates/res/merged/debug/layout/activity_rank_detail.xml",
         "source": "/Users/shitakusei/Desktop/THT/app/src/main/res/layout/activity_rank_detail.xml"
+    },
+    {
+        "merged": "/Users/shitakusei/Desktop/THT/app/build/intermediates/res/merged/debug/layout/layout_rank_detail_item.xml",
+        "source": "/Users/shitakusei/Desktop/THT/app/src/main/res/layout/layout_rank_detail_item.xml"
     },
     {
         "merged": "/Users/shitakusei/Desktop/THT/app/build/intermediates/res/merged/debug/layout/layout_user_favorite_item.xml",
@@ -104,24 +104,24 @@
         "source": "/Users/shitakusei/.android/build-cache/f7e81158ab4f78a630c4d88aff2514a225185962/output/res/layout/abc_list_menu_item_radio.xml"
     },
     {
-        "merged": "/Users/shitakusei/Desktop/THT/app/build/intermediates/res/merged/debug/layout/abc_action_mode_close_item_material.xml",
-        "source": "/Users/shitakusei/.android/build-cache/f7e81158ab4f78a630c4d88aff2514a225185962/output/res/layout/abc_action_mode_close_item_material.xml"
-    },
-    {
         "merged": "/Users/shitakusei/Desktop/THT/app/build/intermediates/res/merged/debug/layout/notification_template_icon_group.xml",
         "source": "/Users/shitakusei/.android/build-cache/f7e81158ab4f78a630c4d88aff2514a225185962/output/res/layout/notification_template_icon_group.xml"
+    },
+    {
+        "merged": "/Users/shitakusei/Desktop/THT/app/build/intermediates/res/merged/debug/layout/abc_action_mode_close_item_material.xml",
+        "source": "/Users/shitakusei/.android/build-cache/f7e81158ab4f78a630c4d88aff2514a225185962/output/res/layout/abc_action_mode_close_item_material.xml"
     },
     {
         "merged": "/Users/shitakusei/Desktop/THT/app/build/intermediates/res/merged/debug/layout/abc_alert_dialog_button_bar_material.xml",
         "source": "/Users/shitakusei/.android/build-cache/f7e81158ab4f78a630c4d88aff2514a225185962/output/res/layout/abc_alert_dialog_button_bar_material.xml"
     },
     {
-        "merged": "/Users/shitakusei/Desktop/THT/app/build/intermediates/res/merged/debug/layout/notification_action.xml",
-        "source": "/Users/shitakusei/.android/build-cache/f7e81158ab4f78a630c4d88aff2514a225185962/output/res/layout/notification_action.xml"
-    },
-    {
         "merged": "/Users/shitakusei/Desktop/THT/app/build/intermediates/res/merged/debug/layout/fragment_user_forum_reviews.xml",
         "source": "/Users/shitakusei/Desktop/THT/app/src/main/res/layout/fragment_user_forum_reviews.xml"
+    },
+    {
+        "merged": "/Users/shitakusei/Desktop/THT/app/build/intermediates/res/merged/debug/layout/notification_action.xml",
+        "source": "/Users/shitakusei/.android/build-cache/f7e81158ab4f78a630c4d88aff2514a225185962/output/res/layout/notification_action.xml"
     },
     {
         "merged": "/Users/shitakusei/Desktop/THT/app/build/intermediates/res/merged/debug/layout/notification_template_media_custom.xml",

@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 
 import com.squareup.haha.perflib.Main;
 
@@ -26,6 +27,7 @@ public class UserForumBlogActivity extends AppCompatActivity {
 
     private TabLayout rankTabLayout;
     private ViewPager rankViewPager;
+    private ImageView forumPostBack;
     private UserBlogViewPagerAdapter userBlogViewPagerAdapter;
 
 
@@ -35,6 +37,14 @@ public class UserForumBlogActivity extends AppCompatActivity {
         setContentView(R.layout.activity_user_forum_blog);
 
         initView();
+
+        forumPostBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                UserForumBlogActivity.this.finish();
+            }
+        });
 
         userBlogViewPagerAdapter = new UserBlogViewPagerAdapter(getSupportFragmentManager());
 
@@ -117,6 +127,7 @@ public class UserForumBlogActivity extends AppCompatActivity {
 
         rankTabLayout = (TabLayout)findViewById(R.id.userBlogTabLayout);
         rankViewPager = (ViewPager)findViewById(R.id.userBlogViewPager);
+        forumPostBack = (ImageView)findViewById(R.id.forumPostBack);
     }
 
     private class UserBlogViewPagerAdapter extends FragmentPagerAdapter {
