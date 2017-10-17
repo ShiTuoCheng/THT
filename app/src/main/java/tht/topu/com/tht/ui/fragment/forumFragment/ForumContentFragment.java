@@ -149,6 +149,16 @@ public class ForumContentFragment extends Fragment {
         forumRecyclerView.setAdapter(forumRecyclerViewAdapter);
     }
 
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+
+        if (uiHandler != null){
+
+            uiHandler = null;
+        }
+    }
+
     public void initData(final boolean isFirstLoad, String flid, String cid){
 
         random32 = Utilities.getStringRandom(32);
@@ -223,6 +233,13 @@ public class ForumContentFragment extends Fragment {
             @Override
             public void onFailure(Call call, IOException e) {
 
+                uiHandler.post(new Runnable() {
+                    @Override
+                    public void run() {
+
+                        Toast.makeText(getActivity(), "加载数据失败，请重试", Toast.LENGTH_SHORT).show();
+                    }
+                });
             }
 
             @Override

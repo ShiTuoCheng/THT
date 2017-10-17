@@ -57,7 +57,7 @@ import tht.topu.com.tht.utils.Utilities;
 import static com.bumptech.glide.request.RequestOptions.bitmapTransform;
 
 
-public class RankContentFragment extends BaseFragment {
+public class RankContentFragment extends Fragment {
 
     private static final String FIRST_ID = "0x04";
     private static final String SECOND_ID = "0x05";
@@ -96,9 +96,11 @@ public class RankContentFragment extends BaseFragment {
     private static final String MID_KEY = "1x11";
 
     public static RankContentFragment newInstance(String firstDay, String secondDay) {
+
         Bundle argus = new Bundle();
         argus.putString(FIRST_ID, firstDay);
         argus.putString(SECOND_ID, secondDay);
+
         RankContentFragment rankContentFragment = new RankContentFragment();
         rankContentFragment.setArguments(argus);
         return rankContentFragment;
@@ -112,7 +114,7 @@ public class RankContentFragment extends BaseFragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
+
         View v = inflater.inflate(R.layout.fragment_rank_content, container, false);
 
         firstDay = getArguments().getString(FIRST_ID);
@@ -322,8 +324,10 @@ public class RankContentFragment extends BaseFragment {
                             @Override
                             public void run() {
 
+                                //设置排行名次
                                 rankNumTextView.setText(rank);
 
+                                //头像旁边的奖杯判断
                                 if (rank.equals("1")){
 
                                     cupImageView.setImageDrawable(getActivity().getResources().getDrawable(R.mipmap.no1));
@@ -421,7 +425,6 @@ public class RankContentFragment extends BaseFragment {
                 "}";
 
         OkHttpClient okHttpClient = new OkHttpClient();
-
         RequestBody body = RequestBody.create(JSON, json);
 
         Log.d("rank", json);
@@ -612,15 +615,5 @@ public class RankContentFragment extends BaseFragment {
                 }
             }
         });
-    }
-
-    @Override
-    protected void lazyLoad() {
-
-    }
-
-    @Override
-    protected void invisibleFunc() {
-
     }
 }
