@@ -286,13 +286,17 @@ public class PersonalFragment extends Fragment {
 
 
                 switch (i){
+                    case 0:
+                        Toast.makeText(getActivity(), "全部订单", Toast.LENGTH_SHORT).show();
+                        break;
                     case 1:
+                        Toast.makeText(getActivity(), "代付款", Toast.LENGTH_SHORT).show();
                         break;
                     case 2:
+                        Toast.makeText(getActivity(), "代发货", Toast.LENGTH_SHORT).show();
                         break;
                     case 3:
-                        break;
-                    case 4:
+                        Toast.makeText(getActivity(), "已发货", Toast.LENGTH_SHORT).show();
                         break;
                 }
             }

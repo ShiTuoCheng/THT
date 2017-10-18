@@ -53,6 +53,7 @@ public class RankDetailActivity extends BaseActivity {
     private LinearLayout loadingLayout;
     private ImageView personal_background_ImageView;
     private ImageView personal_head_img;
+    private ImageView forumBack;
     private LinearLayout closeSunLayout;
     private TextView personal_nickname;
     private TextView personal_vip_num;
@@ -119,6 +120,14 @@ public class RankDetailActivity extends BaseActivity {
         rankDetailRecyclerView.setLayoutManager(linearLayoutManager);
         rankDetailRecyclerView.addItemDecoration(dividerLine);
         rankDetailRecyclerView.setAdapter(rankDetailRecyclerViewAdapter);
+
+        forumBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                RankDetailActivity.this.finish();
+            }
+        });
     }
 
     @Override
@@ -148,6 +157,7 @@ public class RankDetailActivity extends BaseActivity {
         personal_rigint_Icon=(ImageView)findViewById(R.id.personal_rigint_Icon);
         //右侧文字vip
         personal_vip=(TextView)findViewById(R.id.personal_vip);
+        forumBack = (ImageView)findViewById(R.id.forumPostBack);
     }
 
     //获取用户信息

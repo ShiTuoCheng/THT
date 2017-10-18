@@ -267,34 +267,38 @@ public class ForumContentFragment extends Fragment {
                         }
                     }
 
-                    uiHandler.post(new Runnable() {
-                        @Override
-                        public void run() {
+                    if (uiHandler != null){
 
-                            swipeRefreshLayout.setRefreshing(false);
+                        uiHandler.post(new Runnable() {
+                            @Override
+                            public void run() {
 
-                            if (forumList.size() > 0){
+                                swipeRefreshLayout.setRefreshing(false);
 
-                                forumEmptyTextView.setVisibility(View.GONE);
-                            }else {
+                                if (forumList.size() > 0){
 
-                                forumEmptyTextView.setVisibility(View.VISIBLE);
+                                    forumEmptyTextView.setVisibility(View.GONE);
+                                }else {
+
+                                    forumEmptyTextView.setVisibility(View.VISIBLE);
+                                }
+
+                                if (!isFirstLoad){
+
+                                    forumRecyclerViewAdapter.setLoadMoreData(loadMoreForums);
+                                }
+                                forumRecyclerViewAdapter.notifyDataSetChanged();
+                                if (forumList.size() == 0){
+
+                                    forumRecyclerViewAdapter.loadEnd();
+                                }else if (currentPage >= totalPage){
+
+                                    forumRecyclerViewAdapter.loadEnd();
+                                }
                             }
+                        });
+                    }
 
-                            if (!isFirstLoad){
-
-                                forumRecyclerViewAdapter.setLoadMoreData(loadMoreForums);
-                            }
-                            forumRecyclerViewAdapter.notifyDataSetChanged();
-                            if (forumList.size() == 0){
-
-                                forumRecyclerViewAdapter.loadEnd();
-                            }else if (currentPage >= totalPage){
-
-                                forumRecyclerViewAdapter.loadEnd();
-                            }
-                        }
-                    });
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
