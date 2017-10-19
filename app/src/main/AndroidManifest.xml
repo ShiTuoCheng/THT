@@ -85,7 +85,10 @@
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity android:name=".ui.activity.ProductDetailActivity" />
         <activity android:name=".ui.activity.SplashActivity" />
-        <activity android:name=".ui.activity.WebViewActivity"></activity>
+        <activity android:name=".ui.activity.WebViewActivity" />
+        <activity android:name=".ui.activity.ShoppingCardActivity" />
+        <activity android:name=".ui.activity.ForumDetailActivity" />
+        <activity android:name=".ui.activity.AddressListActivity"></activity>
     </application>
 
 </manifest>

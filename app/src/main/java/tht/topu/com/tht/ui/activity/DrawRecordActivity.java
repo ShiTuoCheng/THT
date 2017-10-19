@@ -261,7 +261,7 @@ public class DrawRecordActivity extends AppCompatActivity {
 
                         if (!eachRecordObj.getString("Ptitle").equals("")){
 
-                            Rank rank = rankBuilder.userIcon(API.getAnothereHostName()+eachRecordObj.getJSONObject("Member").getString("Head_img")).userName(eachRecordObj.getJSONObject("Member").getString("Mname")).userPoint("积分："+eachRecordObj.getJSONObject("Member").getString("Integral")).build();
+                            Rank rank = rankBuilder.userIcon(API.getAnothereHostName()+eachRecordObj.getJSONObject("Member").getString("Head_img")).userName(eachRecordObj.getJSONObject("Member").getString("Mname")).userPoint("获得"+eachRecordObj.getString("Ptitle")).build();
 
                             if (isFirstLoad){
 

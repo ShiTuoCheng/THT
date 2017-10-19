@@ -16,6 +16,24 @@ public class Forum {
     private String vip;
     private int likeNum;
     private int replyNum;
+    private String fid;
+    private String flid;
+
+    public String getFlid() {
+        return flid;
+    }
+
+    public void setFlid(String flid) {
+        this.flid = flid;
+    }
+
+    public String getFid() {
+        return fid;
+    }
+
+    public void setFid(String fid) {
+        this.fid = fid;
+    }
 
     private Forum(Builder builder) {
         setTop(builder.isTop);
@@ -28,6 +46,8 @@ public class Forum {
         setVip(builder.vip);
         setLikeNum(builder.likeNum);
         setReplyNum(builder.replyNum);
+        setFid(builder.fid);
+        setFlid(builder.flid);
     }
 
     public boolean isDel() {
@@ -118,6 +138,8 @@ public class Forum {
         private String vip;
         private int likeNum;
         private int replyNum;
+        private String fid;
+        private String flid;
         private boolean isTop;
         private boolean isFavorite;
         private boolean isDel;
@@ -157,6 +179,16 @@ public class Forum {
 
         public Builder replyNum(int val) {
             replyNum = val;
+            return this;
+        }
+
+        public Builder fid(String val) {
+            fid = val;
+            return this;
+        }
+
+        public Builder flid(String val) {
+            flid = val;
             return this;
         }
 

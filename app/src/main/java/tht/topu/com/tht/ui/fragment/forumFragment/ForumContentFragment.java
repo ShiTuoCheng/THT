@@ -255,7 +255,7 @@ public class ForumContentFragment extends Fragment {
                     for (int i=0; i<jsonArr.length(); i++){
 
                         JSONObject eachForumObj = jsonArr.getJSONObject(i);
-                        Forum forum = builder.ForumTitle(eachForumObj.getString("Ftitle")).userName(eachForumObj.getJSONObject("Member").getString("Mname")).vip("VIP:"+eachForumObj.getJSONObject("Member").getString("Members_LV")).avatarIcon(API.getHostName()+eachForumObj.getJSONObject("Member").getString("Head_img")).likeNum(eachForumObj.getInt("Fabulous_Num")).tagName(eachForumObj.getString("Ltitle")).replyNum(eachForumObj.getInt("Comment_Num")).isDel(eachForumObj.getBoolean("isDel")).isFavorite(eachForumObj.getBoolean("Add_Essence")).isTop(eachForumObj.getBoolean("isTop")).build();
+                        Forum forum = builder.ForumTitle(eachForumObj.getString("Ftitle")).userName(eachForumObj.getJSONObject("Member").getString("Mname")).vip("VIP:"+eachForumObj.getJSONObject("Member").getString("Members_LV")).avatarIcon(API.getHostName()+eachForumObj.getJSONObject("Member").getString("Head_img")).likeNum(eachForumObj.getInt("Fabulous_Num")).tagName(eachForumObj.getString("Ltitle")).replyNum(eachForumObj.getInt("Comment_Num")).isDel(eachForumObj.getBoolean("isDel")).isFavorite(eachForumObj.getBoolean("Add_Essence")).isTop(eachForumObj.getBoolean("isTop")).fid(eachForumObj.getString("Fid")).flid(eachForumObj.getString("Flid")).build();
 
                         //判断是否为第一次加载
                         if (isFirstLoad){

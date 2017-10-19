@@ -154,6 +154,7 @@ public class RankFragment extends Fragment {
         rankViewPagerAdapter.addFragment(RankContentFragment.newInstance("", ""));
 
         rankViewPager.setOffscreenPageLimit(4);
+
         rankTabLayout.addTab(rankTabLayout.newTab().setIcon(R.mipmap.selectedweekrank).setText("周排行榜"));
         rankTabLayout.addTab(rankTabLayout.newTab().setIcon(R.mipmap.monthrank).setText("月排行榜"));
         rankTabLayout.addTab(rankTabLayout.newTab().setIcon(R.mipmap.totalrank).setText("总排行榜"));

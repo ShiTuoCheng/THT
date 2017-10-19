@@ -82,7 +82,7 @@ public class SettingActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-
+                Utilities.jumpToActivity(SettingActivity.this, AddressListActivity.class);
             }
         });
 

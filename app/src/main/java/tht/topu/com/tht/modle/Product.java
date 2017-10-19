@@ -13,6 +13,15 @@ public class Product {
     private boolean isRecommend;
     private String ogProductPrice;
     private String Mcid;
+    private String point;
+
+    public String getPoint() {
+        return point;
+    }
+
+    public void setPoint(String point) {
+        this.point = point;
+    }
 
     private Product(Builder builder) {
         setImage(builder.image);
@@ -21,7 +30,8 @@ public class Product {
         setHot(builder.isHot);
         setRecommend(builder.isRecommend);
         setOgProductPrice(builder.ogProductPrice);
-        Mcid = builder.Mcid;
+        setMcid(builder.Mcid);
+        point = builder.point;
     }
 
     public String getMcid() {
@@ -88,6 +98,7 @@ public class Product {
         private boolean isRecommend;
         private String ogProductPrice;
         private String Mcid;
+        private String point;
 
         public Builder() {
         }
@@ -124,6 +135,11 @@ public class Product {
 
         public Builder Mcid(String val) {
             Mcid = val;
+            return this;
+        }
+
+        public Builder point(String val) {
+            point = val;
             return this;
         }
 

@@ -87,6 +87,8 @@ public class RankDetailActivity extends BaseActivity {
     private String time10;
     private String key64;
 
+    private int percenet;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -257,7 +259,7 @@ public class RankDetailActivity extends BaseActivity {
                                         closeSunLayout.setVisibility(View.GONE);
                                         rankDetailRecyclerView.setVisibility(View.VISIBLE);
 
-                                        getOid();
+                                        getPercent();
                                     }else {
 
                                         closeSunLayout.setVisibility(View.VISIBLE);
@@ -325,6 +327,9 @@ public class RankDetailActivity extends BaseActivity {
         random32 = Utilities.getStringRandom(32);
         time10 = Utilities.get10Time();
         key64 = Utilities.get64Key(random32);
+
+        oids.clear();
+        products.clear();
 
         String json = "{\n" +
                 "    \"validate_k\": \"1\",\n" +
@@ -418,6 +423,8 @@ public class RankDetailActivity extends BaseActivity {
                                 oids.add(oid);
                             }
 
+                            Log.d("oids", oids.toString());
+
                             getList();
 
                         }else {
@@ -440,6 +447,74 @@ public class RankDetailActivity extends BaseActivity {
         });
     }
 
+    private void getPercent(){
+
+        random32 = Utilities.getStringRandom(32);
+        time10 = Utilities.get10Time();
+        key64 = Utilities.get64Key(random32);
+
+        String json = "{\n" +
+                "    \"validate_k\": \"1\",\n" +
+                "    \"params\": [\n" +
+                "        {\n" +
+                "            \"type\": \"Init\",\n" +
+                "            \"act\": \"getinfo\",\n" +
+                "            \"para\": {\n" +
+                "                \"params\": {\n" +
+                "                    \"Iid\": \"8\"\n" +
+                "                },\n" +
+                "                \"sign_valid\": {\n" +
+                "                    \"source\": \"Android\",\n" +
+                "                    \"non_str\": \""+random32+"\",\n" +
+                "                    \"stamp\": \""+time10+"\",\n" +
+                "                    \"signature\": \""+Utilities.encode("Iid=8"+"non_str="+random32+"stamp="+time10+"keySecret="+key64)+"\"\n" +
+                "                }\n" +
+                "            }\n" +
+                "        }\n" +
+                "    ]\n" +
+                "}";
+
+        OkHttpClient okHttpClient = new OkHttpClient();
+        RequestBody requestBody = RequestBody.create(JSON, json);
+        Request request = new Request.Builder().url(API.getAPI()).post(requestBody).build();
+
+        okHttpClient.newCall(request).enqueue(new Callback() {
+
+            @Override
+            public void onFailure(Call call, IOException e) {
+                if (uiHandler != null){
+
+                    uiHandler.post(new Runnable() {
+                        @Override
+                        public void run() {
+
+                            Toast.makeText(RankDetailActivity.this, "除了些小差错，请稍后再试", Toast.LENGTH_SHORT).show();
+                        }
+                    });
+                }
+            }
+
+            @Override
+            public void onResponse(Call call, Response response) throws IOException {
+
+                if (response.body()!= null){
+
+                    try {
+                        JSONObject jsonObject = new JSONObject(response.body().string());
+
+                        percenet = jsonObject.getJSONArray("result").getJSONObject(0).getJSONObject("Iinfo").getInt("Iinfo");
+
+                        getOid();
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
+
+
+                }
+            }
+        });
+    }
+
     private void getList(){
 
         random32 = Utilities.getStringRandom(32);
@@ -453,8 +528,6 @@ public class RankDetailActivity extends BaseActivity {
                 result += item + ",";
             }
         }
-
-        Log.d("rankdetailresult", result);
 
         String json = "{\n" +
                 "    \"validate_k\": \"1\",\n" +
@@ -531,7 +604,6 @@ public class RankDetailActivity extends BaseActivity {
 
                     try {
                         JSONObject jsonObj = new JSONObject(response.body().string());
-                        Log.d("rankdetailjson", jsonObj.toString());
 
                         JSONArray jsonArr = jsonObj.getJSONArray("result").getJSONObject(0).getJSONArray("list");
                         Product.Builder builder = new Product.Builder();
@@ -541,7 +613,7 @@ public class RankDetailActivity extends BaseActivity {
                             for (int i = 0; i < jsonArr.length(); i++){
 
                                 JSONObject eachJson = jsonArr.getJSONObject(i);
-                                Product product = builder.productPrice("¥"+eachJson.getString("Price")).productTitle(eachJson.getString("Ctitle")).image(eachJson.getJSONObject("Mdse").getString("Pic2")).build();
+                                Product product = builder.productPrice("¥"+eachJson.getString("Price")).productTitle(eachJson.getString("Ctitle")).image(API.getHostName() + eachJson.getJSONObject("Mdse").getString("Pic2")).point(String.valueOf(eachJson.getInt("Price") * percenet)).build();
 
                                 products.add(product);
                             }

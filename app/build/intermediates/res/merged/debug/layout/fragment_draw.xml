@@ -103,7 +103,7 @@
                     android:id="@+id/drawImageView"
                     android:scaleType="fitXY"
                     android:layout_width="match_parent"
-                    android:layout_height="121dp" />
+                    android:layout_height="164dp" />
 
                 <TextView
                     android:layout_width="match_parent"

@@ -13,6 +13,7 @@ import android.os.Message;
 import android.os.ParcelFileDescriptor;
 import android.provider.Settings;
 import android.support.design.widget.Snackbar;
+import android.support.v4.content.LocalBroadcastManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -87,6 +88,8 @@ public class ForumPostActivity extends AppCompatActivity {
 
     private UploadImageAdapter uploadImageAdapter;
     public final static int CONSULT_DOC_PICTURE = 1000;
+    private LocalBroadcastManager localBroadcastManager;
+    private Intent broadcastIntent;
 
     public Handler uiHandler;
     public Handler alertHandler;
@@ -108,6 +111,8 @@ public class ForumPostActivity extends AppCompatActivity {
 
     private String currentFlid = "";
     private String currentCid = "";
+
+    private String flid;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -155,6 +160,13 @@ public class ForumPostActivity extends AppCompatActivity {
         }
         images.add(null);
         initView();
+
+        localBroadcastManager = LocalBroadcastManager.getInstance(this);
+
+        Bundle bundle = getIntent().getBundleExtra("bundleFlid");
+        flid = bundle.getString("flid");
+
+        Log.d("flidData", flid);
 
         backButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -617,11 +629,17 @@ public class ForumPostActivity extends AppCompatActivity {
                             //判断是否有上传图片 若有图片则调用添加图片方法
                             if (images64.size() == 0){
 
+                                broadcastIntent = new Intent("com.example.mybroadcast.MY_BROADCAST");
+                                broadcastIntent.putExtra("Flid", flid);
+                                localBroadcastManager.sendBroadcast(broadcastIntent);
                                 ForumPostActivity.this.finish();
                                 progressDialog.dismiss();
                                 Toast.makeText(ForumPostActivity.this, "发帖成功", Toast.LENGTH_SHORT).show();
                             }else {
 
+                                broadcastIntent = new Intent("com.example.mybroadcast.MY_BROADCAST");
+                                broadcastIntent.putExtra("Flid", flid);
+                                localBroadcastManager.sendBroadcast(broadcastIntent);
                                 uploadImage(mfid, images64.get(0));
 
                                 progressDialog.dismiss();

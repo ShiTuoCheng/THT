@@ -31,6 +31,7 @@ public class RankDetailRecyclerViewAdapter extends CommonBaseAdapter<Product> {
 
         holder.setText(R.id.rankDetailTextView, data.getProductTitle());
         holder.setText(R.id.rankDetailPriceTextView, data.getProductPrice());
+        holder.setText(R.id.pointTextView, "获得积分："+data.getPoint());
         Glide.with(context).load(data.getImage()).into((ImageView)holder.getView(R.id.rankDetailImageView));
     }
 

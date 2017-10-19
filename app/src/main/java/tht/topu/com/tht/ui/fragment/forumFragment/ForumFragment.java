@@ -167,7 +167,10 @@ public class ForumFragment extends Fragment {
             @Override
             public void onClick(View view) {
 
-                Utilities.jumpToActivity(getActivity(), ForumPostActivity.class);
+                String flid = flids.get(spinner.getSelectedItemPosition());
+                Bundle bundle = new Bundle();
+                bundle.putString("flid", flid);
+                Utilities.jumpToActivity(getActivity(), ForumPostActivity.class, bundle, "bundleFlid");
             }
         });
 

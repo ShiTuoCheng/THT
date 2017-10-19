@@ -12,6 +12,7 @@ import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
 import android.webkit.WebView;
+import android.webkit.WebViewClient;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
@@ -106,98 +107,113 @@ public class DrawRulesActivity extends AppCompatActivity {
             alertHandler.sendEmptyMessageDelayed(0,1000);
         }else {
 
-            initData();
+            drawRulesWebView.loadUrl("http://tht.65276588.cn/f/Activity_rules.aspx?Iid=6");
+            drawRulesWebView.setWebViewClient(new WebViewClient(){
+
+                @Override
+                public boolean shouldOverrideUrlLoading(WebView view, String url) {
+                    return super.shouldOverrideUrlLoading(view, url);
+                }
+
+                @Override
+                public void onPageFinished(WebView view, String url) {
+                    super.onPageFinished(view, url);
+
+                    loadingLayout.setVisibility(View.GONE);
+                    drawRulesWebView.setVisibility(View.VISIBLE);
+                    drawRulesImageView.setVisibility(View.VISIBLE);
+                }
+            });
         }
     }
 
     private void initView(){
-
-        drawRulesImageView = (ImageView)findViewById(R.id.drawRulesImageView);
         drawRulesWebView = (WebView)findViewById(R.id.drawRulesWebView);
         backImageView = (ImageView)findViewById(R.id.drawRulesBack);
         drawLayout = (RelativeLayout)findViewById(R.id.drawLayout);
         loadingLayout = (LinearLayout)findViewById(R.id.loadingLayout);
+        drawRulesImageView = (ImageView)findViewById(R.id.drawRulesImageView);
 
         drawRulesWebView.getSettings().setDefaultTextEncodingName("UTF-8") ;
     }
 
-    private void initData(){
-
-        random32 = Utilities.getStringRandom(32);
-        time10 = Utilities.get10Time();
-        key64 = Utilities.get64Key(random32);
-
-        String json = "{\n" +
-                "    \"validate_k\": \"1\",\n" +
-                "    \"params\": [\n" +
-                "        {\n" +
-                "            \"type\": \"Info\",\n" +
-                "            \"act\": \"Select_List\",\n" +
-                "            \"para\": {\n" +
-                "                \"params\": {\n" +
-                "                    \"s_Iid\": \"6\"\n" +
-                "                },\n" +
-                "                \"sign_valid\": {\n" +
-                "                    \"source\": \"Android\",\n" +
-                "                    \"non_str\": \""+random32+"\",\n" +
-                "                    \"stamp\": \""+time10+"\",\n" +
-                "                    \"signature\": \""+Utilities.encode("s_Iid=6"+"non_str="+random32+"stamp="+time10+"keySecret="+key64)+"\"\n" +
-                "                }\n" +
-                "            }\n" +
-                "        }\n" +
-                "    ]\n" +
-                "}";
-
-        OkHttpClient okHttpClient = new OkHttpClient();
-
-        RequestBody requestBody = RequestBody.create(JSON, json);
-
-        Request request = new Request.Builder().url(API.getAPI()).post(requestBody).build();
-
-        okHttpClient.newCall(request).enqueue(new Callback() {
-
-            @Override
-            public void onFailure(Call call, IOException e) {
-
-                if (uiHandler != null){
-
-                    uiHandler.post(new Runnable() {
-                        @Override
-                        public void run() {
-
-                            alertHandler.sendEmptyMessageDelayed(1,1000);
-                        }
-                    });
-                }
-            }
-
-            @Override
-            public void onResponse(Call call, Response response) throws IOException {
-
-                try {
-
-                    JSONObject jsonObject = new JSONObject(response.body().string());
-                    JSONArray recordArr = jsonObject.getJSONArray("result").getJSONObject(0).getJSONArray("list");
-
-                    final String drawInfo = recordArr.getJSONObject(0).getString("Iinfo");
-
-                    uiHandler.post(new Runnable() {
-                        @Override
-                        public void run() {
-
-                            drawRulesWebView.loadDataWithBaseURL(null, drawInfo,"text/html","utf-8", null);
-                            loadingLayout.setVisibility(View.INVISIBLE);
-
-                            drawRulesImageView.setVisibility(View.VISIBLE);
-                            drawRulesWebView.setVisibility(View.VISIBLE);
-                        }
-                    });
-                } catch (JSONException e) {
-                    e.printStackTrace();
-                }
-            }
-        });
-    }
+//    private void initData(){
+//
+//        random32 = Utilities.getStringRandom(32);
+//        time10 = Utilities.get10Time();
+//        key64 = Utilities.get64Key(random32);
+//
+//        String json = "{\n" +
+//                "    \"validate_k\": \"1\",\n" +
+//                "    \"params\": [\n" +
+//                "        {\n" +
+//                "            \"type\": \"Info\",\n" +
+//                "            \"act\": \"Select_List\",\n" +
+//                "            \"para\": {\n" +
+//                "                \"params\": {\n" +
+//                "                    \"s_Iid\": \"6\"\n" +
+//                "                },\n" +
+//                "                \"sign_valid\": {\n" +
+//                "                    \"source\": \"Android\",\n" +
+//                "                    \"non_str\": \""+random32+"\",\n" +
+//                "                    \"stamp\": \""+time10+"\",\n" +
+//                "                    \"signature\": \""+Utilities.encode("s_Iid=6"+"non_str="+random32+"stamp="+time10+"keySecret="+key64)+"\"\n" +
+//                "                }\n" +
+//                "            }\n" +
+//                "        }\n" +
+//                "    ]\n" +
+//                "}";
+//
+//        OkHttpClient okHttpClient = new OkHttpClient();
+//
+//        RequestBody requestBody = RequestBody.create(JSON, json);
+//
+//        Request request = new Request.Builder().url(API.getAPI()).post(requestBody).build();
+//
+//        okHttpClient.newCall(request).enqueue(new Callback() {
+//
+//            @Override
+//            public void onFailure(Call call, IOException e) {
+//
+//                if (uiHandler != null){
+//
+//                    uiHandler.post(new Runnable() {
+//                        @Override
+//                        public void run() {
+//
+//                            alertHandler.sendEmptyMessageDelayed(1,1000);
+//                        }
+//                    });
+//                }
+//            }
+//
+//            @Override
+//            public void onResponse(Call call, Response response) throws IOException {
+//
+//                try {
+//
+//                    JSONObject jsonObject = new JSONObject(response.body().string());
+//                    JSONArray recordArr = jsonObject.getJSONArray("result").getJSONObject(0).getJSONArray("list");
+//
+//                    final String drawInfo = recordArr.getJSONObject(0).getString("Iinfo");
+//
+//                    uiHandler.post(new Runnable() {
+//                        @Override
+//                        public void run() {
+//
+//                            drawRulesWebView.loadDataWithBaseURL(null, drawInfo,"text/html","utf-8", null);
+//                            loadingLayout.setVisibility(View.INVISIBLE);
+//
+//                            drawRulesImageView.setVisibility(View.VISIBLE);
+//                            drawRulesWebView.setVisibility(View.VISIBLE);
+//                        }
+//                    });
+//                } catch (JSONException e) {
+//                    e.printStackTrace();
+//                }
+//            }
+//        });
+//    }
 
     @Override
     protected void onDestroy() {

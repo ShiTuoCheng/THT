@@ -1,6 +1,7 @@
 package tht.topu.com.tht.adapter;
 
 import android.content.Context;
+import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
@@ -15,6 +16,8 @@ import java.util.List;
 import jp.wasabeef.glide.transformations.CropCircleTransformation;
 import tht.topu.com.tht.R;
 import tht.topu.com.tht.modle.Forum;
+import tht.topu.com.tht.ui.activity.ForumDetailActivity;
+import tht.topu.com.tht.utils.Utilities;
 
 /**
  * Created by shituocheng on 2017/8/16.
@@ -30,7 +33,7 @@ public class ForumRecyclerViewAdapter extends CommonBaseAdapter<Forum>{
     }
 
     @Override
-    protected void convert(ViewHolder holder, Forum data, int position) {
+    protected void convert(ViewHolder holder, final Forum data, int position) {
 
         holder.setText(R.id.tagTextView, data.getTagName());
         holder.setText(R.id.forumTitleTextView, data.getForumTitle());
@@ -58,6 +61,18 @@ public class ForumRecyclerViewAdapter extends CommonBaseAdapter<Forum>{
         }else{
 
             (holder.getView(R.id.isDelLayout)).setVisibility(View.GONE);
+
+            holder.getView(R.id.forumTitleTextView).setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+
+                    Bundle bundle = new Bundle();
+
+                    bundle.putString("fid", data.getFid());
+                    bundle.putString("flid", data.getFlid());
+                    Utilities.jumpToActivity(context, ForumDetailActivity.class, bundle, "forumBundle");
+                }
+            });
         }
     }
 

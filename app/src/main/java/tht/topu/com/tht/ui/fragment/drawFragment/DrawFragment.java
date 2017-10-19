@@ -120,7 +120,12 @@ public class DrawFragment extends Fragment {
 
     private String midStr;
 
+    private int amount = 0;
+    private int drawNum = 0;
+
     private boolean isDrawed = false;
+    private boolean canDrawed = false;
+
 
     private static final String TOKEN_KEY = "0x01";
     private static final String MID_KEY = "1x11";
@@ -145,6 +150,7 @@ public class DrawFragment extends Fragment {
         final View view = inflater.inflate(R.layout.fragment_draw, container, false);
 
         initView(view);
+
 
         SharedPreferences sharedPreferences = getActivity().getSharedPreferences("TokenData", MODE_PRIVATE);
 
@@ -246,17 +252,18 @@ public class DrawFragment extends Fragment {
         drawLayout = view.findViewById(R.id.drawLayout);
         drawImageView = view.findViewById(R.id.drawImageView);
 
-        Glide.with(getActivity()).load(R.drawable.banner).into(drawImageView);
         dialog = new ProgressDialog(getActivity());
 
     }
 
     //    初始化数据
     private void initData(){
-
         getDrawRecord();
-
         getDrawInfo();
+        getDrawImg();
+        getDrawNum();
+        getAmound();
+        getDrawNumMonth();
     }
 
     @Override
@@ -358,6 +365,8 @@ public class DrawFragment extends Fragment {
 
                     final String drawInfo = recordArr.getJSONObject(0).getString("Iinfo");
 
+                    Log.d("img", drawInfo);
+
                     if (uiHandler !=null){
 
                         uiHandler.post(new Runnable() {
@@ -374,6 +383,91 @@ public class DrawFragment extends Fragment {
             }
         });
 
+    }
+
+    private void getDrawImg(){
+
+        Toast.makeText(getActivity(), "shit", Toast.LENGTH_SHORT).show();
+
+        random32 = Utilities.getStringRandom(32);
+        time10 = Utilities.get10Time();
+        key64 = Utilities.get64Key(random32);
+
+        String json = "{\n" +
+                "    \"validate_k\": \"1\",\n" +
+                "    \"params\": [\n" +
+                "        {\n" +
+                "            \"type\": \"Advertise\",\n" +
+                "            \"act\": \"Select_List\",\n" +
+                "            \"para\": {\n" +
+                "                \"params\": {\n" +
+                "                    \"s_Aid\": \"4\",\n" +
+                "                    \"s_Keywords\": \"\",\n" +
+                "                    \"s_Order\": \"\",\n" +
+                "                    \"s_Total_parameter\": \"Aid,Atitle,Url,Pic1\"\n" +
+                "                },\n" +
+                "                \"pages\": {\n" +
+                "                    \"p_c\": \"\",\n" +
+                "                    \"p_First\": \"\",\n" +
+                "                    \"p_inputHeight\": \"\",\n" +
+                "                    \"p_Last\": \"\",\n" +
+                "                    \"p_method\": \"\",\n" +
+                "                    \"p_Next\": \"\",\n" +
+                "                    \"p_Page\": \"\",\n" +
+                "                    \"p_pageName\": \"\",\n" +
+                "                    \"p_PageStyle\": \"\",\n" +
+                "                    \"p_Pname\": \"\",\n" +
+                "                    \"p_Previous\": \"\",\n" +
+                "                    \"p_Ps\": \"\",\n" +
+                "                    \"p_sk\": \"\",\n" +
+                "                    \"p_Tp\": \"\"\n" +
+                "                },\n" +
+                "                \"sign_valid\": {\n" +
+                "                    \"source\": \"Android\",\n" +
+                "                    \"non_str\": \""+random32+"\",\n" +
+                "                    \"stamp\": \""+time10+"\",\n" +
+                "                    \"signature\": \""+Utilities.encode("s_Aid=4"+"s_Keywords="+"s_Order="+"s_Total_parameter=Aid,Atitle,Url,Pic1"+"non_str="+random32+"stamp="+time10+"keySecret="+key64)+"\"\n" +
+                "                }\n" +
+                "            }\n" +
+                "        }\n" +
+                "    ]\n" +
+                "}";
+
+        OkHttpClient okHttpClient = new OkHttpClient();
+
+        RequestBody requestBody = RequestBody.create(JSON, json);
+        Request request = new Request.Builder().url(API.getAPI()).post(requestBody).build();
+
+        okHttpClient.newCall(request).enqueue(new Callback() {
+
+            @Override
+            public void onFailure(Call call, IOException e) {
+
+            }
+
+            @Override
+            public void onResponse(Call call, Response response) throws IOException {
+
+                if (response.body() != null){
+
+                    try {
+                        JSONObject jsonObject = new JSONObject(response.body().string());
+
+                        final String imgUrl = jsonObject.getJSONArray("result").getJSONObject(0).getJSONArray("list").getJSONObject(0).getString("Pic1");
+                        uiHandler.post(new Runnable() {
+                            @Override
+                            public void run() {
+
+                                Glide.with(getActivity()).load(API.getHostName()+imgUrl).into(drawImageView);
+                            }
+                        });
+
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+        });
     }
 
     //获取中奖纪录用来轮播
@@ -828,7 +922,7 @@ public class DrawFragment extends Fragment {
 
                         JSONObject eachRecordObj = recordArr.getJSONObject(i);
 
-                        if (eachRecordObj.getInt("Pid") != 0){
+                        if (eachRecordObj.getBoolean("Is_Record")){
 
                             drawedMid.add(eachRecordObj.getString("Mid"));
                         }
@@ -853,7 +947,7 @@ public class DrawFragment extends Fragment {
                             Log.d("drawRandom", String.valueOf(randomNum));
 
                             //如果用户随机到指定数内则开始抽奖
-                            if (randomNum <= 100 - repeatMid.size() * 25){
+                            if (randomNum <= 100 - repeatMid.size() * amount){
 
                                 Random random = new Random();
                                 int drawNum = random.nextInt(prizes.size());
@@ -1091,6 +1185,29 @@ public class DrawFragment extends Fragment {
 
 
                                      soundPool.play(mSoundId, 1, 1, 1, 0, 1);//播放声音
+                                 }else if (!isDrawed){
+
+                                     isDrawed = true;
+
+                                     AlertDialog.Builder alertBuilder = new AlertDialog.Builder(getActivity());
+                                     AlertDialog alertDialog = alertBuilder
+                                             .setMessage("您这个月的可用抽奖次数已满，下个月再来吧")
+                                             .setTitle("摇一摇")
+                                             .setNeutralButton("好的", new DialogInterface.OnClickListener() {
+                                                 @Override
+                                                 public void onClick(DialogInterface dialogInterface, int i) {
+
+                                                     isShake = false;
+
+                                                     dialogInterface.dismiss();
+
+                                                     soundPool.stop(mSoundId);
+                                                 }
+                                             }).create();
+
+                                     alertDialog.setCancelable(false);
+                                     alertDialog.show();
+
                                  }else {
 
                                      isDrawed = false;
@@ -1098,6 +1215,220 @@ public class DrawFragment extends Fragment {
                                  }
                              }
                          });
+                     } catch (JSONException e) {
+                         e.printStackTrace();
+                     }
+                 }
+             }
+         });
+     }
+
+     private void getDrawNumMonth(){
+
+         random32 = Utilities.getStringRandom(32);
+         time10 = Utilities.get10Time();
+         key64 = Utilities.get64Key(random32);
+
+         SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
+         Calendar cale;
+         String firstday, lastday;
+         // 获取前月的第一天
+         cale = Calendar.getInstance();
+         cale.add(Calendar.MONTH, 0);
+         cale.set(Calendar.DAY_OF_MONTH, 1);
+         firstday = format.format(cale.getTime());
+         // 获取前月的最后一天
+         cale = Calendar.getInstance();
+         cale.add(Calendar.MONTH, 1);
+         cale.set(Calendar.DAY_OF_MONTH, 0);
+         lastday = format.format(cale.getTime());
+         Log.d("本月第一天和最后一天分别是 ： " , firstday + " and " + lastday);
+
+         String json = "{\n" +
+                 "    \"validate_k\": \"1\",\n" +
+                 "    \"params\": [\n" +
+                 "        {\n" +
+                 "            \"type\": \"Prize_Record\",\n" +
+                 "            \"act\": \"Select_List\",\n" +
+                 "            \"para\": {\n" +
+                 "                \"params\": {\n" +
+                 "                    \"s_d1\": \""+firstday+"\",\n" +
+                 "                    \"s_d2\": \""+lastday+"\",\n" +
+                 "                    \"s_Is_Record\":\"\",\n"+
+                 "                    \"s_Keywords\": \"\",\n" +
+                 "                    \"s_Mid\": \""+midStr+"\",\n" +
+                 "                    \"s_Order\": \"\",\n" +
+                 "                    \"s_Pid\": \"\",\n" +
+                 "                    \"s_Prid\": \"\",\n" +
+                 "                    \"s_Total_parameter\": \"Prid,Mid,Member,Mobile,Pdate,Pid,Ptitle,Is_Record\"\n" +
+                 "                },\n" +
+                 "                \"pages\": {\n" +
+                 "                    \"p_c\": \"\",\n" +
+                 "                    \"p_First\": \"\",\n" +
+                 "                    \"p_inputHeight\": \"\",\n" +
+                 "                    \"p_Last\": \"\",\n" +
+                 "                    \"p_method\": \"\",\n" +
+                 "                    \"p_Next\": \"\",\n" +
+                 "                    \"p_Page\": \"\",\n" +
+                 "                    \"p_pageName\": \"\",\n" +
+                 "                    \"p_PageStyle\": \"\",\n" +
+                 "                    \"p_Pname\": \"\",\n" +
+                 "                    \"p_Previous\": \"\",\n" +
+                 "                    \"p_Ps\": \"\",\n" +
+                 "                    \"p_sk\": \"\",\n" +
+                 "                    \"p_Tp\": \"\"\n" +
+                 "                },\n" +
+                 "                \"sign_valid\": {\n" +
+                 "                    \"source\": \"Android\",\n" +
+                 "                    \"non_str\": \""+random32+"\",\n" +
+                 "                    \"stamp\": \""+time10+"\",\n" +
+                 "                    \"signature\": \""+Utilities.encode("s_d1="+firstday+"s_d2="+lastday+"s_Is_Record="+"s_Keywords="+"s_Mid="+midStr+"s_Order="+"s_Pid="+"s_Prid="+"s_Total_parameter=Prid,Mid,Member,Mobile,Pdate,Pid,Ptitle,Is_Record"+"non_str="+random32+"stamp="+time10+"keySecret="+key64)+"\"\n" +
+                 "                }\n" +
+                 "            }\n" +
+                 "        }\n" +
+                 "    ]\n" +
+                 "}";
+         OkHttpClient okHttpClient = new OkHttpClient();
+
+         RequestBody requestBody = RequestBody.create(JSON, json);
+
+         Request request = new Request.Builder().url(API.getAPI()).post(requestBody).build();
+
+         okHttpClient.newCall(request).enqueue(new Callback() {
+
+             @Override
+             public void onFailure(Call call, IOException e) {
+
+             }
+
+             @Override
+             public void onResponse(Call call, Response response) throws IOException {
+
+                 if (response.body()!= null){
+
+                     try {
+                         JSONObject jsonObj = new JSONObject(response.body().string());
+                         JSONArray recordArr = jsonObj.getJSONArray("result").getJSONObject(0).getJSONArray("list");
+
+                         if (recordArr.length() >= drawNum){
+
+                             canDrawed = false;
+                         }else {
+
+                             canDrawed = true;
+                         }
+                     } catch (JSONException e) {
+                         e.printStackTrace();
+                     }
+
+                 }
+             }
+         });
+     }
+
+     private void getAmound(){
+
+         random32 = Utilities.getStringRandom(32);
+         time10 = Utilities.get10Time();
+         key64 = Utilities.get64Key(random32);
+
+         String json = "{\n" +
+                 "    \"validate_k\": \"1\",\n" +
+                 "    \"params\": [\n" +
+                 "        {\n" +
+                 "            \"type\": \"Init\",\n" +
+                 "            \"act\": \"getinfo\",\n" +
+                 "            \"para\": {\n" +
+                 "                \"params\": {\n" +
+                 "                    \"Iid\": \"11\"\n" +
+                 "                },\n" +
+                 "                \"sign_valid\": {\n" +
+                 "                    \"source\": \"Android\",\n" +
+                 "                    \"non_str\": \""+random32+"\",\n" +
+                 "                    \"stamp\": \""+time10+"\",\n" +
+                 "                    \"signature\": \""+Utilities.encode("Iid=11"+"non_str="+random32+"stamp="+time10+"keySecret="+key64)+"\"\n" +
+                 "                }\n" +
+                 "            }\n" +
+                 "        }\n" +
+                 "    ]\n" +
+                 "}";
+
+         OkHttpClient okHttpClient = new OkHttpClient();
+         RequestBody requestBody = RequestBody.create(JSON, json);
+         Request request = new Request.Builder().url(API.getAPI()).post(requestBody).build();
+
+         okHttpClient.newCall(request).enqueue(new Callback() {
+
+             @Override
+             public void onFailure(Call call, IOException e) {
+
+             }
+
+             @Override
+             public void onResponse(Call call, Response response) throws IOException {
+
+                 if (response.body()!= null){
+
+                     try {
+                         JSONObject jsonObject = new JSONObject(response.body().string());
+
+                         amount = jsonObject.getJSONArray("result").getJSONObject(0).getJSONObject("Iinfo").getInt("Iinfo");
+                     } catch (JSONException e) {
+                         e.printStackTrace();
+                     }
+                 }
+             }
+         });
+     }
+
+     private void getDrawNum(){
+
+         random32 = Utilities.getStringRandom(32);
+         time10 = Utilities.get10Time();
+         key64 = Utilities.get64Key(random32);
+
+         String json = "{\n" +
+                 "    \"validate_k\": \"1\",\n" +
+                 "    \"params\": [\n" +
+                 "        {\n" +
+                 "            \"type\": \"Init\",\n" +
+                 "            \"act\": \"getinfo\",\n" +
+                 "            \"para\": {\n" +
+                 "                \"params\": {\n" +
+                 "                    \"Iid\": \"7\"\n" +
+                 "                },\n" +
+                 "                \"sign_valid\": {\n" +
+                 "                    \"source\": \"Android\",\n" +
+                 "                    \"non_str\": \""+random32+"\",\n" +
+                 "                    \"stamp\": \""+time10+"\",\n" +
+                 "                    \"signature\": \""+Utilities.encode("Iid=7"+"non_str="+random32+"stamp="+time10+"keySecret="+key64)+"\"\n" +
+                 "                }\n" +
+                 "            }\n" +
+                 "        }\n" +
+                 "    ]\n" +
+                 "}";
+
+         OkHttpClient okHttpClient = new OkHttpClient();
+         RequestBody requestBody = RequestBody.create(JSON, json);
+         Request request = new Request.Builder().url(API.getAPI()).post(requestBody).build();
+
+         okHttpClient.newCall(request).enqueue(new Callback() {
+
+             @Override
+             public void onFailure(Call call, IOException e) {
+
+             }
+
+             @Override
+             public void onResponse(Call call, Response response) throws IOException {
+
+                 if (response.body()!= null){
+
+                     try {
+                         JSONObject jsonObject = new JSONObject(response.body().string());
+
+                         drawNum = jsonObject.getJSONArray("result").getJSONObject(0).getJSONObject("Iinfo").getInt("Iinfo");
+
                      } catch (JSONException e) {
                          e.printStackTrace();
                      }

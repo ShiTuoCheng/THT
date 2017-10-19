@@ -96,6 +96,9 @@
         <activity android:name="tht.topu.com.tht.ui.activity.ProductDetailActivity" />
         <activity android:name="tht.topu.com.tht.ui.activity.SplashActivity" />
         <activity android:name="tht.topu.com.tht.ui.activity.WebViewActivity" />
+        <activity android:name="tht.topu.com.tht.ui.activity.ShoppingCardActivity" />
+        <activity android:name="tht.topu.com.tht.ui.activity.ForumDetailActivity" />
+        <activity android:name="tht.topu.com.tht.ui.activity.AddressListActivity" />
 
         <service
             android:name="com.squareup.leakcanary.internal.HeapAnalyzerService"

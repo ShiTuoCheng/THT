@@ -124,7 +124,7 @@ public class UserForumReviewsFragment extends Fragment {
                 "                    \"s_Fcid\": \"\",\n" +
                 "                    \"s_Fid\": \"\",\n" +
                 "                    \"s_isDel\": \"\",\n" +
-                "                    \"s_Mid\": \"5\",\n" +
+                "                    \"s_Mid\": \""+mid+"\",\n" +
                 "                    \"s_Of_Fcid\": \"\",\n" +
                 "                    \"s_Order\": \"\",\n" +
                 "                    \"s_Total_parameter\": \"Fcid,Fid,Of_Fcid,Of_Comment,Mid,Member,Cinfo,Cdate,Layer,isDel\"\n" +
@@ -149,7 +149,7 @@ public class UserForumReviewsFragment extends Fragment {
                 "                    \"source\": \"Android\",\n" +
                 "                    \"non_str\": \""+random32+"\",\n" +
                 "                    \"stamp\": \""+time10+"\",\n" +
-                "                    \"signature\": \""+Utilities.encode("s_d1="+"s_d2="+"s_Fcid="+"s_Fid="+"s_isDel="+"s_Mid=5"+"s_Of_Fcid="+"s_Order="+"s_Total_parameter=Fcid,Fid,Of_Fcid,Of_Comment,Mid,Member,Cinfo,Cdate,Layer,isDel"+"non_str="+random32+"stamp="+time10+"keySecret="+key64)+"\"\n" +
+                "                    \"signature\": \""+Utilities.encode("s_d1="+"s_d2="+"s_Fcid="+"s_Fid="+"s_isDel="+"s_Mid="+mid+"s_Of_Fcid="+"s_Order="+"s_Total_parameter=Fcid,Fid,Of_Fcid,Of_Comment,Mid,Member,Cinfo,Cdate,Layer,isDel"+"non_str="+random32+"stamp="+time10+"keySecret="+key64)+"\"\n" +
                 "                }\n" +
                 "            }\n" +
                 "        }\n" +
@@ -300,7 +300,7 @@ public class UserForumReviewsFragment extends Fragment {
 
                             JSONObject eachForumObj = jsonArr.getJSONObject(i);
 
-                            Forum forum = builder.ForumTitle(eachForumObj.getString("Ftitle")).userName(eachForumObj.getJSONObject("Member").getString("Mname")).avatarIcon(API.getHostName()+eachForumObj.getJSONObject("Member").getString("Head_img")).likeNum(eachForumObj.getInt("Fabulous_Num")).tagName(eachForumObj.getString("Ltitle")).replyNum(eachForumObj.getInt("Comment_Num")).isTop(eachForumObj.getBoolean("isTop")).isDel(eachForumObj.getBoolean("isDel")).isFavorite(eachForumObj.getBoolean("Add_Essence")).build();
+                            Forum forum = builder.ForumTitle(eachForumObj.getString("Ftitle")).userName(eachForumObj.getJSONObject("Member").getString("Mname")).avatarIcon(API.getHostName()+eachForumObj.getJSONObject("Member").getString("Head_img")).likeNum(eachForumObj.getInt("Fabulous_Num")).tagName(eachForumObj.getString("Ltitle")).replyNum(eachForumObj.getInt("Comment_Num")).isTop(eachForumObj.getBoolean("isTop")).isDel(eachForumObj.getBoolean("isDel")).isFavorite(eachForumObj.getBoolean("Add_Essence")).fid(eachForumObj.getString("Fid")).flid(eachForumObj.getString("Flid")).vip("VIP:"+eachForumObj.getJSONObject("Member").getString("Members_LV")).build();
 
 
                                 forums.add(forum);
