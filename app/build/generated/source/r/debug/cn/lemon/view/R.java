@@ -21,15 +21,15 @@ public final class R {
         public static final int item_touch_helper_swipe_escape_velocity = 0x7f0a008b;
     }
     public static final class id {
-        public static final int $_recycler_view = 0x7f10019d;
-        public static final int $_refresh_layout = 0x7f10019c;
+        public static final int $_recycler_view = 0x7f10019e;
+        public static final int $_refresh_layout = 0x7f10019d;
         public static final int item_touch_helper_previous_elevation = 0x7f100006;
-        public static final int load_more_view = 0x7f10019e;
-        public static final int no_more_view = 0x7f10019f;
+        public static final int load_more_view = 0x7f10019f;
+        public static final int no_more_view = 0x7f1001a0;
     }
     public static final class layout {
-        public static final int view_refresh_recycler = 0x7f040070;
-        public static final int view_status_last = 0x7f040071;
+        public static final int view_refresh_recycler = 0x7f040071;
+        public static final int view_status_last = 0x7f040072;
     }
     public static final class styleable {
         public static final int[] RecyclerView = { 0x010100c4, 0x010100f1, 0x7f010135, 0x7f010136, 0x7f010137, 0x7f010138, 0x7f010139, 0x7f01013a, 0x7f01013b, 0x7f01013c, 0x7f01013d };

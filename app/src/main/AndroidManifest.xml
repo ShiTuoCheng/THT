@@ -88,7 +88,8 @@
         <activity android:name=".ui.activity.WebViewActivity" />
         <activity android:name=".ui.activity.ShoppingCardActivity" />
         <activity android:name=".ui.activity.ForumDetailActivity" />
-        <activity android:name=".ui.activity.AddressListActivity"></activity>
+        <activity android:name=".ui.activity.AddressListActivity" />
+        <activity android:name=".ui.activity.OrderListActivity"></activity>
     </application>
 
 </manifest>

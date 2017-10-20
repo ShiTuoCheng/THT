@@ -12,6 +12,7 @@ import android.webkit.WebViewClient;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import tht.topu.com.tht.R;
 
@@ -35,6 +36,8 @@ public class ProductDetailActivity extends AppCompatActivity {
         mdid = bundle.getString("mdid");
 
         initView();
+
+        Toast.makeText(ProductDetailActivity.this, mdid, Toast.LENGTH_SHORT).show();
 
         productDetailWebView.loadUrl("http://tht.65276588.cn/f/Mdse_detail.aspx?Mid="+mdid+"&Mids="+mid+"&Stem_from=2");
     }

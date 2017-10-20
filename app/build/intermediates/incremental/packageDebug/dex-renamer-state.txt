@@ -1,4 +1,4 @@
-#Thu Oct 19 16:44:03 CST 2017
+#Fri Oct 20 13:24:43 CST 2017
 base.0=/Users/shitakusei/Desktop/THT/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_a298f43ad6b276883c739d61a588cee1d848c91e
 renamed.1=classes.dex
 renamed.0=classes2.dex

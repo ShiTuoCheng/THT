@@ -239,8 +239,6 @@ public class ProductFragment extends Fragment {
                                 .Mcid(eachProPrice.getString("Mid"))
                                 .build();
 
-                        Log.d("productMid", eachProPrice.getString("Mid"));
-
                         if (isFirstLoad){
 
                             products.add(product);

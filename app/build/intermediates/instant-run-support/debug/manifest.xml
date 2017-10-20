@@ -99,6 +99,7 @@
         <activity android:name="tht.topu.com.tht.ui.activity.ShoppingCardActivity" />
         <activity android:name="tht.topu.com.tht.ui.activity.ForumDetailActivity" />
         <activity android:name="tht.topu.com.tht.ui.activity.AddressListActivity" />
+        <activity android:name="tht.topu.com.tht.ui.activity.OrderListActivity" />
 
         <service
             android:name="com.squareup.leakcanary.internal.HeapAnalyzerService"

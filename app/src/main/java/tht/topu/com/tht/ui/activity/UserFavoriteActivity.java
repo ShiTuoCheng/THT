@@ -235,7 +235,7 @@ public class UserFavoriteActivity extends BaseActivity {
                         for (int i = 0; i < jsonArray.length(); i++){
 
                             JSONObject eachJson = jsonArray.getJSONObject(i).getJSONObject("Mdse");
-                            Product product = builder.productTitle(eachJson.getString("Stitle")).productPrice("¥"+eachJson.getString("Price")).image(API.getHostName()+eachJson.getString("Pic2")).Mcid(jsonArray.getJSONObject(i).getString("Mcid")).build();
+                            Product product = builder.productTitle(eachJson.getString("Stitle")).productPrice("¥"+eachJson.getString("Price")).image(API.getHostName()+eachJson.getString("Pic2")).Mcid(jsonArray.getJSONObject(i).getString("Mdid")).build();
 
                             if (isFirstLoad){
 
@@ -284,10 +284,24 @@ public class UserFavoriteActivity extends BaseActivity {
         @Override
         protected void convert(ViewHolder holder, final Product data, final int position) {
 
+            SharedPreferences sharedPreferences = getSharedPreferences("TokenData", MODE_PRIVATE);
+            final String mid = sharedPreferences.getString(MID_KEY, "");
+
             ((TextView)holder.getView(R.id.userFavoriteTextView)).setText(data.getProductTitle());
             ((TextView)holder.getView(R.id.userFavoritePriceTextView)).setText(data.getProductPrice());
             Glide.with(UserFavoriteActivity.this).load(data.getImage()).into((ImageView)holder.getView(R.id.userFavoriteItemImageView));
 
+            ((ImageView)holder.getView(R.id.userFavoriteItemImageView)).setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+
+                    Bundle bundle = new Bundle();
+                    bundle.putString("mdid", data.getMcid());
+                    bundle.putString("mid", mid);
+
+                    Utilities.jumpToActivity(mContext, ProductDetailActivity.class, bundle, "bundleData");
+                }
+            });
             (holder.getView(R.id.deleteFavoriteItem)).setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {

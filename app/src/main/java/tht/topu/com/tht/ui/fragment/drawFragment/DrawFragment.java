@@ -208,7 +208,7 @@ public class DrawFragment extends Fragment {
                     isShake = true;
 
                     dialog.show();
-                    isDrawedAlready();
+                    getDrawNum();
                 }
             }
         });
@@ -261,9 +261,6 @@ public class DrawFragment extends Fragment {
         getDrawRecord();
         getDrawInfo();
         getDrawImg();
-        getDrawNum();
-        getAmound();
-        getDrawNumMonth();
     }
 
     @Override
@@ -386,8 +383,6 @@ public class DrawFragment extends Fragment {
     }
 
     private void getDrawImg(){
-
-        Toast.makeText(getActivity(), "shit", Toast.LENGTH_SHORT).show();
 
         random32 = Utilities.getStringRandom(32);
         time10 = Utilities.get10Time();
@@ -661,7 +656,7 @@ public class DrawFragment extends Fragment {
                                 isShake = true;
 
                                 dialog.show();
-                                isDrawedAlready();
+                                getDrawNum();
                             }
                         }
                     }
@@ -1160,32 +1155,7 @@ public class DrawFragment extends Fragment {
                              public void run() {
 
                                  dialog.dismiss();
-                                 if (recordArr.length() > 0){
-
-                                     isDrawed = true;
-
-                                     AlertDialog.Builder alertBuilder = new AlertDialog.Builder(getActivity());
-                                     AlertDialog alertDialog = alertBuilder
-                                             .setMessage("您今天已经抽过了，明天再来吧")
-                                             .setTitle("摇一摇")
-                                             .setNeutralButton("好的", new DialogInterface.OnClickListener() {
-                                                 @Override
-                                                 public void onClick(DialogInterface dialogInterface, int i) {
-
-                                                     isShake = false;
-
-                                                     dialogInterface.dismiss();
-
-                                                     soundPool.stop(mSoundId);
-                                                 }
-                                             }).create();
-
-                                     alertDialog.setCancelable(false);
-                                     alertDialog.show();
-
-
-                                     soundPool.play(mSoundId, 1, 1, 1, 0, 1);//播放声音
-                                 }else if (!isDrawed){
+                                 if (!canDrawed){
 
                                      isDrawed = true;
 
@@ -1208,6 +1178,32 @@ public class DrawFragment extends Fragment {
                                      alertDialog.setCancelable(false);
                                      alertDialog.show();
 
+                                     soundPool.play(mSoundId, 1, 1, 1, 0, 1);//播放声音
+
+                                 }else if (recordArr.length() > 0){
+
+                                     isDrawed = true;
+
+                                     AlertDialog.Builder alertBuilder = new AlertDialog.Builder(getActivity());
+                                     AlertDialog alertDialog = alertBuilder
+                                             .setMessage("您今天已经抽过了，明天再来吧")
+                                             .setTitle("摇一摇")
+                                             .setNeutralButton("好的", new DialogInterface.OnClickListener() {
+                                                 @Override
+                                                 public void onClick(DialogInterface dialogInterface, int i) {
+
+                                                     isShake = false;
+
+                                                     dialogInterface.dismiss();
+
+                                                     soundPool.stop(mSoundId);
+                                                 }
+                                             }).create();
+
+                                     alertDialog.setCancelable(false);
+                                     alertDialog.show();
+
+                                     soundPool.play(mSoundId, 1, 1, 1, 0, 1);//播放声音
                                  }else {
 
                                      isDrawed = false;
@@ -1317,6 +1313,8 @@ public class DrawFragment extends Fragment {
 
                              canDrawed = true;
                          }
+
+                         isDrawedAlready();
                      } catch (JSONException e) {
                          e.printStackTrace();
                      }
@@ -1373,6 +1371,8 @@ public class DrawFragment extends Fragment {
                          JSONObject jsonObject = new JSONObject(response.body().string());
 
                          amount = jsonObject.getJSONArray("result").getJSONObject(0).getJSONObject("Iinfo").getInt("Iinfo");
+
+                         getDrawNumMonth();
                      } catch (JSONException e) {
                          e.printStackTrace();
                      }
@@ -1428,6 +1428,8 @@ public class DrawFragment extends Fragment {
                          JSONObject jsonObject = new JSONObject(response.body().string());
 
                          drawNum = jsonObject.getJSONArray("result").getJSONObject(0).getJSONObject("Iinfo").getInt("Iinfo");
+
+                         getAmound();
 
                      } catch (JSONException e) {
                          e.printStackTrace();

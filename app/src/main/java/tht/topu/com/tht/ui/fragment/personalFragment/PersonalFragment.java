@@ -49,6 +49,7 @@ import tht.topu.com.tht.ui.activity.CardActivity;
 import tht.topu.com.tht.ui.activity.ChangePasswordActivity;
 import tht.topu.com.tht.ui.activity.ChangeUserInfoActivity;
 import tht.topu.com.tht.ui.activity.LoginActivity;
+import tht.topu.com.tht.ui.activity.OrderListActivity;
 import tht.topu.com.tht.ui.activity.PasswordActivity;
 import tht.topu.com.tht.ui.activity.SettingActivity;
 import tht.topu.com.tht.ui.activity.ShoppingCardActivity;
@@ -290,6 +291,8 @@ public class PersonalFragment extends Fragment {
             }
         });
 
+        final Bundle bundle = new Bundle();
+
         personal_gridview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
@@ -297,16 +300,24 @@ public class PersonalFragment extends Fragment {
 
                 switch (i){
                     case 0:
-                        Toast.makeText(getActivity(), "全部订单", Toast.LENGTH_SHORT).show();
+
+                        bundle.putInt("ostatus", 0);
+                        Utilities.jumpToActivity(getActivity(), OrderListActivity.class, bundle, "bundleOstatus");
                         break;
                     case 1:
-                        Toast.makeText(getActivity(), "代付款", Toast.LENGTH_SHORT).show();
+
+                        bundle.putInt("ostatus", 2);
+                        Utilities.jumpToActivity(getActivity(), OrderListActivity.class, bundle, "bundleOstatus");
                         break;
                     case 2:
-                        Toast.makeText(getActivity(), "代发货", Toast.LENGTH_SHORT).show();
+
+                        bundle.putInt("ostatus", 4);
+                        Utilities.jumpToActivity(getActivity(), OrderListActivity.class, bundle, "bundleOstatus");
                         break;
                     case 3:
-                        Toast.makeText(getActivity(), "已发货", Toast.LENGTH_SHORT).show();
+
+                        bundle.putInt("ostatus", 5);
+                        Utilities.jumpToActivity(getActivity(), OrderListActivity.class, bundle, "bundleOstatus");
                         break;
                 }
             }

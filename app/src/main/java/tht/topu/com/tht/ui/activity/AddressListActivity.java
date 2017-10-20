@@ -46,7 +46,7 @@ public class AddressListActivity extends AppCompatActivity {
             }
         });
 
-        addressListWebView.loadUrl("http://tht.65276588.cn/f/AddrssList.aspx?Mid="+mid+"?&Stem_from=2");
+        addressListWebView.loadUrl("http://tht.65276588.cn/f/AddrssList.aspx?Mid="+mid+"&Stem_from=2");
     }
 
     private void initView(){

@@ -2,38 +2,35 @@
 <instant-run
     abi="arm64-v8a,armeabi-v7a,armeabi"
     api-level="25"
-    build-mode="HOT_WARM"
+    build-mode="COLD"
     density="420dpi"
     format="10"
     plugin-version="2.3.3"
-    timestamp="1508404192310"
+    timestamp="1508478235431"
     token="-4246449883703749462"
-    verifier="COMPATIBLE" >
+    verifier="COLD_SWAP_REQUESTED" >
 
     <task
         name="javac"
-        duration="0" />
+        duration="2980" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="0" />
+        duration="17" />
     <task
         name="verifier"
-        duration="0" />
+        duration="4" />
 
     <artifact
-        location="/Users/shitakusei/Desktop/THT/app/build/intermediates/instant-run-resources/resources-debug.ir.ap_"
-        type="RESOURCES" />
+        location="/Users/shitakusei/Desktop/THT/app/build/intermediates/split-apk/debug/slices/slice_8.apk"
+        type="SPLIT" />
 
     <build
         build-mode="FULL"
-        timestamp="1508403908702"
+        timestamp="1508478070077"
         verifier="FULL_BUILD_REQUESTED" >
-        <artifact
-            location="/Users/shitakusei/Desktop/THT/app/build/intermediates/split-apk/debug/slices/slice_4.apk"
-            type="SPLIT" />
         <artifact
             location="/Users/shitakusei/Desktop/THT/app/build/intermediates/split-apk/debug/slices/slice_7.apk"
             type="SPLIT" />
@@ -48,6 +45,9 @@
             type="SPLIT" />
         <artifact
             location="/Users/shitakusei/Desktop/THT/app/build/intermediates/split-apk/debug/slices/slice_0.apk"
+            type="SPLIT" />
+        <artifact
+            location="/Users/shitakusei/Desktop/THT/app/build/intermediates/split-apk/debug/slices/slice_4.apk"
             type="SPLIT" />
         <artifact
             location="/Users/shitakusei/Desktop/THT/app/build/intermediates/split-apk/debug/slices/slice_3.apk"
@@ -69,36 +69,12 @@
             type="SPLIT_MAIN" />
     </build>
     <build
-        build-mode="HOT_WARM"
-        timestamp="1508403966669"
-        verifier="COMPATIBLE" >
+        build-mode="COLD"
+        timestamp="1508478235431"
+        verifier="COLD_SWAP_REQUESTED" >
         <artifact
-            location="/Users/shitakusei/Desktop/THT/app/build/intermediates/builds/debug/1508403966669/classes.dex"
-            type="RELOAD_DEX" />
-    </build>
-    <build
-        build-mode="HOT_WARM"
-        timestamp="1508404101093"
-        verifier="COMPATIBLE" >
-        <artifact
-            location="/Users/shitakusei/Desktop/THT/app/build/intermediates/builds/debug/1508404101093/classes.dex"
-            type="RELOAD_DEX" />
-    </build>
-    <build
-        build-mode="HOT_WARM"
-        timestamp="1508404163922"
-        verifier="COMPATIBLE" >
-        <artifact
-            location="/Users/shitakusei/Desktop/THT/app/build/intermediates/builds/debug/1508404163922/classes.dex"
-            type="RELOAD_DEX" />
-    </build>
-    <build
-        build-mode="HOT_WARM"
-        timestamp="1508404192310"
-        verifier="COMPATIBLE" >
-        <artifact
-            location="/Users/shitakusei/Desktop/THT/app/build/intermediates/instant-run-resources/resources-debug.ir.ap_"
-            type="RESOURCES" />
+            location="/Users/shitakusei/Desktop/THT/app/build/intermediates/split-apk/debug/slices/slice_8.apk"
+            type="SPLIT" />
     </build>
 
 </instant-run>
