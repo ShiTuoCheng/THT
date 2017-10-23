@@ -254,6 +254,8 @@ public class DrawFragment extends Fragment {
 
         dialog = new ProgressDialog(getActivity());
 
+        dialog.setCancelable(false);
+
     }
 
     //    初始化数据
@@ -472,6 +474,20 @@ public class DrawFragment extends Fragment {
         time10 = Utilities.get10Time();
         key64 = Utilities.get64Key(random32);
 
+        SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
+        Calendar cale;
+        String firstday, lastday;
+        // 获取前月的第一天
+        cale = Calendar.getInstance();
+        cale.add(Calendar.MONTH, 0);
+        cale.set(Calendar.DAY_OF_MONTH, 1);
+        firstday = format.format(cale.getTime());
+        // 获取前月的最后一天
+        cale = Calendar.getInstance();
+        cale.add(Calendar.MONTH, 1);
+        cale.set(Calendar.DAY_OF_MONTH, 0);
+        lastday = format.format(cale.getTime());
+
         String json = "{\n" +
                 "    \"validate_k\": \"1\",\n" +
                 "    \"params\": [\n" +
@@ -480,12 +496,12 @@ public class DrawFragment extends Fragment {
                 "            \"act\": \"Select_List\",\n" +
                 "            \"para\": {\n" +
                 "                \"params\": {\n" +
-                "                    \"s_d1\": \"\",\n" +
-                "                    \"s_d2\": \"\",\n" +
+                "                    \"s_d1\": \""+firstday+"\",\n" +
+                "                    \"s_d2\": \""+lastday+"\",\n" +
                 "                    \"s_Is_Record\":\"\",\n"+
                 "                    \"s_Keywords\": \"\",\n" +
                 "                    \"s_Mid\": \"\",\n" +
-                "                    \"s_Order\": \"\",\n" +
+                "                    \"s_Order\": \"Pdate desc\",\n" +
                 "                    \"s_Pid\": \"\",\n" +
                 "                    \"s_Prid\": \"\",\n" +
                 "                    \"s_Total_parameter\": \"Prid,Mid,Member,Mobile,Pdate,Pid,Ptitle,Is_Record\"\n" +
@@ -510,7 +526,7 @@ public class DrawFragment extends Fragment {
                 "                    \"source\": \"Android\",\n" +
                 "                    \"non_str\": \""+random32+"\",\n" +
                 "                    \"stamp\": \""+time10+"\",\n" +
-                "                    \"signature\": \""+Utilities.encode("s_d1="+"s_d2="+"s_Is_Record="+"s_Keywords="+"s_Mid="+"s_Order="+"s_Pid="+"s_Prid="+"s_Total_parameter=Prid,Mid,Member,Mobile,Pdate,Pid,Ptitle,Is_Record"+"non_str="+random32+"stamp="+time10+"keySecret="+key64)+"\"\n" +
+                "                    \"signature\": \""+Utilities.encode("s_d1="+firstday+"s_d2="+lastday+"s_Is_Record="+"s_Keywords="+"s_Mid="+"s_Order=Pdate desc"+"s_Pid="+"s_Prid="+"s_Total_parameter=Prid,Mid,Member,Mobile,Pdate,Pid,Ptitle,Is_Record"+"non_str="+random32+"stamp="+time10+"keySecret="+key64)+"\"\n" +
                 "                }\n" +
                 "            }\n" +
                 "        }\n" +
@@ -548,6 +564,11 @@ public class DrawFragment extends Fragment {
                     JSONArray recordArr = jsonObject.getJSONArray("result").getJSONObject(0).getJSONArray("list");
 
                     for (int i = 0; i < recordArr.length(); i++){
+
+                        if (i > 10){
+
+                            break;
+                        }
 
                         JSONObject eachRecordObj = recordArr.getJSONObject(i);
 

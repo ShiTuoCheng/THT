@@ -117,9 +117,7 @@ public class DrawRecordActivity extends AppCompatActivity {
         dividerLine.setSize(2);
 
         drawRecordRecyclerView.setLayoutManager(linearLayoutManager);
-        drawRecordRecyclerView.setAdapter(rankRecyclerViewAdapter);
 
-        rankRecyclerViewAdapter.notifyDataSetChanged();
         //初始化 开始加载更多的loading View
         rankRecyclerViewAdapter.setLoadingView(R.layout.progress_item);
         //加载完成，更新footer view提示
@@ -152,6 +150,8 @@ public class DrawRecordActivity extends AppCompatActivity {
 
             initData(true);
         }
+
+        drawRecordRecyclerView.setAdapter(rankRecyclerViewAdapter);
     }
 
     private void initView(){
@@ -169,14 +169,14 @@ public class DrawRecordActivity extends AppCompatActivity {
 
         if (isFirstLoad){
 
-            ranks.clear();
             currentPage = 1;
+            ranks.clear();
         }else {
 
             moreRanks.clear();
         }
 
-        String json = "{\n" +
+        final String json = "{\n" +
                 "    \"validate_k\": \"1\",\n" +
                 "    \"params\": [\n" +
                 "        {\n" +
@@ -252,6 +252,9 @@ public class DrawRecordActivity extends AppCompatActivity {
                     JSONObject jsonObject = new JSONObject(response.body().string());
                     JSONArray recordArr = jsonObject.getJSONArray("result").getJSONObject(0).getJSONArray("list");
 
+                    Log.d("jsonResult", jsonObject.toString());
+                    Log.d("json", json);
+
                     totalPage = jsonObject.getJSONArray("result").getJSONObject(0).getJSONObject("page").getInt("Pc");
                     Rank.Builder rankBuilder = new Rank.Builder();
 
@@ -290,7 +293,6 @@ public class DrawRecordActivity extends AppCompatActivity {
 
                                 rankRecyclerViewAdapter.loadEnd();
                             }
-                            rankRecyclerViewAdapter.notifyDataSetChanged();
                         }
                     });
 

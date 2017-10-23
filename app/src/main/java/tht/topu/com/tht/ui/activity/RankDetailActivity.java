@@ -613,7 +613,7 @@ public class RankDetailActivity extends BaseActivity {
                             for (int i = 0; i < jsonArr.length(); i++){
 
                                 JSONObject eachJson = jsonArr.getJSONObject(i);
-                                Product product = builder.productPrice("¥"+eachJson.getString("Price")).productTitle(eachJson.getString("Ctitle")).image(API.getHostName() + eachJson.getJSONObject("Mdse").getString("Pic2")).point(String.valueOf(eachJson.getInt("Price") * percenet)).build();
+                                Product product = builder.productPrice("¥"+eachJson.getString("Price")).productTitle(eachJson.getString("Mtitle")).image(API.getHostName() + eachJson.getJSONObject("Mdse").getString("Pic2")).point(String.valueOf(eachJson.getInt("Price") * percenet)).Mcid(eachJson.getString("Mid")).build();
 
                                 products.add(product);
                             }

@@ -37,8 +37,6 @@ public class ProductDetailActivity extends AppCompatActivity {
 
         initView();
 
-        Toast.makeText(ProductDetailActivity.this, mdid, Toast.LENGTH_SHORT).show();
-
         productDetailWebView.loadUrl("http://tht.65276588.cn/f/Mdse_detail.aspx?Mid="+mdid+"&Mids="+mid+"&Stem_from=2");
     }
 

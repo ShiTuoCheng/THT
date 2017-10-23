@@ -327,8 +327,11 @@ public class PersonalFragment extends Fragment {
     /* 黑色设置样式*/
     private void changeBlack(){
 
-        //背景图片
-        Glide.with(getActivity()).load(R.drawable.personal_bj_back).into(personal_background_ImageView);
+        if (getActivity() != null){
+
+            //背景图片
+            Glide.with(getActivity()).load(R.drawable.personal_bj_back).into(personal_background_ImageView);
+        }
         //右侧背景颜色
         personal_rigint_relative.setBackgroundResource(R.drawable.personal_right_border_balck);
         //右侧圆形
@@ -361,8 +364,11 @@ public class PersonalFragment extends Fragment {
     /* 银色设置样式*/
     private void changeSilver(){
 
-        //背景图片
-        Glide.with(getActivity()).load(R.drawable.personal_bj_silvery).into(personal_background_ImageView);
+        if (getActivity() != null){
+
+            //背景图片
+            Glide.with(getActivity()).load(R.drawable.personal_bj_silvery).into(personal_background_ImageView);
+        }
         //右侧背景颜色
         personal_rigint_relative.setBackgroundResource(R.drawable.personal_right_border_silvery);
         //右侧圆形

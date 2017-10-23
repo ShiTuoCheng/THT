@@ -68,6 +68,7 @@ public class RankRecyclerViewAdapter extends CommonBaseAdapter<Rank>{
         ((holder.getView(R.id.rankNum))).setVisibility(View.VISIBLE);
         (holder.getView(R.id.rankHighLight)).setVisibility(View.VISIBLE);
 
+        //如果用户没有图片，则显示默认图片
         if (!data.getUserIcon().equals("")){
 
             Glide.with(context).load(data.getUserIcon())
@@ -75,8 +76,10 @@ public class RankRecyclerViewAdapter extends CommonBaseAdapter<Rank>{
                     .into((userIconImageView));
         }else {
 
-
-            userIconImageView.setImageDrawable(context.getResources().getDrawable(R.mipmap.login_logo));
+            Glide.with(context).load(R.mipmap.login_logo)
+                    .apply(bitmapTransform(new CropCircleTransformation()))
+                    .into((userIconImageView));
+//            userIconImageView.setImageDrawable(context.getResources().getDrawable(R.mipmap.login_logo));
         }
 
         if (data.getUserRank() != null){

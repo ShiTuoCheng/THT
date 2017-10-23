@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 
 import tht.topu.com.tht.R;
@@ -14,6 +15,7 @@ public class AddressListActivity extends AppCompatActivity {
 
     private WebView addressListWebView;
     private LinearLayout loadingLayout;
+    private ImageView back;
     private static final String MID_KEY = "1x11";
 
     private String mid;
@@ -27,6 +29,14 @@ public class AddressListActivity extends AppCompatActivity {
 
         SharedPreferences sharedPreferences = getSharedPreferences("TokenData", MODE_PRIVATE);
         mid = sharedPreferences.getString(MID_KEY, "");
+
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                AddressListActivity.this.finish();
+            }
+        });
 
         addressListWebView.getSettings().setJavaScriptEnabled(true);
 
@@ -53,5 +63,6 @@ public class AddressListActivity extends AppCompatActivity {
 
         addressListWebView = (WebView)findViewById(R.id.addressListWebView);
         loadingLayout = (LinearLayout)findViewById(R.id.loadingLayout);
+        back = (ImageView)findViewById(R.id.forumPostBack);
     }
 }

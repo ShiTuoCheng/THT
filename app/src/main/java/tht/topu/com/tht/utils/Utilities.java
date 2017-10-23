@@ -73,6 +73,7 @@ public class Utilities {
     public static void jumpToActivity(Context context, Class destinationActivity, Bundle bundle, String dataName) {
         Intent intent = new Intent(context, destinationActivity);
         intent.putExtra(dataName, bundle);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         context.startActivity(intent);
     }
 

@@ -436,7 +436,10 @@ public class MainFragment extends Fragment {
                                 @Override
                                 public void run() {
 
-                                    swipeRefreshLayout.setRefreshing(false);
+                                    if (swipeRefreshLayout.isRefreshing()){
+
+                                        swipeRefreshLayout.setRefreshing(false);
+                                    }
                                     Log.d("finish", "loadFinish");
                                     if (MainFragment.this.isAdded()){
 

@@ -10,6 +10,7 @@ import android.view.View;
 import android.webkit.JavascriptInterface;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
@@ -19,6 +20,7 @@ public class ForumDetailActivity extends AppCompatActivity {
 
     private WebView forumDetailWebView;
     private LinearLayout loadingLayout;
+    private ImageView back;
     private LocalBroadcastManager localBroadcastManager;
     private Intent broadcastIntent;
 
@@ -45,6 +47,14 @@ public class ForumDetailActivity extends AppCompatActivity {
 
         forumDetailWebView.getSettings().setJavaScriptEnabled(true);
 
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                ForumDetailActivity.this.finish();
+            }
+        });
+
         forumDetailWebView.addJavascriptInterface(this, "pageApp");
         forumDetailWebView.setWebViewClient(new WebViewClient(){
 
@@ -68,6 +78,7 @@ public class ForumDetailActivity extends AppCompatActivity {
 
         loadingLayout = (LinearLayout)findViewById(R.id.loadingLayout);
         forumDetailWebView = (WebView)findViewById(R.id.forumDetailWebView);
+        back = (ImageView)findViewById(R.id.forumPostBack);
     }
 
     @JavascriptInterface
@@ -75,8 +86,7 @@ public class ForumDetailActivity extends AppCompatActivity {
         forumDetailWebView.post(new Runnable() {
             @Override
             public void run() {
-//默认发送第一次广播
-
+                //默认发送第一次广播
                 broadcastIntent = new Intent("com.example.mybroadcast.MY_BROADCAST");
                 broadcastIntent.putExtra("Flid", flid);
                 localBroadcastManager.sendBroadcast(broadcastIntent);
