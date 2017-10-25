@@ -47,8 +47,7 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <ImageView
-                android:scaleType="center"
+            <tht.topu.com.tht.utils.CircleImageView
                 android:layout_gravity="center"
                 android:layout_width="76dp"
                 android:id="@+id/changeUserAvatar"

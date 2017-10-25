@@ -1026,14 +1026,7 @@
                     "endOffset": 7027
                 },
                 "from": {
-                    "file": "/Users/shitakusei/Desktop/THT/app/src/main/res/values/colors.xml",
-                    "position": {
-                        "startLine": 46,
-                        "startColumn": 4,
-                        "startOffset": 1760,
-                        "endColumn": 42,
-                        "endOffset": 1798
-                    }
+                    "file": "/Users/shitakusei/Desktop/THT/app/src/main/res/values/colors.xml"
                 }
             },
             {
@@ -5246,7 +5239,14 @@
                     "endOffset": 69266
                 },
                 "from": {
-                    "file": "/Users/shitakusei/Desktop/THT/app/src/main/res/values/strings.xml"
+                    "file": "/Users/shitakusei/Desktop/THT/app/src/main/res/values/strings.xml",
+                    "position": {
+                        "startLine": 22,
+                        "startColumn": 4,
+                        "startOffset": 727,
+                        "endColumn": 56,
+                        "endOffset": 779
+                    }
                 }
             },
             {
@@ -5270,7 +5270,14 @@
                     "endOffset": 69373
                 },
                 "from": {
-                    "file": "/Users/shitakusei/Desktop/THT/app/src/main/res/values/strings.xml"
+                    "file": "/Users/shitakusei/Desktop/THT/app/src/main/res/values/strings.xml",
+                    "position": {
+                        "startLine": 24,
+                        "startColumn": 4,
+                        "startOffset": 842,
+                        "endColumn": 48,
+                        "endOffset": 886
+                    }
                 }
             },
             {

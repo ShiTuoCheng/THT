@@ -20,7 +20,7 @@
     <string name="forgotPassword">忘记密码?</string>
 
     <string name="personal_all_order">全部订单</string>
-    <string name="personal_pending_payment">待付款</string>
+    <string name="personal_pending_payment">未付款</string>
     <string name="personal_shipment_pending">待发货</string>
-    <string name="personal_shipped">已发货</string>
+    <string name="personal_shipped">待收货</string>
 </resources>

@@ -60,6 +60,8 @@ public class MainActivity extends AppCompatActivity {
 
     public static final MediaType JSON = MediaType
             .parse("application/json; charset=utf-8");
+
+    private boolean isCheckToken = false;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -85,7 +87,7 @@ public class MainActivity extends AppCompatActivity {
         viewPager.setOffscreenPageLimit(4);
 
         BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
-                = new BottomNavigationView.OnNavigationItemSelectedListener() {
+                =   new BottomNavigationView.OnNavigationItemSelectedListener() {
 
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
@@ -149,7 +151,7 @@ public class MainActivity extends AppCompatActivity {
 
         setupViewPager(viewPager);
 
-        validToken();
+        validToken(true);
     }
 
     private void setupViewPager(ViewPager viewPager) {
@@ -167,15 +169,22 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
-//        validToken();
+        if (!isCheckToken){
+
+            validToken(false);
+        }
+
+        isCheckToken = false;
     }
 
     //验证token
-    private void validToken(){
+    private void validToken(boolean isFirst){
 
         random32 = Utilities.getStringRandom(32);
         time10 = Utilities.get10Time();
         key64 = Utilities.get64Key(random32);
+
+        isCheckToken = true;
 
         final SharedPreferences sharedPreferences = getSharedPreferences("TokenData", Context.MODE_PRIVATE);
         String token = sharedPreferences.getString(TOKEN_KEY, "");
@@ -191,30 +200,59 @@ public class MainActivity extends AppCompatActivity {
             return;
         }
 
-        final String json = "{\n" +
-                "    \"validate_k\": \"1\",\n" +
-                "    \"params\": [\n" +
-                "        {\n" +
-                "            \"type\": \"Members\",\n" +
-                "            \"act\": \"Select_Detail\",\n" +
-                "            \"para\": {\n" +
-                "                \"params\": {\n" +
-                "                    \"d_Alive\": \"\",\n" +
-                "                    \"d_IsUpdateToken\": \"1\",\n"+
-                "                    \"d_Mid\": \""+mid+"\",\n" +
-                "                    \"d_Token\": \""+token+"\",\n" +
-                "                    \"s_Total_parameter\": \"Mid,OpenID,Nickname,Head_img,Mname,Sex,Mobile,Rdate,Birthday,Alive,Gag,The_sun,Members_LV,Orders_count,Integral,card,Passwd,Addr,Stem_from,Token,Token_expiry,Token_IP,Referee_Mid,Referee2_Mid,Referee,Referee2,Reward,Withdraw,Contribution_Award,Balance\"\n" +
-                "                },\n" +
-                "                \"sign_valid\": {\n" +
-                "                    \"source\": \"Android\",\n" +
-                "                    \"non_str\": \""+random32+"\",\n" +
-                "                    \"stamp\": \""+time10+"\",\n" +
-                "                    \"signature\": \""+Utilities.encode("d_Alive="+"d_IsUpdateToken=1"+"d_Mid="+mid+"d_Token="+token+"s_Total_parameter=Mid,OpenID,Nickname,Head_img,Mname,Sex,Mobile,Rdate,Birthday,Alive,Gag,The_sun,Members_LV,Orders_count,Integral,card,Passwd,Addr,Stem_from,Token,Token_expiry,Token_IP,Referee_Mid,Referee2_Mid,Referee,Referee2,Reward,Withdraw,Contribution_Award,Balance"+"non_str="+random32+"stamp="+time10+"keySecret="+key64)+"\"\n" +
-                "                }\n" +
-                "            }\n" +
-                "        }\n" +
-                "    ]\n" +
-                "}";
+        final String json;
+
+        if (isFirst){
+            json = "{\n" +
+                    "    \"validate_k\": \"1\",\n" +
+                    "    \"params\": [\n" +
+                    "        {\n" +
+                    "            \"type\": \"Members\",\n" +
+                    "            \"act\": \"Select_Detail\",\n" +
+                    "            \"para\": {\n" +
+                    "                \"params\": {\n" +
+                    "                    \"d_Alive\": \"\",\n" +
+                    "                    \"d_IsUpdateToken\": \"1\",\n"+
+                    "                    \"d_Mid\": \""+mid+"\",\n" +
+                    "                    \"d_Token\": \""+token+"\",\n" +
+                    "                    \"s_Total_parameter\": \"Mid,OpenID,Nickname,Head_img,Mname,Sex,Mobile,Rdate,Birthday,Alive,Gag,The_sun,Members_LV,Orders_count,Integral,card,Passwd,Addr,Stem_from,Token,Token_expiry,Token_IP,Referee_Mid,Referee2_Mid,Referee,Referee2,Reward,Withdraw,Contribution_Award,Balance\"\n" +
+                    "                },\n" +
+                    "                \"sign_valid\": {\n" +
+                    "                    \"source\": \"Android\",\n" +
+                    "                    \"non_str\": \""+random32+"\",\n" +
+                    "                    \"stamp\": \""+time10+"\",\n" +
+                    "                    \"signature\": \""+Utilities.encode("d_Alive="+"d_IsUpdateToken=1"+"d_Mid="+mid+"d_Token="+token+"s_Total_parameter=Mid,OpenID,Nickname,Head_img,Mname,Sex,Mobile,Rdate,Birthday,Alive,Gag,The_sun,Members_LV,Orders_count,Integral,card,Passwd,Addr,Stem_from,Token,Token_expiry,Token_IP,Referee_Mid,Referee2_Mid,Referee,Referee2,Reward,Withdraw,Contribution_Award,Balance"+"non_str="+random32+"stamp="+time10+"keySecret="+key64)+"\"\n" +
+                    "                }\n" +
+                    "            }\n" +
+                    "        }\n" +
+                    "    ]\n" +
+                    "}";
+        }else{
+            json = "{\n" +
+                    "    \"validate_k\": \"1\",\n" +
+                    "    \"params\": [\n" +
+                    "        {\n" +
+                    "            \"type\": \"Members\",\n" +
+                    "            \"act\": \"Select_Detail\",\n" +
+                    "            \"para\": {\n" +
+                    "                \"params\": {\n" +
+                    "                    \"d_Alive\": \"\",\n" +
+                    "                    \"d_IsUpdateToken\": \"0\",\n"+
+                    "                    \"d_Mid\": \""+mid+"\",\n" +
+                    "                    \"d_Token\": \""+token+"\",\n" +
+                    "                    \"s_Total_parameter\": \"Mid,OpenID,Nickname,Head_img,Mname,Sex,Mobile,Rdate,Birthday,Alive,Gag,The_sun,Members_LV,Orders_count,Integral,card,Passwd,Addr,Stem_from,Token,Token_expiry,Token_IP,Referee_Mid,Referee2_Mid,Referee,Referee2,Reward,Withdraw,Contribution_Award,Balance\"\n" +
+                    "                },\n" +
+                    "                \"sign_valid\": {\n" +
+                    "                    \"source\": \"Android\",\n" +
+                    "                    \"non_str\": \""+random32+"\",\n" +
+                    "                    \"stamp\": \""+time10+"\",\n" +
+                    "                    \"signature\": \""+Utilities.encode("d_Alive="+"d_IsUpdateToken=0"+"d_Mid="+mid+"d_Token="+token+"s_Total_parameter=Mid,OpenID,Nickname,Head_img,Mname,Sex,Mobile,Rdate,Birthday,Alive,Gag,The_sun,Members_LV,Orders_count,Integral,card,Passwd,Addr,Stem_from,Token,Token_expiry,Token_IP,Referee_Mid,Referee2_Mid,Referee,Referee2,Reward,Withdraw,Contribution_Award,Balance"+"non_str="+random32+"stamp="+time10+"keySecret="+key64)+"\"\n" +
+                    "                }\n" +
+                    "            }\n" +
+                    "        }\n" +
+                    "    ]\n" +
+                    "}";
+        }
 
         OkHttpClient okHttpClient = new OkHttpClient();
 
@@ -247,6 +285,8 @@ public class MainActivity extends AppCompatActivity {
                         final String newToken = jsonObject.getJSONArray("result").getJSONObject(0).getJSONObject("detail").getString("Token");
                         final int grade = jsonObject.getJSONArray("result").getJSONObject(0).getJSONObject("detail").getJSONObject("card").getInt("Grade");
 
+                        Log.d("login", jsonObject.toString());
+
                         uiHandler.post(new Runnable() {
                             @Override
                             public void run() {
@@ -258,7 +298,7 @@ public class MainActivity extends AppCompatActivity {
                                     editor.putString(TOKEN_KEY, "");
                                     editor.putString(MID_KEY, "");
                                     editor.apply();
-
+//
                                     MainActivity.this.finish();
                                     Utilities.jumpToActivity(MainActivity.this, LoginActivity.class);
                                     return;

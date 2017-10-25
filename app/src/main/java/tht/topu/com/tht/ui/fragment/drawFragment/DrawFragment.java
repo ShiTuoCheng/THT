@@ -126,6 +126,8 @@ public class DrawFragment extends Fragment {
     private boolean isDrawed = false;
     private boolean canDrawed = false;
 
+    private boolean isVisible = false;
+
 
     private static final String TOKEN_KEY = "0x01";
     private static final String MID_KEY = "1x11";
@@ -141,6 +143,17 @@ public class DrawFragment extends Fragment {
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        if(isVisible) {
+
+            shakePhone();
+        } else {
+
+            if (sensorManager != null){
+
+                sensorManager.unregisterListener(sensorEventListener);
+            }
+        }
     }
 
     @Override
@@ -228,6 +241,7 @@ public class DrawFragment extends Fragment {
                 Utilities.jumpToActivity(getActivity(), DrawRulesActivity.class);
             }
         });
+
         return view;
     }
 
@@ -277,6 +291,61 @@ public class DrawFragment extends Fragment {
 
                 sensorManager.unregisterListener(sensorEventListener);
             }
+        }
+    }
+
+    @Override
+    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+        if(isVisible) {
+
+            shakePhone();
+        } else {
+
+            if (sensorManager != null){
+
+                sensorManager.unregisterListener(sensorEventListener);
+            }
+        }
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+
+        if(isVisible) {
+
+            shakePhone();
+        } else {
+
+            if (sensorManager != null){
+
+                sensorManager.unregisterListener(sensorEventListener);
+            }
+        }
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        if(isVisible) {
+
+            shakePhone();
+        } else {
+
+            if (sensorManager != null){
+
+                sensorManager.unregisterListener(sensorEventListener);
+            }
+        }
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        if (sensorManager != null){
+
+            sensorManager.unregisterListener(sensorEventListener);
         }
     }
 

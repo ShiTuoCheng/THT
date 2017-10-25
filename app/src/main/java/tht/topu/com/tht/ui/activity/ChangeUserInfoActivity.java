@@ -49,13 +49,14 @@ import okhttp3.RequestBody;
 import okhttp3.Response;
 import tht.topu.com.tht.R;
 import tht.topu.com.tht.utils.API;
+import tht.topu.com.tht.utils.CircleImageView;
 import tht.topu.com.tht.utils.Utilities;
 
 import static com.bumptech.glide.request.RequestOptions.bitmapTransform;
 
 public class ChangeUserInfoActivity extends AppCompatActivity {
 
-    private ImageView userAvatar;
+    private CircleImageView userAvatar;
     private EditText userName;
     private EditText userPhoneNum;
     private EditText codeEdittext;
@@ -135,7 +136,7 @@ public class ChangeUserInfoActivity extends AppCompatActivity {
     private void initView(){
 
         calendar = Calendar.getInstance();
-        userAvatar = (ImageView)findViewById(R.id.changeUserAvatar);
+        userAvatar = (CircleImageView)findViewById(R.id.changeUserAvatar);
         userName = (EditText)findViewById(R.id.changeNameInput);
         userPhoneNum = (EditText)findViewById(R.id.changePhoneInput);
         codeEdittext = (EditText)findViewById(R.id.changeCodeInput);

@@ -2,34 +2,34 @@
 <instant-run
     abi="arm64-v8a,armeabi-v7a,armeabi"
     api-level="25"
-    build-mode="COLD"
+    build-mode="HOT_WARM"
     density="420dpi"
     format="10"
     plugin-version="2.3.3"
-    timestamp="1508750632783"
+    timestamp="1508912485091"
     token="-4246449883703749462"
-    verifier="CLASS_ADDED" >
+    verifier="COMPATIBLE" >
 
     <task
         name="javac"
-        duration="9114" />
+        duration="3222" />
     <task
         name="instant-run-dex"
-        duration="0" />
+        duration="92" />
     <task
         name="instant-run-transform"
-        duration="55" />
+        duration="267" />
     <task
         name="verifier"
         duration="5" />
 
     <artifact
-        location="/Users/shitakusei/Desktop/THT/app/build/intermediates/split-apk/debug/slices/slice_7.apk"
-        type="SPLIT" />
+        location="/Users/shitakusei/Desktop/THT/app/build/intermediates/reload-dex/debug/classes.dex"
+        type="RELOAD_DEX" />
 
     <build
         build-mode="FULL"
-        timestamp="1508750109603"
+        timestamp="1508911774487"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
             location="/Users/shitakusei/Desktop/THT/app/build/intermediates/split-apk/debug/slices/slice_8.apk"
@@ -70,11 +70,19 @@
     </build>
     <build
         build-mode="COLD"
-        timestamp="1508750632783"
-        verifier="CLASS_ADDED" >
+        timestamp="1508912419824"
+        verifier="COLD_SWAP_REQUESTED" >
         <artifact
-            location="/Users/shitakusei/Desktop/THT/app/build/intermediates/split-apk/debug/slices/slice_7.apk"
+            location="/Users/shitakusei/Desktop/THT/app/build/intermediates/split-apk/debug/slices/slice_8.apk"
             type="SPLIT" />
+    </build>
+    <build
+        build-mode="HOT_WARM"
+        timestamp="1508912485091"
+        verifier="COMPATIBLE" >
+        <artifact
+            location="/Users/shitakusei/Desktop/THT/app/build/intermediates/reload-dex/debug/classes.dex"
+            type="RELOAD_DEX" />
     </build>
 
 </instant-run>

@@ -811,9 +811,9 @@
     <string name="path_password_eye_mask_visible" translatable="false">M2,4.27 L2,4.27 L4.54,1.73 L4.54,1.73 L4.54,1 L23,1 L23,23 L1,23 L1,4.27 Z</string>
     <string name="path_password_strike_through" translatable="false">M3.27,4.27 L19.74,20.74</string>
     <string name="personal_all_order">全部订单</string>
-    <string name="personal_pending_payment">待付款</string>
+    <string name="personal_pending_payment">未付款</string>
     <string name="personal_shipment_pending">待发货</string>
-    <string name="personal_shipped">已发货</string>
+    <string name="personal_shipped">待收货</string>
     <string name="product">商品</string>
     <string name="qr_code">验证码</string>
     <string name="rank">排行</string>

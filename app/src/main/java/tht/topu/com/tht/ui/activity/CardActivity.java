@@ -1,6 +1,7 @@
 package tht.topu.com.tht.ui.activity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
@@ -27,6 +28,7 @@ import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.RequestBody;
 import okhttp3.Response;
+import okhttp3.internal.Util;
 import tht.topu.com.tht.R;
 import tht.topu.com.tht.ui.base.BaseActivity;
 import tht.topu.com.tht.utils.API;
@@ -55,6 +57,9 @@ public class CardActivity extends BaseActivity {
     private boolean card2IsClicked = false;
     private boolean card3IsClicked = false;
 
+    private String mid;
+    private static final String MID_KEY = "1x11";
+
     private Handler uiHandler;
 
     private String random32;
@@ -75,6 +80,9 @@ public class CardActivity extends BaseActivity {
             Utilities.popUpAlert(this, "网络不可用");
         }
         getCardPrice();
+
+        SharedPreferences sharedPreferences = getSharedPreferences("TokenData", MODE_PRIVATE);
+        mid = sharedPreferences.getString(MID_KEY, "");
 
 //        卡片1初始化点击
         card1.setOnClickListener(new View.OnClickListener() {
@@ -136,9 +144,13 @@ public class CardActivity extends BaseActivity {
 
                 if (card1X == 200 || card2X == 200 || card3X == 200){
 
-                    //清空activity调用盏
-                    Intent intent = new Intent(CardActivity.this, MainActivity.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
-                    startActivity(intent);
+                    if (card1X == 200){
+                        addCard("1", mid);
+                    }else if (card2X == 200){
+                        addCard("2", mid);
+                    }else{
+                        addCard("3", mid );
+                    }
                 }else {
                     cardAlertTextView.setText("请至少选择一种卡片");
 
@@ -306,6 +318,136 @@ public class CardActivity extends BaseActivity {
                         }
 
 
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+        });
+    }
+
+    //添加卡券
+    private void addCard(String card, String mid){
+
+        random32 = Utilities.getStringRandom(32);
+        time10 = Utilities.get10Time();
+        key64 = Utilities.get64Key(random32);
+
+        final String json = "{\n" +
+                "    \"validate_k\": \"1\",\n" +
+                "    \"params\": [\n" +
+                "        {\n" +
+                "            \"type\": \"Membership_card\",\n" +
+                "            \"act\": \"Add\",\n" +
+                "            \"para\": {\n" +
+                "                \"params\": {\n" +
+                "                    \"Grade\": \""+card+"\",\n" +
+                "                    \"Mid\": \""+mid+"\"\n" +
+                "                },\n" +
+                "                \"sign_valid\": {\n" +
+                "                    \"source\": \"Android\",\n" +
+                "                    \"non_str\": \""+random32+"\",\n" +
+                "                    \"stamp\": \""+time10+"\",\n" +
+                "                    \"signature\": \""+Utilities.encode("Grade="+card+"Mid="+mid+"non_str="+random32+"stamp="+time10+"keySecret="+key64)+"\"\n" +
+                "                }\n" +
+                "            }\n" +
+                "        }\n" +
+                "    ]\n" +
+                "}";
+
+        OkHttpClient okHttpClient = new OkHttpClient();
+
+        RequestBody requestBody = RequestBody.create(JSON, json);
+        Request request = new Request.Builder().url(API.getAPI()).post(requestBody).build();
+
+        okHttpClient.newCall(request).enqueue(new Callback() {
+
+
+            @Override
+            public void onFailure(Call call, IOException e) {
+
+            }
+
+            @Override
+            public void onResponse(Call call, Response response) throws IOException {
+
+                if (response.body() != null){
+
+                    try {
+                        JSONObject jsonObject = new JSONObject(response.body().string());
+
+                        String mcid = jsonObject.getJSONArray("result").getJSONObject(0).getString("Mcid");
+
+                        Log.d("card", jsonObject.toString());
+
+                        cardSerial(mcid);
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+        });
+    }
+
+    private void cardSerial(String mcid){
+
+        random32 = Utilities.getStringRandom(32);
+        time10 = Utilities.get10Time();
+        key64 = Utilities.get64Key(random32);
+
+        String json = "{\n" +
+                "    \"validate_k\": \"1\",\n" +
+                "    \"params\": [\n" +
+                "        {\n" +
+                "            \"type\": \"Membership_card\",\n" +
+                "            \"act\": \"Serial_pay\",\n" +
+                "            \"para\": {\n" +
+                "                \"params\": {\n" +
+                "                    \"d_Mcid\": \""+mcid+"\",\n" +
+                "                    \"Serial_pay\": \"瞎几把编的\"\n" +
+                "                },\n" +
+                "                \"sign_valid\": {\n" +
+                "                    \"source\": \"Android\",\n" +
+                "                    \"non_str\": \""+random32+"\",\n" +
+                "                    \"stamp\": \""+time10+"\",\n" +
+                "                    \"signature\": \""+Utilities.encode("d_Mcid="+mcid+"Serial_pay=瞎几把编的"+"non_str="+random32+"stamp="+time10+"keySecret="+key64)+"\"\n" +
+                "                }\n" +
+                "            }\n" +
+                "        }\n" +
+                "    ]\n" +
+                "}";
+
+        OkHttpClient okHttpClient = new OkHttpClient();
+
+        RequestBody requestBody = RequestBody.create(JSON, json);
+        Request request = new Request.Builder().url(API.getAPI()).post(requestBody).build();
+
+        okHttpClient.newCall(request).enqueue(new Callback() {
+
+            @Override
+            public void onFailure(Call call, IOException e) {
+
+            }
+
+            @Override
+            public void onResponse(Call call, Response response) throws IOException {
+
+                if (response.body() != null){
+
+                    try {
+                        JSONObject jsonObject = new JSONObject(response.body().string());
+
+                        Log.d("cardSerial", jsonObject.toString());
+
+                        uiHandler.post(new Runnable() {
+                            @Override
+                            public void run() {
+
+                                //清空activity调用盏
+                                Intent intent = new Intent(CardActivity.this, MainActivity.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+                                startActivity(intent);
+                            }
+                        });
                     } catch (JSONException e) {
                         e.printStackTrace();
                     }

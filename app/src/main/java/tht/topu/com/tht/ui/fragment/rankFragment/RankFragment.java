@@ -6,6 +6,7 @@ import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
+import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -18,6 +19,7 @@ import java.util.Calendar;
 import java.util.List;
 
 import tht.topu.com.tht.R;
+import tht.topu.com.tht.adapter.MainViewPagerAdapter;
 
 public class RankFragment extends Fragment {
 
@@ -114,8 +116,6 @@ public class RankFragment extends Fragment {
         rankTabLayout = view.findViewById(R.id.rankTabLayout);
         rankViewPager = view.findViewById(R.id.rankViewPager);
 
-        rankViewPager.setOffscreenPageLimit(0);
-
     }
 
     //初始化数据
@@ -145,7 +145,7 @@ public class RankFragment extends Fragment {
 
         Log.d("当前时间的周一和周末:", monday+" and "+sunday);
 
-        rankViewPagerAdapter = new RankViewPagerAdapter(getFragmentManager());
+        rankViewPagerAdapter = new RankViewPagerAdapter(getChildFragmentManager());
 
         rankViewPagerAdapter.notifyDataSetChanged();
 
@@ -153,14 +153,14 @@ public class RankFragment extends Fragment {
         rankViewPagerAdapter.addFragment(RankContentFragment.newInstance(firstday, lastday));
         rankViewPagerAdapter.addFragment(RankContentFragment.newInstance("", ""));
 
-        rankViewPager.setOffscreenPageLimit(4);
+        rankViewPager.setOffscreenPageLimit(3);
 
         rankTabLayout.addTab(rankTabLayout.newTab().setIcon(R.mipmap.selectedweekrank).setText("周排行榜"));
         rankTabLayout.addTab(rankTabLayout.newTab().setIcon(R.mipmap.monthrank).setText("月排行榜"));
         rankTabLayout.addTab(rankTabLayout.newTab().setIcon(R.mipmap.totalrank).setText("总排行榜"));
     }
 
-    private class RankViewPagerAdapter extends FragmentPagerAdapter {
+    private class RankViewPagerAdapter extends FragmentStatePagerAdapter {
 
         private final List<Fragment> mFragmentList = new ArrayList<>();
         private List<Integer> pageIndex = new ArrayList<>();

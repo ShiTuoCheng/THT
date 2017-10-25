@@ -43,6 +43,7 @@ dependencies {
     compile 'com.othershe:BaseAdapter:1.1.5'
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
     compile 'com.heinrichreimersoftware:material-intro:1.6.2'
+    compile 'com.tencent.mm.opensdk:wechat-sdk-android-with-mta:+'
     testCompile 'junit:junit:4.12'
     debugCompile 'com.squareup.leakcanary:leakcanary-android:1.5.4'
     releaseCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.5.4'
