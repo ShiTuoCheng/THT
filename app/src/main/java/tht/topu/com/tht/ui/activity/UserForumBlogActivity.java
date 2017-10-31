@@ -12,8 +12,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
-import com.squareup.haha.perflib.Main;
-
 import java.util.ArrayList;
 import java.util.List;
 

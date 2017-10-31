@@ -1,6 +1,7 @@
 package tht.topu.com.tht.ui.activity;
 
 import android.annotation.SuppressLint;
+import android.app.ProgressDialog;
 import android.content.IntentFilter;
 import android.content.SharedPreferences;
 import android.os.Handler;
@@ -14,6 +15,8 @@ import android.webkit.WebViewClient;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Toast;
+
+import com.jpay.JPay;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -41,6 +44,8 @@ public class OrderListActivity extends AppCompatActivity {
     private int Ostatus = 0;
     private static final String MID_KEY = "1x11";
 
+    private ProgressDialog progressDialog;
+
     private String random32;
     private String time10;
     private String key64;
@@ -66,7 +71,7 @@ public class OrderListActivity extends AppCompatActivity {
         Ostatus = bundle.getInt("ostatus");
 
         orderListWebView.getSettings().setJavaScriptEnabled(true);
-        orderListWebView.addJavascriptInterface(this, "pageApp");
+        orderListWebView.addJavascriptInterface(this, "payApp");
         orderListWebView.setWebViewClient(new WebViewClient(){
 
             @Override
@@ -98,10 +103,13 @@ public class OrderListActivity extends AppCompatActivity {
         loadingLayout = (LinearLayout)findViewById(R.id.loadingLayout);
         orderListWebView = (WebView)findViewById(R.id.orderListWebView);
         back = (ImageView)findViewById(R.id.forumPostBack);
+
+        progressDialog = new ProgressDialog(OrderListActivity.this);
+        progressDialog.setCancelable(false);
     }
 
     @JavascriptInterface
-    public void goToPay(final String price, final String name, final String mid, final String oSerial, final String oid) {
+    public void wxPay(final String oid, final String oSerial, final String price) {
         orderListWebView.post(new Runnable() {
 
             @Override
@@ -109,12 +117,117 @@ public class OrderListActivity extends AppCompatActivity {
 
                 if (Float.valueOf(price) <= 0){
 
-                    Toast.makeText(OrderListActivity.this, "价格小于等于0", Toast.LENGTH_SHORT).show();
+//                    Toast.makeText(ProductDetailActivity.this, "价格小于等于0", Toast.LENGTH_SHORT).show();
+                    progressDialog.show();
+                    changeOrderStatus(oid);
+
+                }else {
+
+                    getPrePay(price, oid, oSerial);
                 }
+            }
+        });
+    }
 
-                Toast.makeText(OrderListActivity.this, "价格："+price+" 名称:"+name+"mid:"+mid+"oid:"+oid, Toast.LENGTH_SHORT).show();
+    //获取订单预支付id
+    private void getPrePay(final String price, final String oid, final String oSerial){
 
+        random32 = Utilities.getStringRandom(32);
+        time10 = Utilities.get10Time();
+        key64 = Utilities.get64Key(random32);
+
+        String json = "{\n" +
+                "    \"validate_k\": \"1\",\n" +
+                "    \"params\": [\n" +
+                "        {\n" +
+                "            \"type\": \"Orders\",\n" +
+                "            \"act\": \"UnifiedOrder\",\n" +
+                "            \"para\": {\n" +
+                "                \"params\": {\n" +
+                "                    \"Money\": \""+price+"\",\n" +
+                "                    \"Oid\": \""+oid+"\",\n" +
+                "                    \"Oserial\": \""+oSerial+"\"\n" +
+                "                },\n" +
+                "                \"sign_valid\": {\n" +
+                "                    \"source\": \"Android\",\n" +
+                "                    \"non_str\": \""+random32+"\",\n" +
+                "                    \"stamp\": \""+time10+"\",\n" +
+                "                    \"signature\": \""+Utilities.encode("Money="+price+"Oid="+oid+"Oserial="+oSerial+"non_str="+random32+"stamp="+time10+"keySecret="+key64)+"\"\n" +
+                "                }\n" +
+                "            }\n" +
+                "        }\n" +
+                "    ]\n" +
+                "}";
+
+        OkHttpClient okHttpClient = new OkHttpClient();
+
+        RequestBody requestBody = RequestBody.create(JSON, json);
+        Request request = new Request.Builder().url(API.getAPI()).post(requestBody).build();
+
+        okHttpClient.newCall(request).enqueue(new Callback() {
+
+            @Override
+            public void onFailure(Call call, IOException e) {
+
+                uiHandler.post(new Runnable() {
+                    @Override
+                    public void run() {
+
+                        Toast.makeText(OrderListActivity.this, "支付失败，请重试", Toast.LENGTH_SHORT).show();
+                    }
+                });
+            }
+
+            @Override
+            public void onResponse(Call call, Response response) throws IOException {
+
+                if (response.body() != null){
+
+                    try {
+                        JSONObject jsonObject = new JSONObject(response.body().string());
+                        final String prePayId = jsonObject.getJSONArray("result").getJSONObject(0).getString("prepay_id");
+
+                        uiHandler.post(new Runnable() {
+                            @Override
+                            public void run() {
+
+                                if (!prePayId.equals("")){
+
+                                    launchWXPay(prePayId, oid);
+
+                                }else {
+
+                                    Toast.makeText(OrderListActivity.this, "支付出错 请重试", Toast.LENGTH_SHORT).show();
+                                }
+                            }
+                        });
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
+
+                }
+            }
+        });
+    }
+
+    private void launchWXPay(final String prepayId, final String oid){
+
+        JPay.getIntance(this).toWxPay(API.APPID, API.PartnerID, prepayId, Utilities.getStringRandom(32), Utilities.get10Time(), "Sign=WXPay", new JPay.JPayListener() {
+            @Override
+            public void onPaySuccess() {
+                Toast.makeText(OrderListActivity.this, "支付成功", Toast.LENGTH_SHORT).show();
+                progressDialog.show();
                 changeOrderStatus(oid);
+            }
+
+            @Override
+            public void onPayError(int error_code, String message) {
+                Toast.makeText(OrderListActivity.this, "支付失败>"+error_code+" "+ message, Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onPayCancel() {
+                Toast.makeText(OrderListActivity.this, "取消了支付", Toast.LENGTH_SHORT).show();
             }
         });
     }
@@ -229,13 +342,12 @@ public class OrderListActivity extends AppCompatActivity {
                     try {
                         JSONObject jsonObject = new JSONObject(response.body().string());
 
-                        Log.d("changeSerial", jsonObject.toString());
-
                         uiHandler.post(new Runnable() {
                             @Override
                             public void run() {
 
                                 orderListWebView.reload();
+                                progressDialog.dismiss();
                             }
                         });
                     } catch (JSONException e) {
@@ -244,6 +356,5 @@ public class OrderListActivity extends AppCompatActivity {
                 }
             }
         });
-
     }
 }

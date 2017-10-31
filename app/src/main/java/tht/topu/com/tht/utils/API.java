@@ -20,4 +20,8 @@ public  class API {
 
         return "http://thtmp.65276588.cn";
     }
+
+    public static final String APPID = "wxdb8c338a095d2043";
+    public static final String PartnerID = "1490771452";
+    public static final String APPSecret = "4fdd75a27070558c46fe9d03db5120ad";
 }

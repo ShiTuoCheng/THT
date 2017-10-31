@@ -1,10 +1,15 @@
 package com.heinrichreimersoftware.materialintro.databinding;
 import com.heinrichreimersoftware.materialintro.R;
 import com.heinrichreimersoftware.materialintro.BR;
+import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
 import android.view.View;
+@SuppressWarnings("unchecked")
 public class MiActivityIntroBinding extends android.databinding.ViewDataBinding  {
 
+    @Nullable
     private static final android.databinding.ViewDataBinding.IncludedLayouts sIncludes;
+    @Nullable
     private static final android.util.SparseIntArray sViewsWithIds;
     static {
         sIncludes = null;
@@ -16,18 +21,24 @@ public class MiActivityIntroBinding extends android.databinding.ViewDataBinding 
         sViewsWithIds.put(R.id.mi_button_cta, 5);
     }
     // views
+    @NonNull
     public final android.widget.ImageButton miButtonBack;
+    @NonNull
     public final android.widget.TextSwitcher miButtonCta;
+    @NonNull
     public final android.widget.ImageButton miButtonNext;
+    @NonNull
     public final android.support.constraint.ConstraintLayout miFrame;
+    @NonNull
     public final com.heinrichreimersoftware.materialintro.view.FadeableViewPager miPager;
+    @NonNull
     public final com.heinrichreimersoftware.materialintro.view.InkPageIndicator miPagerIndicator;
     // variables
     // values
     // listeners
     // Inverse Binding Event Handlers
 
-    public MiActivityIntroBinding(android.databinding.DataBindingComponent bindingComponent, View root) {
+    public MiActivityIntroBinding(@NonNull android.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
         super(bindingComponent, root, 0);
         final Object[] bindings = mapBindings(bindingComponent, root, 6, sIncludes, sViewsWithIds);
         this.miButtonBack = (android.widget.ImageButton) bindings[2];
@@ -60,10 +71,10 @@ public class MiActivityIntroBinding extends android.databinding.ViewDataBinding 
         return false;
     }
 
-    public boolean setVariable(int variableId, Object variable) {
-        switch(variableId) {
-        }
-        return false;
+    @Override
+    public boolean setVariable(int variableId, @Nullable Object variable)  {
+        boolean variableSet = true;
+            return variableSet;
     }
 
     @Override
@@ -87,22 +98,28 @@ public class MiActivityIntroBinding extends android.databinding.ViewDataBinding 
     // dirty flag
     private  long mDirtyFlags = 0xffffffffffffffffL;
 
-    public static MiActivityIntroBinding inflate(android.view.LayoutInflater inflater, android.view.ViewGroup root, boolean attachToRoot) {
+    @NonNull
+    public static MiActivityIntroBinding inflate(@NonNull android.view.LayoutInflater inflater, @Nullable android.view.ViewGroup root, boolean attachToRoot) {
         return inflate(inflater, root, attachToRoot, android.databinding.DataBindingUtil.getDefaultComponent());
     }
-    public static MiActivityIntroBinding inflate(android.view.LayoutInflater inflater, android.view.ViewGroup root, boolean attachToRoot, android.databinding.DataBindingComponent bindingComponent) {
+    @NonNull
+    public static MiActivityIntroBinding inflate(@NonNull android.view.LayoutInflater inflater, @Nullable android.view.ViewGroup root, boolean attachToRoot, @Nullable android.databinding.DataBindingComponent bindingComponent) {
         return android.databinding.DataBindingUtil.<MiActivityIntroBinding>inflate(inflater, com.heinrichreimersoftware.materialintro.R.layout.mi_activity_intro, root, attachToRoot, bindingComponent);
     }
-    public static MiActivityIntroBinding inflate(android.view.LayoutInflater inflater) {
+    @NonNull
+    public static MiActivityIntroBinding inflate(@NonNull android.view.LayoutInflater inflater) {
         return inflate(inflater, android.databinding.DataBindingUtil.getDefaultComponent());
     }
-    public static MiActivityIntroBinding inflate(android.view.LayoutInflater inflater, android.databinding.DataBindingComponent bindingComponent) {
+    @NonNull
+    public static MiActivityIntroBinding inflate(@NonNull android.view.LayoutInflater inflater, @Nullable android.databinding.DataBindingComponent bindingComponent) {
         return bind(inflater.inflate(com.heinrichreimersoftware.materialintro.R.layout.mi_activity_intro, null, false), bindingComponent);
     }
-    public static MiActivityIntroBinding bind(android.view.View view) {
+    @NonNull
+    public static MiActivityIntroBinding bind(@NonNull android.view.View view) {
         return bind(view, android.databinding.DataBindingUtil.getDefaultComponent());
     }
-    public static MiActivityIntroBinding bind(android.view.View view, android.databinding.DataBindingComponent bindingComponent) {
+    @NonNull
+    public static MiActivityIntroBinding bind(@NonNull android.view.View view, @Nullable android.databinding.DataBindingComponent bindingComponent) {
         if (!"layout/mi_activity_intro_0".equals(view.getTag())) {
             throw new RuntimeException("view tag isn't correct on view:" + view.getTag());
         }

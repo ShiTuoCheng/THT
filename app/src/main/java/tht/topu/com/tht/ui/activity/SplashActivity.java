@@ -11,7 +11,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
-import com.squareup.haha.perflib.Main;
 
 import tht.topu.com.tht.R;
 import tht.topu.com.tht.utils.Utilities;

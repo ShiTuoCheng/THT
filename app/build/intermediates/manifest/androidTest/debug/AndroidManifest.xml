@@ -13,7 +13,7 @@
         android:label="Tests for tht.topu.com.tht"
         android:targetPackage="tht.topu.com.tht" />
 
-    <application>
+    <application android:debuggable="true" >
         <uses-library android:name="android.test.runner" />
     </application>
 

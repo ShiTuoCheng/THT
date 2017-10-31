@@ -1,342 +1,409 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:2:1-100:12
+ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:2:1-118:12
+INJECTED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:2:1-118:12
+INJECTED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:2:1-118:12
+INJECTED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:2:1-118:12
+MERGED from [com.heinrichreimersoftware:material-intro:1.6.2] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/material-intro-1.6.2.aar/102ce2e88b4a4cb4556ea1daeff49db9/AndroidManifest.xml:25:1-35:12
+MERGED from [com.android.databinding:adapters:1.3.1] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/adapters-1.3.1.aar/84227e7f118f9690d6be6e693945b65d/AndroidManifest.xml:17:1-26:12
+MERGED from [com.android.databinding:library:1.3.1] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/library-1.3.1.aar/1375e901827ff60476be46188dd09056/AndroidManifest.xml:17:1-26:12
+MERGED from [com.android.support:design:26.0.0-alpha1] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/design-26.0.0-alpha1.aar/d7abba6433467a435c3877cface9f1c4/AndroidManifest.xml:17:1-31:12
+MERGED from [com.github.javen205.JPay:jpaysdk:0.0.3] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpaysdk-0.0.3.aar/f71ca43812dab3fb86cb21a4ba5bb45e/AndroidManifest.xml:2:1-17:12
+MERGED from [com.android.support:appcompat-v7:26.0.0-alpha1] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.0.0-alpha1.aar/a27655e5bc59afc4b44dc8948dc4309d/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:animated-vector-drawable:26.0.0-alpha1] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.0.0-alpha1.aar/752df4d7804a17ce7cf87cedfb3def3c/AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:support-vector-drawable:26.0.0-alpha1] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.0.0-alpha1.aar/d667360c6a778ab84433a37faccfbb44/AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:transition:26.0.0-alpha1] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/transition-26.0.0-alpha1.aar/1fb0143d66e75dc4d53200ee4253088e/AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:support-v4:26.0.0-alpha1] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/support-v4-26.0.0-alpha1.aar/9aab0a16c9d79c9cd2cefcac515cd66f/AndroidManifest.xml:17:1-31:12
+MERGED from [jp.wasabeef:glide-transformations:3.0.1] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/glide-transformations-3.0.1.aar/861a74d576359aae028a04d7393e3b37/AndroidManifest.xml:2:1-12:12
+MERGED from [com.youth.banner:banner:1.4.9] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/banner-1.4.9.aar/93e12ad1974516f18c248e642e1f68a3/AndroidManifest.xml:2:1-11:12
+MERGED from [com.android.support:cardview-v7:26.0.0-alpha1] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/cardview-v7-26.0.0-alpha1.aar/369b42205e2c0dae4fe1f30ed0cb066d/AndroidManifest.xml:17:1-28:12
+MERGED from [cn.lemon:RefreshRecyclerView:1.2.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/RefreshRecyclerView-1.2.0.aar/014bb2f804d040bdcfe1ed1a19a63519/AndroidManifest.xml:2:1-11:12
+MERGED from [com.othershe:BaseAdapter:1.1.5] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/BaseAdapter-1.1.5.aar/a06cdc4d47ae78f337f0233174c5ae8b/AndroidManifest.xml:2:1-17:12
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.0.2.aar/d00f03fbe89936a07ce6a3e5d9f6cbb8/AndroidManifest.xml:2:1-11:12
+MERGED from [com.android.support:support-media-compat:26.0.0-alpha1] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.0.0-alpha1.aar/4d90a3148199ced3246badc4bdd78b1b/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-fragment:26.0.0-alpha1] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/support-fragment-26.0.0-alpha1.aar/d417609fc2e5449eb6bdad8483100315/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-core-utils:26.0.0-alpha1] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.0.0-alpha1.aar/6c1e51f7b1b50f1cf0479903205212f4/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:recyclerview-v7:26.0.0-alpha1] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-26.0.0-alpha1.aar/46b85228d2d693a3b1e802cf5efc9397/AndroidManifest.xml:17:1-26:12
+MERGED from [com.android.support:support-core-ui:26.0.0-alpha1] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.0.0-alpha1.aar/46ae156c1fbe8bf83d866dc8b5a9cbd8/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-compat:26.0.0-alpha1] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/support-compat-26.0.0-alpha1.aar/f667a11eea32ea77d31e6a8be19c53a2/AndroidManifest.xml:17:1-31:12
+INJECTED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:2:1-118:12
+INJECTED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:2:1-118:12
+INJECTED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:2:1-118:12
 	package
 		ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:3:5-31
 		INJECTED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml
 		INJECTED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml
 	android:versionName
 		INJECTED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml
+		ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:2:1-118:12
+		INJECTED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml
+	android:versionCode
+		INJECTED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml
+		ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:2:1-118:12
 		INJECTED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml
 	xmlns:android
 		ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:2:11-69
-	android:versionCode
-		INJECTED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml
-		INJECTED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml
 uses-permission#android.permission.INTERNET
-ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:5:5-67
+ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:5:5-66
 	android:name
 		ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:5:22-64
 uses-permission#android.permission.ACCESS_NETWORK_STATE
 ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:6:5-79
 	android:name
 		ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:6:22-76
-uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
-ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:7:5-81
-MERGED from [com.squareup.leakcanary:leakcanary-android:1.5.4] /Users/shitakusei/.android/build-cache/3fc867f0d1850e816b69088059fa965a7cae93ee/output/AndroidManifest.xml:24:5-81
-	android:name
-		ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:7:22-78
-uses-permission#android.permission.READ_EXTERNAL_STORAGE
-ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:8:5-80
-MERGED from [com.squareup.leakcanary:leakcanary-android:1.5.4] /Users/shitakusei/.android/build-cache/3fc867f0d1850e816b69088059fa965a7cae93ee/output/AndroidManifest.xml:23:5-80
-	android:name
-		ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:8:22-77
 uses-permission#android.permission.ACCESS_WIFI_STATE
-ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:9:5-75
+ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:7:5-76
 	android:name
-		ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:9:22-73
+		ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:7:22-73
 uses-permission#android.permission.READ_PHONE_STATE
-ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:10:5-74
+ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:8:5-75
 	android:name
-		ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:10:22-72
+		ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:8:22-72
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:9:5-81
+	android:name
+		ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:9:22-78
+uses-permission#android.permission.CHANGE_NETWORK_STATE
+ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:11:5-79
+	android:name
+		ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:11:22-76
+uses-permission#org.simalliance.openmobileapi.SMARTCARD
+ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:12:5-79
+	android:name
+		ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:12:22-76
+uses-permission#android.permission.NFC
+ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:13:5-62
+	android:name
+		ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:13:22-59
+uses-feature#android.hardware.nfc.hce
+ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:14:5-60
+	android:name
+		ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:14:19-58
 application
-ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:12:5-98:19
-MERGED from [com.android.support:design:26.0.0-alpha1] /Users/shitakusei/.android/build-cache/106b7aeac23eec540c464e81dd7a66d14a9368c2/output/AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:transition:26.0.0-alpha1] /Users/shitakusei/.android/build-cache/99642e97839c0ebf6010a314c81f5d3abe0b4beb/output/AndroidManifest.xml:26:5-20
-MERGED from [com.android.support:cardview-v7:26.0.0-alpha1] /Users/shitakusei/.android/build-cache/2fb2ddf4f4ae665a0885ef28e1d7fb4592a4f442/output/AndroidManifest.xml:26:5-20
-MERGED from [com.othershe:BaseAdapter:1.1.5] /Users/shitakusei/.android/build-cache/46696a5ea3b7f62c2a535c433716a59817af3f82/output/AndroidManifest.xml:11:5-15:19
-MERGED from [com.android.support:appcompat-v7:26.0.0-alpha1] /Users/shitakusei/.android/build-cache/f7e81158ab4f78a630c4d88aff2514a225185962/output/AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:animated-vector-drawable:26.0.0-alpha1] /Users/shitakusei/.android/build-cache/998c5efd1d0671a158276060f214bd32523ccb6a/output/AndroidManifest.xml:26:5-20
-MERGED from [com.android.support:support-vector-drawable:26.0.0-alpha1] /Users/shitakusei/.android/build-cache/a74b6b447c7021758a6956531a144d60ea3cc9b1/output/AndroidManifest.xml:26:5-20
-MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /Users/shitakusei/.android/build-cache/924e4eb07f7a587d7366606e5a46dac2f22ad3d3/output/AndroidManifest.xml:9:5-20
-MERGED from [com.android.support:support-v4:26.0.0-alpha1] /Users/shitakusei/.android/build-cache/989070fa0a01c67abd03b4737bb826bd3de5dff4/output/AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-media-compat:26.0.0-alpha1] /Users/shitakusei/.android/build-cache/bdaa1c5560319752c6f02b6d3aabc8ccdbc2be15/output/AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-fragment:26.0.0-alpha1] /Users/shitakusei/.android/build-cache/c5123c89a2d5284f3f765c75743879e69f13fdd8/output/AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-core-ui:26.0.0-alpha1] /Users/shitakusei/.android/build-cache/620ab76955c15b8ac2e5c1394ccb11984d155919/output/AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-core-utils:26.0.0-alpha1] /Users/shitakusei/.android/build-cache/84d5e824d4d2d230c0e06eea77610a52f0263ed2/output/AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-compat:26.0.0-alpha1] /Users/shitakusei/.android/build-cache/6c59939d6ca76ee85abd9e32692c0ad2e60a4a4c/output/AndroidManifest.xml:29:5-20
-MERGED from [com.squareup.leakcanary:leakcanary-android:1.5.4] /Users/shitakusei/.android/build-cache/3fc867f0d1850e816b69088059fa965a7cae93ee/output/AndroidManifest.xml:26:5-59:19
-MERGED from [com.squareup.leakcanary:leakcanary-analyzer:1.5.4] /Users/shitakusei/.android/build-cache/a90d0413a49ced536949ff2f90e81a5155380e17/output/AndroidManifest.xml:23:5-20
-	android:label
-		ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:16:9-41
+ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:16:5-116:19
+MERGED from [com.android.support:design:26.0.0-alpha1] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/design-26.0.0-alpha1.aar/d7abba6433467a435c3877cface9f1c4/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:design:26.0.0-alpha1] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/design-26.0.0-alpha1.aar/d7abba6433467a435c3877cface9f1c4/AndroidManifest.xml:29:5-20
+MERGED from [com.github.javen205.JPay:jpaysdk:0.0.3] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpaysdk-0.0.3.aar/f71ca43812dab3fb86cb21a4ba5bb45e/AndroidManifest.xml:11:5-15:19
+MERGED from [com.github.javen205.JPay:jpaysdk:0.0.3] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpaysdk-0.0.3.aar/f71ca43812dab3fb86cb21a4ba5bb45e/AndroidManifest.xml:11:5-15:19
+MERGED from [com.android.support:appcompat-v7:26.0.0-alpha1] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.0.0-alpha1.aar/a27655e5bc59afc4b44dc8948dc4309d/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:appcompat-v7:26.0.0-alpha1] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.0.0-alpha1.aar/a27655e5bc59afc4b44dc8948dc4309d/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:animated-vector-drawable:26.0.0-alpha1] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.0.0-alpha1.aar/752df4d7804a17ce7cf87cedfb3def3c/AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:animated-vector-drawable:26.0.0-alpha1] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.0.0-alpha1.aar/752df4d7804a17ce7cf87cedfb3def3c/AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:support-vector-drawable:26.0.0-alpha1] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.0.0-alpha1.aar/d667360c6a778ab84433a37faccfbb44/AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:support-vector-drawable:26.0.0-alpha1] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.0.0-alpha1.aar/d667360c6a778ab84433a37faccfbb44/AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:transition:26.0.0-alpha1] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/transition-26.0.0-alpha1.aar/1fb0143d66e75dc4d53200ee4253088e/AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:transition:26.0.0-alpha1] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/transition-26.0.0-alpha1.aar/1fb0143d66e75dc4d53200ee4253088e/AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:support-v4:26.0.0-alpha1] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/support-v4-26.0.0-alpha1.aar/9aab0a16c9d79c9cd2cefcac515cd66f/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-v4:26.0.0-alpha1] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/support-v4-26.0.0-alpha1.aar/9aab0a16c9d79c9cd2cefcac515cd66f/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:cardview-v7:26.0.0-alpha1] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/cardview-v7-26.0.0-alpha1.aar/369b42205e2c0dae4fe1f30ed0cb066d/AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:cardview-v7:26.0.0-alpha1] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/cardview-v7-26.0.0-alpha1.aar/369b42205e2c0dae4fe1f30ed0cb066d/AndroidManifest.xml:26:5-20
+MERGED from [com.othershe:BaseAdapter:1.1.5] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/BaseAdapter-1.1.5.aar/a06cdc4d47ae78f337f0233174c5ae8b/AndroidManifest.xml:11:5-15:19
+MERGED from [com.othershe:BaseAdapter:1.1.5] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/BaseAdapter-1.1.5.aar/a06cdc4d47ae78f337f0233174c5ae8b/AndroidManifest.xml:11:5-15:19
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.0.2.aar/d00f03fbe89936a07ce6a3e5d9f6cbb8/AndroidManifest.xml:9:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.0.2.aar/d00f03fbe89936a07ce6a3e5d9f6cbb8/AndroidManifest.xml:9:5-20
+MERGED from [com.android.support:support-media-compat:26.0.0-alpha1] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.0.0-alpha1.aar/4d90a3148199ced3246badc4bdd78b1b/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-media-compat:26.0.0-alpha1] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.0.0-alpha1.aar/4d90a3148199ced3246badc4bdd78b1b/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-fragment:26.0.0-alpha1] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/support-fragment-26.0.0-alpha1.aar/d417609fc2e5449eb6bdad8483100315/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-fragment:26.0.0-alpha1] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/support-fragment-26.0.0-alpha1.aar/d417609fc2e5449eb6bdad8483100315/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-utils:26.0.0-alpha1] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.0.0-alpha1.aar/6c1e51f7b1b50f1cf0479903205212f4/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-utils:26.0.0-alpha1] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.0.0-alpha1.aar/6c1e51f7b1b50f1cf0479903205212f4/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-ui:26.0.0-alpha1] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.0.0-alpha1.aar/46ae156c1fbe8bf83d866dc8b5a9cbd8/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-ui:26.0.0-alpha1] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.0.0-alpha1.aar/46ae156c1fbe8bf83d866dc8b5a9cbd8/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-compat:26.0.0-alpha1] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/support-compat-26.0.0-alpha1.aar/f667a11eea32ea77d31e6a8be19c53a2/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-compat:26.0.0-alpha1] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/support-compat-26.0.0-alpha1.aar/f667a11eea32ea77d31e6a8be19c53a2/AndroidManifest.xml:29:5-20
 	android:supportsRtl
-		ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:19:9-35
-	android:roundIcon
-		ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:18:9-47
-	android:allowBackup
-		ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:14:9-35
-	android:icon
-		ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:15:9-42
-	android:largeHeap
-		ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:17:9-33
-	android:theme
-		ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:20:9-40
-	android:name
-		ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:13:9-49
-activity#tht.topu.com.tht.wxapi.WXEntryActivity
-ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:21:9-23:25
-	android:exported
-		ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:22:17-40
-	android:name
-		ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:21:19-56
-activity#tht.topu.com.tht.ui.activity.MainActivity
-ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:24:9-27:52
-	android:screenOrientation
-		ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:27:13-49
+		ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:22:9-35
 	android:label
-		ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:26:13-45
+		ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:19:9-41
+	android:roundIcon
+		ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:21:9-47
+	android:largeHeap
+		ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:20:9-33
+	android:icon
+		ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:18:9-42
+	android:allowBackup
+		ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:17:9-35
+	android:theme
+		ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:23:9-40
+activity#com.jpay.weixin.WXPayEntryActivity
+ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:25:9-29:75
+	android:launchMode
+		ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:28:13-43
+	android:configChanges
+		ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:27:13-85
+	android:theme
+		ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:29:13-72
 	android:name
-		ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:25:13-53
+		ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:26:13-62
+activity-alias#tht.topu.com.tht.wxapi.WXPayEntryActivity
+ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:30:9-33:75
+	android:exported
+		ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:32:13-36
+	android:targetActivity
+		ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:33:13-72
+	android:name
+		ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:31:13-53
+activity#tht.topu.com.tht.ui.activity.MainActivity
+ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:34:9-37:52
+	android:screenOrientation
+		ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:37:13-49
+	android:label
+		ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:36:13-45
+	android:name
+		ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:35:13-53
 activity#tht.topu.com.tht.ui.activity.LoginActivity
-ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:28:9-31:72
+ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:38:9-41:72
 	android:screenOrientation
-		ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:30:13-49
+		ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:40:13-49
 	android:theme
-		ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:31:13-69
+		ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:41:13-69
 	android:name
-		ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:29:13-54
+		ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:39:13-54
 activity#tht.topu.com.tht.ui.activity.SignActivity
-ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:32:9-35:72
+ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:42:9-45:72
 	android:screenOrientation
-		ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:34:13-49
+		ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:44:13-49
 	android:theme
-		ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:35:13-69
+		ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:45:13-69
 	android:name
-		ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:33:13-53
+		ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:43:13-53
 activity#tht.topu.com.tht.ui.activity.CardActivity
-ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:36:9-39:72
+ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:46:9-49:72
 	android:screenOrientation
-		ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:38:13-49
+		ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:48:13-49
 	android:theme
-		ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:39:13-69
+		ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:49:13-69
 	android:name
-		ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:37:13-53
+		ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:47:13-53
 activity#tht.topu.com.tht.ui.activity.PasswordActivity
-ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:40:9-43:72
+ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:50:9-53:72
 	android:screenOrientation
-		ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:42:13-49
+		ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:52:13-49
 	android:theme
-		ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:43:13-69
+		ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:53:13-69
 	android:name
-		ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:41:13-57
+		ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:51:13-57
 activity#tht.topu.com.tht.ui.activity.MainIntroActivity
-ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:44:9-54:20
-	android:screenOrientation
-		ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:47:13-49
-	android:noHistory
-		ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:46:13-37
-	android:theme
-		ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:48:13-47
-	android:name
-		ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:45:13-58
-intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
-ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:49:13-53:29
-action#android.intent.action.MAIN
-ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:50:17-69
-	android:name
-		ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:50:25-66
-category#android.intent.category.LAUNCHER
-ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:52:17-77
-	android:name
-		ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:52:27-74
-activity#tht.topu.com.tht.ui.activity.DrawRecordActivity
-ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:55:9-58:72
+ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:54:9-64:20
 	android:screenOrientation
 		ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:57:13-49
+	android:noHistory
+		ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:56:13-37
 	android:theme
-		ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:58:13-69
+		ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:58:13-47
 	android:name
-		ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:56:13-59
+		ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:55:13-58
+intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
+ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:59:13-63:29
+action#android.intent.action.MAIN
+ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:60:17-69
+	android:name
+		ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:60:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:62:17-77
+	android:name
+		ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:62:27-74
+activity#tht.topu.com.tht.ui.activity.DrawRecordActivity
+ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:65:9-68:72
+	android:screenOrientation
+		ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:67:13-49
+	android:theme
+		ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:68:13-69
+	android:name
+		ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:66:13-59
 activity#tht.topu.com.tht.ui.activity.DrawRulesActivity
-ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:59:9-62:72
+ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:69:9-72:72
 	android:screenOrientation
-		ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:61:13-49
+		ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:71:13-49
 	android:theme
-		ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:62:13-69
+		ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:72:13-69
 	android:name
-		ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:60:13-58
+		ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:70:13-58
 activity#tht.topu.com.tht.ui.activity.ForumPostActivity
-ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:63:9-66:72
+ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:73:9-76:72
 	android:screenOrientation
-		ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:65:13-49
+		ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:75:13-49
 	android:theme
-		ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:66:13-69
+		ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:76:13-69
 	android:name
-		ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:64:13-58
+		ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:74:13-58
 activity#tht.topu.com.tht.ui.activity.ChangePasswordActivity
-ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:67:9-70:72
+ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:77:9-80:72
 	android:screenOrientation
-		ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:69:13-49
+		ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:79:13-49
 	android:theme
-		ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:70:13-69
+		ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:80:13-69
 	android:name
-		ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:68:13-63
+		ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:78:13-63
 activity#tht.topu.com.tht.ui.activity.SettingActivity
-ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:71:9-74:72
+ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:81:9-84:72
 	android:screenOrientation
-		ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:73:13-49
+		ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:83:13-49
 	android:theme
-		ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:74:13-69
+		ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:84:13-69
 	android:name
-		ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:72:13-56
+		ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:82:13-56
 activity#tht.topu.com.tht.ui.activity.ChangeUserInfoActivity
-ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:75:9-78:72
+ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:85:9-88:72
 	android:screenOrientation
-		ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:77:13-49
+		ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:87:13-49
 	android:theme
-		ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:78:13-69
+		ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:88:13-69
 	android:name
-		ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:76:13-63
+		ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:86:13-63
 activity#tht.topu.com.tht.ui.activity.RankDetailActivity
-ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:79:9-82:72
+ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:89:9-92:72
 	android:screenOrientation
-		ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:81:13-49
+		ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:91:13-49
 	android:theme
-		ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:82:13-69
+		ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:92:13-69
 	android:name
-		ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:80:13-59
+		ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:90:13-59
 activity#tht.topu.com.tht.ui.activity.UserFavoriteActivity
-ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:83:9-86:72
+ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:93:9-96:72
 	android:screenOrientation
-		ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:85:13-49
+		ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:95:13-49
 	android:theme
-		ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:86:13-69
+		ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:96:13-69
 	android:name
-		ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:84:13-61
+		ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:94:13-61
 activity#tht.topu.com.tht.ui.activity.UserForumBlogActivity
-ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:87:9-90:72
+ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:97:9-100:72
 	android:screenOrientation
-		ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:89:13-49
+		ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:99:13-49
 	android:theme
-		ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:90:13-69
+		ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:100:13-69
 	android:name
-		ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:88:13-62
+		ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:98:13-62
 activity#tht.topu.com.tht.ui.activity.ProductDetailActivity
-ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:91:9-71
+ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:101:9-102:52
+	android:screenOrientation
+		ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:102:13-49
 	android:name
-		ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:91:19-68
+		ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:101:19-68
 activity#tht.topu.com.tht.ui.activity.SplashActivity
-ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:92:9-64
+ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:103:9-104:51
+	android:screenOrientation
+		ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:104:13-49
 	android:name
-		ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:92:19-61
+		ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:103:19-61
 activity#tht.topu.com.tht.ui.activity.WebViewActivity
-ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:93:9-65
+ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:105:9-106:51
+	android:screenOrientation
+		ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:106:13-49
 	android:name
-		ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:93:19-62
+		ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:105:19-62
 activity#tht.topu.com.tht.ui.activity.ShoppingCardActivity
-ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:94:9-70
+ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:107:9-108:51
+	android:screenOrientation
+		ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:108:13-49
 	android:name
-		ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:94:19-67
+		ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:107:19-67
 activity#tht.topu.com.tht.ui.activity.ForumDetailActivity
-ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:95:9-69
+ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:109:9-110:51
+	android:screenOrientation
+		ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:110:13-49
 	android:name
-		ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:95:19-66
+		ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:109:19-66
 activity#tht.topu.com.tht.ui.activity.AddressListActivity
-ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:96:9-69
+ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:111:9-112:51
+	android:screenOrientation
+		ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:112:13-49
 	android:name
-		ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:96:19-66
+		ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:111:19-66
 activity#tht.topu.com.tht.ui.activity.OrderListActivity
-ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:97:9-76
+ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:113:9-115:20
+	android:screenOrientation
+		ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:114:13-49
 	android:name
-		ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:97:19-64
+		ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:113:19-64
 uses-sdk
 INJECTED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
-MERGED from [com.android.support:design:26.0.0-alpha1] /Users/shitakusei/.android/build-cache/106b7aeac23eec540c464e81dd7a66d14a9368c2/output/AndroidManifest.xml:21:5-23:62
-MERGED from [com.android.support:transition:26.0.0-alpha1] /Users/shitakusei/.android/build-cache/99642e97839c0ebf6010a314c81f5d3abe0b4beb/output/AndroidManifest.xml:20:5-44
-MERGED from [com.youth.banner:banner:1.4.9] /Users/shitakusei/.android/build-cache/5430eb50155aff5ddaf9882cbf3b7d79e8d83dab/output/AndroidManifest.xml:7:5-9:41
-MERGED from [com.android.support:cardview-v7:26.0.0-alpha1] /Users/shitakusei/.android/build-cache/2fb2ddf4f4ae665a0885ef28e1d7fb4592a4f442/output/AndroidManifest.xml:20:5-44
-MERGED from [jp.wasabeef:glide-transformations:3.0.1] /Users/shitakusei/.android/build-cache/3ee15257fe76e036761dcc9e4074e96bbb3f3038/output/AndroidManifest.xml:8:5-10:41
-MERGED from [cn.lemon:RefreshRecyclerView:1.2.0] /Users/shitakusei/.android/build-cache/dd849fa844b26de8fcdd13215384b0e4d8620f42/output/AndroidManifest.xml:7:5-9:41
-MERGED from [com.othershe:BaseAdapter:1.1.5] /Users/shitakusei/.android/build-cache/46696a5ea3b7f62c2a535c433716a59817af3f82/output/AndroidManifest.xml:7:5-9:41
-MERGED from [com.android.support:recyclerview-v7:26.0.0-alpha1] /Users/shitakusei/.android/build-cache/01cc690f97140515f17787433321542b69de9b0a/output/AndroidManifest.xml:20:5-44
-MERGED from [com.heinrichreimersoftware:material-intro:1.6.2] /Users/shitakusei/.android/build-cache/6ad3134e7ef6a54d3b0280fed46226b3a6f2036f/output/AndroidManifest.xml:31:5-33:41
-MERGED from [com.android.support:appcompat-v7:26.0.0-alpha1] /Users/shitakusei/.android/build-cache/f7e81158ab4f78a630c4d88aff2514a225185962/output/AndroidManifest.xml:21:5-23:78
-MERGED from [com.android.support:animated-vector-drawable:26.0.0-alpha1] /Users/shitakusei/.android/build-cache/998c5efd1d0671a158276060f214bd32523ccb6a/output/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:26.0.0-alpha1] /Users/shitakusei/.android/build-cache/a74b6b447c7021758a6956531a144d60ea3cc9b1/output/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /Users/shitakusei/.android/build-cache/924e4eb07f7a587d7366606e5a46dac2f22ad3d3/output/AndroidManifest.xml:5:5-7:41
-MERGED from [com.android.databinding:adapters:1.3.1] /Users/shitakusei/.android/build-cache/113b2ce4e1dcd20e59f31f4a8e6ea19f1d636b5e/output/AndroidManifest.xml:22:5-24:41
-MERGED from [com.android.databinding:library:1.3.1] /Users/shitakusei/.android/build-cache/e2907f571f4c321160a7d49e8b03cb20b09910bb/output/AndroidManifest.xml:22:5-24:41
-MERGED from [com.android.support:support-v4:26.0.0-alpha1] /Users/shitakusei/.android/build-cache/989070fa0a01c67abd03b4737bb826bd3de5dff4/output/AndroidManifest.xml:21:5-23:54
-MERGED from [com.android.support:support-media-compat:26.0.0-alpha1] /Users/shitakusei/.android/build-cache/bdaa1c5560319752c6f02b6d3aabc8ccdbc2be15/output/AndroidManifest.xml:21:5-23:63
-MERGED from [com.android.support:support-fragment:26.0.0-alpha1] /Users/shitakusei/.android/build-cache/c5123c89a2d5284f3f765c75743879e69f13fdd8/output/AndroidManifest.xml:21:5-23:60
-MERGED from [com.android.support:support-core-ui:26.0.0-alpha1] /Users/shitakusei/.android/build-cache/620ab76955c15b8ac2e5c1394ccb11984d155919/output/AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support:support-core-utils:26.0.0-alpha1] /Users/shitakusei/.android/build-cache/84d5e824d4d2d230c0e06eea77610a52f0263ed2/output/AndroidManifest.xml:21:5-23:61
-MERGED from [com.android.support:support-compat:26.0.0-alpha1] /Users/shitakusei/.android/build-cache/6c59939d6ca76ee85abd9e32692c0ad2e60a4a4c/output/AndroidManifest.xml:21:5-23:58
-MERGED from [com.squareup.leakcanary:leakcanary-android:1.5.4] /Users/shitakusei/.android/build-cache/3fc867f0d1850e816b69088059fa965a7cae93ee/output/AndroidManifest.xml:20:5-44
-MERGED from [com.squareup.leakcanary:leakcanary-analyzer:1.5.4] /Users/shitakusei/.android/build-cache/a90d0413a49ced536949ff2f90e81a5155380e17/output/AndroidManifest.xml:21:5-44
+INJECTED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml
+INJECTED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml
+MERGED from [com.heinrichreimersoftware:material-intro:1.6.2] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/material-intro-1.6.2.aar/102ce2e88b4a4cb4556ea1daeff49db9/AndroidManifest.xml:31:5-33:41
+MERGED from [com.heinrichreimersoftware:material-intro:1.6.2] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/material-intro-1.6.2.aar/102ce2e88b4a4cb4556ea1daeff49db9/AndroidManifest.xml:31:5-33:41
+MERGED from [com.android.databinding:adapters:1.3.1] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/adapters-1.3.1.aar/84227e7f118f9690d6be6e693945b65d/AndroidManifest.xml:22:5-24:41
+MERGED from [com.android.databinding:adapters:1.3.1] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/adapters-1.3.1.aar/84227e7f118f9690d6be6e693945b65d/AndroidManifest.xml:22:5-24:41
+MERGED from [com.android.databinding:library:1.3.1] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/library-1.3.1.aar/1375e901827ff60476be46188dd09056/AndroidManifest.xml:22:5-24:41
+MERGED from [com.android.databinding:library:1.3.1] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/library-1.3.1.aar/1375e901827ff60476be46188dd09056/AndroidManifest.xml:22:5-24:41
+MERGED from [com.android.support:design:26.0.0-alpha1] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/design-26.0.0-alpha1.aar/d7abba6433467a435c3877cface9f1c4/AndroidManifest.xml:21:5-23:62
+MERGED from [com.android.support:design:26.0.0-alpha1] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/design-26.0.0-alpha1.aar/d7abba6433467a435c3877cface9f1c4/AndroidManifest.xml:21:5-23:62
+MERGED from [com.github.javen205.JPay:jpaysdk:0.0.3] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpaysdk-0.0.3.aar/f71ca43812dab3fb86cb21a4ba5bb45e/AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.javen205.JPay:jpaysdk:0.0.3] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpaysdk-0.0.3.aar/f71ca43812dab3fb86cb21a4ba5bb45e/AndroidManifest.xml:7:5-9:41
+MERGED from [com.android.support:appcompat-v7:26.0.0-alpha1] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.0.0-alpha1.aar/a27655e5bc59afc4b44dc8948dc4309d/AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:appcompat-v7:26.0.0-alpha1] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.0.0-alpha1.aar/a27655e5bc59afc4b44dc8948dc4309d/AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:animated-vector-drawable:26.0.0-alpha1] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.0.0-alpha1.aar/752df4d7804a17ce7cf87cedfb3def3c/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:26.0.0-alpha1] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.0.0-alpha1.aar/752df4d7804a17ce7cf87cedfb3def3c/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:26.0.0-alpha1] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.0.0-alpha1.aar/d667360c6a778ab84433a37faccfbb44/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:26.0.0-alpha1] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.0.0-alpha1.aar/d667360c6a778ab84433a37faccfbb44/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:26.0.0-alpha1] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/transition-26.0.0-alpha1.aar/1fb0143d66e75dc4d53200ee4253088e/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:26.0.0-alpha1] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/transition-26.0.0-alpha1.aar/1fb0143d66e75dc4d53200ee4253088e/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:26.0.0-alpha1] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/support-v4-26.0.0-alpha1.aar/9aab0a16c9d79c9cd2cefcac515cd66f/AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-v4:26.0.0-alpha1] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/support-v4-26.0.0-alpha1.aar/9aab0a16c9d79c9cd2cefcac515cd66f/AndroidManifest.xml:21:5-23:54
+MERGED from [jp.wasabeef:glide-transformations:3.0.1] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/glide-transformations-3.0.1.aar/861a74d576359aae028a04d7393e3b37/AndroidManifest.xml:8:5-10:41
+MERGED from [jp.wasabeef:glide-transformations:3.0.1] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/glide-transformations-3.0.1.aar/861a74d576359aae028a04d7393e3b37/AndroidManifest.xml:8:5-10:41
+MERGED from [com.youth.banner:banner:1.4.9] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/banner-1.4.9.aar/93e12ad1974516f18c248e642e1f68a3/AndroidManifest.xml:7:5-9:41
+MERGED from [com.youth.banner:banner:1.4.9] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/banner-1.4.9.aar/93e12ad1974516f18c248e642e1f68a3/AndroidManifest.xml:7:5-9:41
+MERGED from [com.android.support:cardview-v7:26.0.0-alpha1] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/cardview-v7-26.0.0-alpha1.aar/369b42205e2c0dae4fe1f30ed0cb066d/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cardview-v7:26.0.0-alpha1] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/cardview-v7-26.0.0-alpha1.aar/369b42205e2c0dae4fe1f30ed0cb066d/AndroidManifest.xml:20:5-44
+MERGED from [cn.lemon:RefreshRecyclerView:1.2.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/RefreshRecyclerView-1.2.0.aar/014bb2f804d040bdcfe1ed1a19a63519/AndroidManifest.xml:7:5-9:41
+MERGED from [cn.lemon:RefreshRecyclerView:1.2.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/RefreshRecyclerView-1.2.0.aar/014bb2f804d040bdcfe1ed1a19a63519/AndroidManifest.xml:7:5-9:41
+MERGED from [com.othershe:BaseAdapter:1.1.5] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/BaseAdapter-1.1.5.aar/a06cdc4d47ae78f337f0233174c5ae8b/AndroidManifest.xml:7:5-9:41
+MERGED from [com.othershe:BaseAdapter:1.1.5] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/BaseAdapter-1.1.5.aar/a06cdc4d47ae78f337f0233174c5ae8b/AndroidManifest.xml:7:5-9:41
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.0.2.aar/d00f03fbe89936a07ce6a3e5d9f6cbb8/AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.0.2.aar/d00f03fbe89936a07ce6a3e5d9f6cbb8/AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support:support-media-compat:26.0.0-alpha1] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.0.0-alpha1.aar/4d90a3148199ced3246badc4bdd78b1b/AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-media-compat:26.0.0-alpha1] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.0.0-alpha1.aar/4d90a3148199ced3246badc4bdd78b1b/AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-fragment:26.0.0-alpha1] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/support-fragment-26.0.0-alpha1.aar/d417609fc2e5449eb6bdad8483100315/AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-fragment:26.0.0-alpha1] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/support-fragment-26.0.0-alpha1.aar/d417609fc2e5449eb6bdad8483100315/AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-core-utils:26.0.0-alpha1] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.0.0-alpha1.aar/6c1e51f7b1b50f1cf0479903205212f4/AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-core-utils:26.0.0-alpha1] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.0.0-alpha1.aar/6c1e51f7b1b50f1cf0479903205212f4/AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:recyclerview-v7:26.0.0-alpha1] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-26.0.0-alpha1.aar/46b85228d2d693a3b1e802cf5efc9397/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:26.0.0-alpha1] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-26.0.0-alpha1.aar/46b85228d2d693a3b1e802cf5efc9397/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:26.0.0-alpha1] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.0.0-alpha1.aar/46ae156c1fbe8bf83d866dc8b5a9cbd8/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-ui:26.0.0-alpha1] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.0.0-alpha1.aar/46ae156c1fbe8bf83d866dc8b5a9cbd8/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-compat:26.0.0-alpha1] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/support-compat-26.0.0-alpha1.aar/f667a11eea32ea77d31e6a8be19c53a2/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-compat:26.0.0-alpha1] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/support-compat-26.0.0-alpha1.aar/f667a11eea32ea77d31e6a8be19c53a2/AndroidManifest.xml:21:5-23:58
+INJECTED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml
+INJECTED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml
 	tools:overrideLibrary
-		ADDED from [com.android.support:design:26.0.0-alpha1] /Users/shitakusei/.android/build-cache/106b7aeac23eec540c464e81dd7a66d14a9368c2/output/AndroidManifest.xml:23:9-59
+		ADDED from [com.android.support:design:26.0.0-alpha1] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/design-26.0.0-alpha1.aar/d7abba6433467a435c3877cface9f1c4/AndroidManifest.xml:23:9-59
 	android:targetSdkVersion
 		INJECTED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml
+		ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml
 		INJECTED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml
 	android:minSdkVersion
 		INJECTED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml
+		ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml
 		INJECTED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml
 meta-data#android.support.VERSION
-ADDED from [com.android.support:design:26.0.0-alpha1] /Users/shitakusei/.android/build-cache/106b7aeac23eec540c464e81dd7a66d14a9368c2/output/AndroidManifest.xml:25:5-27:41
-MERGED from [com.android.support:transition:26.0.0-alpha1] /Users/shitakusei/.android/build-cache/99642e97839c0ebf6010a314c81f5d3abe0b4beb/output/AndroidManifest.xml:22:5-24:41
-MERGED from [com.android.support:cardview-v7:26.0.0-alpha1] /Users/shitakusei/.android/build-cache/2fb2ddf4f4ae665a0885ef28e1d7fb4592a4f442/output/AndroidManifest.xml:22:5-24:41
-MERGED from [com.android.support:recyclerview-v7:26.0.0-alpha1] /Users/shitakusei/.android/build-cache/01cc690f97140515f17787433321542b69de9b0a/output/AndroidManifest.xml:22:5-24:41
-MERGED from [com.android.support:appcompat-v7:26.0.0-alpha1] /Users/shitakusei/.android/build-cache/f7e81158ab4f78a630c4d88aff2514a225185962/output/AndroidManifest.xml:25:5-27:41
-MERGED from [com.android.support:animated-vector-drawable:26.0.0-alpha1] /Users/shitakusei/.android/build-cache/998c5efd1d0671a158276060f214bd32523ccb6a/output/AndroidManifest.xml:22:5-24:41
-MERGED from [com.android.support:support-vector-drawable:26.0.0-alpha1] /Users/shitakusei/.android/build-cache/a74b6b447c7021758a6956531a144d60ea3cc9b1/output/AndroidManifest.xml:22:5-24:41
-MERGED from [com.android.support:support-v4:26.0.0-alpha1] /Users/shitakusei/.android/build-cache/989070fa0a01c67abd03b4737bb826bd3de5dff4/output/AndroidManifest.xml:25:5-27:41
-MERGED from [com.android.support:support-media-compat:26.0.0-alpha1] /Users/shitakusei/.android/build-cache/bdaa1c5560319752c6f02b6d3aabc8ccdbc2be15/output/AndroidManifest.xml:25:5-27:41
-MERGED from [com.android.support:support-fragment:26.0.0-alpha1] /Users/shitakusei/.android/build-cache/c5123c89a2d5284f3f765c75743879e69f13fdd8/output/AndroidManifest.xml:25:5-27:41
-MERGED from [com.android.support:support-core-ui:26.0.0-alpha1] /Users/shitakusei/.android/build-cache/620ab76955c15b8ac2e5c1394ccb11984d155919/output/AndroidManifest.xml:25:5-27:41
-MERGED from [com.android.support:support-core-utils:26.0.0-alpha1] /Users/shitakusei/.android/build-cache/84d5e824d4d2d230c0e06eea77610a52f0263ed2/output/AndroidManifest.xml:25:5-27:41
-MERGED from [com.android.support:support-compat:26.0.0-alpha1] /Users/shitakusei/.android/build-cache/6c59939d6ca76ee85abd9e32692c0ad2e60a4a4c/output/AndroidManifest.xml:25:5-27:41
+ADDED from [com.android.support:design:26.0.0-alpha1] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/design-26.0.0-alpha1.aar/d7abba6433467a435c3877cface9f1c4/AndroidManifest.xml:25:5-27:41
+MERGED from [com.android.support:appcompat-v7:26.0.0-alpha1] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.0.0-alpha1.aar/a27655e5bc59afc4b44dc8948dc4309d/AndroidManifest.xml:25:5-27:41
+MERGED from [com.android.support:appcompat-v7:26.0.0-alpha1] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.0.0-alpha1.aar/a27655e5bc59afc4b44dc8948dc4309d/AndroidManifest.xml:25:5-27:41
+MERGED from [com.android.support:animated-vector-drawable:26.0.0-alpha1] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.0.0-alpha1.aar/752df4d7804a17ce7cf87cedfb3def3c/AndroidManifest.xml:22:5-24:41
+MERGED from [com.android.support:animated-vector-drawable:26.0.0-alpha1] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.0.0-alpha1.aar/752df4d7804a17ce7cf87cedfb3def3c/AndroidManifest.xml:22:5-24:41
+MERGED from [com.android.support:support-vector-drawable:26.0.0-alpha1] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.0.0-alpha1.aar/d667360c6a778ab84433a37faccfbb44/AndroidManifest.xml:22:5-24:41
+MERGED from [com.android.support:support-vector-drawable:26.0.0-alpha1] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.0.0-alpha1.aar/d667360c6a778ab84433a37faccfbb44/AndroidManifest.xml:22:5-24:41
+MERGED from [com.android.support:transition:26.0.0-alpha1] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/transition-26.0.0-alpha1.aar/1fb0143d66e75dc4d53200ee4253088e/AndroidManifest.xml:22:5-24:41
+MERGED from [com.android.support:transition:26.0.0-alpha1] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/transition-26.0.0-alpha1.aar/1fb0143d66e75dc4d53200ee4253088e/AndroidManifest.xml:22:5-24:41
+MERGED from [com.android.support:support-v4:26.0.0-alpha1] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/support-v4-26.0.0-alpha1.aar/9aab0a16c9d79c9cd2cefcac515cd66f/AndroidManifest.xml:25:5-27:41
+MERGED from [com.android.support:support-v4:26.0.0-alpha1] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/support-v4-26.0.0-alpha1.aar/9aab0a16c9d79c9cd2cefcac515cd66f/AndroidManifest.xml:25:5-27:41
+MERGED from [com.android.support:cardview-v7:26.0.0-alpha1] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/cardview-v7-26.0.0-alpha1.aar/369b42205e2c0dae4fe1f30ed0cb066d/AndroidManifest.xml:22:5-24:41
+MERGED from [com.android.support:cardview-v7:26.0.0-alpha1] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/cardview-v7-26.0.0-alpha1.aar/369b42205e2c0dae4fe1f30ed0cb066d/AndroidManifest.xml:22:5-24:41
+MERGED from [com.android.support:support-media-compat:26.0.0-alpha1] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.0.0-alpha1.aar/4d90a3148199ced3246badc4bdd78b1b/AndroidManifest.xml:25:5-27:41
+MERGED from [com.android.support:support-media-compat:26.0.0-alpha1] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.0.0-alpha1.aar/4d90a3148199ced3246badc4bdd78b1b/AndroidManifest.xml:25:5-27:41
+MERGED from [com.android.support:support-fragment:26.0.0-alpha1] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/support-fragment-26.0.0-alpha1.aar/d417609fc2e5449eb6bdad8483100315/AndroidManifest.xml:25:5-27:41
+MERGED from [com.android.support:support-fragment:26.0.0-alpha1] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/support-fragment-26.0.0-alpha1.aar/d417609fc2e5449eb6bdad8483100315/AndroidManifest.xml:25:5-27:41
+MERGED from [com.android.support:support-core-utils:26.0.0-alpha1] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.0.0-alpha1.aar/6c1e51f7b1b50f1cf0479903205212f4/AndroidManifest.xml:25:5-27:41
+MERGED from [com.android.support:support-core-utils:26.0.0-alpha1] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.0.0-alpha1.aar/6c1e51f7b1b50f1cf0479903205212f4/AndroidManifest.xml:25:5-27:41
+MERGED from [com.android.support:recyclerview-v7:26.0.0-alpha1] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-26.0.0-alpha1.aar/46b85228d2d693a3b1e802cf5efc9397/AndroidManifest.xml:22:5-24:41
+MERGED from [com.android.support:recyclerview-v7:26.0.0-alpha1] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-26.0.0-alpha1.aar/46b85228d2d693a3b1e802cf5efc9397/AndroidManifest.xml:22:5-24:41
+MERGED from [com.android.support:support-core-ui:26.0.0-alpha1] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.0.0-alpha1.aar/46ae156c1fbe8bf83d866dc8b5a9cbd8/AndroidManifest.xml:25:5-27:41
+MERGED from [com.android.support:support-core-ui:26.0.0-alpha1] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.0.0-alpha1.aar/46ae156c1fbe8bf83d866dc8b5a9cbd8/AndroidManifest.xml:25:5-27:41
+MERGED from [com.android.support:support-compat:26.0.0-alpha1] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/support-compat-26.0.0-alpha1.aar/f667a11eea32ea77d31e6a8be19c53a2/AndroidManifest.xml:25:5-27:41
+MERGED from [com.android.support:support-compat:26.0.0-alpha1] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/support-compat-26.0.0-alpha1.aar/f667a11eea32ea77d31e6a8be19c53a2/AndroidManifest.xml:25:5-27:41
 	android:value
-		ADDED from [com.android.support:design:26.0.0-alpha1] /Users/shitakusei/.android/build-cache/106b7aeac23eec540c464e81dd7a66d14a9368c2/output/AndroidManifest.xml:27:9-38
+		ADDED from [com.android.support:design:26.0.0-alpha1] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/design-26.0.0-alpha1.aar/d7abba6433467a435c3877cface9f1c4/AndroidManifest.xml:27:9-38
 	android:name
-		ADDED from [com.android.support:design:26.0.0-alpha1] /Users/shitakusei/.android/build-cache/106b7aeac23eec540c464e81dd7a66d14a9368c2/output/AndroidManifest.xml:26:9-47
-service#com.squareup.leakcanary.internal.HeapAnalyzerService
-ADDED from [com.squareup.leakcanary:leakcanary-android:1.5.4] /Users/shitakusei/.android/build-cache/3fc867f0d1850e816b69088059fa965a7cae93ee/output/AndroidManifest.xml:27:9-30:45
-	android:enabled
-		ADDED from [com.squareup.leakcanary:leakcanary-android:1.5.4] /Users/shitakusei/.android/build-cache/3fc867f0d1850e816b69088059fa965a7cae93ee/output/AndroidManifest.xml:29:13-36
-	android:process
-		ADDED from [com.squareup.leakcanary:leakcanary-android:1.5.4] /Users/shitakusei/.android/build-cache/3fc867f0d1850e816b69088059fa965a7cae93ee/output/AndroidManifest.xml:30:13-42
-	android:name
-		ADDED from [com.squareup.leakcanary:leakcanary-android:1.5.4] /Users/shitakusei/.android/build-cache/3fc867f0d1850e816b69088059fa965a7cae93ee/output/AndroidManifest.xml:28:13-80
-service#com.squareup.leakcanary.DisplayLeakService
-ADDED from [com.squareup.leakcanary:leakcanary-android:1.5.4] /Users/shitakusei/.android/build-cache/3fc867f0d1850e816b69088059fa965a7cae93ee/output/AndroidManifest.xml:31:9-34:45
-	android:enabled
-		ADDED from [com.squareup.leakcanary:leakcanary-android:1.5.4] /Users/shitakusei/.android/build-cache/3fc867f0d1850e816b69088059fa965a7cae93ee/output/AndroidManifest.xml:33:13-36
-	android:process
-		ADDED from [com.squareup.leakcanary:leakcanary-android:1.5.4] /Users/shitakusei/.android/build-cache/3fc867f0d1850e816b69088059fa965a7cae93ee/output/AndroidManifest.xml:34:13-42
-	android:name
-		ADDED from [com.squareup.leakcanary:leakcanary-android:1.5.4] /Users/shitakusei/.android/build-cache/3fc867f0d1850e816b69088059fa965a7cae93ee/output/AndroidManifest.xml:32:13-70
-activity#com.squareup.leakcanary.internal.DisplayLeakActivity
-ADDED from [com.squareup.leakcanary:leakcanary-android:1.5.4] /Users/shitakusei/.android/build-cache/3fc867f0d1850e816b69088059fa965a7cae93ee/output/AndroidManifest.xml:36:9-49:20
-	android:enabled
-		ADDED from [com.squareup.leakcanary:leakcanary-android:1.5.4] /Users/shitakusei/.android/build-cache/3fc867f0d1850e816b69088059fa965a7cae93ee/output/AndroidManifest.xml:38:13-36
-	android:process
-		ADDED from [com.squareup.leakcanary:leakcanary-android:1.5.4] /Users/shitakusei/.android/build-cache/3fc867f0d1850e816b69088059fa965a7cae93ee/output/AndroidManifest.xml:41:13-42
-	android:label
-		ADDED from [com.squareup.leakcanary:leakcanary-android:1.5.4] /Users/shitakusei/.android/build-cache/3fc867f0d1850e816b69088059fa965a7cae93ee/output/AndroidManifest.xml:40:13-71
-	android:icon
-		ADDED from [com.squareup.leakcanary:leakcanary-android:1.5.4] /Users/shitakusei/.android/build-cache/3fc867f0d1850e816b69088059fa965a7cae93ee/output/AndroidManifest.xml:39:13-54
-	android:theme
-		ADDED from [com.squareup.leakcanary:leakcanary-android:1.5.4] /Users/shitakusei/.android/build-cache/3fc867f0d1850e816b69088059fa965a7cae93ee/output/AndroidManifest.xml:43:13-63
-	android:taskAffinity
-		ADDED from [com.squareup.leakcanary:leakcanary-android:1.5.4] /Users/shitakusei/.android/build-cache/3fc867f0d1850e816b69088059fa965a7cae93ee/output/AndroidManifest.xml:42:13-76
-	android:name
-		ADDED from [com.squareup.leakcanary:leakcanary-android:1.5.4] /Users/shitakusei/.android/build-cache/3fc867f0d1850e816b69088059fa965a7cae93ee/output/AndroidManifest.xml:37:13-80
-activity#com.squareup.leakcanary.internal.RequestStoragePermissionActivity
-ADDED from [com.squareup.leakcanary:leakcanary-android:1.5.4] /Users/shitakusei/.android/build-cache/3fc867f0d1850e816b69088059fa965a7cae93ee/output/AndroidManifest.xml:50:9-58:68
-	android:enabled
-		ADDED from [com.squareup.leakcanary:leakcanary-android:1.5.4] /Users/shitakusei/.android/build-cache/3fc867f0d1850e816b69088059fa965a7cae93ee/output/AndroidManifest.xml:52:13-36
-	android:process
-		ADDED from [com.squareup.leakcanary:leakcanary-android:1.5.4] /Users/shitakusei/.android/build-cache/3fc867f0d1850e816b69088059fa965a7cae93ee/output/AndroidManifest.xml:56:13-42
-	android:label
-		ADDED from [com.squareup.leakcanary:leakcanary-android:1.5.4] /Users/shitakusei/.android/build-cache/3fc867f0d1850e816b69088059fa965a7cae93ee/output/AndroidManifest.xml:55:13-82
-	android:excludeFromRecents
-		ADDED from [com.squareup.leakcanary:leakcanary-android:1.5.4] /Users/shitakusei/.android/build-cache/3fc867f0d1850e816b69088059fa965a7cae93ee/output/AndroidManifest.xml:53:13-46
-	android:icon
-		ADDED from [com.squareup.leakcanary:leakcanary-android:1.5.4] /Users/shitakusei/.android/build-cache/3fc867f0d1850e816b69088059fa965a7cae93ee/output/AndroidManifest.xml:54:13-54
-	android:theme
-		ADDED from [com.squareup.leakcanary:leakcanary-android:1.5.4] /Users/shitakusei/.android/build-cache/3fc867f0d1850e816b69088059fa965a7cae93ee/output/AndroidManifest.xml:58:13-65
-	android:taskAffinity
-		ADDED from [com.squareup.leakcanary:leakcanary-android:1.5.4] /Users/shitakusei/.android/build-cache/3fc867f0d1850e816b69088059fa965a7cae93ee/output/AndroidManifest.xml:57:13-76
-	android:name
-		ADDED from [com.squareup.leakcanary:leakcanary-android:1.5.4] /Users/shitakusei/.android/build-cache/3fc867f0d1850e816b69088059fa965a7cae93ee/output/AndroidManifest.xml:51:13-93
+		ADDED from [com.android.support:design:26.0.0-alpha1] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/design-26.0.0-alpha1.aar/d7abba6433467a435c3877cface9f1c4/AndroidManifest.xml:26:9-47

@@ -134,7 +134,7 @@ public class RankContentFragment extends Fragment {
             swipeRefreshLayout.post(new Runnable() {
                 @Override
                 public void run() {
-                    swipeRefreshLayout.setRefreshing(false);
+                    swipeRefreshLayout.setRefreshing(true);
                 }
             });
 
@@ -482,6 +482,7 @@ public class RankContentFragment extends Fragment {
                             public void run() {
 
                                 swipeRefreshLayout.setRefreshing(false);
+                                rankRecyclerViewAdapter.notifyDataSetChanged();
 
                                 if (!isFirstLoad){
 

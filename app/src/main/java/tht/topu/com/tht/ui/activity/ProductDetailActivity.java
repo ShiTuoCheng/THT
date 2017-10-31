@@ -1,8 +1,13 @@
 package tht.topu.com.tht.ui.activity;
 
+import android.Manifest;
 import android.annotation.SuppressLint;
+import android.app.ProgressDialog;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.os.Handler;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -18,10 +23,13 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.jpay.JPay;
+
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.IOException;
+import java.util.Random;
 
 import okhttp3.Call;
 import okhttp3.Callback;
@@ -34,8 +42,9 @@ import tht.topu.com.tht.R;
 import tht.topu.com.tht.modle.Product;
 import tht.topu.com.tht.utils.API;
 import tht.topu.com.tht.utils.Utilities;
+import tht.topu.com.tht.utils.WXPayUtils;
 
-public class ProductDetailActivity extends AppCompatActivity {
+public class ProductDetailActivity extends AppCompatActivity implements ActivityCompat.OnRequestPermissionsResultCallback {
 
     private WebView productDetailWebView;
     private LinearLayout loadingLayout;
@@ -52,6 +61,8 @@ public class ProductDetailActivity extends AppCompatActivity {
     //json请求
     public static final MediaType JSON = MediaType
             .parse("application/json; charset=utf-8");
+
+    private ProgressDialog progressDialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -73,6 +84,9 @@ public class ProductDetailActivity extends AppCompatActivity {
     private void initView(){
 
         productDetailWebView = (WebView)findViewById(R.id.productDetailWebView);
+        progressDialog = new ProgressDialog(ProductDetailActivity.this);
+        progressDialog.setTitle("正在处理中...");
+        progressDialog.setCancelable(false);
         WebSettings webSettings = productDetailWebView.getSettings();
         loadingLayout = (LinearLayout)findViewById(R.id.loadingLayout);
         back = (ImageView)findViewById(R.id.forumPostBack);
@@ -87,7 +101,7 @@ public class ProductDetailActivity extends AppCompatActivity {
         });
 
         webSettings.setJavaScriptEnabled(true);
-        productDetailWebView.addJavascriptInterface(this, "pageApp");
+        productDetailWebView.addJavascriptInterface(this, "payApp");
 
         productDetailWebView.setWebViewClient(new WebViewClient(){
 
@@ -118,7 +132,7 @@ public class ProductDetailActivity extends AppCompatActivity {
     }
 
     @JavascriptInterface
-    public void goToPay(final String price, final String name, final String mid, final String oSerial, final String oid) {
+    public void wxPay(final String oid, final String oSerial, final String price) {
         productDetailWebView.post(new Runnable() {
 
             @Override
@@ -126,12 +140,117 @@ public class ProductDetailActivity extends AppCompatActivity {
 
                 if (Float.valueOf(price) <= 0){
 
-                    Toast.makeText(ProductDetailActivity.this, "价格小于等于0", Toast.LENGTH_SHORT).show();
+//                    Toast.makeText(ProductDetailActivity.this, "价格小于等于0", Toast.LENGTH_SHORT).show();
+                    progressDialog.show();
+                    changeOrderStatus(oid);
+
+                }else {
+
+                    getPrePay(price, oid, oSerial);
                 }
+            }
+        });
+    }
 
-                Toast.makeText(ProductDetailActivity.this, "价格："+price+" 名称:"+name+"mid:"+mid+"oid:"+oid, Toast.LENGTH_SHORT).show();
+    //获取订单预支付id
+    private void getPrePay(final String price, final String oid, final String oSerial){
 
+        random32 = Utilities.getStringRandom(32);
+        time10 = Utilities.get10Time();
+        key64 = Utilities.get64Key(random32);
+
+        String json = "{\n" +
+                "    \"validate_k\": \"1\",\n" +
+                "    \"params\": [\n" +
+                "        {\n" +
+                "            \"type\": \"Orders\",\n" +
+                "            \"act\": \"UnifiedOrder\",\n" +
+                "            \"para\": {\n" +
+                "                \"params\": {\n" +
+                "                    \"Money\": \""+price+"\",\n" +
+                "                    \"Oid\": \""+oid+"\",\n" +
+                "                    \"Oserial\": \""+oSerial+"\"\n" +
+                "                },\n" +
+                "                \"sign_valid\": {\n" +
+                "                    \"source\": \"Android\",\n" +
+                "                    \"non_str\": \""+random32+"\",\n" +
+                "                    \"stamp\": \""+time10+"\",\n" +
+                "                    \"signature\": \""+Utilities.encode("Money="+price+"Oid="+oid+"Oserial="+oSerial+"non_str="+random32+"stamp="+time10+"keySecret="+key64)+"\"\n" +
+                "                }\n" +
+                "            }\n" +
+                "        }\n" +
+                "    ]\n" +
+                "}";
+
+        OkHttpClient okHttpClient = new OkHttpClient();
+
+        RequestBody requestBody = RequestBody.create(JSON, json);
+        Request request = new Request.Builder().url(API.getAPI()).post(requestBody).build();
+
+        okHttpClient.newCall(request).enqueue(new Callback() {
+
+            @Override
+            public void onFailure(Call call, IOException e) {
+
+                uiHandler.post(new Runnable() {
+                    @Override
+                    public void run() {
+
+                        Toast.makeText(ProductDetailActivity.this, "支付失败，请重试", Toast.LENGTH_SHORT).show();
+                    }
+                });
+            }
+
+            @Override
+            public void onResponse(Call call, Response response) throws IOException {
+
+                if (response.body() != null){
+
+                    try {
+                        JSONObject jsonObject = new JSONObject(response.body().string());
+                        final String prePayId = jsonObject.getJSONArray("result").getJSONObject(0).getString("prepay_id");
+                        
+                        uiHandler.post(new Runnable() {
+                            @Override
+                            public void run() {
+                           
+                                if (!prePayId.equals("")){
+
+                                    launchWXPay(prePayId, oid);
+                                    
+                                }else {
+
+                                    Toast.makeText(ProductDetailActivity.this, "支付出错 请重试", Toast.LENGTH_SHORT).show();
+                                }
+                            }
+                        });
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
+
+                }
+            }
+        });
+    }
+
+    private void launchWXPay(final String prepayId, final String oid){
+
+        JPay.getIntance(this).toWxPay(API.APPID, API.PartnerID, prepayId, Utilities.getStringRandom(32), Utilities.get10Time(), "Sign=WXPay", new JPay.JPayListener() {
+            @Override
+            public void onPaySuccess() {
+                Toast.makeText(ProductDetailActivity.this, "支付成功", Toast.LENGTH_SHORT).show();
+                progressDialog.show();
                 changeOrderStatus(oid);
+            }
+
+            @Override
+            public void onPayError(int error_code, String message) {
+                Toast.makeText(ProductDetailActivity.this, "支付失败>"+error_code+" "+ message, Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onPayCancel() {
+                Toast.makeText(ProductDetailActivity.this, "取消了支付", Toast.LENGTH_SHORT).show();
             }
         });
     }
@@ -246,13 +365,12 @@ public class ProductDetailActivity extends AppCompatActivity {
                     try {
                         JSONObject jsonObject = new JSONObject(response.body().string());
 
-                        Log.d("changeSerial", jsonObject.toString());
-
                         uiHandler.post(new Runnable() {
                             @Override
                             public void run() {
 
                                 productDetailWebView.reload();
+                                progressDialog.dismiss();
                             }
                         });
                     } catch (JSONException e) {
@@ -261,6 +379,5 @@ public class ProductDetailActivity extends AppCompatActivity {
                 }
             }
         });
-
     }
 }

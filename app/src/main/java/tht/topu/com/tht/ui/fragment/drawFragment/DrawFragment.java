@@ -143,17 +143,6 @@ public class DrawFragment extends Fragment {
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        if(isVisible) {
-
-            shakePhone();
-        } else {
-
-            if (sensorManager != null){
-
-                sensorManager.unregisterListener(sensorEventListener);
-            }
-        }
     }
 
     @Override
@@ -279,70 +268,54 @@ public class DrawFragment extends Fragment {
         getDrawImg();
     }
 
+//    @Override
+//    public void onHiddenChanged(boolean hidden) {
+//        super.onHiddenChanged(hidden);
+//        if(hidden) {
+//
+//            if (sensorManager != null){
+//
+//                sensorManager.unregisterListener(sensorEventListener);
+//            }
+//            isVisible = false;
+//        } else {
+//
+//            shakePhone();
+//
+//            isVisible = true;
+//        }
+//    }
+
     @Override
     public void setUserVisibleHint(boolean isVisibleToUser) {
         super.setUserVisibleHint(isVisibleToUser);
         if(isVisibleToUser) {
 
             shakePhone();
+            isVisible = true;
         } else {
 
             if (sensorManager != null){
 
                 sensorManager.unregisterListener(sensorEventListener);
             }
-        }
-    }
-
-    @Override
-    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
-        super.onActivityCreated(savedInstanceState);
-        if(isVisible) {
-
-            shakePhone();
-        } else {
-
-            if (sensorManager != null){
-
-                sensorManager.unregisterListener(sensorEventListener);
-            }
-        }
-    }
-
-    @Override
-    public void onStart() {
-        super.onStart();
-
-        if(isVisible) {
-
-            shakePhone();
-        } else {
-
-            if (sensorManager != null){
-
-                sensorManager.unregisterListener(sensorEventListener);
-            }
+            isVisible = false;
         }
     }
 
     @Override
     public void onResume() {
         super.onResume();
-        if(isVisible) {
+        if (isVisible){
 
             shakePhone();
-        } else {
-
-            if (sensorManager != null){
-
-                sensorManager.unregisterListener(sensorEventListener);
-            }
         }
     }
 
     @Override
     public void onPause() {
         super.onPause();
+
         if (sensorManager != null){
 
             sensorManager.unregisterListener(sensorEventListener);

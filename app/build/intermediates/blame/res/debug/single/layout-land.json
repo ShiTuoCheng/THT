@@ -1,10 +1,10 @@
 [
     {
-        "merged": "/Users/shitakusei/Desktop/THT/app/build/intermediates/res/merged/debug/layout-land/mi_fragment_simple_slide_scrollable.xml",
-        "source": "/Users/shitakusei/.android/build-cache/6ad3134e7ef6a54d3b0280fed46226b3a6f2036f/output/res/layout-land/mi_fragment_simple_slide_scrollable.xml"
+        "merged": "/Users/shitakusei/Desktop/THT/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout-land/mi_fragment_simple_slide_scrollable.xml",
+        "source": "/Users/shitakusei/.gradle/caches/transforms-1/files-1.1/material-intro-1.6.2.aar/102ce2e88b4a4cb4556ea1daeff49db9/res/layout-land/mi_fragment_simple_slide_scrollable.xml"
     },
     {
-        "merged": "/Users/shitakusei/Desktop/THT/app/build/intermediates/res/merged/debug/layout-land/mi_fragment_simple_slide.xml",
-        "source": "/Users/shitakusei/.android/build-cache/6ad3134e7ef6a54d3b0280fed46226b3a6f2036f/output/res/layout-land/mi_fragment_simple_slide.xml"
+        "merged": "/Users/shitakusei/Desktop/THT/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout-land/mi_fragment_simple_slide.xml",
+        "source": "/Users/shitakusei/.gradle/caches/transforms-1/files-1.1/material-intro-1.6.2.aar/102ce2e88b4a4cb4556ea1daeff49db9/res/layout-land/mi_fragment_simple_slide.xml"
     }
 ]
