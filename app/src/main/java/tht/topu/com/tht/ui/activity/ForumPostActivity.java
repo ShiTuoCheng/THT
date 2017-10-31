@@ -112,6 +112,8 @@ public class ForumPostActivity extends AppCompatActivity {
     private String currentFlid = "";
     private String currentCid = "";
 
+    private ProgressDialog progressDialog;
+
     private String flid;
 
     @Override
@@ -188,6 +190,8 @@ public class ForumPostActivity extends AppCompatActivity {
         postBlogLayout = (LinearLayout)findViewById(R.id.postBlogLayout);
         backButton = (ImageView)findViewById(R.id.forumPostBack);
 
+        progressDialog = new ProgressDialog(this);
+        progressDialog.setCancelable(false);
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);
         layoutManager.setOrientation(LinearLayoutManager.HORIZONTAL);
         uploadImageAdapter = new UploadImageAdapter(images);
@@ -642,11 +646,6 @@ public class ForumPostActivity extends AppCompatActivity {
                                 localBroadcastManager.sendBroadcast(broadcastIntent);
                                 uploadImage(mfid, images64.get(0));
 
-                                progressDialog.dismiss();
-
-                                Toast.makeText(ForumPostActivity.this, "发帖成功", Toast.LENGTH_SHORT).show();
-                                ForumPostActivity.this.finish();
-
                             }
                         } catch (JSONException e) {
                             e.printStackTrace();
@@ -690,7 +689,7 @@ public class ForumPostActivity extends AppCompatActivity {
 
         uploadTimes++;
 
-        Log.d("test", eachImage64+" "+fid);
+        Log.d("test", String.valueOf(uploadTimes));
 
         OkHttpClient okHttpClient = new OkHttpClient();
 
@@ -732,6 +731,10 @@ public class ForumPostActivity extends AppCompatActivity {
                                     if (uploadTimes == images64.size()){
 
                                         Toast.makeText(ForumPostActivity.this, "发帖成功", Toast.LENGTH_SHORT).show();
+
+
+                                        progressDialog.dismiss();
+                                        ForumPostActivity.this.finish();
 
                                     }else {
 

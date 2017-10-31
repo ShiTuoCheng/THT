@@ -126,7 +126,7 @@ public class ForumContentFragment extends Fragment {
         forumRecyclerView.setLayoutManager(linearLayoutManager);
         forumRecyclerView.addItemDecoration(dividerLine);
 
-        forumRecyclerViewAdapter = new ForumRecyclerViewAdapter(getActivity().getApplicationContext(), forumList, true);
+        forumRecyclerViewAdapter = new ForumRecyclerViewAdapter(getActivity(), null, true);
 
         forumRecyclerViewAdapter.notifyDataSetChanged();
 
@@ -143,6 +143,8 @@ public class ForumContentFragment extends Fragment {
 
                 currentPage++;
                 initData(false,flid , cid);
+
+                Log.d("loadmore", "forumLoadMore");
             }
         });
 
@@ -275,6 +277,8 @@ public class ForumContentFragment extends Fragment {
 
                                 swipeRefreshLayout.setRefreshing(false);
 
+                                Log.d("forumSize", String.valueOf(forumList.size()));
+
                                 if (forumList.size() > 0){
 
                                     forumEmptyTextView.setVisibility(View.GONE);
@@ -286,8 +290,14 @@ public class ForumContentFragment extends Fragment {
                                 if (!isFirstLoad){
 
                                     forumRecyclerViewAdapter.setLoadMoreData(loadMoreForums);
+                                }else {
+
+                                    Log.d("forumSize", String.valueOf(forumList.size()));
+                                    forumRecyclerViewAdapter.reset();
+                                    forumRecyclerViewAdapter.setNewData(forumList);
                                 }
-                                forumRecyclerViewAdapter.notifyDataSetChanged();
+
+//                                forumRecyclerViewAdapter.notifyDataSetChanged();
                                 if (forumList.size() == 0){
 
                                     forumRecyclerViewAdapter.loadEnd();
@@ -317,10 +327,11 @@ public class ForumContentFragment extends Fragment {
         @Override
         public void onReceive(Context context, Intent intent) {
             flid = intent.getStringExtra("Flid");
+
+//            forumList.clear();
             initData(true, flid, cid);
             Log.d("接受广播", "接受广播");
 
-            forumList.clear();
 
             swipeRefreshLayout.post(new Runnable() {
                 @Override

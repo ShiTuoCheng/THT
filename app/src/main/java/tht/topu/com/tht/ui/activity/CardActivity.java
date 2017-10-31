@@ -1,5 +1,6 @@
 package tht.topu.com.tht.ui.activity;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -15,6 +16,9 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import com.jpay.JPay;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -65,6 +69,10 @@ public class CardActivity extends BaseActivity {
     private String random32;
     private String time10;
     private String key64;
+
+    private String[] priceArr;
+
+    private ProgressDialog progressDialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -145,11 +153,11 @@ public class CardActivity extends BaseActivity {
                 if (card1X == 200 || card2X == 200 || card3X == 200){
 
                     if (card1X == 200){
-                        addCard("1", mid);
+                        addCard("1", mid, priceArr[0]);
                     }else if (card2X == 200){
-                        addCard("2", mid);
+                        addCard("2", mid, priceArr[1]);
                     }else{
-                        addCard("3", mid );
+                        addCard("3", mid, priceArr[2]);
                     }
                 }else {
                     cardAlertTextView.setText("请至少选择一种卡片");
@@ -191,6 +199,9 @@ public class CardActivity extends BaseActivity {
 
         cardButton = (AppCompatButton)findViewById(R.id.cardButton);
         cardAlertTextView = (TextView)findViewById(R.id.cardAlertTextView);
+
+        progressDialog = new ProgressDialog(this);
+        progressDialog.setCancelable(false);
     }
 
     @Override
@@ -300,7 +311,7 @@ public class CardActivity extends BaseActivity {
                         JSONObject resultJson = new JSONObject(response.body().string());
                         String priceStr = resultJson.getJSONArray("result").getJSONObject(0).getJSONObject("Iinfo").getString("Iinfo");
 
-                        final String[] priceArr = priceStr.split("\\|");
+                        priceArr = priceStr.split("\\|");
 
                         if (uiHandler != null){
 
@@ -310,9 +321,9 @@ public class CardActivity extends BaseActivity {
 
                                     loadingLayout.setVisibility(View.GONE);
                                     cardLayout.setVisibility(View.VISIBLE);
-                                    card1Price.setText(priceArr[0]+" / 月");
-                                    card2Price.setText(priceArr[1]+" / 月");
-                                    card3Price.setText(priceArr[2]+" / 月");
+                                    card1Price.setText(priceArr[0]+" / 1个月");
+                                    card2Price.setText(priceArr[1]+" / 6个月");
+                                    card3Price.setText(priceArr[2]+" / 12个月");
                                 }
                             });
                         }
@@ -326,8 +337,10 @@ public class CardActivity extends BaseActivity {
         });
     }
 
+
+
     //添加卡券
-    private void addCard(String card, String mid){
+    private void addCard(final String card, String mid, final String cardPrice){
 
         random32 = Utilities.getStringRandom(32);
         time10 = Utilities.get10Time();
@@ -376,11 +389,19 @@ public class CardActivity extends BaseActivity {
                     try {
                         JSONObject jsonObject = new JSONObject(response.body().string());
 
-                        String mcid = jsonObject.getJSONArray("result").getJSONObject(0).getString("Mcid");
+                        final String mcid = jsonObject.getJSONArray("result").getJSONObject(0).getString("Mcid");
 
                         Log.d("card", jsonObject.toString());
 
-                        cardSerial(mcid);
+                        uiHandler.post(new Runnable() {
+                            @Override
+                            public void run() {
+
+                                progressDialog.show();
+                                getPrePay(cardPrice, card, mcid);
+                            }
+                        });
+
                     } catch (JSONException e) {
                         e.printStackTrace();
                     }
@@ -389,7 +410,8 @@ public class CardActivity extends BaseActivity {
         });
     }
 
-    private void cardSerial(String mcid){
+    //获取订单预支付id
+    private void getPrePay(final String price, final String grade, final String mcid){
 
         random32 = Utilities.getStringRandom(32);
         time10 = Utilities.get10Time();
@@ -400,17 +422,18 @@ public class CardActivity extends BaseActivity {
                 "    \"params\": [\n" +
                 "        {\n" +
                 "            \"type\": \"Membership_card\",\n" +
-                "            \"act\": \"Serial_pay\",\n" +
+                "            \"act\": \"UnifiedOrder\",\n" +
                 "            \"para\": {\n" +
                 "                \"params\": {\n" +
-                "                    \"d_Mcid\": \""+mcid+"\",\n" +
-                "                    \"Serial_pay\": \"瞎几把编的\"\n" +
+                "                    \"Grade\": \""+grade+"\",\n" +
+                "                    \"Mcid\": \""+mcid+"\",\n" +
+                "                    \"Money\": \""+price+"\"\n" +
                 "                },\n" +
                 "                \"sign_valid\": {\n" +
                 "                    \"source\": \"Android\",\n" +
                 "                    \"non_str\": \""+random32+"\",\n" +
                 "                    \"stamp\": \""+time10+"\",\n" +
-                "                    \"signature\": \""+Utilities.encode("d_Mcid="+mcid+"Serial_pay=瞎几把编的"+"non_str="+random32+"stamp="+time10+"keySecret="+key64)+"\"\n" +
+                "                    \"signature\": \""+Utilities.encode("Grade="+grade+"Mcid="+mcid+"Money="+price+"non_str="+random32+"stamp="+time10+"keySecret="+key64)+"\"\n" +
                 "                }\n" +
                 "            }\n" +
                 "        }\n" +
@@ -427,6 +450,13 @@ public class CardActivity extends BaseActivity {
             @Override
             public void onFailure(Call call, IOException e) {
 
+                uiHandler.post(new Runnable() {
+                    @Override
+                    public void run() {
+
+                        Toast.makeText(CardActivity.this, "支付失败，请重试", Toast.LENGTH_SHORT).show();
+                    }
+                });
             }
 
             @Override
@@ -436,23 +466,118 @@ public class CardActivity extends BaseActivity {
 
                     try {
                         JSONObject jsonObject = new JSONObject(response.body().string());
-
-                        Log.d("cardSerial", jsonObject.toString());
+                        final String prePayId = jsonObject.getJSONArray("result").getJSONObject(0).getString("prepay_id");
 
                         uiHandler.post(new Runnable() {
                             @Override
                             public void run() {
 
-                                //清空activity调用盏
-                                Intent intent = new Intent(CardActivity.this, MainActivity.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
-                                startActivity(intent);
+                                if (!prePayId.equals("")){
+
+                                    launchWXPay(prePayId);
+
+                                }else {
+
+                                    Toast.makeText(CardActivity.this, "支付出错 请重试", Toast.LENGTH_SHORT).show();
+                                }
                             }
                         });
                     } catch (JSONException e) {
                         e.printStackTrace();
                     }
+
                 }
             }
         });
     }
+
+    private void launchWXPay(final String prepayId){
+
+        JPay.getIntance(this).toWxPay(API.APPID, API.PartnerID, prepayId, Utilities.getStringRandom(32), Utilities.get10Time(), "Sign=WXPay", new JPay.JPayListener() {
+            @Override
+            public void onPaySuccess() {
+                Toast.makeText(CardActivity.this, "支付成功", Toast.LENGTH_SHORT).show();
+                progressDialog.cancel();
+            }
+
+            @Override
+            public void onPayError(int error_code, String message) {
+                Toast.makeText(CardActivity.this, "支付失败>"+error_code+" "+ message, Toast.LENGTH_SHORT).show();
+                progressDialog.cancel();
+            }
+
+            @Override
+            public void onPayCancel() {
+                Toast.makeText(CardActivity.this, "取消了支付", Toast.LENGTH_SHORT).show();
+                progressDialog.cancel();
+            }
+        });
+    }
+
+//    private void cardSerial(String mcid){
+//
+//        random32 = Utilities.getStringRandom(32);
+//        time10 = Utilities.get10Time();
+//        key64 = Utilities.get64Key(random32);
+//
+//        String json = "{\n" +
+//                "    \"validate_k\": \"1\",\n" +
+//                "    \"params\": [\n" +
+//                "        {\n" +
+//                "            \"type\": \"Membership_card\",\n" +
+//                "            \"act\": \"Serial_pay\",\n" +
+//                "            \"para\": {\n" +
+//                "                \"params\": {\n" +
+//                "                    \"d_Mcid\": \""+mcid+"\",\n" +
+//                "                    \"Serial_pay\": \""+time10+"\"\n" +
+//                "                },\n" +
+//                "                \"sign_valid\": {\n" +
+//                "                    \"source\": \"Android\",\n" +
+//                "                    \"non_str\": \""+random32+"\",\n" +
+//                "                    \"stamp\": \""+time10+"\",\n" +
+//                "                    \"signature\": \""+Utilities.encode("d_Mcid="+mcid+"Serial_pay="+time10+"non_str="+random32+"stamp="+time10+"keySecret="+key64)+"\"\n" +
+//                "                }\n" +
+//                "            }\n" +
+//                "        }\n" +
+//                "    ]\n" +
+//                "}";
+//
+//        OkHttpClient okHttpClient = new OkHttpClient();
+//
+//        RequestBody requestBody = RequestBody.create(JSON, json);
+//        Request request = new Request.Builder().url(API.getAPI()).post(requestBody).build();
+//
+//        okHttpClient.newCall(request).enqueue(new Callback() {
+//
+//            @Override
+//            public void onFailure(Call call, IOException e) {
+//
+//            }
+//
+//            @Override
+//            public void onResponse(Call call, Response response) throws IOException {
+//
+//                if (response.body() != null){
+//
+//                    try {
+//                        JSONObject jsonObject = new JSONObject(response.body().string());
+//
+//                        Log.d("cardSerial", jsonObject.toString());
+//
+//                        uiHandler.post(new Runnable() {
+//                            @Override
+//                            public void run() {
+//
+//                                //清空activity调用盏
+//                                Intent intent = new Intent(CardActivity.this, MainActivity.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+//                                startActivity(intent);
+//                            }
+//                        });
+//                    } catch (JSONException e) {
+//                        e.printStackTrace();
+//                    }
+//                }
+//            }
+//        });
+//    }
 }

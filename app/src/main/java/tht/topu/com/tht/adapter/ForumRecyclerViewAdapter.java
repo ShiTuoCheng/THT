@@ -42,6 +42,8 @@ public class ForumRecyclerViewAdapter extends CommonBaseAdapter<Forum>{
         holder.setText(R.id.goodNumTextView, ""+data.getLikeNum());
         holder.setText(R.id.forumVipTextView, data.getVip());
 
+        holder.setIsRecyclable(false);
+
         Glide.with(context).load(data.getAvatarIcon()).apply(RequestOptions.bitmapTransform(new CropCircleTransformation())).into((ImageView)holder.getView(R.id.userImageView));
         if (data.isFavorite() && !data.isTop()){
 

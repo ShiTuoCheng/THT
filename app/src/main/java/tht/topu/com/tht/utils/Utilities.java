@@ -1,5 +1,6 @@
 package tht.topu.com.tht.utils;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -35,6 +36,7 @@ import tht.topu.com.tht.R;
 public class Utilities {
 
     public static final String secretKey = "d1x9f1gyin36dqdovv8pgiu9drlm3gd8";
+    @SuppressLint("RestrictedApi")
     public static void disableShiftMode(BottomNavigationView view) {
         BottomNavigationMenuView menuView = (BottomNavigationMenuView) view.getChildAt(0);
         try {
