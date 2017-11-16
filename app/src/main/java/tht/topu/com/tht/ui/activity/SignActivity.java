@@ -312,6 +312,7 @@ public class SignActivity extends BaseActivity {
                 "                    \"s_d5\": \"\",\n" +
                 "                    \"s_d6\": \"\",\n" +
                 "                    \"s_Gag\": \"\",\n" +
+                "                    \"s_Grade\": \"\",\n" +
                 "                    \"s_Keywords\": \"\",\n" +
                 "                    \"s_Members_LV\": \"\",\n" +
                 "                    \"s_Mid\": \"\",\n" +
@@ -345,7 +346,7 @@ public class SignActivity extends BaseActivity {
                 "                    \"source\": \"Android\",\n" +
                 "                    \"non_str\": \""+ random32 +"\",\n" +
                 "                    \"stamp\": \""+ time10 +"\",\n" +
-                "                    \"signature\": \""+ Utilities.encode("s_Alive="+"s_Attention_state="+"s_d1="+"s_d2="+"s_d3="+"s_d4="+"s_d5="+"s_d6="+"s_Gag="+"s_Keywords="+"s_Members_LV="+"s_Mid="+"s_Mobile=$$$$$$$$$$Mobile_Valid:Select_Detail:detail:Mobile$$$$$$$$$$"+"s_Openid="+"s_Order="+"s_Ranking_Mid="+"s_Referee_Mid="+"s_Referee2_Mid="+"s_Stem_from=2"+"s_The_sun="+"s_Total_parameter=Mid,OpenID,Nickname,Head_img,Mname,Sex,Mobile,Rdate,Birthday,Alive,Gag,The_sun,Members_LV,Orders_count,Integral,card,Passwd,Addr,Stem_from,Token,Token_expiry,Token_IP,Referee_Mid,Referee2_Mid,Referee,Referee2,Reward,Withdraw,Contribution_Award,Balance,Ranking"+"non_str="+random32+"stamp="+time10+"keySecret="+key64) +"\"\n" +
+                "                    \"signature\": \""+ Utilities.encode("s_Alive="+"s_Attention_state="+"s_d1="+"s_d2="+"s_d3="+"s_d4="+"s_d5="+"s_d6="+"s_Gag="+"s_Grade="+"s_Keywords="+"s_Members_LV="+"s_Mid="+"s_Mobile=$$$$$$$$$$Mobile_Valid:Select_Detail:detail:Mobile$$$$$$$$$$"+"s_Openid="+"s_Order="+"s_Ranking_Mid="+"s_Referee_Mid="+"s_Referee2_Mid="+"s_Stem_from=2"+"s_The_sun="+"s_Total_parameter=Mid,OpenID,Nickname,Head_img,Mname,Sex,Mobile,Rdate,Birthday,Alive,Gag,The_sun,Members_LV,Orders_count,Integral,card,Passwd,Addr,Stem_from,Token,Token_expiry,Token_IP,Referee_Mid,Referee2_Mid,Referee,Referee2,Reward,Withdraw,Contribution_Award,Balance,Ranking"+"non_str="+random32+"stamp="+time10+"keySecret="+key64) +"\"\n" +
                 "                }\n" +
                 "            }\n" +
                 "        }"+
@@ -382,13 +383,8 @@ public class SignActivity extends BaseActivity {
 
                         if (!mobile.equals("")){
 
-                            if (jsonObject.getJSONArray("result").getJSONObject(1).getJSONArray("list").isNull(0)){
-
-                                submitUsr(phoneNum, password);
-
-                                Utilities.jumpToActivity(SignActivity.this, CardActivity.class);
-                            }else {
-
+                            if (jsonObject.getJSONArray("result").getJSONObject(1).getJSONArray("list").length() == 2 ){
+//                                Log.d("sign1", "fuck");
                                 uiHandler.post(new Runnable() {
                                     @Override
                                     public void run() {
@@ -396,6 +392,19 @@ public class SignActivity extends BaseActivity {
                                         Utilities.popUpAlert(SignActivity.this, "该手机号已经被注册了！");
                                     }
                                 });
+                            }else if(!jsonObject.getJSONArray("result").getJSONObject(1).getJSONArray("list").getJSONObject(0).getString("Stem_from").equals("1")) {
+//                                Log.d("sign2", "fuck");
+                                uiHandler.post(new Runnable() {
+                                    @Override
+                                    public void run() {
+
+                                        Utilities.popUpAlert(SignActivity.this, "该手机号已经被注册了！");
+                                    }
+                                });
+                            }else{
+                                submitUsr(phoneNum, password);
+
+                                Utilities.jumpToActivity(SignActivity.this, CardActivity.class);
                             }
 
                         }else {
@@ -479,8 +488,8 @@ public class SignActivity extends BaseActivity {
                             @Override
                             public void run() {
 
-                                 dialog = ProgressDialog.show(SignActivity.this, "正在提交",
-                                        "正在提交用户信息...", false);
+//                                 dialog = ProgressDialog.show(SignActivity.this, "正在提交",
+//                                        "正在提交用户信息...", false);
                             }
                         });
 
@@ -489,12 +498,14 @@ public class SignActivity extends BaseActivity {
                             uiHandler.post(new Runnable() {
                                 @Override
                                 public void run() {
+                                    Utilities.jumpToActivity(SignActivity.this, CardActivity.class);
 
-                                    SharedPreferences.Editor editor = getSharedPreferences("TokenData", MODE_PRIVATE).edit();
-                                    editor.putString(MID_KEY, mid);
-                                    editor.apply();
+//                                    SharedPreferences.Editor editor = getSharedPreferences("TokenData", MODE_PRIVATE).edit();
+//                                    editor.putString(MID_KEY, mid);
+//                                    editor.apply();
+//
+//                                    fetchToken(mid);
 
-                                    fetchToken(mid);
                                 }
                             });
                         }

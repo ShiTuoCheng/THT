@@ -126,13 +126,13 @@ public class ProductDetailActivity extends AppCompatActivity implements Activity
             public void onReceivedTitle(WebView view, String title) {
                 super.onReceivedTitle(view, title);
 
-                password_title.setText(title);
+                password_title.setText("宝贝详情");
             }
         });
     }
 
     @JavascriptInterface
-    public void wxPay(final String oid, final String oSerial, final String price) {
+    public void wxPay(final String oid, final long oSerial, final String price) {
         productDetailWebView.post(new Runnable() {
 
             @Override
@@ -153,7 +153,7 @@ public class ProductDetailActivity extends AppCompatActivity implements Activity
     }
 
     //获取订单预支付id
-    private void getPrePay(final String price, final String oid, final String oSerial){
+    private void getPrePay(final String price, final String oid, final long oSerial){
 
         random32 = Utilities.getStringRandom(32);
         time10 = Utilities.get10Time();
@@ -239,8 +239,9 @@ public class ProductDetailActivity extends AppCompatActivity implements Activity
             @Override
             public void onPaySuccess() {
                 Toast.makeText(ProductDetailActivity.this, "支付成功", Toast.LENGTH_SHORT).show();
-                progressDialog.show();
-                changeOrderStatus(oid);
+//                progressDialog.show();
+                productDetailWebView.reload();
+//                progressDialog.dismiss();
             }
 
             @Override
@@ -312,8 +313,7 @@ public class ProductDetailActivity extends AppCompatActivity implements Activity
                             @Override
                             public void run() {
 
-                                productDetailWebView.reload();
-                                progressDialog.dismiss();
+                                serialPay(oid);
                             }
                         });
 
@@ -325,66 +325,66 @@ public class ProductDetailActivity extends AppCompatActivity implements Activity
         });
     }
 
-//    private void serialPay(String oid){
-//
-//        random32 = Utilities.getStringRandom(32);
-//        time10 = Utilities.get10Time();
-//        key64 = Utilities.get64Key(random32);
-//
-//        String json = "{\n" +
-//                "    \"validate_k\": \"1\",\n" +
-//                "    \"params\": [\n" +
-//                "        {\n" +
-//                "            \"type\": \"Orders\",\n" +
-//                "            \"act\": \"Serial_pay\",\n" +
-//                "            \"para\": {\n" +
-//                "                \"params\": {\n" +
-//                "                    \"d_Oid\": \""+oid+"\",\n" +
-//                "                    \"Serial_pay\": \"瞎编的\"\n" +
-//                "                },\n" +
-//                "                \"sign_valid\": {\n" +
-//                "                    \"source\": \"Android\",\n" +
-//                "                    \"non_str\": \""+random32+"\",\n" +
-//                "                    \"stamp\": \""+time10+"\",\n" +
-//                "                    \"signature\": \""+Utilities.encode("d_Oid="+oid+"Serial_pay=瞎编的"+"non_str="+random32+"stamp="+time10+"keySecret="+key64)+"\"\n" +
-//                "                }\n" +
-//                "            }\n" +
-//                "        }\n" +
-//                "    ]\n" +
-//                "}";
-//        OkHttpClient okHttpClient = new OkHttpClient();
-//
-//        RequestBody requestBody = RequestBody.create(JSON, json);
-//        Request request = new Request.Builder().url(API.getAPI()).post(requestBody).build();
-//
-//        okHttpClient.newCall(request).enqueue(new Callback() {
-//
-//            @Override
-//            public void onFailure(Call call, IOException e) {
-//
-//            }
-//
-//            @Override
-//            public void onResponse(Call call, Response response) throws IOException {
-//
-//                if (response.body() != null){
-//
-//                    try {
-//                        JSONObject jsonObject = new JSONObject(response.body().string());
-//
-//                        uiHandler.post(new Runnable() {
-//                            @Override
-//                            public void run() {
-//
-//                                productDetailWebView.reload();
-//                                progressDialog.dismiss();
-//                            }
-//                        });
-//                    } catch (JSONException e) {
-//                        e.printStackTrace();
-//                    }
-//                }
-//            }
-//        });
-//    }
+    private void serialPay(String oid){
+
+        random32 = Utilities.getStringRandom(32);
+        time10 = Utilities.get10Time();
+        key64 = Utilities.get64Key(random32);
+
+        String json = "{\n" +
+                "    \"validate_k\": \"1\",\n" +
+                "    \"params\": [\n" +
+                "        {\n" +
+                "            \"type\": \"Orders\",\n" +
+                "            \"act\": \"Serial_pay\",\n" +
+                "            \"para\": {\n" +
+                "                \"params\": {\n" +
+                "                    \"d_Oid\": \""+oid+"\",\n" +
+                "                    \"Serial_pay\": \""+time10+"\"\n" +
+                "                },\n" +
+                "                \"sign_valid\": {\n" +
+                "                    \"source\": \"Android\",\n" +
+                "                    \"non_str\": \""+random32+"\",\n" +
+                "                    \"stamp\": \""+time10+"\",\n" +
+                "                    \"signature\": \""+Utilities.encode("d_Oid="+oid+"Serial_pay="+time10+"non_str="+random32+"stamp="+time10+"keySecret="+key64)+"\"\n" +
+                "                }\n" +
+                "            }\n" +
+                "        }\n" +
+                "    ]\n" +
+                "}";
+        OkHttpClient okHttpClient = new OkHttpClient();
+
+        RequestBody requestBody = RequestBody.create(JSON, json);
+        Request request = new Request.Builder().url(API.getAPI()).post(requestBody).build();
+
+        okHttpClient.newCall(request).enqueue(new Callback() {
+
+            @Override
+            public void onFailure(Call call, IOException e) {
+
+            }
+
+            @Override
+            public void onResponse(Call call, Response response) throws IOException {
+
+                if (response.body() != null){
+
+                    try {
+                        JSONObject jsonObject = new JSONObject(response.body().string());
+
+                        uiHandler.post(new Runnable() {
+                            @Override
+                            public void run() {
+
+                                productDetailWebView.reload();
+                                progressDialog.dismiss();
+                            }
+                        });
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+        });
+    }
 }

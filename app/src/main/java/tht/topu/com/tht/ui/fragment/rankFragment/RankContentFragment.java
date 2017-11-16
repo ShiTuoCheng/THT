@@ -145,23 +145,21 @@ public class RankContentFragment extends Fragment {
         }
 
         //下拉刷新
-//        swipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
-//            @Override
-//            public void onRefresh() {
-//
-//                // 获取用户信息
-//                getUserInfo();
-//
-//                refreshData();
-//            }
-//        });
+        swipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
 
-        swipeRefreshLayout.setEnabled(false);
+                // 获取用户信息
+                getUserInfo();
+
+                initData(true);
+            }
+        });
 
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getActivity().getApplicationContext());
         linearLayoutManager.setOrientation(LinearLayoutManager.VERTICAL);
 
-        rankRecyclerViewAdapter = new RankRecyclerViewAdapter(getActivity().getApplicationContext(), ranks, true, true);
+        rankRecyclerViewAdapter = new RankRecyclerViewAdapter(getActivity(), null, true, true);
 
         DividerLine dividerLine = new DividerLine();
         dividerLine.setColor(getResources().getColor(R.color.colorBorder));
@@ -170,6 +168,11 @@ public class RankContentFragment extends Fragment {
         rankRecyclerViewAdapter.notifyDataSetChanged();
         //初始化 开始加载更多的loading View
         rankRecyclerViewAdapter.setLoadingView(R.layout.progress_item);
+        rankRecyclerViewAdapter.setLoadEndView(R.layout.layout_load_end);
+
+        refreshRecyclerView.setLayoutManager(linearLayoutManager);
+        refreshRecyclerView.addItemDecoration(dividerLine);
+
         // 加载更多
         rankRecyclerViewAdapter.setOnLoadMoreListener(new OnLoadMoreListener() {
             @Override
@@ -182,8 +185,6 @@ public class RankContentFragment extends Fragment {
             }
         });
 
-        refreshRecyclerView.setLayoutManager(linearLayoutManager);
-        refreshRecyclerView.addItemDecoration(dividerLine);
         refreshRecyclerView.setAdapter(rankRecyclerViewAdapter);
         return v;
     }
@@ -248,6 +249,7 @@ public class RankContentFragment extends Fragment {
                 "                    \"s_d5\": \""+firstDay+"\",\n" +
                 "                    \"s_d6\": \""+secondDay+"\",\n" +
                 "                    \"s_Gag\": \"\",\n" +
+                "                    \"s_Grade\": \"\",\n" +
                 "                    \"s_Keywords\": \"\",\n" +
                 "                    \"s_Members_LV\": \"\",\n" +
                 "                    \"s_Mid\": \"\",\n" +
@@ -281,7 +283,7 @@ public class RankContentFragment extends Fragment {
                 "                    \"source\": \"Android\",\n" +
                 "                    \"non_str\": \""+random32+"\",\n" +
                 "                    \"stamp\": \""+time10+"\",\n" +
-                "                    \"signature\": \""+Utilities.encode("s_Alive="+"s_Attention_state="+"s_d1="+"s_d2="+"s_d3="+"s_d4="+"s_d5="+firstDay+"s_d6="+secondDay+"s_Gag="+"s_Keywords="+"s_Members_LV="+"s_Mid="+"s_Mobile="+"s_Openid="+"s_Order=Integral desc,Rdate"+"s_Ranking_Mid="+mid+"s_Referee_Mid="+"s_Referee2_Mid="+"s_Stem_from=2"+"s_The_sun="+"s_Total_parameter=Mid,OpenID,Nickname,Head_img,Mname,Sex,Mobile,Rdate,Birthday,Alive,Gag,The_sun,Members_LV,Orders_count,Integral,card,Passwd,Addr,Stem_from,Token,Token_expiry,Token_IP,Referee_Mid,Referee2_Mid,Referee,Referee2,Reward,Withdraw,Contribution_Award,Balance,Ranking"+"non_str="+random32+"stamp="+time10+"keySecret="+key64)+"\"\n" +
+                "                    \"signature\": \""+Utilities.encode("s_Alive="+"s_Attention_state="+"s_d1="+"s_d2="+"s_d3="+"s_d4="+"s_d5="+firstDay+"s_d6="+secondDay+"s_Gag="+"s_Grade="+"s_Keywords="+"s_Members_LV="+"s_Mid="+"s_Mobile="+"s_Openid="+"s_Order=Integral desc,Rdate"+"s_Ranking_Mid="+mid+"s_Referee_Mid="+"s_Referee2_Mid="+"s_Stem_from=2"+"s_The_sun="+"s_Total_parameter=Mid,OpenID,Nickname,Head_img,Mname,Sex,Mobile,Rdate,Birthday,Alive,Gag,The_sun,Members_LV,Orders_count,Integral,card,Passwd,Addr,Stem_from,Token,Token_expiry,Token_IP,Referee_Mid,Referee2_Mid,Referee,Referee2,Reward,Withdraw,Contribution_Award,Balance,Ranking"+"non_str="+random32+"stamp="+time10+"keySecret="+key64)+"\"\n" +
                 "                }\n" +
                 "            }\n" +
                 "        }\n" +
@@ -364,7 +366,6 @@ public class RankContentFragment extends Fragment {
         }else {
 
             loadMoreRanks.clear();
-            Log.d("loadmore", "loadmore");
         }
 
         final String json = "{\n" +
@@ -384,6 +385,7 @@ public class RankContentFragment extends Fragment {
                 "                    \"s_d5\": \""+firstDay+"\",\n" +
                 "                    \"s_d6\": \""+secondDay+"\",\n" +
                 "                    \"s_Gag\": \"\",\n" +
+                "                    \"s_Grade\": \"\",\n" +
                 "                    \"s_Keywords\": \"\",\n" +
                 "                    \"s_Members_LV\": \"\",\n" +
                 "                    \"s_Mid\": \"\",\n" +
@@ -417,7 +419,7 @@ public class RankContentFragment extends Fragment {
                 "                    \"source\": \"Android\",\n" +
                 "                    \"non_str\": \""+random32+"\",\n" +
                 "                    \"stamp\": \""+time10+"\",\n" +
-                "                    \"signature\": \""+Utilities.encode("s_Alive="+"s_Attention_state="+"s_d1="+"s_d2="+"s_d3="+"s_d4="+"s_d5="+firstDay+"s_d6="+secondDay+"s_Gag="+"s_Keywords="+"s_Members_LV="+"s_Mid="+"s_Mobile="+"s_Openid="+"s_Order=Integral desc,Rdate"+"s_Ranking_Mid="+"s_Referee_Mid="+"s_Referee2_Mid="+"s_Stem_from=2"+"s_The_sun="+"s_Total_parameter=Mid,OpenID,Nickname,Head_img,Mname,Sex,Mobile,Rdate,Birthday,Alive,Gag,The_sun,Members_LV,Orders_count,Integral,card,Passwd,Addr,Stem_from,Token,Token_expiry,Token_IP,Referee_Mid,Referee2_Mid,Referee,Referee2,Reward,Withdraw,Contribution_Award,Balance,Ranking"+"non_str="+random32+"stamp="+time10+"keySecret="+key64)+"\"\n" +
+                "                    \"signature\": \""+Utilities.encode("s_Alive="+"s_Attention_state="+"s_d1="+"s_d2="+"s_d3="+"s_d4="+"s_d5="+firstDay+"s_d6="+secondDay+"s_Gag="+"s_Grade="+"s_Keywords="+"s_Members_LV="+"s_Mid="+"s_Mobile="+"s_Openid="+"s_Order=Integral desc,Rdate"+"s_Ranking_Mid="+"s_Referee_Mid="+"s_Referee2_Mid="+"s_Stem_from=2"+"s_The_sun="+"s_Total_parameter=Mid,OpenID,Nickname,Head_img,Mname,Sex,Mobile,Rdate,Birthday,Alive,Gag,The_sun,Members_LV,Orders_count,Integral,card,Passwd,Addr,Stem_from,Token,Token_expiry,Token_IP,Referee_Mid,Referee2_Mid,Referee,Referee2,Reward,Withdraw,Contribution_Award,Balance,Ranking"+"non_str="+random32+"stamp="+time10+"keySecret="+key64)+"\"\n" +
                 "                }\n" +
                 "            }\n" +
                 "        }\n" +
@@ -453,12 +455,9 @@ public class RankContentFragment extends Fragment {
                     try {
                         JSONObject jsonObject = new JSONObject(response.body().string());
 
-                        if (isFirstLoad){
+                        Log.d("rank", jsonObject.toString());
 
-                            Log.d("loadMore", jsonObject.toString());
-                        }
-
-                        JSONArray listData = jsonObject.getJSONArray("result").getJSONObject(0).getJSONArray("list");
+                        final JSONArray listData = jsonObject.getJSONArray("result").getJSONObject(0).getJSONArray("list");
                         totalPage = jsonObject.getJSONArray("result").getJSONObject(0).getJSONObject("page").getInt("Pc");
                         Rank.Builder builder = new Rank.Builder();
 
@@ -482,23 +481,20 @@ public class RankContentFragment extends Fragment {
                             public void run() {
 
                                 swipeRefreshLayout.setRefreshing(false);
-                                rankRecyclerViewAdapter.notifyDataSetChanged();
 
                                 if (!isFirstLoad){
-
                                     rankRecyclerViewAdapter.setLoadMoreData(loadMoreRanks);
-                                    rankRecyclerViewAdapter.notifyDataSetChanged();
+                                }else{
+                                    rankRecyclerViewAdapter.reset();
+                                    rankRecyclerViewAdapter.setNewData(ranks);
                                 }
                                 if (ranks.size() == 0){
 
                                     //加载完成，更新footer view提示
-                                    rankRecyclerViewAdapter.setLoadEndView(R.layout.layout_load_end);
-
                                     rankRecyclerViewAdapter.loadEnd();
                                 }else if (currentPage >= totalPage){
 
                                     //加载完成，更新footer view提示
-                                    rankRecyclerViewAdapter.setLoadEndView(R.layout.layout_load_end);
                                     rankRecyclerViewAdapter.loadEnd();
                                 }
                             }

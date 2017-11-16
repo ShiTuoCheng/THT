@@ -269,13 +269,13 @@ public class CardActivity extends BaseActivity {
                 "            \"act\": \"getinfo\",\n" +
                 "            \"para\": {\n" +
                 "                \"params\": {\n" +
-                "                    \"Iid\": \"5\"\n" +
+                "                    \"Iid\": \"14\"\n" +
                 "                },\n" +
                 "                \"sign_valid\": {\n" +
                 "                    \"source\": \"Android\",\n" +
                 "                    \"non_str\": \""+random32+"\",\n" +
                 "                    \"stamp\": \""+time10+"\",\n" +
-                "                    \"signature\": \""+Utilities.encode("Iid=5"+"non_str="+random32+"stamp="+time10+"keySecret="+key64)+"\"\n" +
+                "                    \"signature\": \""+Utilities.encode("Iid=14"+"non_str="+random32+"stamp="+time10+"keySecret="+key64)+"\"\n" +
                 "                }\n" +
                 "            }\n" +
                 "        }\n" +
@@ -321,9 +321,9 @@ public class CardActivity extends BaseActivity {
 
                                     loadingLayout.setVisibility(View.GONE);
                                     cardLayout.setVisibility(View.VISIBLE);
-                                    card1Price.setText(priceArr[0]+" / 1个月");
-                                    card2Price.setText(priceArr[1]+" / 6个月");
-                                    card3Price.setText(priceArr[2]+" / 12个月");
+                                    card1Price.setText("¥"+priceArr[0]+" / 1个月");
+                                    card2Price.setText("¥"+priceArr[1]+" / 6个月");
+                                    card3Price.setText("¥"+priceArr[2]+" / 12个月");
                                 }
                             });
                         }
@@ -498,6 +498,9 @@ public class CardActivity extends BaseActivity {
             public void onPaySuccess() {
                 Toast.makeText(CardActivity.this, "支付成功", Toast.LENGTH_SHORT).show();
                 progressDialog.cancel();
+
+                Intent intent = new Intent(CardActivity.this, MainActivity.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+                startActivity(intent);
             }
 
             @Override

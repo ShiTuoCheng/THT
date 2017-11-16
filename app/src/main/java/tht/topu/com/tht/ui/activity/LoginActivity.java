@@ -252,36 +252,43 @@ public class LoginActivity extends BaseActivity {
                                 editor.putString(PHONE_KEY, phone);
                                 editor.apply();
 
-                                uiHandler.post(new Runnable() {
-                                    @Override
-                                    public void run() {
-                                        
-                                        Toast.makeText(LoginActivity.this, "登录成功", Toast.LENGTH_SHORT).show();
-                                        //跳转页面之前先收回软键盘
-                                        InputMethodManager imm =  (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
-                                        imm.hideSoftInputFromWindow(getWindow().getDecorView().getWindowToken(),0);
+                                if (uiHandler != null){
 
-                                        if (grade == 0){
 
-                                            Toast.makeText(LoginActivity.this, "您还没有购买卡券，请购买卡券以继续", Toast.LENGTH_LONG).show();
-                                            LoginActivity.this.finish();
-                                            Utilities.jumpToActivity(LoginActivity.this, CardActivity.class);
-                                        }else {
+                                    uiHandler.post(new Runnable() {
+                                        @Override
+                                        public void run() {
 
-                                            LoginActivity.this.finish();
-                                            Utilities.jumpToActivity(LoginActivity.this, SplashActivity.class);
+                                            Toast.makeText(LoginActivity.this, "登录成功", Toast.LENGTH_SHORT).show();
+                                            //跳转页面之前先收回软键盘
+                                            InputMethodManager imm =  (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
+                                            imm.hideSoftInputFromWindow(getWindow().getDecorView().getWindowToken(),0);
+
+                                            if (grade == 0){
+
+                                                Toast.makeText(LoginActivity.this, "您还没有购买卡券，请购买卡券以继续", Toast.LENGTH_LONG).show();
+                                                LoginActivity.this.finish();
+                                                Utilities.jumpToActivity(LoginActivity.this, CardActivity.class);
+                                            }else {
+
+                                                LoginActivity.this.finish();
+                                                Utilities.jumpToActivity(LoginActivity.this, SplashActivity.class);
+                                            }
                                         }
-                                    }
-                                });
+                                    });
+                                }
                             }else {
 
-                                uiHandler.post(new Runnable() {
-                                    @Override
-                                    public void run() {
+                                if (uiHandler != null){
 
-                                        Utilities.popUpAlert(LoginActivity.this, "登录失败！输入的用户名和密码有误。");
-                                    }
-                                });
+                                    uiHandler.post(new Runnable() {
+                                        @Override
+                                        public void run() {
+
+                                            Utilities.popUpAlert(LoginActivity.this, "登录失败！输入的用户名和密码有误。");
+                                        }
+                                    });
+                                }
                             }
 
                         } catch (JSONException e) {

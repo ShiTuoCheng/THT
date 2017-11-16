@@ -334,6 +334,7 @@ public class MainFragment extends Fragment {
                 "                    \"s_Alive\": \"\",\n" +
                 "                    \"s_Cid\": \"\",\n" +
                 "                    \"s_Keywords\": \"\",\n" +
+                "                    \"s_Kind\": \"1\",\n" +
                 "                    \"s_Order\": \"Layer\",\n" +
                 "                    \"s_Stem_from\":\"2\",\n" +
                 "                    \"s_Total_parameter\": \"Cid,Ctitle,Pic1,Pic2,Layer,Alive,Stem_from\"\n" +
@@ -358,7 +359,7 @@ public class MainFragment extends Fragment {
                 "                    \"source\": \"Android\",\n" +
                 "                    \"non_str\": \""+random32+"\",\n" +
                 "                    \"stamp\": \""+time10+"\",\n" +
-                "                    \"signature\": \""+Utilities.encode("s_Alive="+"s_Cid="+"s_Keywords="+"s_Order=Layer"+"s_Stem_from=2"+"s_Total_parameter=Cid,Ctitle,Pic1,Pic2,Layer,Alive,Stem_from"+"non_str="+random32+"stamp="+time10+"keySecret="+key64)+"\"\n" +
+                "                    \"signature\": \""+Utilities.encode("s_Alive="+"s_Cid="+"s_Keywords="+"s_Kind=1"+"s_Order=Layer"+"s_Stem_from=2"+"s_Total_parameter=Cid,Ctitle,Pic1,Pic2,Layer,Alive,Stem_from"+"non_str="+random32+"stamp="+time10+"keySecret="+key64)+"\"\n" +
                 "                }\n" +
                 "            }\n" +
                 "        }\n" +

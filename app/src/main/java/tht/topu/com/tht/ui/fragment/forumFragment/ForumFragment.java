@@ -344,6 +344,7 @@ public class ForumFragment extends Fragment {
                 "                    \"s_Alive\": \"\",\n" +
                 "                    \"s_Cid\": \"\",\n" +
                 "                    \"s_Keywords\": \"\",\n" +
+                "                    \"s_Kind\": \"2\",\n" +
                 "                    \"s_Order\": \"Layer\",\n" +
                 "                    \"s_Stem_from\":\"2\",\n" +
                 "                    \"s_Total_parameter\": \"Cid,Ctitle,Pic1,Pic2,Layer,Alive,Stem_from\"\n" +
@@ -368,7 +369,7 @@ public class ForumFragment extends Fragment {
                 "                    \"source\": \"Android\",\n" +
                 "                    \"non_str\": \""+random32+"\",\n" +
                 "                    \"stamp\": \""+time10+"\",\n" +
-                "                    \"signature\": \""+Utilities.encode("s_Alive="+"s_Cid="+"s_Keywords="+"s_Order=Layer"+"s_Stem_from=2"+"s_Total_parameter=Cid,Ctitle,Pic1,Pic2,Layer,Alive,Stem_from"+"non_str="+random32+"stamp="+time10+"keySecret="+key64)+"\"\n" +
+                "                    \"signature\": \""+Utilities.encode("s_Alive="+"s_Cid="+"s_Keywords="+"s_Kind=2"+"s_Order=Layer"+"s_Stem_from=2"+"s_Total_parameter=Cid,Ctitle,Pic1,Pic2,Layer,Alive,Stem_from"+"non_str="+random32+"stamp="+time10+"keySecret="+key64)+"\"\n" +
                 "                }\n" +
                 "            }\n" +
                 "        }\n" +
@@ -418,10 +419,8 @@ public class ForumFragment extends Fragment {
                         unselectedIcons.clear();
                         selectedIcons.clear();
 
-                        tabTexts.add(0, "推荐");
                         unselectedDraw.add(0, getResources().getDrawable(R.drawable.recommand));
                         selectedDraw.add(0, getResources().getDrawable(R.drawable.selected_recommand));
-                        tabCids.add(0, "-1");
 
                         for (int i=0; i<imgArr.length(); i++){
 
@@ -549,16 +548,17 @@ public class ForumFragment extends Fragment {
 
         });
 
-        //默认发送第一次广播
-        broadcastIntent = new Intent("com.example.mybroadcast.MY_BROADCAST");
-        broadcastIntent.putExtra("Flid", flids.get(0));
-        localBroadcastManager.sendBroadcast(broadcastIntent);
+        if (flids.size() > 0){
+            //默认发送第一次广播
+            broadcastIntent = new Intent("com.example.mybroadcast.MY_BROADCAST");
+            broadcastIntent.putExtra("Flid", flids.get(0));
+            localBroadcastManager.sendBroadcast(broadcastIntent);
 
-        if (mainViewPagerAdapter != null){
+            if (mainViewPagerAdapter != null){
 
-            mainViewPagerAdapter.notifyDataSetChanged();
+                mainViewPagerAdapter.notifyDataSetChanged();
+            }
         }
-
     }
 
 }

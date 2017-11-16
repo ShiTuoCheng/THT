@@ -164,6 +164,7 @@ public class PasswordActivity extends BaseActivity{
                 "                    \"s_d5\": \"\",\n" +
                 "                    \"s_d6\": \"\",\n" +
                 "                    \"s_Gag\": \"\",\n" +
+                "                    \"s_Grade\": \"\",\n" +
                 "                    \"s_Keywords\": \"\",\n" +
                 "                    \"s_Members_LV\": \"\",\n" +
                 "                    \"s_Mid\": \"\",\n" +
@@ -197,7 +198,7 @@ public class PasswordActivity extends BaseActivity{
                 "                    \"source\": \"Android\",\n" +
                 "                    \"non_str\": \""+ random32 +"\",\n" +
                 "                    \"stamp\": \""+ time10 +"\",\n" +
-                "                    \"signature\": \""+ Utilities.encode("s_Alive="+"s_Attention_state="+"s_d1="+"s_d2="+"s_d3="+"s_d4="+"s_d5="+"s_d6="+"s_Gag="+"s_Keywords="+"s_Members_LV="+"s_Mid="+"s_Mobile="+phoneNum+"s_Openid="+"s_Order="+"s_Ranking_Mid="+"s_Referee_Mid="+"s_Referee2_Mid="+"s_Stem_from=2"+"s_The_sun="+"s_Total_parameter=Mid,OpenID,Nickname,Head_img,Mname,Sex,Mobile,Rdate,Birthday,Alive,Gag,The_sun,Members_LV,Orders_count,Integral,card,Passwd,Addr,Stem_from,Token,Token_expiry,Token_IP,Referee_Mid,Referee2_Mid,Referee,Referee2,Reward,Withdraw,Contribution_Award,Balance,Ranking"+"non_str="+random32+"stamp="+time10+"keySecret="+key64) +"\"\n" +
+                "                    \"signature\": \""+ Utilities.encode("s_Alive="+"s_Attention_state="+"s_d1="+"s_d2="+"s_d3="+"s_d4="+"s_d5="+"s_d6="+"s_Gag="+"s_Grade="+"s_Keywords="+"s_Members_LV="+"s_Mid="+"s_Mobile="+phoneNum+"s_Openid="+"s_Order="+"s_Ranking_Mid="+"s_Referee_Mid="+"s_Referee2_Mid="+"s_Stem_from=2"+"s_The_sun="+"s_Total_parameter=Mid,OpenID,Nickname,Head_img,Mname,Sex,Mobile,Rdate,Birthday,Alive,Gag,The_sun,Members_LV,Orders_count,Integral,card,Passwd,Addr,Stem_from,Token,Token_expiry,Token_IP,Referee_Mid,Referee2_Mid,Referee,Referee2,Reward,Withdraw,Contribution_Award,Balance,Ranking"+"non_str="+random32+"stamp="+time10+"keySecret="+key64) +"\"\n" +
                 "                }\n" +
                 "            }\n" +
                 "        }"+
@@ -245,7 +246,16 @@ public class PasswordActivity extends BaseActivity{
                                     Utilities.popUpAlert(PasswordActivity.this, "输入的手机号没有注册过，请重新输入有效手机号");
                                 }
                             });
-                        }else{
+                        }else if(jsonArray.getJSONObject(0).getString("Stem_from").equals("1")){
+
+                            uiHandler.post(new Runnable() {
+                                @Override
+                                public void run() {
+
+                                    Utilities.popUpAlert(PasswordActivity.this, "输入的手机号没有注册过，请重新输入有效手机号");
+                                }
+                            });
+                        } else{
 
                             uiHandler.post(new Runnable() {
                                 @Override

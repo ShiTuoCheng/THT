@@ -175,7 +175,7 @@ public class ForumContentFragment extends Fragment {
 
             loadMoreForums.clear();
         }
-        Log.d("loadDataParams", String.valueOf(isFirstLoad)+String.valueOf(flid)+String.valueOf(cid));
+
         String json = "{\n" +
                 "    \"validate_k\": \"1\",\n" +
                 "    \"params\": [\n" +

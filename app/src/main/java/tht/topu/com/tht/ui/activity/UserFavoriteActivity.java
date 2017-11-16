@@ -235,7 +235,7 @@ public class UserFavoriteActivity extends BaseActivity {
                         for (int i = 0; i < jsonArray.length(); i++){
 
                             JSONObject eachJson = jsonArray.getJSONObject(i).getJSONObject("Mdse");
-                            Product product = builder.productTitle(eachJson.getString("Stitle")).productPrice("¥"+eachJson.getString("Price")).image(API.getHostName()+eachJson.getString("Pic2")).Mcid(jsonArray.getJSONObject(i).getString("Mdid")).build();
+                            Product product = builder.productTitle(eachJson.getString("Stitle")).productPrice("¥"+eachJson.getString("Price")).image(API.getHostName()+eachJson.getString("Pic2")).Mcid(jsonArray.getJSONObject(i).getString("Mcid")).build();
 
                             if (isFirstLoad){
 
