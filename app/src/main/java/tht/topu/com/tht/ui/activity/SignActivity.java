@@ -392,19 +392,24 @@ public class SignActivity extends BaseActivity {
                                         Utilities.popUpAlert(SignActivity.this, "该手机号已经被注册了！");
                                     }
                                 });
-                            }else if(!jsonObject.getJSONArray("result").getJSONObject(1).getJSONArray("list").getJSONObject(0).getString("Stem_from").equals("1")) {
-//                                Log.d("sign2", "fuck");
-                                uiHandler.post(new Runnable() {
-                                    @Override
-                                    public void run() {
-
-                                        Utilities.popUpAlert(SignActivity.this, "该手机号已经被注册了！");
-                                    }
-                                });
                             }else{
-                                submitUsr(phoneNum, password);
+//                                Log.d("sign2", jsonObject.getJSONArray("result").getJSONObject(1).getJSONArray("list").getJSONObject(0).getString("Stem_from"));
+                                if (jsonObject.getJSONArray("result").getJSONObject(1).getJSONArray("list").length() == 0){
 
-                                Utilities.jumpToActivity(SignActivity.this, CardActivity.class);
+                                    submitUsr(phoneNum, password);
+                                    Utilities.jumpToActivity(SignActivity.this, CardActivity.class);
+                                }else if(jsonObject.getJSONArray("result").getJSONObject(1).getJSONArray("list").getJSONObject(0).getString("Stem_from").equals("1")) {
+                                    submitUsr(phoneNum, password);
+                                    Utilities.jumpToActivity(SignActivity.this, CardActivity.class);
+                                }else{
+                                    uiHandler.post(new Runnable() {
+                                        @Override
+                                        public void run() {
+
+                                            Utilities.popUpAlert(SignActivity.this, "该手机号已经被注册了！");
+                                        }
+                                    });
+                                }
                             }
 
                         }else {

@@ -8,29 +8,29 @@ package cn.lemon.view;
 
 public final class R {
     public static final class attr {
-        public static final int layoutManager = 0x7f0400ba;
-        public static final int load_more_able = 0x7f0400fc;
-        public static final int refresh_able = 0x7f040122;
-        public static final int reverseLayout = 0x7f040123;
-        public static final int spanCount = 0x7f040133;
-        public static final int stackFromEnd = 0x7f040139;
+        public static final int layoutManager = 0x7f0400cd;
+        public static final int load_more_able = 0x7f04010f;
+        public static final int refresh_able = 0x7f040136;
+        public static final int reverseLayout = 0x7f040137;
+        public static final int spanCount = 0x7f040147;
+        public static final int stackFromEnd = 0x7f04014d;
     }
     public static final class dimen {
-        public static final int item_touch_helper_max_drag_scroll_per_frame = 0x7f070081;
-        public static final int item_touch_helper_swipe_escape_max_velocity = 0x7f070082;
-        public static final int item_touch_helper_swipe_escape_velocity = 0x7f070083;
+        public static final int item_touch_helper_max_drag_scroll_per_frame = 0x7f070086;
+        public static final int item_touch_helper_swipe_escape_max_velocity = 0x7f070087;
+        public static final int item_touch_helper_swipe_escape_velocity = 0x7f070088;
     }
     public static final class id {
-        public static final int item_touch_helper_previous_elevation = 0x7f0900a3;
-        public static final int load_more_view = 0x7f0900aa;
-        public static final int no_more_view = 0x7f0900cb;
+        public static final int item_touch_helper_previous_elevation = 0x7f0900ae;
+        public static final int load_more_view = 0x7f0900b5;
+        public static final int no_more_view = 0x7f0900d7;
     }
     public static final class layout {
-        public static final int view_refresh_recycler = 0x7f0b006d;
-        public static final int view_status_last = 0x7f0b006e;
+        public static final int view_refresh_recycler = 0x7f0b0070;
+        public static final int view_status_last = 0x7f0b0071;
     }
     public static final class styleable {
-        public static final int[] RecyclerView = { 0x010100c4, 0x010100f1, 0x7f040095, 0x7f040096, 0x7f040097, 0x7f040098, 0x7f040099, 0x7f0400ba, 0x7f040123, 0x7f040133, 0x7f040139 };
+        public static final int[] RecyclerView = { 0x010100c4, 0x010100f1, 0x7f04009c, 0x7f04009d, 0x7f04009e, 0x7f04009f, 0x7f0400a0, 0x7f0400cd, 0x7f040137, 0x7f040147, 0x7f04014d };
         public static final int RecyclerView_android_orientation = 0;
         public static final int RecyclerView_android_descendantFocusability = 1;
         public static final int RecyclerView_fastScrollEnabled = 2;
@@ -42,7 +42,7 @@ public final class R {
         public static final int RecyclerView_reverseLayout = 8;
         public static final int RecyclerView_spanCount = 9;
         public static final int RecyclerView_stackFromEnd = 10;
-        public static final int[] RefreshRecyclerView = { 0x7f0400fc, 0x7f040122 };
+        public static final int[] RefreshRecyclerView = { 0x7f04010f, 0x7f040136 };
         public static final int RefreshRecyclerView_load_more_able = 0;
         public static final int RefreshRecyclerView_refresh_able = 1;
     }

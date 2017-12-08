@@ -266,6 +266,9 @@ public class DrawFragment extends Fragment {
         getDrawRecord();
         getDrawInfo();
         getDrawImg();
+
+        Log.d("draw", String.valueOf(amount));
+        Log.d("draw", String.valueOf(drawNum));
     }
 
 //    @Override
@@ -839,10 +842,12 @@ public class DrawFragment extends Fragment {
                                 //如果没有奖品直接提示失败,之后不再执行
                                 if (prizes.size() == 0){
 
+                                    Log.d("drawPrize", "none");
+
                                     submitDraw(midStr, String.valueOf(0), false);
                                     AlertDialog.Builder alertBuilder = new AlertDialog.Builder(getActivity());
                                     AlertDialog alertDialog = alertBuilder
-                                            .setMessage("很遗憾，这次您没有抽中，请明天再试试吧")
+                                            .setMessage("很遗憾，奖品都抽完了，请明天再试试吧")
                                             .setTitle("摇一摇")
                                             .setNeutralButton("好的", new DialogInterface.OnClickListener() {
                                                 @Override
@@ -1003,6 +1008,7 @@ public class DrawFragment extends Fragment {
                             int randomNum=(int)(Math.random()*100);
 
                             Log.d("drawRandom", String.valueOf(randomNum));
+                            Log.d("drawRandomStandard", String.valueOf(100 - repeatMid.size() * amount));
 
                             //如果用户随机到指定数内则开始抽奖
                             if (randomNum <= 100 - repeatMid.size() * amount){

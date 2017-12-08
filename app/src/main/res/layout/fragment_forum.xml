@@ -10,7 +10,7 @@
     <android.support.v7.widget.Toolbar
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/colorWhite"
+        android:background="@drawable/tool_bar"
         android:id="@+id/forumToolBar">
 
 
@@ -66,29 +66,30 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <RelativeLayout
+        <FrameLayout
+            android:id="@+id/forumContainer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <android.support.design.widget.TabLayout
-                android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:id="@+id/forumTabLayout"
-                app:tabMode="scrollable"
-                app:tabIndicatorColor="@color/colorGold"
-                app:tabIndicatorHeight="3dp"
-                app:tabMinWidth="72dp"
-                app:tabSelectedTextColor="@color/colorGold"
-                app:tabTextColor="@color/colorWhite"
-                android:background="#3c3c3c"/>
+            <!--<android.support.design.widget.TabLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="60dp"-->
+                <!--android:id="@+id/forumTabLayout"-->
+                <!--app:tabMode="scrollable"-->
+                <!--app:tabIndicatorColor="@color/colorGold"-->
+                <!--app:tabIndicatorHeight="3dp"-->
+                <!--app:tabMinWidth="72dp"-->
+                <!--app:tabSelectedTextColor="@color/colorGold"-->
+                <!--app:tabTextColor="@color/colorWhite"-->
+                <!--android:background="#3c3c3c"/>-->
 
-            <android.support.v4.view.ViewPager
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_below="@id/forumTabLayout"
-                android:id="@+id/forumViewPager"/>
+            <!--<android.support.v4.view.ViewPager-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:layout_below="@id/forumTabLayout"-->
+                <!--android:id="@+id/forumViewPager"/>-->
 
-        </RelativeLayout>
+        </FrameLayout>
 
     </android.support.v4.widget.SwipeRefreshLayout>
 

@@ -427,11 +427,12 @@ public class ChangeUserInfoActivity extends AppCompatActivity {
                     "                    \"s_Mobile\": \"$$$$$$$$$$Mobile_Valid:Select_Detail:detail:Mobile$$$$$$$$$$\",\n" +
                     "                    \"s_Openid\": \"\",\n" +
                     "                    \"s_Order\": \"\",\n" +
+                    "                    \"s_Ranking_Mid\": \"\",\n"+
                     "                    \"s_Referee_Mid\": \"\",\n"+
                     "                    \"s_Referee2_Mid\": \"\",\n"+
                     "                    \"s_Stem_from\": \"2\",\n" +
                     "                    \"s_The_sun\": \"\",\n" +
-                    "                    \"s_Total_parameter\": \"Mid,OpenID,Nickname,Head_img,Mname,Sex,Mobile,Rdate,Birthday,Alive,Gag,The_sun,Members_LV,Orders_count,Integral,card,Passwd,Addr,Stem_from,Token,Token_expiry,Token_IP,Referee_Mid,Referee2_Mid,Referee,Referee2,Reward,Withdraw,Contribution_Award,Balance\"\n" +
+                    "                    \"s_Total_parameter\": \"Mid,OpenID,Nickname,Head_img,Mname,Sex,Mobile,Rdate,Birthday,Alive,Gag,The_sun,Members_LV,Orders_count,Integral,card,Passwd,Addr,Stem_from,Token,Token_expiry,Token_IP,Referee_Mid,Referee2_Mid,Referee,Referee2,Reward,Withdraw,Contribution_Award,Balance,Ranking\"\n" +
                     "                },\n" +
                     "                \"pages\": {\n" +
                     "                    \"p_c\": \"\",\n" +
@@ -453,7 +454,7 @@ public class ChangeUserInfoActivity extends AppCompatActivity {
                     "                    \"source\": \"Android\",\n" +
                     "                    \"non_str\": \""+ random32 +"\",\n" +
                     "                    \"stamp\": \""+ time10 +"\",\n" +
-                    "                    \"signature\": \""+ Utilities.encode("s_Alive="+"s_Attention_state="+"s_d1="+"s_d2="+"s_d3="+"s_d4="+"s_d5="+"s_d6="+"s_Gag="+"s_Grade="+"s_Keywords="+"s_Members_LV="+"s_Mid="+"s_Mobile=$$$$$$$$$$Mobile_Valid:Select_Detail:detail:Mobile$$$$$$$$$$"+"s_Openid="+"s_Order="+"s_Referee_Mid="+"s_Referee2_Mid="+"s_Stem_from=2"+"s_The_sun="+"s_Total_parameter=Mid,OpenID,Nickname,Head_img,Mname,Sex,Mobile,Rdate,Birthday,Alive,Gag,The_sun,Members_LV,Orders_count,Integral,card,Passwd,Addr,Stem_from,Token,Token_expiry,Token_IP,Referee_Mid,Referee2_Mid,Referee,Referee2,Reward,Withdraw,Contribution_Award,Balance"+"non_str="+random32+"stamp="+time10+"keySecret="+key64) +"\"\n" +
+                    "                    \"signature\": \""+ Utilities.encode("s_Alive="+"s_Attention_state="+"s_d1="+"s_d2="+"s_d3="+"s_d4="+"s_d5="+"s_d6="+"s_Gag="+"s_Grade="+"s_Keywords="+"s_Members_LV="+"s_Mid="+"s_Mobile=$$$$$$$$$$Mobile_Valid:Select_Detail:detail:Mobile$$$$$$$$$$"+"s_Openid="+"s_Order="+"s_Ranking_Mid="+"s_Referee_Mid="+"s_Referee2_Mid="+"s_Stem_from=2"+"s_The_sun="+"s_Total_parameter=Mid,OpenID,Nickname,Head_img,Mname,Sex,Mobile,Rdate,Birthday,Alive,Gag,The_sun,Members_LV,Orders_count,Integral,card,Passwd,Addr,Stem_from,Token,Token_expiry,Token_IP,Referee_Mid,Referee2_Mid,Referee,Referee2,Reward,Withdraw,Contribution_Award,Balance,Ranking"+"non_str="+random32+"stamp="+time10+"keySecret="+key64) +"\"\n" +
                     "                }\n" +
                     "            }\n" +
                     "        }"+
@@ -483,22 +484,20 @@ public class ChangeUserInfoActivity extends AppCompatActivity {
 
                     if (response.body() != null){
 
+//                        Log.d("json", response.body().string());
+
                         try {
                             JSONObject jsonObject = new JSONObject(response.body().string());
+
+                            Log.d("json", jsonObject.toString());
 
                             String mobile = jsonObject.getJSONArray("result").getJSONObject(0).getJSONObject("detail").getString("Mobile");
 
                             Log.d("mobile", mobile);
                             if (!mobile.equals("")){
 
-                                if (jsonObject.getJSONArray("result").getJSONObject(1).getJSONArray("list").isNull(0)){
-
-                                    Log.d("开始执行修改方法", "提交修改信息");
-                                    submitHandler(phoneNum, name, sex, date, address);
-
-                                    //ChangeUserInfoActivity.this.finish();
-                                }else {
-
+                                if (jsonObject.getJSONArray("result").getJSONObject(1).getJSONArray("list").length() == 2 ){
+//                                Log.d("sign1", "fuck");
                                     uiHandler.post(new Runnable() {
                                         @Override
                                         public void run() {
@@ -506,6 +505,22 @@ public class ChangeUserInfoActivity extends AppCompatActivity {
                                             Utilities.popUpAlert(ChangeUserInfoActivity.this, "该手机号已经被注册了！");
                                         }
                                     });
+                                }else{
+//                                Log.d("sign2", jsonObject.getJSONArray("result").getJSONObject(1).getJSONArray("list").getJSONObject(0).getString("Stem_from"));
+                                    if (jsonObject.getJSONArray("result").getJSONObject(1).getJSONArray("list").length() == 0){
+
+                                        submitHandler(phoneNum, name, sex, date, address);
+                                    }else if(jsonObject.getJSONArray("result").getJSONObject(1).getJSONArray("list").getJSONObject(0).getString("Stem_from").equals("1")) {
+                                        submitHandler(phoneNum, name, sex, date, address);
+                                    }else{
+                                        uiHandler.post(new Runnable() {
+                                            @Override
+                                            public void run() {
+
+                                                Utilities.popUpAlert(ChangeUserInfoActivity.this, "该手机号已经被注册了！");
+                                            }
+                                        });
+                                    }
                                 }
 
                             }else {

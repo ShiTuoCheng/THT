@@ -64,7 +64,7 @@ public class ForumPostActivity extends AppCompatActivity {
     private RecyclerView imageRecyclerView;
     private TextView postButton;
     private TextView TagTextView;
-    private TextView CategoryTextView;
+//    private TextView CategoryTextView;
 
     private ImageView backButton;
 
@@ -72,14 +72,14 @@ public class ForumPostActivity extends AppCompatActivity {
     private EditText blogContentEditText;
 
     private ListPopupWindow tagListPopupWindow;
-    private ListPopupWindow categoryPopupWindow;
+//    private ListPopupWindow categoryPopupWindow;
 
     private LinearLayout postBlogLayout;
 
     private List<Bitmap> images = new ArrayList<>();
-    private List<String> tabTexts = new ArrayList<>();
+//    private List<String> tabTexts = new ArrayList<>();
     private List<String> tests = new ArrayList<>();
-    private List<String> tabCids = new ArrayList<>();
+//    private List<String> tabCids = new ArrayList<>();
 
     private List<String> images64 = new ArrayList<>();
     private List<String> tagTexts = new ArrayList<>();
@@ -110,7 +110,7 @@ public class ForumPostActivity extends AppCompatActivity {
     private String key64;
 
     private String currentFlid = "";
-    private String currentCid = "";
+//    private String currentCid = "";
 
     private ProgressDialog progressDialog;
 
@@ -157,7 +157,7 @@ public class ForumPostActivity extends AppCompatActivity {
             alertHandler.sendEmptyMessageDelayed(0,1000);
         }else {
 
-            getCategoryList();
+//            getCategoryList();
             getTabTag();
         }
         images.add(null);
@@ -183,7 +183,7 @@ public class ForumPostActivity extends AppCompatActivity {
 
         imageRecyclerView = (RecyclerView)findViewById(R.id.imageRecyclerView);
         TagTextView = (TextView)findViewById(R.id.forumPostTagTextView);
-        CategoryTextView = (TextView) findViewById(R.id.forumPostCategoryTextView);
+//        CategoryTextView = (TextView) findViewById(R.id.forumPostCategoryTextView);
         postButton = (TextView)findViewById(R.id.postButton);
         blogTitleEditText = (EditText)findViewById(R.id.blogTitleEditText);
         blogContentEditText = (EditText)findViewById(R.id.blogContentEditText);
@@ -218,35 +218,35 @@ public class ForumPostActivity extends AppCompatActivity {
         });
 
         //分类列表初始化
-        categoryPopupWindow = new ListPopupWindow(this);
-        ArrayAdapter categoryAdapter = new ArrayAdapter(this, R.layout.custom_spinner_text, tabTexts);
-        categoryPopupWindow.setAdapter(categoryAdapter);
-        categoryPopupWindow.setWidth(Utilities.dip2px(this, 100));
-        categoryPopupWindow.setHeight(ViewGroup.LayoutParams.WRAP_CONTENT);
-        categoryPopupWindow.setModal(true);
-        //标签列表点击
-        categoryPopupWindow.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-
-                CategoryTextView.setText(tabTexts.get(i));
-                currentCid = tabCids.get(i);
-                categoryPopupWindow.dismiss();
-            }
-        });
-
-//        分类点击
-        CategoryTextView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                if (Build.VERSION.SDK_INT >=  Build.VERSION_CODES.KITKAT) {
-                    categoryPopupWindow.setDropDownGravity(Gravity.START);
-                }
-                categoryPopupWindow.setAnchorView(view);
-                categoryPopupWindow.show();
-            }
-        });
+//        categoryPopupWindow = new ListPopupWindow(this);
+//        ArrayAdapter categoryAdapter = new ArrayAdapter(this, R.layout.custom_spinner_text, tabTexts);
+//        categoryPopupWindow.setAdapter(categoryAdapter);
+//        categoryPopupWindow.setWidth(Utilities.dip2px(this, 100));
+//        categoryPopupWindow.setHeight(ViewGroup.LayoutParams.WRAP_CONTENT);
+//        categoryPopupWindow.setModal(true);
+//        //标签列表点击
+//        categoryPopupWindow.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+//            @Override
+//            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+//
+//                CategoryTextView.setText(tabTexts.get(i));
+//                currentCid = tabCids.get(i);
+//                categoryPopupWindow.dismiss();
+//            }
+//        });
+//
+////        分类点击
+//        CategoryTextView.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//
+//                if (Build.VERSION.SDK_INT >=  Build.VERSION_CODES.KITKAT) {
+//                    categoryPopupWindow.setDropDownGravity(Gravity.START);
+//                }
+//                categoryPopupWindow.setAnchorView(view);
+//                categoryPopupWindow.show();
+//            }
+//        });
 
 //        标签点击事件
         TagTextView.setOnClickListener(new View.OnClickListener() {
@@ -447,95 +447,95 @@ public class ForumPostActivity extends AppCompatActivity {
     }
 
     //获取分类名称和cid方法
-    private void getCategoryList(){
-
-        random32 = Utilities.getStringRandom(32);
-        time10 = Utilities.get10Time();
-        key64 = Utilities.get64Key(random32);
-
-        String json = "{\n" +
-                "    \"validate_k\": \"1\",\n" +
-                "    \"params\": [\n" +
-                "        {\n" +
-                "            \"type\": \"Classification\",\n" +
-                "            \"act\": \"Select_List\",\n" +
-                "            \"para\": {\n" +
-                "                \"params\": {\n" +
-                "                    \"s_Alive\": \"\",\n" +
-                "                    \"s_Cid\": \"\",\n" +
-                "                    \"s_Keywords\": \"\",\n" +
-                "                    \"s_Kind\": \"2\",\n" +
-                "                    \"s_Order\": \"\",\n" +
-                "                    \"s_Stem_from\":\"2\",\n" +
-                "                    \"s_Total_parameter\": \"Cid,Ctitle,Pic1,Pic2,Layer,Alive,Stem_from\"\n" +
-                "                },\n" +
-                "                \"pages\": {\n" +
-                "                    \"p_c\": \"\",\n" +
-                "                    \"p_First\": \"\",\n" +
-                "                    \"p_inputHeight\": \"\",\n" +
-                "                    \"p_Last\": \"\",\n" +
-                "                    \"p_method\": \"\",\n" +
-                "                    \"p_Next\": \"\",\n" +
-                "                    \"p_Page\": \"\",\n" +
-                "                    \"p_pageName\": \"\",\n" +
-                "                    \"p_PageStyle\": \"\",\n" +
-                "                    \"p_Pname\": \"\",\n" +
-                "                    \"p_Previous\": \"\",\n" +
-                "                    \"p_Ps\": \"\",\n" +
-                "                    \"p_sk\": \"\",\n" +
-                "                    \"p_Tp\": \"\"\n" +
-                "                },\n" +
-                "                \"sign_valid\": {\n" +
-                "                    \"source\": \"Android\",\n" +
-                "                    \"non_str\": \""+random32+"\",\n" +
-                "                    \"stamp\": \""+time10+"\",\n" +
-                "                    \"signature\": \""+Utilities.encode("s_Alive="+"s_Cid="+"s_Keywords="+"s_Kind=2"+"s_Order="+"s_Stem_from=2"+"s_Total_parameter=Cid,Ctitle,Pic1,Pic2,Layer,Alive,Stem_from"+"non_str="+random32+"stamp="+time10+"keySecret="+key64)+"\"\n" +
-                "                }\n" +
-                "            }\n" +
-                "        }\n" +
-                "    ]\n" +
-                "}";
-
-        OkHttpClient okHttpClient = new OkHttpClient();
-
-        RequestBody requestBody = RequestBody.create(JSON, json);
-
-        Request request = new Request.Builder().url(API.getAPI()).post(requestBody).build();
-
-        okHttpClient.newCall(request).enqueue(new Callback() {
-
-            @Override
-            public void onFailure(Call call, IOException e) {
-
-
-            }
-
-            @Override
-            public void onResponse(Call call, Response response) throws IOException {
-
-                if (response.body() != null){
-
-                    try {
-                        JSONObject resultJson = new JSONObject(response.body().string());
-                        JSONArray imgArr = resultJson.getJSONArray("result").getJSONObject(0).getJSONArray("list");
-
-                        tabTexts.clear();
-                        tabCids.clear();
-
-                        for (int i=0; i<imgArr.length(); i++){
-
-                            JSONObject iconObj = imgArr.getJSONObject(i);
-                            tabTexts.add(iconObj.getString("Ctitle"));
-                            tabCids.add(iconObj.getString("Cid"));
-                        }
-
-                    }catch (JSONException e){
-
-                        e.printStackTrace();
-                    }
-            }
-        }});
-    }
+//    private void getCategoryList(){
+//
+//        random32 = Utilities.getStringRandom(32);
+//        time10 = Utilities.get10Time();
+//        key64 = Utilities.get64Key(random32);
+//
+//        String json = "{\n" +
+//                "    \"validate_k\": \"1\",\n" +
+//                "    \"params\": [\n" +
+//                "        {\n" +
+//                "            \"type\": \"Classification\",\n" +
+//                "            \"act\": \"Select_List\",\n" +
+//                "            \"para\": {\n" +
+//                "                \"params\": {\n" +
+//                "                    \"s_Alive\": \"\",\n" +
+//                "                    \"s_Cid\": \"\",\n" +
+//                "                    \"s_Keywords\": \"\",\n" +
+//                "                    \"s_Kind\": \"2\",\n" +
+//                "                    \"s_Order\": \"\",\n" +
+//                "                    \"s_Stem_from\":\"2\",\n" +
+//                "                    \"s_Total_parameter\": \"Cid,Ctitle,Pic1,Pic2,Layer,Alive,Stem_from\"\n" +
+//                "                },\n" +
+//                "                \"pages\": {\n" +
+//                "                    \"p_c\": \"\",\n" +
+//                "                    \"p_First\": \"\",\n" +
+//                "                    \"p_inputHeight\": \"\",\n" +
+//                "                    \"p_Last\": \"\",\n" +
+//                "                    \"p_method\": \"\",\n" +
+//                "                    \"p_Next\": \"\",\n" +
+//                "                    \"p_Page\": \"\",\n" +
+//                "                    \"p_pageName\": \"\",\n" +
+//                "                    \"p_PageStyle\": \"\",\n" +
+//                "                    \"p_Pname\": \"\",\n" +
+//                "                    \"p_Previous\": \"\",\n" +
+//                "                    \"p_Ps\": \"\",\n" +
+//                "                    \"p_sk\": \"\",\n" +
+//                "                    \"p_Tp\": \"\"\n" +
+//                "                },\n" +
+//                "                \"sign_valid\": {\n" +
+//                "                    \"source\": \"Android\",\n" +
+//                "                    \"non_str\": \""+random32+"\",\n" +
+//                "                    \"stamp\": \""+time10+"\",\n" +
+//                "                    \"signature\": \""+Utilities.encode("s_Alive="+"s_Cid="+"s_Keywords="+"s_Kind=2"+"s_Order="+"s_Stem_from=2"+"s_Total_parameter=Cid,Ctitle,Pic1,Pic2,Layer,Alive,Stem_from"+"non_str="+random32+"stamp="+time10+"keySecret="+key64)+"\"\n" +
+//                "                }\n" +
+//                "            }\n" +
+//                "        }\n" +
+//                "    ]\n" +
+//                "}";
+//
+//        OkHttpClient okHttpClient = new OkHttpClient();
+//
+//        RequestBody requestBody = RequestBody.create(JSON, json);
+//
+//        Request request = new Request.Builder().url(API.getAPI()).post(requestBody).build();
+//
+//        okHttpClient.newCall(request).enqueue(new Callback() {
+//
+//            @Override
+//            public void onFailure(Call call, IOException e) {
+//
+//
+//            }
+//
+//            @Override
+//            public void onResponse(Call call, Response response) throws IOException {
+//
+//                if (response.body() != null){
+//
+//                    try {
+//                        JSONObject resultJson = new JSONObject(response.body().string());
+//                        JSONArray imgArr = resultJson.getJSONArray("result").getJSONObject(0).getJSONArray("list");
+//
+//                        tabTexts.clear();
+//                        tabCids.clear();
+//
+//                        for (int i=0; i<imgArr.length(); i++){
+//
+//                            JSONObject iconObj = imgArr.getJSONObject(i);
+//                            tabTexts.add(iconObj.getString("Ctitle"));
+//                            tabCids.add(iconObj.getString("Cid"));
+//                        }
+//
+//                    }catch (JSONException e){
+//
+//                        e.printStackTrace();
+//                    }
+//            }
+//        }});
+//    }
 
     //点击发送按钮发送一条帖子
     private void postBlog(String blogTitle, String blogContent){
@@ -553,10 +553,10 @@ public class ForumPostActivity extends AppCompatActivity {
 
             Utilities.popUpAlert(this, "帖子内容不能为空");
             return;
-        }else if (currentCid.equals("")){
-
-            Utilities.popUpAlert(this, "必须选择一种分类");
-            return;
+//        }else if (currentCid.equals("")){
+//
+//            Utilities.popUpAlert(this, "必须选择一种分类");
+//            return;
         }else if (currentFlid.equals("")){
 
             Utilities.popUpAlert(this, "必须选择一个标签");
@@ -577,7 +577,7 @@ public class ForumPostActivity extends AppCompatActivity {
                 "            \"para\": {\n" +
                 "                \"params\": {\n" +
                 "                    \"Add_Essence\": \"false\",\n" +
-                "                    \"Cid\": \""+currentCid+"\",\n" +
+                "                    \"Cid\": \"12\",\n" +
                 "                    \"Finfo\": \""+blogContent+"\",\n" +
                 "                    \"Flid\": \""+currentFlid+"\",\n" +
                 "                    \"Ftitle\": \""+blogTitle+"\",\n" +
@@ -589,7 +589,7 @@ public class ForumPostActivity extends AppCompatActivity {
                 "                    \"source\": \"Android\",\n" +
                 "                    \"non_str\": \""+random32+"\",\n" +
                 "                    \"stamp\": \""+time10+"\",\n" +
-                "                    \"signature\": \""+Utilities.encode("Add_Essence=false"+"Cid="+currentCid+"Finfo="+blogContent+"Flid="+currentFlid+"Ftitle="+blogTitle+"isTop=false"+"Mid="+mid+"Stem_from=2"+"non_str="+random32+"stamp="+time10+"keySecret="+key64)+"\"\n" +
+                "                    \"signature\": \""+Utilities.encode("Add_Essence=false"+"Cid=12"+"Finfo="+blogContent+"Flid="+currentFlid+"Ftitle="+blogTitle+"isTop=false"+"Mid="+mid+"Stem_from=2"+"non_str="+random32+"stamp="+time10+"keySecret="+key64)+"\"\n" +
                 "                }\n" +
                 "            }\n" +
                 "        }\n" +

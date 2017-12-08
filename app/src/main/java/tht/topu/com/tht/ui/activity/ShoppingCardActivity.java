@@ -74,7 +74,7 @@ public class ShoppingCardActivity extends AppCompatActivity {
             }
         });
 
-        webView.loadUrl("http://tht.65276588.cn/f/ShoppingCart.aspx?Mid="+mid+"&Stem_from=2");
+        webView.loadUrl("http://wechat.taohuantang.com.cn/f/ShoppingCart.aspx?Mid="+mid+"&Stem_from=2");
     }
 
     private void initView(){

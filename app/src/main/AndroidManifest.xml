@@ -2,16 +2,16 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="tht.topu.com.tht">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-
     <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
     <uses-permission android:name="org.simalliance.openmobileapi.SMARTCARD" />
     <uses-permission android:name="android.permission.NFC" />
-    <uses-feature android:name="android.hardware.nfc.hce"/>
+
+    <uses-feature android:name="android.hardware.nfc.hce" />
 
     <application
         android:allowBackup="true"
@@ -21,16 +21,19 @@
         android:roundIcon="@mipmap/login_logo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
         <!-- 微信支付 -->
         <activity
             android:name="com.jpay.weixin.WXPayEntryActivity"
             android:configChanges="orientation|keyboardHidden|navigation|screenSize"
             android:launchMode="singleTop"
             android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
         <activity-alias
             android:name=".wxapi.WXPayEntryActivity"
             android:exported="true"
             android:targetActivity="com.jpay.weixin.WXPayEntryActivity" />
+
         <activity
             android:name=".ui.activity.MainActivity"
             android:label="@string/app_name"
@@ -98,21 +101,28 @@
             android:name=".ui.activity.UserForumBlogActivity"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
-        <activity android:name=".ui.activity.ProductDetailActivity"
+        <activity
+            android:name=".ui.activity.ProductDetailActivity"
             android:screenOrientation="portrait" />
-        <activity android:name=".ui.activity.SplashActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".ui.activity.WebViewActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".ui.activity.ShoppingCardActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".ui.activity.ForumDetailActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".ui.activity.AddressListActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".ui.activity.OrderListActivity"
-            android:screenOrientation="portrait">
-        </activity>
+        <activity
+            android:name=".ui.activity.SplashActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.WebViewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.ShoppingCardActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.ForumDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.AddressListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.OrderListActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity android:name=".ui.activity.SearchActivity"></activity>
     </application>
 
 </manifest>

@@ -1,26 +1,46 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context="tht.topu.com.tht.ui.fragment.mainFragment.ProductFragment">
 
-    <ImageView
-        android:layout_marginTop="5dp"
-        android:layout_marginBottom="5dp"
-        android:layout_centerHorizontal="true"
-        android:id="@+id/baobei"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-
-    <android.support.v7.widget.RecyclerView
-        android:background="@color/colorWhite"
-        android:layout_below="@id/baobei"
-        android:layout_marginBottom="10dp"
+    <android.support.v4.widget.SwipeRefreshLayout
         android:layout_width="match_parent"
-        app:load_more_able="true"
-        app:refresh_able="false"
-        android:layout_height="match_parent"
-        android:id="@+id/productRecyclerView"/>
+        android:layout_height="wrap_content"
+        android:id="@+id/swipe_refresh_layout">
 
-</RelativeLayout>
+        <tht.topu.com.tht.utils.MyScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+
+                <com.youth.banner.Banner
+
+                    android:id="@+id/mainBanner"
+                    android:layout_width="match_parent"
+                    app:indicator_drawable_selected="@color/colorGold"
+                    app:indicator_drawable_unselected="@color/colorGray"
+                    android:layout_height="240dp"/>
+
+                <android.support.v7.widget.RecyclerView
+                    android:background="@color/colorWhite"
+                    android:layout_width="match_parent"
+                    app:load_more_able="true"
+                    app:refresh_able="false"
+                    android:layout_height="match_parent"
+                    android:id="@+id/productRecyclerView"/>
+
+            </LinearLayout>
+
+        </tht.topu.com.tht.utils.MyScrollView>
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+</LinearLayout>

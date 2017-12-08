@@ -87,7 +87,7 @@ public class OrderListActivity extends AppCompatActivity {
             }
         });
 
-        orderListWebView.loadUrl("http://tht.65276588.cn/f/MyOrder.aspx?Ostatus="+Ostatus+"&Mid="+mid+"&Stem_from=2");
+        orderListWebView.loadUrl("http://wechat.taohuantang.com.cn/f/MyOrder.aspx?Ostatus="+Ostatus+"&Mid="+mid+"&Stem_from=2");
 
         back.setOnClickListener(new View.OnClickListener() {
             @Override

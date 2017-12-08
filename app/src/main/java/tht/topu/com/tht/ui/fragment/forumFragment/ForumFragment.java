@@ -18,6 +18,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.app.FragmentStatePagerAdapter;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v4.content.LocalBroadcastManager;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
@@ -56,6 +57,7 @@ import okhttp3.Response;
 import tht.topu.com.tht.R;
 import tht.topu.com.tht.adapter.MainViewPagerAdapter;
 import tht.topu.com.tht.ui.activity.ForumPostActivity;
+import tht.topu.com.tht.ui.fragment.mainFragment.ProductFragment;
 import tht.topu.com.tht.utils.API;
 import tht.topu.com.tht.utils.Utilities;
 
@@ -64,8 +66,8 @@ public class ForumFragment extends Fragment {
 
 
     private Spinner spinner;
-    private ViewPager forumViewPager;
-    private TabLayout forumTabLayout;
+//    private ViewPager forumViewPager;
+//    private TabLayout forumTabLayout;
     private LocalBroadcastManager localBroadcastManager;
 
     private List<String> unselectedIcons = new ArrayList<>();
@@ -81,7 +83,6 @@ public class ForumFragment extends Fragment {
     private ImageView postButton;
 
     private SwipeRefreshLayout swipeRefreshLayout;
-    private MainViewPagerAdapter mainViewPagerAdapter;
     private LinearLayout forumLayout;
 
     private String random32;
@@ -155,8 +156,8 @@ public class ForumFragment extends Fragment {
 
         forumLayout = view.findViewById(R.id.forumLayout);
 
-        forumTabLayout = view.findViewById(R.id.forumTabLayout);
-        forumViewPager = view.findViewById(R.id.forumViewPager);
+//        forumTabLayout = view.findViewById(R.id.forumTabLayout);
+//        forumViewPager = view.findViewById(R.id.forumViewPager);
 
         postButton = (ImageView)view.findViewById(R.id.postForum);
         swipeRefreshLayout = (SwipeRefreshLayout)view.findViewById(R.id.swipe_refresh_layout);
@@ -192,10 +193,6 @@ public class ForumFragment extends Fragment {
                     broadcastIntent.putExtra("Flid", flids.get(i));
                     localBroadcastManager.sendBroadcast(broadcastIntent);
                     Log.d("Flid", flids.get(i));
-                    if (mainViewPagerAdapter != null){
-
-                        mainViewPagerAdapter.notifyDataSetChanged();
-                    }
                 }
             }
 
@@ -204,6 +201,12 @@ public class ForumFragment extends Fragment {
 
             }
         });
+
+        FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
+
+        transaction.add(R.id.forumContainer, new ForumContentFragment());
+
+        transaction.commit();
     }
 
     @Override
@@ -220,7 +223,7 @@ public class ForumFragment extends Fragment {
     }
 
     private void initData(){
-        getTabIcon();
+//        getTabIcon();
         getTabTag();
     }
 
@@ -315,6 +318,8 @@ public class ForumFragment extends Fragment {
 
                                 ArrayAdapter sort_spinner_adapter = new ArrayAdapter<>(getActivity(),R.layout.custom_spinner_text, tagTexts);
                                 spinner.setAdapter(sort_spinner_adapter);
+
+                                swipeRefreshLayout.setRefreshing(false);
                             }
                         });
 
@@ -327,238 +332,238 @@ public class ForumFragment extends Fragment {
     }
 
     //获取tab栏图标
-    private void getTabIcon(){
-
-        random32 = Utilities.getStringRandom(32);
-        time10 = Utilities.get10Time();
-        key64 = Utilities.get64Key(random32);
-
-        String json = "{\n" +
-                "    \"validate_k\": \"1\",\n" +
-                "    \"params\": [\n" +
-                "        {\n" +
-                "            \"type\": \"Classification\",\n" +
-                "            \"act\": \"Select_List\",\n" +
-                "            \"para\": {\n" +
-                "                \"params\": {\n" +
-                "                    \"s_Alive\": \"\",\n" +
-                "                    \"s_Cid\": \"\",\n" +
-                "                    \"s_Keywords\": \"\",\n" +
-                "                    \"s_Kind\": \"2\",\n" +
-                "                    \"s_Order\": \"Layer\",\n" +
-                "                    \"s_Stem_from\":\"2\",\n" +
-                "                    \"s_Total_parameter\": \"Cid,Ctitle,Pic1,Pic2,Layer,Alive,Stem_from\"\n" +
-                "                },\n" +
-                "                \"pages\": {\n" +
-                "                    \"p_c\": \"\",\n" +
-                "                    \"p_First\": \"\",\n" +
-                "                    \"p_inputHeight\": \"\",\n" +
-                "                    \"p_Last\": \"\",\n" +
-                "                    \"p_method\": \"\",\n" +
-                "                    \"p_Next\": \"\",\n" +
-                "                    \"p_Page\": \"\",\n" +
-                "                    \"p_pageName\": \"\",\n" +
-                "                    \"p_PageStyle\": \"\",\n" +
-                "                    \"p_Pname\": \"\",\n" +
-                "                    \"p_Previous\": \"\",\n" +
-                "                    \"p_Ps\": \"\",\n" +
-                "                    \"p_sk\": \"\",\n" +
-                "                    \"p_Tp\": \"\"\n" +
-                "                },\n" +
-                "                \"sign_valid\": {\n" +
-                "                    \"source\": \"Android\",\n" +
-                "                    \"non_str\": \""+random32+"\",\n" +
-                "                    \"stamp\": \""+time10+"\",\n" +
-                "                    \"signature\": \""+Utilities.encode("s_Alive="+"s_Cid="+"s_Keywords="+"s_Kind=2"+"s_Order=Layer"+"s_Stem_from=2"+"s_Total_parameter=Cid,Ctitle,Pic1,Pic2,Layer,Alive,Stem_from"+"non_str="+random32+"stamp="+time10+"keySecret="+key64)+"\"\n" +
-                "                }\n" +
-                "            }\n" +
-                "        }\n" +
-                "    ]\n" +
-                "}";
-
-        OkHttpClient okHttpClient = new OkHttpClient();
-
-        RequestBody requestBody = RequestBody.create(JSON, json);
-
-        Request request = new Request.Builder().url(API.getAPI()).post(requestBody).build();
-
-        okHttpClient.newCall(request).enqueue(new Callback() {
-
-            @Override
-            public void onFailure(Call call, IOException e) {
-
-                uiHandler.post(new Runnable() {
-                    @Override
-                    public void run() {
-
-                        alertHandler.sendEmptyMessageDelayed(1,1000);
-
-                        if (swipeRefreshLayout.isRefreshing()){
-
-                            swipeRefreshLayout.setRefreshing(false);
-                        }
-                    }
-                });
-            }
-
-            @Override
-            public void onResponse(Call call, Response response) throws IOException {
-
-                if (response.body() != null){
-
-                    try {
-                        JSONObject resultJson = new JSONObject(response.body().string());
-                        JSONArray imgArr = resultJson.getJSONArray("result").getJSONObject(0).getJSONArray("list");
-
-                        tabTexts.clear();
-
-                        unselectedDraw.clear();
-                        selectedDraw.clear();
-                        tabCids.clear();
-
-                        unselectedIcons.clear();
-                        selectedIcons.clear();
-
-                        unselectedDraw.add(0, getResources().getDrawable(R.drawable.recommand));
-                        selectedDraw.add(0, getResources().getDrawable(R.drawable.selected_recommand));
-
-                        for (int i=0; i<imgArr.length(); i++){
-
-                            JSONObject iconObj = imgArr.getJSONObject(i);
-                            tabTexts.add(iconObj.getString("Ctitle"));
-                            unselectedIcons.add(iconObj.getString("Pic2"));
-                            selectedIcons.add(iconObj.getString("Pic1"));
-                            tabCids.add(iconObj.getString("Cid"));
-                        }
-
-                        for (int j=0; j<selectedIcons.size(); j++){
-
-                            selectedDraw.add(new BitmapDrawable(Utilities.returnBitmap(API.getHostName()+selectedIcons.get(j))));
-                            unselectedDraw.add(new BitmapDrawable(Utilities.returnBitmap(API.getHostName()+unselectedIcons.get(j))));
-                        }
-
-                        if (uiHandler != null){
-
-                            uiHandler.post(new Runnable() {
-                                @Override
-                                public void run() {
-
-                                    swipeRefreshLayout.setRefreshing(false);
-                                    setTabIcon();
-                                }
-                            });
-                        }
-                    }catch (JSONException e){
-
-                        e.printStackTrace();
-                    }
-                }
-            }
-        });
-    }
+//    private void getTabIcon(){
+//
+//        random32 = Utilities.getStringRandom(32);
+//        time10 = Utilities.get10Time();
+//        key64 = Utilities.get64Key(random32);
+//
+//        String json = "{\n" +
+//                "    \"validate_k\": \"1\",\n" +
+//                "    \"params\": [\n" +
+//                "        {\n" +
+//                "            \"type\": \"Classification\",\n" +
+//                "            \"act\": \"Select_List\",\n" +
+//                "            \"para\": {\n" +
+//                "                \"params\": {\n" +
+//                "                    \"s_Alive\": \"\",\n" +
+//                "                    \"s_Cid\": \"\",\n" +
+//                "                    \"s_Keywords\": \"\",\n" +
+//                "                    \"s_Kind\": \"2\",\n" +
+//                "                    \"s_Order\": \"Layer\",\n" +
+//                "                    \"s_Stem_from\":\"2\",\n" +
+//                "                    \"s_Total_parameter\": \"Cid,Ctitle,Pic1,Pic2,Layer,Alive,Stem_from\"\n" +
+//                "                },\n" +
+//                "                \"pages\": {\n" +
+//                "                    \"p_c\": \"\",\n" +
+//                "                    \"p_First\": \"\",\n" +
+//                "                    \"p_inputHeight\": \"\",\n" +
+//                "                    \"p_Last\": \"\",\n" +
+//                "                    \"p_method\": \"\",\n" +
+//                "                    \"p_Next\": \"\",\n" +
+//                "                    \"p_Page\": \"\",\n" +
+//                "                    \"p_pageName\": \"\",\n" +
+//                "                    \"p_PageStyle\": \"\",\n" +
+//                "                    \"p_Pname\": \"\",\n" +
+//                "                    \"p_Previous\": \"\",\n" +
+//                "                    \"p_Ps\": \"\",\n" +
+//                "                    \"p_sk\": \"\",\n" +
+//                "                    \"p_Tp\": \"\"\n" +
+//                "                },\n" +
+//                "                \"sign_valid\": {\n" +
+//                "                    \"source\": \"Android\",\n" +
+//                "                    \"non_str\": \""+random32+"\",\n" +
+//                "                    \"stamp\": \""+time10+"\",\n" +
+//                "                    \"signature\": \""+Utilities.encode("s_Alive="+"s_Cid="+"s_Keywords="+"s_Kind=2"+"s_Order=Layer"+"s_Stem_from=2"+"s_Total_parameter=Cid,Ctitle,Pic1,Pic2,Layer,Alive,Stem_from"+"non_str="+random32+"stamp="+time10+"keySecret="+key64)+"\"\n" +
+//                "                }\n" +
+//                "            }\n" +
+//                "        }\n" +
+//                "    ]\n" +
+//                "}";
+//
+//        OkHttpClient okHttpClient = new OkHttpClient();
+//
+//        RequestBody requestBody = RequestBody.create(JSON, json);
+//
+//        Request request = new Request.Builder().url(API.getAPI()).post(requestBody).build();
+//
+//        okHttpClient.newCall(request).enqueue(new Callback() {
+//
+//            @Override
+//            public void onFailure(Call call, IOException e) {
+//
+//                uiHandler.post(new Runnable() {
+//                    @Override
+//                    public void run() {
+//
+//                        alertHandler.sendEmptyMessageDelayed(1,1000);
+//
+//                        if (swipeRefreshLayout.isRefreshing()){
+//
+//                            swipeRefreshLayout.setRefreshing(false);
+//                        }
+//                    }
+//                });
+//            }
+//
+//            @Override
+//            public void onResponse(Call call, Response response) throws IOException {
+//
+//                if (response.body() != null){
+//
+//                    try {
+//                        JSONObject resultJson = new JSONObject(response.body().string());
+//                        JSONArray imgArr = resultJson.getJSONArray("result").getJSONObject(0).getJSONArray("list");
+//
+//                        tabTexts.clear();
+//
+//                        unselectedDraw.clear();
+//                        selectedDraw.clear();
+//                        tabCids.clear();
+//
+//                        unselectedIcons.clear();
+//                        selectedIcons.clear();
+//
+//                        unselectedDraw.add(0, getResources().getDrawable(R.drawable.recommand));
+//                        selectedDraw.add(0, getResources().getDrawable(R.drawable.selected_recommand));
+//
+//                        for (int i=0; i<imgArr.length(); i++){
+//
+//                            JSONObject iconObj = imgArr.getJSONObject(i);
+//                            tabTexts.add(iconObj.getString("Ctitle"));
+//                            unselectedIcons.add(iconObj.getString("Pic2"));
+//                            selectedIcons.add(iconObj.getString("Pic1"));
+//                            tabCids.add(iconObj.getString("Cid"));
+//                        }
+//
+//                        for (int j=0; j<selectedIcons.size(); j++){
+//
+//                            selectedDraw.add(new BitmapDrawable(Utilities.returnBitmap(API.getHostName()+selectedIcons.get(j))));
+//                            unselectedDraw.add(new BitmapDrawable(Utilities.returnBitmap(API.getHostName()+unselectedIcons.get(j))));
+//                        }
+//
+//                        if (uiHandler != null){
+//
+//                            uiHandler.post(new Runnable() {
+//                                @Override
+//                                public void run() {
+//
+//                                    swipeRefreshLayout.setRefreshing(false);
+//                                    setTabIcon();
+//                                }
+//                            });
+//                        }
+//                    }catch (JSONException e){
+//
+//                        e.printStackTrace();
+//                    }
+//                }
+//            }
+//        });
+//    }
 
     //设置tab的图标（主线程运行）
-    private void setTabIcon(){
-
-        mainViewPagerAdapter = new MainViewPagerAdapter(getFragmentManager());
-        mainViewPagerAdapter.notifyDataSetChanged();
-
-        forumTabLayout.removeAllTabs();
-
-        for (int i = 0; i<tabTexts.size(); i++){
-
-                forumTabLayout.addTab(forumTabLayout.newTab().setIcon(unselectedDraw.get(i)).setText(tabTexts.get(i)));
-                // 加载列表
-            mainViewPagerAdapter.addFragment(ForumContentFragment.newInstance(tabCids.get(i)));
-        }
-
-        forumViewPager.setAdapter(mainViewPagerAdapter);
-
-        forumViewPager.setOffscreenPageLimit(tabTexts.size()-1);
-        forumViewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
-            @Override
-            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
-
-            }
-
-            @Override
-            public void onPageSelected(int position) {
-
-            }
-
-            @Override
-            public void onPageScrollStateChanged(int state) {
-
-            }
-        });
-
-        forumViewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(forumTabLayout){
-
-            @Override
-            public void onPageScrollStateChanged(int state) {
-                toggleRefreshing(state == ViewPager.SCROLL_STATE_IDLE);
-            }
-
-            private void toggleRefreshing(boolean enabled) {
-//                if (swipeRefreshLayout != null) {
-//                    swipeRefreshLayout.setEnabled(enabled);
+//    private void setTabIcon(){
+//
+//        mainViewPagerAdapter = new MainViewPagerAdapter(getFragmentManager());
+//        mainViewPagerAdapter.notifyDataSetChanged();
+//
+//        forumTabLayout.removeAllTabs();
+//
+//        for (int i = 0; i<tabTexts.size(); i++){
+//
+//            forumTabLayout.addTab(forumTabLayout.newTab().setIcon(unselectedDraw.get(i)).setText(tabTexts.get(i)));
+//            // 加载列表
+//            mainViewPagerAdapter.addFragment(ForumContentFragment.newInstance(tabCids.get(i)));
+//        }
+//
+//        forumViewPager.setAdapter(mainViewPagerAdapter);
+//
+//        forumViewPager.setOffscreenPageLimit(tabTexts.size()-1);
+//        forumViewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+//            @Override
+//            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+//
+//            }
+//
+//            @Override
+//            public void onPageSelected(int position) {
+//
+//            }
+//
+//            @Override
+//            public void onPageScrollStateChanged(int state) {
+//
+//            }
+//        });
+//
+//        forumViewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(forumTabLayout){
+//
+//            @Override
+//            public void onPageScrollStateChanged(int state) {
+//                toggleRefreshing(state == ViewPager.SCROLL_STATE_IDLE);
+//            }
+//
+//            private void toggleRefreshing(boolean enabled) {
+////                if (swipeRefreshLayout != null) {
+////                    swipeRefreshLayout.setEnabled(enabled);
+////                }
+//            }
+//        });
+//
+//        forumTabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
+//            @Override
+//            public void onTabSelected(TabLayout.Tab tab) {
+//                forumViewPager.setCurrentItem(tab.getPosition());
+//
+//                int index = tab.getPosition();
+//
+//                forumTabLayout.setTabTextColors(getResources().getColor(R.color.colorWhite), getResources().getColor(R.color.colorGold));
+//
+//                for (int i=0; i<tabTexts.size(); i++){
+//
+//                    if (index == i) {
+//
+//                        forumTabLayout.getTabAt(tab.getPosition()).setIcon(selectedDraw.get(i));
+//                    }
 //                }
-            }
-        });
-
-        forumTabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
-            @Override
-            public void onTabSelected(TabLayout.Tab tab) {
-                forumViewPager.setCurrentItem(tab.getPosition());
-
-                int index = tab.getPosition();
-
-                forumTabLayout.setTabTextColors(getResources().getColor(R.color.colorWhite), getResources().getColor(R.color.colorGold));
-
-                for (int i=0; i<tabTexts.size(); i++){
-
-                    if (index == i) {
-
-                        forumTabLayout.getTabAt(tab.getPosition()).setIcon(selectedDraw.get(i));
-                    }
-                }
-
-            }
-
-            @Override
-            public void onTabUnselected(TabLayout.Tab tab) {
-
-                int index = tab.getPosition();
-
-                forumTabLayout.setTabTextColors(getResources().getColor(R.color.colorWhite), getResources().getColor(R.color.colorGold));
-
-                for (int i=0; i<tabTexts.size(); i++){
-
-                    if (index == i) {
-
-                        forumTabLayout.getTabAt(tab.getPosition()).setIcon(unselectedDraw.get(i));
-                    }
-                }
-            }
-
-            @Override
-            public void onTabReselected(TabLayout.Tab tab) {
-
-            }
-
-        });
-
-        if (flids.size() > 0){
-            //默认发送第一次广播
-            broadcastIntent = new Intent("com.example.mybroadcast.MY_BROADCAST");
-            broadcastIntent.putExtra("Flid", flids.get(0));
-            localBroadcastManager.sendBroadcast(broadcastIntent);
-
-            if (mainViewPagerAdapter != null){
-
-                mainViewPagerAdapter.notifyDataSetChanged();
-            }
-        }
-    }
+//
+//            }
+//
+//            @Override
+//            public void onTabUnselected(TabLayout.Tab tab) {
+//
+//                int index = tab.getPosition();
+//
+//                forumTabLayout.setTabTextColors(getResources().getColor(R.color.colorWhite), getResources().getColor(R.color.colorGold));
+//
+//                for (int i=0; i<tabTexts.size(); i++){
+//
+//                    if (index == i) {
+//
+//                        forumTabLayout.getTabAt(tab.getPosition()).setIcon(unselectedDraw.get(i));
+//                    }
+//                }
+//            }
+//
+//            @Override
+//            public void onTabReselected(TabLayout.Tab tab) {
+//
+//            }
+//
+//        });
+//
+//        if (flids.size() > 0){
+//            //默认发送第一次广播
+//            broadcastIntent = new Intent("com.example.mybroadcast.MY_BROADCAST");
+//            broadcastIntent.putExtra("Flid", flids.get(0));
+//            localBroadcastManager.sendBroadcast(broadcastIntent);
+//
+//            if (mainViewPagerAdapter != null){
+//
+//                mainViewPagerAdapter.notifyDataSetChanged();
+//            }
+//        }
+//    }
 
 }

@@ -59,7 +59,7 @@ public class ForumContentFragment extends Fragment {
     public static final MediaType JSON = MediaType
             .parse("application/json; charset=utf-8");
 
-    private String cid;
+//    private String cid;
     private String flid;
 
     private String random32;
@@ -74,14 +74,14 @@ public class ForumContentFragment extends Fragment {
     private List<Forum> forumList = new ArrayList<>();
     private List<Forum> loadMoreForums = new ArrayList<>();
 
-    public static ForumContentFragment newInstance(String cid){
-
-        Bundle argus = new Bundle();
-        argus.putString(CID_ID, cid);
-        ForumContentFragment forumContentFragment = new ForumContentFragment();
-        forumContentFragment.setArguments(argus);
-        return forumContentFragment;
-    }
+//    public static ForumContentFragment newInstance(String cid) {
+//
+//        Bundle argus = new Bundle();
+//        argus.putString(CID_ID, cid);
+//        ForumContentFragment forumContentFragment = new ForumContentFragment();
+//        forumContentFragment.setArguments(argus);
+//        return forumContentFragment;
+//    }
 
     @Override
     public void onAttach(Context context) {
@@ -92,7 +92,7 @@ public class ForumContentFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        cid = getArguments().getString(CID_ID);
+//        cid = getArguments().getString(CID_ID);
         intentFilter = new IntentFilter();
         intentFilter.addAction("com.example.mybroadcast.MY_BROADCAST");
         localReceiver = new LocalReceiver();
@@ -106,7 +106,7 @@ public class ForumContentFragment extends Fragment {
         return view;
     }
 
-    private void initView(View view){
+    private void initView(View view) {
 
         forumRecyclerView = view.findViewById(R.id.forumRecyclerView);
         forumEmptyTextView = view.findViewById(R.id.forumEmptyTextView);
@@ -142,7 +142,7 @@ public class ForumContentFragment extends Fragment {
             public void onLoadMore(boolean isReload) {
 
                 currentPage++;
-                initData(false,flid , cid);
+                initData(false, flid, "12");
 
                 Log.d("loadmore", "forumLoadMore");
             }
@@ -155,23 +155,23 @@ public class ForumContentFragment extends Fragment {
     public void onDestroy() {
         super.onDestroy();
 
-        if (uiHandler != null){
+        if (uiHandler != null) {
 
             uiHandler = null;
         }
     }
 
-    public void initData(final boolean isFirstLoad, String flid, String cid){
+    public void initData(final boolean isFirstLoad, String flid, String cid) {
 
         random32 = Utilities.getStringRandom(32);
         time10 = Utilities.get10Time();
         key64 = Utilities.get64Key(random32);
 
-        if (isFirstLoad){
+        if (isFirstLoad) {
 
             currentPage = 1;
             forumList.clear();
-        }else {
+        } else {
 
             loadMoreForums.clear();
         }
@@ -185,16 +185,16 @@ public class ForumContentFragment extends Fragment {
                 "            \"para\": {\n" +
                 "                \"params\": {\n" +
                 "                    \"s_Add_Essence\": \"\",\n" +
-                "                    \"s_Cid\": \""+cid+"\",\n" +
+                "                    \"s_Cid\": \"" + cid + "\",\n" +
                 "                    \"s_d1\": \"\",\n" +
                 "                    \"s_d2\": \"\",\n" +
                 "                    \"s_Fid\": \"\",\n" +
-                "                    \"s_Flid\": \""+flid+"\",\n" +
+                "                    \"s_Flid\": \"" + flid + "\",\n" +
                 "                    \"s_isDel\": \"2\",\n" +
                 "                    \"s_isTop\": \"\",\n" +
                 "                    \"s_Keywords\": \"\",\n" +
                 "                    \"s_Mid\": \"\",\n" +
-                "                    \"s_Order\": \"isTop desc,Rdate desc\",\n" +
+                "                    \"s_Order\": \"isTop desc,Add_Essence desc,Rdate desc\",\n" +
                 "                    \"s_Stem_from\": \"2\",\n" +
                 "                    \"s_Total_parameter\": \"Fid,Cid,Ctitle,Flid,Ltitle,Ftitle,Mid,Member,isTop,Add_Essence,isDel,Rdate,Finfo,Fabulous_Num,Stem_from,Comment_Num,Final_date\"\n" +
                 "                },\n" +
@@ -205,7 +205,7 @@ public class ForumContentFragment extends Fragment {
                 "                    \"p_Last\": \"\",\n" +
                 "                    \"p_method\": \"\",\n" +
                 "                    \"p_Next\": \"\",\n" +
-                "                    \"p_Page\": \""+currentPage+"\",\n" +
+                "                    \"p_Page\": \"" + currentPage + "\",\n" +
                 "                    \"p_pageName\": \"\",\n" +
                 "                    \"p_PageStyle\": \"\",\n" +
                 "                    \"p_Pname\": \"\",\n" +
@@ -216,9 +216,9 @@ public class ForumContentFragment extends Fragment {
                 "                },\n" +
                 "                \"sign_valid\": {\n" +
                 "                    \"source\": \"Android\",\n" +
-                "                    \"non_str\": \""+random32+"\",\n" +
-                "                    \"stamp\": \""+time10+"\",\n" +
-                "                    \"signature\": \""+Utilities.encode("s_Add_Essence="+"s_Cid="+cid+"s_d1="+"s_d2="+"s_Fid="+"s_Flid="+flid+"s_isDel=2"+"s_isTop="+"s_Keywords="+"s_Mid="+"s_Order=isTop desc,Rdate desc"+"s_Stem_from=2"+"s_Total_parameter=Fid,Cid,Ctitle,Flid,Ltitle,Ftitle,Mid,Member,isTop,Add_Essence,isDel,Rdate,Finfo,Fabulous_Num,Stem_from,Comment_Num,Final_date"+"non_str="+random32+"stamp="+time10+"keySecret="+key64)+"\"\n" +
+                "                    \"non_str\": \"" + random32 + "\",\n" +
+                "                    \"stamp\": \"" + time10 + "\",\n" +
+                "                    \"signature\": \"" + Utilities.encode("s_Add_Essence=" + "s_Cid=" + cid + "s_d1=" + "s_d2=" + "s_Fid=" + "s_Flid=" + flid + "s_isDel=2" + "s_isTop=" + "s_Keywords=" + "s_Mid=" + "s_Order=isTop desc,Add_Essence desc,Rdate desc" + "s_Stem_from=2" + "s_Total_parameter=Fid,Cid,Ctitle,Flid,Ltitle,Ftitle,Mid,Member,isTop,Add_Essence,isDel,Rdate,Finfo,Fabulous_Num,Stem_from,Comment_Num,Final_date" + "non_str=" + random32 + "stamp=" + time10 + "keySecret=" + key64) + "\"\n" +
                 "                }\n" +
                 "            }\n" +
                 "        }\n" +
@@ -249,27 +249,28 @@ public class ForumContentFragment extends Fragment {
 
                 try {
                     JSONObject jsonObject = new JSONObject(response.body().string());
+                    Log.d("forum", jsonObject.toString());
                     final JSONArray jsonArr = jsonObject.getJSONArray("result").getJSONObject(0).getJSONArray("list");
 
                     Forum.Builder builder = new Forum.Builder();
                     totalPage = jsonObject.getJSONArray("result").getJSONObject(0).getJSONObject("page").getInt("Pc");
 
-                    for (int i=0; i<jsonArr.length(); i++){
+                    for (int i = 0; i < jsonArr.length(); i++) {
 
                         JSONObject eachForumObj = jsonArr.getJSONObject(i);
-                        Forum forum = builder.ForumTitle(eachForumObj.getString("Ftitle")).userName(eachForumObj.getJSONObject("Member").getString("Mname")).vip("VIP:"+eachForumObj.getJSONObject("Member").getString("Members_LV")).avatarIcon(API.getHostName()+eachForumObj.getJSONObject("Member").getString("Head_img")).likeNum(eachForumObj.getInt("Fabulous_Num")).tagName(eachForumObj.getString("Ltitle")).replyNum(eachForumObj.getInt("Comment_Num")).isDel(eachForumObj.getBoolean("isDel")).isFavorite(eachForumObj.getBoolean("Add_Essence")).isTop(eachForumObj.getBoolean("isTop")).fid(eachForumObj.getString("Fid")).flid(eachForumObj.getString("Flid")).build();
+                        Forum forum = builder.ForumTitle(eachForumObj.getString("Ftitle")).userName(eachForumObj.getJSONObject("Member").getString("Mname")).vip("VIP:" + eachForumObj.getJSONObject("Member").getString("Members_LV")).avatarIcon(API.getHostName() + eachForumObj.getJSONObject("Member").getString("Head_img")).likeNum(eachForumObj.getInt("Fabulous_Num")).tagName(eachForumObj.getString("Ltitle")).replyNum(eachForumObj.getInt("Comment_Num")).isDel(eachForumObj.getBoolean("isDel")).isFavorite(eachForumObj.getBoolean("Add_Essence")).isTop(eachForumObj.getBoolean("isTop")).fid(eachForumObj.getString("Fid")).flid(eachForumObj.getString("Flid")).build();
 
                         //判断是否为第一次加载
-                        if (isFirstLoad){
+                        if (isFirstLoad) {
 
                             forumList.add(forum);
-                        }else {
+                        } else {
 
                             loadMoreForums.add(forum);
                         }
                     }
 
-                    if (uiHandler != null){
+                    if (uiHandler != null) {
 
                         uiHandler.post(new Runnable() {
                             @Override
@@ -279,18 +280,18 @@ public class ForumContentFragment extends Fragment {
 
                                 Log.d("forumSize", String.valueOf(forumList.size()));
 
-                                if (forumList.size() > 0){
+                                if (forumList.size() > 0) {
 
                                     forumEmptyTextView.setVisibility(View.GONE);
-                                }else {
+                                } else {
 
                                     forumEmptyTextView.setVisibility(View.VISIBLE);
                                 }
 
-                                if (!isFirstLoad){
+                                if (!isFirstLoad) {
 
                                     forumRecyclerViewAdapter.setLoadMoreData(loadMoreForums);
-                                }else {
+                                } else {
 
                                     Log.d("forumSize", String.valueOf(forumList.size()));
                                     forumRecyclerViewAdapter.reset();
@@ -298,10 +299,10 @@ public class ForumContentFragment extends Fragment {
                                 }
 
 //                                forumRecyclerViewAdapter.notifyDataSetChanged();
-                                if (forumList.size() == 0){
+                                if (forumList.size() == 0) {
 
                                     forumRecyclerViewAdapter.loadEnd();
-                                }else if (currentPage >= totalPage){
+                                } else if (currentPage >= totalPage) {
 
                                     forumRecyclerViewAdapter.loadEnd();
                                 }
@@ -320,7 +321,6 @@ public class ForumContentFragment extends Fragment {
     @Override
     public void onDestroyView() {
         super.onDestroyView();
-        localBroadcastManager.unregisterReceiver(localReceiver);
     }
 
     public class LocalReceiver extends BroadcastReceiver {
@@ -329,7 +329,7 @@ public class ForumContentFragment extends Fragment {
             flid = intent.getStringExtra("Flid");
 
 //            forumList.clear();
-            initData(true, flid, cid);
+            initData(true, flid, "12");
             Log.d("接受广播", "接受广播");
 
 

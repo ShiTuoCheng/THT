@@ -1,14 +1,14 @@
 [
     {
         "merged": "/Users/shitakusei/Desktop/THT/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/mi_activity_intro.xml",
-        "source": "/Users/shitakusei/.gradle/caches/transforms-1/files-1.1/material-intro-1.6.2.aar/102ce2e88b4a4cb4556ea1daeff49db9/res/layout/mi_activity_intro.xml"
+        "source": "/Users/shitakusei/.gradle/caches/transforms-1/files-1.1/material-intro-1.6.2.aar/2d6b4e45c462baef9f66259ce07d5886/res/layout/mi_activity_intro.xml"
     },
     {
         "merged": "/Users/shitakusei/Desktop/THT/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/mi_fragment_simple_slide_scrollable.xml",
-        "source": "/Users/shitakusei/.gradle/caches/transforms-1/files-1.1/material-intro-1.6.2.aar/102ce2e88b4a4cb4556ea1daeff49db9/res/layout/mi_fragment_simple_slide_scrollable.xml"
+        "source": "/Users/shitakusei/.gradle/caches/transforms-1/files-1.1/material-intro-1.6.2.aar/2d6b4e45c462baef9f66259ce07d5886/res/layout/mi_fragment_simple_slide_scrollable.xml"
     },
     {
         "merged": "/Users/shitakusei/Desktop/THT/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/mi_fragment_simple_slide.xml",
-        "source": "/Users/shitakusei/.gradle/caches/transforms-1/files-1.1/material-intro-1.6.2.aar/102ce2e88b4a4cb4556ea1daeff49db9/res/layout/mi_fragment_simple_slide.xml"
+        "source": "/Users/shitakusei/.gradle/caches/transforms-1/files-1.1/material-intro-1.6.2.aar/2d6b4e45c462baef9f66259ce07d5886/res/layout/mi_fragment_simple_slide.xml"
     }
 ]

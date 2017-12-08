@@ -1,4 +1,4 @@
-#Thu Nov 16 11:49:38 CST 2017
-base.0=/Users/shitakusei/Desktop/THT/app/build/intermediates/transforms/dexMerger/debug/43
+#Fri Dec 08 10:47:54 CST 2017
+base.0=/Users/shitakusei/Desktop/THT/app/build/intermediates/transforms/dexMerger/debug/4
 renamed.0=classes.dex
-file.0=/Users/shitakusei/Desktop/THT/app/build/intermediates/transforms/dexMerger/debug/43/classes.dex
+file.0=/Users/shitakusei/Desktop/THT/app/build/intermediates/transforms/dexMerger/debug/4/classes.dex

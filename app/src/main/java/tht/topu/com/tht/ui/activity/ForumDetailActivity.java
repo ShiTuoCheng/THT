@@ -71,7 +71,7 @@ public class ForumDetailActivity extends AppCompatActivity {
             }
         });
 
-        forumDetailWebView.loadUrl("http://tht.65276588.cn/f/ForumDetail.aspx?Fid="+fid+"&Mid="+mid+"&Stem_from=2");
+        forumDetailWebView.loadUrl("http://wechat.taohuantang.com.cn/f/ForumDetail.aspx?Fid="+fid+"&Mid="+mid+"&Stem_from=2");
     }
 
     private void initView(){

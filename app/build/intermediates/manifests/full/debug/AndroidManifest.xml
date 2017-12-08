@@ -19,10 +19,6 @@
 
     <uses-feature android:name="android.hardware.nfc.hce" />
 
-    <meta-data
-        android:name="android.support.VERSION"
-        android:value="26.0.0-alpha1" />
-
     <application
         android:allowBackup="true"
         android:debuggable="true"
@@ -31,6 +27,7 @@
         android:largeHeap="true"
         android:roundIcon="@mipmap/login_logo"
         android:supportsRtl="true"
+        android:testOnly="true"
         android:theme="@style/AppTheme" >
 
         <!-- 微信支付 -->
@@ -132,8 +129,15 @@
             android:screenOrientation="portrait" />
         <activity
             android:name="tht.topu.com.tht.ui.activity.OrderListActivity"
-            android:screenOrientation="portrait" >
-        </activity>
+            android:screenOrientation="portrait" />
+        <activity android:name="tht.topu.com.tht.ui.activity.SearchActivity" />
+
+        <meta-data
+            android:name="android.support.VERSION"
+            android:value="26.1.0" />
+        <meta-data
+            android:name="android.arch.lifecycle.VERSION"
+            android:value="27.0.0-SNAPSHOT" />
     </application>
 
 </manifest>

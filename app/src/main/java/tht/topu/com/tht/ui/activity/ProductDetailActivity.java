@@ -77,7 +77,7 @@ public class ProductDetailActivity extends AppCompatActivity implements Activity
 
         uiHandler = new Handler(getMainLooper());
 
-        productDetailWebView.loadUrl("http://tht.65276588.cn/f/Mdse_detail.aspx?Mid="+mdid+"&Mids="+mid+"&Stem_from=2");
+        productDetailWebView.loadUrl("http://wechat.taohuantang.com.cn/f/Mdse_detail.aspx?Mid="+mdid+"&Mids="+mid+"&Stem_from=2");
     }
 
     @SuppressLint("JavascriptInterface")
