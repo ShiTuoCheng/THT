@@ -512,11 +512,21 @@ public class MainFragment extends Fragment {
                                             public void onOffsetChanged(AppBarLayout appBarLayout, int verticalOffset) {
                                                 if (Math.abs(verticalOffset) == appBarLayout.getTotalScrollRange()) {
 
-                                                    mainCategoryRecyclerView.setLayoutManager(linearLayoutManager);
+                                                    uiHandler.postDelayed(new Runnable() {
+                                                        @Override
+                                                        public void run() {
+                                                            mainCategoryRecyclerView.setLayoutManager(linearLayoutManager);
+                                                        }
+                                                    }, 100);
                                                     // Collapsed
                                                 } else if (verticalOffset == 0) {
 
-                                                    mainCategoryRecyclerView.setLayoutManager(gridLayoutManager);
+                                                    uiHandler.postDelayed(new Runnable() {
+                                                        @Override
+                                                        public void run() {
+                                                            mainCategoryRecyclerView.setLayoutManager(gridLayoutManager);
+                                                        }
+                                                    }, 100);
                                                     // Expanded
                                                 } else {
                                                     // Somewhere in between
