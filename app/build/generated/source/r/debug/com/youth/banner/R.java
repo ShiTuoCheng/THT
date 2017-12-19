@@ -42,11 +42,11 @@ public final class R {
         public static final int fit_end = 0x7f09008a;
         public static final int fit_start = 0x7f09008b;
         public static final int fit_xy = 0x7f09008c;
-        public static final int indicatorInside = 0x7f0900ad;
-        public static final int matrix = 0x7f0900c7;
-        public static final int numIndicator = 0x7f0900e1;
-        public static final int numIndicatorInside = 0x7f0900e2;
-        public static final int titleView = 0x7f09019e;
+        public static final int indicatorInside = 0x7f0900b1;
+        public static final int matrix = 0x7f0900ca;
+        public static final int numIndicator = 0x7f0900e4;
+        public static final int numIndicatorInside = 0x7f0900e5;
+        public static final int titleView = 0x7f0901a1;
     }
     public static final class layout {
         public static final int banner = 0x7f0b0034;

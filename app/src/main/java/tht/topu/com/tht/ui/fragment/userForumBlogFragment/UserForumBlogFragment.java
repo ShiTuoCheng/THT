@@ -168,7 +168,7 @@ public class UserForumBlogFragment extends Fragment {
                     "                    \"s_d2\": \"\",\n" +
                     "                    \"s_Fid\": \"\",\n" +
                     "                    \"s_Flid\": \"\",\n" +
-                    "                    \"s_isDel\": \"\",\n" +
+                    "                    \"s_isDel\": \"2\",\n" +
                     "                    \"s_isTop\": \"\",\n" +
                     "                    \"s_Keywords\": \"\",\n" +
                     "                    \"s_Mid\": \""+mid+"\",\n" +
@@ -196,7 +196,7 @@ public class UserForumBlogFragment extends Fragment {
                     "                    \"source\": \"Android\",\n" +
                     "                    \"non_str\": \""+random32+"\",\n" +
                     "                    \"stamp\": \""+time10+"\",\n" +
-                    "                    \"signature\": \""+Utilities.encode("s_Add_Essence="+"s_Cid="+"s_d1="+"s_d2="+"s_Fid="+"s_Flid="+"s_isDel="+"s_isTop="+"s_Keywords="+"s_Mid="+mid+"s_Order=Rdate desc"+"s_Stem_from=2"+"s_Total_parameter=Fid,Cid,Ctitle,Flid,Ltitle,Ftitle,Mid,Member,isTop,Add_Essence,isDel,Rdate,Finfo,Fabulous_Num,Stem_from,Comment_Num,Final_date"+"non_str="+random32+"stamp="+time10+"keySecret="+key64)+"\"\n" +
+                    "                    \"signature\": \""+Utilities.encode("s_Add_Essence="+"s_Cid="+"s_d1="+"s_d2="+"s_Fid="+"s_Flid="+"s_isDel=2"+"s_isTop="+"s_Keywords="+"s_Mid="+mid+"s_Order=Rdate desc"+"s_Stem_from=2"+"s_Total_parameter=Fid,Cid,Ctitle,Flid,Ltitle,Ftitle,Mid,Member,isTop,Add_Essence,isDel,Rdate,Finfo,Fabulous_Num,Stem_from,Comment_Num,Final_date"+"non_str="+random32+"stamp="+time10+"keySecret="+key64)+"\"\n" +
                     "                }\n" +
                     "            }\n" +
                     "        }\n" +

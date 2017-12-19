@@ -12,7 +12,6 @@ public class ExampleApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
-        JPushInterface.setDebugMode(true);
         JPushInterface.init(this);
     }
 }

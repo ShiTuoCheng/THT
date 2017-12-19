@@ -21,9 +21,9 @@ public final class R {
         public static final int item_touch_helper_swipe_escape_velocity = 0x7f070088;
     }
     public static final class id {
-        public static final int item_touch_helper_previous_elevation = 0x7f0900b2;
-        public static final int load_more_view = 0x7f0900b9;
-        public static final int no_more_view = 0x7f0900db;
+        public static final int item_touch_helper_previous_elevation = 0x7f0900b5;
+        public static final int load_more_view = 0x7f0900bc;
+        public static final int no_more_view = 0x7f0900de;
     }
     public static final class layout {
         public static final int view_refresh_recycler = 0x7f0b0073;

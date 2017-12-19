@@ -11,6 +11,8 @@ import com.bumptech.glide.request.RequestOptions;
 import com.othershe.baseadapter.ViewHolder;
 import com.othershe.baseadapter.base.CommonBaseAdapter;
 
+import java.lang.reflect.Array;
+import java.util.ArrayList;
 import java.util.List;
 
 import jp.wasabeef.glide.transformations.CropCircleTransformation;
@@ -26,6 +28,11 @@ import tht.topu.com.tht.utils.Utilities;
 public class ForumRecyclerViewAdapter extends CommonBaseAdapter<Forum>{
 
     private Context context;
+    private ImageView forumImg1;
+    private ImageView forumImg2;
+    private ImageView forumImg3;
+    private String[] picArr;
+
 
     public ForumRecyclerViewAdapter(Context context, List<Forum> datas, boolean isOpenLoadMore) {
         super(context, datas, isOpenLoadMore);
@@ -35,6 +42,8 @@ public class ForumRecyclerViewAdapter extends CommonBaseAdapter<Forum>{
     @Override
     protected void convert(ViewHolder holder, final Forum data, int position) {
 
+        holder.setIsRecyclable(false);
+
         holder.setText(R.id.tagTextView, data.getTagName());
         holder.setText(R.id.forumTitleTextView, data.getForumTitle());
         holder.setText(R.id.userNameTextView, data.getUserName());
@@ -42,7 +51,40 @@ public class ForumRecyclerViewAdapter extends CommonBaseAdapter<Forum>{
         holder.setText(R.id.goodNumTextView, ""+data.getLikeNum());
         holder.setText(R.id.forumVipTextView, data.getVip());
 
-        holder.setIsRecyclable(false);
+        forumImg1 = holder.getView(R.id.forumImg1);
+        forumImg2 = holder.getView(R.id.forumImg2);
+        forumImg3 = holder.getView(R.id.forumImg3);
+
+        if (data.getPic1() != null){
+
+            picArr = data.getPic1().split(",");
+
+            if (picArr.length == 0){
+                forumImg1.setVisibility(View.GONE);
+                forumImg2.setVisibility(View.GONE);
+                forumImg3.setVisibility(View.GONE);
+
+            }else if (picArr.length == 1) {
+                Glide.with(context).load(picArr[0]).into(forumImg1);
+                forumImg2.setVisibility(View.GONE);
+                forumImg3.setVisibility(View.GONE);
+            }else if (picArr.length == 2) {
+
+                Glide.with(context).load(picArr[0]).into(forumImg1);
+                Glide.with(context).load(picArr[1]).into(forumImg2);
+                forumImg3.setVisibility(View.GONE);
+            }else{
+
+                Glide.with(context).load(picArr[0]).into(forumImg1);
+                Glide.with(context).load(picArr[1]).into(forumImg2);
+                Glide.with(context).load(picArr[2]).into(forumImg3);
+            }
+        }else {
+
+            forumImg1.setVisibility(View.GONE);
+            forumImg2.setVisibility(View.GONE);
+            forumImg3.setVisibility(View.GONE);
+        }
 
         Glide.with(context).load(data.getAvatarIcon()).apply(RequestOptions.bitmapTransform(new CropCircleTransformation())).into((ImageView)holder.getView(R.id.userImageView));
         if (data.isFavorite() && !data.isTop()){
@@ -57,25 +99,17 @@ public class ForumRecyclerViewAdapter extends CommonBaseAdapter<Forum>{
             ((ImageView)holder.getView(R.id.cornerImageView)).setImageDrawable(context.getResources().getDrawable(R.mipmap.jing));
         }
 
-        if (data.isDel()){
+        holder.getView(R.id.forumTitleTextView).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
 
-            (holder.getView(R.id.isDelLayout)).setVisibility(View.VISIBLE);
-        }else{
+                Bundle bundle = new Bundle();
 
-            (holder.getView(R.id.isDelLayout)).setVisibility(View.GONE);
-
-            holder.getView(R.id.forumTitleTextView).setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-
-                    Bundle bundle = new Bundle();
-
-                    bundle.putString("fid", data.getFid());
-                    bundle.putString("flid", data.getFlid());
-                    Utilities.jumpToActivity(context, ForumDetailActivity.class, bundle, "forumBundle");
-                }
-            });
-        }
+                bundle.putString("fid", data.getFid());
+                bundle.putString("flid", data.getFlid());
+                Utilities.jumpToActivity(context, ForumDetailActivity.class, bundle, "forumBundle");
+            }
+        });
     }
 
     @Override

@@ -123,7 +123,7 @@ public class UserForumReviewsFragment extends Fragment {
                 "                    \"s_d2\": \"\",\n" +
                 "                    \"s_Fcid\": \"\",\n" +
                 "                    \"s_Fid\": \"\",\n" +
-                "                    \"s_isDel\": \"\",\n" +
+                "                    \"s_isDel\": \"2\",\n" +
                 "                    \"s_Mid\": \""+mid+"\",\n" +
                 "                    \"s_Of_Fcid\": \"\",\n" +
                 "                    \"s_Order\": \"\",\n" +
@@ -149,7 +149,7 @@ public class UserForumReviewsFragment extends Fragment {
                 "                    \"source\": \"Android\",\n" +
                 "                    \"non_str\": \""+random32+"\",\n" +
                 "                    \"stamp\": \""+time10+"\",\n" +
-                "                    \"signature\": \""+Utilities.encode("s_d1="+"s_d2="+"s_Fcid="+"s_Fid="+"s_isDel="+"s_Mid="+mid+"s_Of_Fcid="+"s_Order="+"s_Total_parameter=Fcid,Fid,Of_Fcid,Of_Comment,Mid,Member,Cinfo,Cdate,Layer,isDel"+"non_str="+random32+"stamp="+time10+"keySecret="+key64)+"\"\n" +
+                "                    \"signature\": \""+Utilities.encode("s_d1="+"s_d2="+"s_Fcid="+"s_Fid="+"s_isDel=2"+"s_Mid="+mid+"s_Of_Fcid="+"s_Order="+"s_Total_parameter=Fcid,Fid,Of_Fcid,Of_Comment,Mid,Member,Cinfo,Cdate,Layer,isDel"+"non_str="+random32+"stamp="+time10+"keySecret="+key64)+"\"\n" +
                 "                }\n" +
                 "            }\n" +
                 "        }\n" +
@@ -232,7 +232,7 @@ public class UserForumReviewsFragment extends Fragment {
                 "                    \"s_d2\": \"\",\n" +
                 "                    \"s_Fid\": \""+result+"\",\n" +
                 "                    \"s_Flid\": \"\",\n" +
-                "                    \"s_isDel\": \"\",\n" +
+                "                    \"s_isDel\": \"2\",\n" +
                 "                    \"s_isTop\": \"\",\n" +
                 "                    \"s_Keywords\": \"\",\n" +
                 "                    \"s_Mid\": \"\",\n" +
@@ -260,7 +260,7 @@ public class UserForumReviewsFragment extends Fragment {
                 "                    \"source\": \"Android\",\n" +
                 "                    \"non_str\": \""+random32+"\",\n" +
                 "                    \"stamp\": \""+time10+"\",\n" +
-                "                    \"signature\": \""+Utilities.encode("s_Add_Essence="+"s_Cid="+"s_d1="+"s_d2="+"s_Fid="+result+"s_Flid="+"s_isDel="+"s_isTop="+"s_Keywords="+"s_Mid="+"s_Order=Rdate desc"+"s_Stem_from=2"+"s_Total_parameter=Fid,Cid,Ctitle,Flid,Ltitle,Ftitle,Mid,Member,isTop,Add_Essence,isDel,Rdate,Finfo,Fabulous_Num,Stem_from,Comment_Num,Final_date"+"non_str="+random32+"stamp="+time10+"keySecret="+key64)+"\"\n" +
+                "                    \"signature\": \""+Utilities.encode("s_Add_Essence="+"s_Cid="+"s_d1="+"s_d2="+"s_Fid="+result+"s_Flid="+"s_isDel=2"+"s_isTop="+"s_Keywords="+"s_Mid="+"s_Order=Rdate desc"+"s_Stem_from=2"+"s_Total_parameter=Fid,Cid,Ctitle,Flid,Ltitle,Ftitle,Mid,Member,isTop,Add_Essence,isDel,Rdate,Finfo,Fabulous_Num,Stem_from,Comment_Num,Final_date"+"non_str="+random32+"stamp="+time10+"keySecret="+key64)+"\"\n" +
                 "                }\n" +
                 "            }\n" +
                 "        }\n" +

@@ -18,6 +18,16 @@ public class Forum {
     private int replyNum;
     private String fid;
     private String flid;
+    private String pic1;
+
+
+    public String getPic1() {
+        return pic1;
+    }
+
+    public void setPic1(String pic1) {
+        this.pic1 = pic1;
+    }
 
     public String getFlid() {
         return flid;
@@ -48,6 +58,7 @@ public class Forum {
         setReplyNum(builder.replyNum);
         setFid(builder.fid);
         setFlid(builder.flid);
+        setPic1(builder.pic1);
     }
 
     public boolean isDel() {
@@ -140,6 +151,7 @@ public class Forum {
         private int replyNum;
         private String fid;
         private String flid;
+        private String pic1;
         private boolean isTop;
         private boolean isFavorite;
         private boolean isDel;
@@ -189,6 +201,11 @@ public class Forum {
 
         public Builder flid(String val) {
             flid = val;
+            return this;
+        }
+
+        public Builder pic1(String val) {
+            pic1 = val;
             return this;
         }
 
