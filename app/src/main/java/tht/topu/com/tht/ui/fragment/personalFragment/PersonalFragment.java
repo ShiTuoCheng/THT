@@ -51,6 +51,7 @@ import tht.topu.com.tht.ui.activity.ChangeUserInfoActivity;
 import tht.topu.com.tht.ui.activity.LoginActivity;
 import tht.topu.com.tht.ui.activity.OrderListActivity;
 import tht.topu.com.tht.ui.activity.PasswordActivity;
+import tht.topu.com.tht.ui.activity.ServiceActivity;
 import tht.topu.com.tht.ui.activity.SettingActivity;
 import tht.topu.com.tht.ui.activity.ShoppingCardActivity;
 import tht.topu.com.tht.ui.activity.UserFavoriteActivity;
@@ -100,6 +101,7 @@ public class PersonalFragment extends Fragment {
     private RelativeLayout personal_list_renew_relative;
     private RelativeLayout personal_list_cart_relative;
     private RelativeLayout personal_list_post_relative;
+    private RelativeLayout personal_list_service_relative;
 
     private ImageView personal_background_ImageView;
 
@@ -202,6 +204,7 @@ public class PersonalFragment extends Fragment {
         personal_list_renew_relative = (RelativeLayout)view.findViewById(R.id.personal_list_renew_relative);
         personal_list_post_relative = (RelativeLayout)view.findViewById(R.id.personal_list_post_relative);
         personal_list_cart_relative = view.findViewById(R.id.personal_list_cart_relative);
+        personal_list_service_relative = view.findViewById(R.id.personal_list_service_relative);
         swipeRefreshLayout = (SwipeRefreshLayout)view.findViewById(R.id.swipe_refresh_layout);
 
         personal_background_ImageView = (ImageView)view.findViewById(R.id.personal_background_ImageView);
@@ -262,6 +265,14 @@ public class PersonalFragment extends Fragment {
             public void onClick(View view) {
 
                 Utilities.jumpToActivity(getActivity(), ShoppingCardActivity.class);
+            }
+        });
+
+        personal_list_service_relative.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Utilities.jumpToActivity(getActivity(), ServiceActivity.class);
             }
         });
 

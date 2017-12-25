@@ -476,6 +476,46 @@
                             />
                     </RelativeLayout>
 
+                    <!--第五行收藏-->
+                    <RelativeLayout
+                        android:id="@+id/personal_list_service_relative"
+                        android:layout_width="match_parent"
+                        android:layout_height="44dp"
+                        android:gravity="center_vertical"
+                        android:layout_marginLeft="16dp"
+                        android:background="@drawable/personal_list_border"
+                        >
+
+                        <ImageView
+                            android:id="@+id/personal_list_service_icon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@mipmap/personal_list_cart"
+                            android:layout_centerVertical="true"
+                            />
+
+                        <TextView
+                            android:id="@+id/personal_list_service_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:text="客服"
+                            android:textColor="#797979"
+                            android:textSize="17dp"
+                            android:layout_toRightOf="@id/personal_list_service_icon"
+                            android:layout_marginLeft="11dp"
+                            />
+                        <ImageView
+                            android:id="@+id/personal_list_service_action"
+                            android:layout_width="8dp"
+                            android:layout_height="12dp"
+                            android:src="@mipmap/personal_arrow_rigint"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="16dp"
+                            android:layout_centerVertical="true"
+                            />
+                    </RelativeLayout>
+
                 </LinearLayout>
             </LinearLayout>
         </ScrollView>

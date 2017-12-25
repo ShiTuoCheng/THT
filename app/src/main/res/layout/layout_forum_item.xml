@@ -40,23 +40,23 @@
         <ImageView
             android:id="@+id/forumImg1"
             android:padding="6dp"
-            android:layout_width="0dp"
-            android:layout_height="100dp"
-            android:layout_weight="1"/>
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:scaleType="fitXY"/>
 
         <ImageView
             android:id="@+id/forumImg2"
             android:padding="6dp"
-            android:layout_width="0dp"
-            android:layout_height="100dp"
-            android:layout_weight="1"/>
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:scaleType="fitXY"/>
 
         <ImageView
             android:id="@+id/forumImg3"
             android:padding="6dp"
-            android:layout_width="0dp"
-            android:layout_height="100dp"
-            android:layout_weight="1"/>
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:scaleType="fitXY"/>
 
     </LinearLayout>
 

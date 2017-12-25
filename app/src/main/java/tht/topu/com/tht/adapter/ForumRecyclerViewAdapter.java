@@ -19,6 +19,7 @@ import jp.wasabeef.glide.transformations.CropCircleTransformation;
 import tht.topu.com.tht.R;
 import tht.topu.com.tht.modle.Forum;
 import tht.topu.com.tht.ui.activity.ForumDetailActivity;
+import tht.topu.com.tht.utils.API;
 import tht.topu.com.tht.utils.Utilities;
 
 /**
@@ -59,25 +60,43 @@ public class ForumRecyclerViewAdapter extends CommonBaseAdapter<Forum>{
 
             picArr = data.getPic1().split(",");
 
+            Log.d("PicData", data.getPic1());
+            Log.d("Picforim", String.valueOf(picArr.length));
+
             if (picArr.length == 0){
                 forumImg1.setVisibility(View.GONE);
                 forumImg2.setVisibility(View.GONE);
                 forumImg3.setVisibility(View.GONE);
 
             }else if (picArr.length == 1) {
-                Glide.with(context).load(picArr[0]).into(forumImg1);
+                Glide.with(context).load(API.getAnothereHostName()+picArr[0]).into(forumImg1);
                 forumImg2.setVisibility(View.GONE);
                 forumImg3.setVisibility(View.GONE);
+                if (picArr[0].equals("")){
+                    forumImg1.setVisibility(View.GONE);
+                }
             }else if (picArr.length == 2) {
 
-                Glide.with(context).load(picArr[0]).into(forumImg1);
-                Glide.with(context).load(picArr[1]).into(forumImg2);
+                Glide.with(context).load(API.getAnothereHostName()+picArr[0]).into(forumImg1);
+                Glide.with(context).load(API.getAnothereHostName()+picArr[1]).into(forumImg2);
                 forumImg3.setVisibility(View.GONE);
+                if (picArr[0].equals("")){
+                    forumImg1.setVisibility(View.GONE);
+                }else if (picArr[1].equals("")){
+                    forumImg2.setVisibility(View.GONE);
+                }
             }else{
 
-                Glide.with(context).load(picArr[0]).into(forumImg1);
-                Glide.with(context).load(picArr[1]).into(forumImg2);
-                Glide.with(context).load(picArr[2]).into(forumImg3);
+                Glide.with(context).load(API.getAnothereHostName()+picArr[0]).into(forumImg1);
+                Glide.with(context).load(API.getAnothereHostName()+picArr[1]).into(forumImg2);
+                Glide.with(context).load(API.getAnothereHostName()+picArr[2]).into(forumImg3);
+                if (picArr[0].equals("")){
+                    forumImg1.setVisibility(View.GONE);
+                }else if (picArr[1].equals("")){
+                    forumImg2.setVisibility(View.GONE);
+                }else if (picArr[2].equals("")){
+                    forumImg3.setVisibility(View.GONE);
+                }
             }
         }else {
 

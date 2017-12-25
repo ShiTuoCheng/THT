@@ -338,7 +338,7 @@ public class ProductFragment extends Fragment {
                 "                    \"s_Special_offer\": \"\",\n" +
                 "                    \"s_Stem_from\": \"2\",\n" +
                 "                    \"s_Stock_final\": \"\",\n" +
-                "                    \"s_Total_parameter\": \"Mid,Cid,Ctitle,Stitle,Pic1,Pic2,Description,Amount,Market_Price,Price,Special_offer,Sotitle,So_Price,So_Sdate,So_Bdate,So_Amount,Flash_sale,Fstitle,Fs_Price,Fs_Sdate,Fs_Bdate,Fs_Amount,Recommend,Hot,Layer,Alive,Stem_from,Sales_volume,Stock_final,Normal_margin,So_Stock_final,Fs_Stock_final\"\n" +
+                "                    \"s_Total_parameter\": \"Mid,Cid,Ctitle,Stitle,Pic1,Pic2,Description,Amount,Market_Price,Price,Special_offer,Sotitle,So_Price,So_Sdate,So_Bdate,So_Amount,Flash_sale,Fstitle,Fs_Price,Fs_Sdate,Fs_Bdate,Fs_Amount,Recommend,Hot,Layer,Alive,Stem_from,Sales_volume,Stock_final,So_Stock_final,Fs_Stock_final\"\n" +
                 "                },\n" +
                 "                \"pages\": {\n" +
                 "                    \"p_c\": \"\",\n" +
@@ -360,7 +360,7 @@ public class ProductFragment extends Fragment {
                 "                    \"source\": \"Android\",\n" +
                 "                    \"non_str\": \""+random32+"\",\n" +
                 "                    \"stamp\": \""+time10+"\",\n" +
-                "                    \"signature\": \""+Utilities.encode("s_Alive="+"s_Cid="+Cid+"s_d1="+"s_d2="+"s_d3="+"s_d4="+"s_d5="+"s_d6="+"s_d7="+"s_d8="+"s_Flash_sale="+"s_Fs_Stock_final="+"s_Hot="+"s_Keywords="+"s_Mid="+"s_Order="+"s_Recommend="+recommend+"s_So_Stock_final="+"s_Special_offer="+"s_Stem_from=2"+"s_Stock_final="+"s_Total_parameter="+"Mid,Cid,Ctitle,Stitle,Pic1,Pic2,Description,Amount,Market_Price,Price,Special_offer,Sotitle,So_Price,So_Sdate,So_Bdate,So_Amount,Flash_sale,Fstitle,Fs_Price,Fs_Sdate,Fs_Bdate,Fs_Amount,Recommend,Hot,Layer,Alive,Stem_from,Sales_volume,Stock_final,Normal_margin,So_Stock_final,Fs_Stock_final"+"non_str="+random32+"stamp="+time10+"keySecret="+key64)+"\"\n" +
+                "                    \"signature\": \""+Utilities.encode("s_Alive="+"s_Cid="+Cid+"s_d1="+"s_d2="+"s_d3="+"s_d4="+"s_d5="+"s_d6="+"s_d7="+"s_d8="+"s_Flash_sale="+"s_Fs_Stock_final="+"s_Hot="+"s_Keywords="+"s_Mid="+"s_Order="+"s_Recommend="+recommend+"s_So_Stock_final="+"s_Special_offer="+"s_Stem_from=2"+"s_Stock_final="+"s_Total_parameter="+"Mid,Cid,Ctitle,Stitle,Pic1,Pic2,Description,Amount,Market_Price,Price,Special_offer,Sotitle,So_Price,So_Sdate,So_Bdate,So_Amount,Flash_sale,Fstitle,Fs_Price,Fs_Sdate,Fs_Bdate,Fs_Amount,Recommend,Hot,Layer,Alive,Stem_from,Sales_volume,Stock_final,So_Stock_final,Fs_Stock_final"+"non_str="+random32+"stamp="+time10+"keySecret="+key64)+"\"\n" +
                 "                }\n" +
                 "            }\n" +
                 "        }\n" +
