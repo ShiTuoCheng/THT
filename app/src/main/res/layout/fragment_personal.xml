@@ -490,7 +490,7 @@
                             android:id="@+id/personal_list_service_icon"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:src="@mipmap/personal_list_cart"
+                            android:src="@mipmap/customer_service"
                             android:layout_centerVertical="true"
                             />
 

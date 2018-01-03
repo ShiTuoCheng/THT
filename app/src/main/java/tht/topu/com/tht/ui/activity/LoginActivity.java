@@ -15,6 +15,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.RequestOptions;
 import com.bumptech.glide.util.Util;
 
 import org.json.JSONArray;
@@ -152,7 +153,7 @@ public class LoginActivity extends BaseActivity {
         passwordInput = (EditText)findViewById(R.id.passwordInput);
         forgotPasswordTextView = (TextView)findViewById(R.id.forgotPassword);
 
-        Glide.with(this).load(R.drawable.login).into(backgroundImageView);
+        Glide.with(this).load("").apply(new RequestOptions().placeholder(R.drawable.login)).into(backgroundImageView);
 
         final int screenHeight = this.getWindowManager().getDefaultDisplay().getHeight();
 

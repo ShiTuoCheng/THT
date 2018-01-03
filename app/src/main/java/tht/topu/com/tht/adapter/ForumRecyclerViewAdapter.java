@@ -60,9 +60,6 @@ public class ForumRecyclerViewAdapter extends CommonBaseAdapter<Forum>{
 
             picArr = data.getPic1().split(",");
 
-            Log.d("PicData", data.getPic1());
-            Log.d("Picforim", String.valueOf(picArr.length));
-
             if (picArr.length == 0){
                 forumImg1.setVisibility(View.GONE);
                 forumImg2.setVisibility(View.GONE);
@@ -122,6 +119,18 @@ public class ForumRecyclerViewAdapter extends CommonBaseAdapter<Forum>{
             @Override
             public void onClick(View view) {
 
+                Bundle bundle = new Bundle();
+
+                bundle.putString("fid", data.getFid());
+                bundle.putString("flid", data.getFlid());
+                Utilities.jumpToActivity(context, ForumDetailActivity.class, bundle, "forumBundle");
+            }
+        });
+
+        holder.getView(R.id.forumImgList).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                
                 Bundle bundle = new Bundle();
 
                 bundle.putString("fid", data.getFid());

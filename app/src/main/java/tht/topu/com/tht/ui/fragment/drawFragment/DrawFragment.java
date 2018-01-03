@@ -500,7 +500,10 @@ public class DrawFragment extends Fragment {
                             @Override
                             public void run() {
 
-                                Glide.with(getActivity()).load(API.getHostName()+imgUrl).into(drawImageView);
+                                if (getActivity() != null){
+
+                                    Glide.with(getActivity()).load(API.getHostName()+imgUrl).into(drawImageView);
+                                }
                             }
                         });
 

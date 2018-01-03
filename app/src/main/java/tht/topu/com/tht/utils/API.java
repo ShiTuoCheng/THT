@@ -8,17 +8,17 @@ public  class API {
 
     public static String getAPI(){
 
-        return "http://mp.taohuantang.com.cn/Handler/Handlers.ashx";
+        return "http://taohuantang.65276588.cn/Handler/Handlers.ashx";
     }
 
     public static String getHostName(){
 
-        return  "http://mp.taohuantang.com.cn/";
+        return  "http://taohuantang.65276588.cn/";
     }
 
     public static String getAnothereHostName(){
 
-        return "http://mp.taohuantang.com.cn";
+        return "http://taohuantang.65276588.cn";
     }
 
     public static final String APPID = "wxdb8c338a095d2043";

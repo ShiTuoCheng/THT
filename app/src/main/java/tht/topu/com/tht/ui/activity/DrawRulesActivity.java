@@ -107,7 +107,7 @@ public class DrawRulesActivity extends AppCompatActivity {
             alertHandler.sendEmptyMessageDelayed(0,1000);
         }else {
 
-            drawRulesWebView.loadUrl("http://tht.65276588.cn/f/Activity_rules.aspx?Iid=6");
+            drawRulesWebView.loadUrl("http://wechat.taohuantang.com.cn/f/Activity_rules.aspx?Iid=6");
             drawRulesWebView.setWebViewClient(new WebViewClient(){
 
                 @Override

@@ -233,6 +233,7 @@ public class ProductDetailActivity extends AppCompatActivity implements Activity
         });
     }
 
+    // wxpay
     private void launchWXPay(final String prepayId, final String oid){
 
         JPay.getIntance(this).toWxPay(API.APPID, API.PartnerID, prepayId, Utilities.getStringRandom(32), Utilities.get10Time(), "Sign=WXPay", new JPay.JPayListener() {
@@ -252,6 +253,28 @@ public class ProductDetailActivity extends AppCompatActivity implements Activity
             @Override
             public void onPayCancel() {
                 Toast.makeText(ProductDetailActivity.this, "取消了支付", Toast.LENGTH_SHORT).show();
+            }
+        });
+    }
+
+    // alipay
+
+    private void launchAlipay (final String orderInfo) {
+
+        JPay.getIntance(this).toAliPay(orderInfo, new JPay.JPayListener() {
+            @Override
+            public void onPaySuccess() {
+
+            }
+
+            @Override
+            public void onPayError(int error_code, String message) {
+
+            }
+
+            @Override
+            public void onPayCancel() {
+
             }
         });
     }

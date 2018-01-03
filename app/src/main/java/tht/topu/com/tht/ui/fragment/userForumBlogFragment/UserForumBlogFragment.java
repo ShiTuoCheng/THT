@@ -166,6 +166,7 @@ public class UserForumBlogFragment extends Fragment {
                     "                    \"s_Cid\": \"\",\n" +
                     "                    \"s_d1\": \"\",\n" +
                     "                    \"s_d2\": \"\",\n" +
+                    "                    \"s_Examine\": \"2\",\n" +
                     "                    \"s_Fid\": \"\",\n" +
                     "                    \"s_Flid\": \"\",\n" +
                     "                    \"s_isDel\": \"2\",\n" +
@@ -174,7 +175,7 @@ public class UserForumBlogFragment extends Fragment {
                     "                    \"s_Mid\": \""+mid+"\",\n" +
                     "                    \"s_Order\": \"Rdate desc\",\n" +
                     "                    \"s_Stem_from\": \"2\",\n" +
-                    "                    \"s_Total_parameter\": \"Fid,Cid,Ctitle,Flid,Ltitle,Ftitle,Mid,Member,isTop,Add_Essence,isDel,Rdate,Finfo,Fabulous_Num,Stem_from,Comment_Num,Final_date\"\n" +
+                    "                    \"s_Total_parameter\": \"Fid,Cid,Ctitle,Flid,Ltitle,Ftitle,Mid,Member,isTop,Add_Essence,isDel,Rdate,Finfo,Fabulous_Num,Stem_from,Comment_Num,Final_date,Examine,Pic1\"\n" +
                     "                },\n" +
                     "                \"pages\": {\n" +
                     "                    \"p_c\": \"\",\n" +
@@ -196,7 +197,7 @@ public class UserForumBlogFragment extends Fragment {
                     "                    \"source\": \"Android\",\n" +
                     "                    \"non_str\": \""+random32+"\",\n" +
                     "                    \"stamp\": \""+time10+"\",\n" +
-                    "                    \"signature\": \""+Utilities.encode("s_Add_Essence="+"s_Cid="+"s_d1="+"s_d2="+"s_Fid="+"s_Flid="+"s_isDel=2"+"s_isTop="+"s_Keywords="+"s_Mid="+mid+"s_Order=Rdate desc"+"s_Stem_from=2"+"s_Total_parameter=Fid,Cid,Ctitle,Flid,Ltitle,Ftitle,Mid,Member,isTop,Add_Essence,isDel,Rdate,Finfo,Fabulous_Num,Stem_from,Comment_Num,Final_date"+"non_str="+random32+"stamp="+time10+"keySecret="+key64)+"\"\n" +
+                    "                    \"signature\": \""+Utilities.encode("s_Add_Essence="+"s_Cid="+"s_d1="+"s_d2=" + "s_Examine=2"+"s_Fid="+"s_Flid="+"s_isDel=2"+"s_isTop="+"s_Keywords="+"s_Mid="+mid+"s_Order=Rdate desc"+"s_Stem_from=2"+"s_Total_parameter=Fid,Cid,Ctitle,Flid,Ltitle,Ftitle,Mid,Member,isTop,Add_Essence,isDel,Rdate,Finfo,Fabulous_Num,Stem_from,Comment_Num,Final_date,Examine,Pic1"+"non_str="+random32+"stamp="+time10+"keySecret="+key64)+"\"\n" +
                     "                }\n" +
                     "            }\n" +
                     "        }\n" +
@@ -239,7 +240,7 @@ public class UserForumBlogFragment extends Fragment {
 
                             JSONObject eachForumObj = jsonArr.getJSONObject(i);
 
-                            Forum forum = builder.ForumTitle(eachForumObj.getString("Ftitle")).userName(eachForumObj.getJSONObject("Member").getString("Mname")).avatarIcon(API.getHostName()+eachForumObj.getJSONObject("Member").getString("Head_img")).likeNum(eachForumObj.getInt("Fabulous_Num")).tagName(eachForumObj.getString("Ltitle")).replyNum(eachForumObj.getInt("Comment_Num")).isDel(eachForumObj.getBoolean("isDel")).vip("VIP:"+eachForumObj.getJSONObject("Member").getString("Members_LV")).isTop(eachForumObj.getBoolean("isTop")).isFavorite(eachForumObj.getBoolean("Add_Essence")).fid(eachForumObj.getString("Fid")).flid(eachForumObj.getString("Flid")).build();
+                            Forum forum = builder.ForumTitle(eachForumObj.getString("Ftitle")).userName(eachForumObj.getJSONObject("Member").getString("Mname")).avatarIcon(API.getHostName()+eachForumObj.getJSONObject("Member").getString("Head_img")).likeNum(eachForumObj.getInt("Fabulous_Num")).tagName(eachForumObj.getString("Ltitle")).replyNum(eachForumObj.getInt("Comment_Num")).isDel(eachForumObj.getBoolean("isDel")).vip("VIP:"+eachForumObj.getJSONObject("Member").getString("Members_LV")).isTop(eachForumObj.getBoolean("isTop")).isFavorite(eachForumObj.getBoolean("Add_Essence")).fid(eachForumObj.getString("Fid")).flid(eachForumObj.getString("Flid")).pic1(eachForumObj.getString("Pic1")).build();
 
                             //判断是否为第一次加载
                             if (isFirstLoad){

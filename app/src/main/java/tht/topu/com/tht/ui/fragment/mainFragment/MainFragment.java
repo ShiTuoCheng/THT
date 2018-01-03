@@ -2,7 +2,9 @@ package tht.topu.com.tht.ui.fragment.mainFragment;
 
 
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
@@ -20,6 +22,7 @@ import android.support.v4.app.FragmentTransaction;
 import android.support.v4.content.LocalBroadcastManager;
 import android.support.v4.view.ViewPager;
 import android.support.v4.widget.SwipeRefreshLayout;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
@@ -50,7 +53,10 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.IOException;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -108,6 +114,13 @@ public class MainFragment extends Fragment {
 
     private int selectedPosition=0;
 
+    private boolean canSignIn = false;
+
+    String mid;
+    int point;
+
+    private static final String MID_KEY = "1x11";
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -118,6 +131,9 @@ public class MainFragment extends Fragment {
         localBroadcastManager = LocalBroadcastManager.getInstance(getActivity().getApplicationContext());
 
         uiHandler = new Handler(Looper.getMainLooper());
+
+        SharedPreferences sharedPreferences = getActivity().getSharedPreferences("TokenData", Context.MODE_PRIVATE);
+        mid = sharedPreferences.getString(MID_KEY, "");
 
         alertHandler = new Handler(){
 
@@ -203,12 +219,17 @@ public class MainFragment extends Fragment {
         signInImg = (ImageView)view.findViewById(R.id.signInImg);
         searchImg = view.findViewById(R.id.searchImg);
 
-        Glide.with(getActivity()).load(R.mipmap.uncheck_sign_in).into(signInImg);
         signInImg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-                signIn();
+                if (canSignIn){
+
+                    getPoint();
+                }else{
+
+                    isSignToday(true);
+                }
             }
         });
 
@@ -231,18 +252,301 @@ public class MainFragment extends Fragment {
     // 初始化数据
     private void initData(){
 
-//        bannerImages.clear();
-
-//        getBannerImages();
-
         getTabIcon();
+
+        isSignToday(false);
+    }
+
+    // 查询是否签到
+    private void isSignToday(final boolean canShow) {
+        random32 = Utilities.getStringRandom(32);
+        time10 = Utilities.get10Time();
+        key64 = Utilities.get64Key(random32);
+
+        String json = "{\n" +
+                "    \"validate_k\": \"1\",\n" +
+                "    \"params\": [\n" +
+                "{\n" +
+                "    \"type\": \"Members_Integral\",\n" +
+                "    \"act\": \"Select_List\",\n" +
+                "    \"para\": {\n" +
+                "        \"params\": {\n" +
+                "            \"s_d1\": \"\",\n" +
+                "            \"s_d2\": \"\",\n" +
+                "            \"s_Keywords\": \"\",\n" +
+                "            \"s_Kind\": \"\",\n" +
+                "            \"s_Mid\": \""+mid+"\",\n" +
+                "            \"s_Miid\": \"\",\n" +
+                "            \"s_Oid\": \"\",\n" +
+                "            \"s_Order\": \"\",\n" +
+                "            \"s_Total_parameter\": \"Miid,Mid,Oid,Idate,Integral,Kind,Sign_count\"\n" +
+                "        },\n" +
+                "        \"pages\": {\n" +
+                "            \"s_Order\": \"\",\n" +
+                "            \"s_Miid\": \"\",\n" +
+                "            \"s_Mid\": \"\",\n" +
+                "            \"s_d1\": \"\",\n" +
+                "            \"s_d2\": \"\",\n" +
+                "            \"s_Kind\": \"\",\n" +
+                "            \"s_Oid\": \"\",\n" +
+                "            \"p_c\": \"\",\n" +
+                "            \"p_First\": \"\",\n" +
+                "            \"p_inputHeight\": \"\",\n" +
+                "            \"p_Last\": \"\",\n" +
+                "            \"p_method\": \"\",\n" +
+                "            \"p_Next\": \"\",\n" +
+                "            \"p_Page\": \"\",\n" +
+                "            \"p_pageName\": \"\",\n" +
+                "            \"p_PageStyle\": \"\",\n" +
+                "            \"p_Pname\": \"\",\n" +
+                "            \"p_Previous\": \"\",\n" +
+                "            \"p_Ps\": \"\",\n" +
+                "            \"p_sk\": \"\",\n" +
+                "            \"p_Tp\": \"\"\n" +
+                "        },\n" +
+                "        \"sign_valid\": {\n" +
+                "            \"source\": \"Android\",\n" +
+                "            \"non_str\": \""+random32+"\",\n" +
+                "            \"stamp\": \""+time10+"\",\n" +
+                "            \"signature\": \""+Utilities.encode("s_d1="+"s_d2="+"s_Keywords="+"s_Kind="+"s_Mid="+mid+"s_Miid="+"s_Oid="+"s_Order="+"s_Total_parameter=Miid,Mid,Oid,Idate,Integral,Kind,Sign_count"+"non_str="+random32+"stamp="+time10+"keySecret="+key64)+"\"\n" +
+                "        }\n" +
+                "    }\n" +
+                "}"+
+                "    ]\n" +
+                "}";
+
+        OkHttpClient okHttpClient = new OkHttpClient();
+
+        RequestBody requestBody = RequestBody.create(JSON, json);
+
+        Request request = new Request.Builder().url(API.getAPI()).post(requestBody).build();
+
+        okHttpClient.newCall(request).enqueue(new Callback() {
+            @Override
+            public void onFailure(Call call, IOException e) {
+
+            }
+
+            @Override
+            public void onResponse(Call call, Response response) throws IOException {
+
+                if (response.body() != null){
+
+                    try {
+                        JSONObject jsonObject = new JSONObject(response.body().string());
+
+                        final SimpleDateFormat fmt = new SimpleDateFormat("yyyy-MM-dd");
+
+                        JSONArray list = jsonObject.getJSONArray("result").getJSONObject(0).getJSONArray("list");
+
+                        String date = list.getJSONObject(list.length()-1).getString("Idate").split(" ")[0];
+
+                        final int signCount = Integer.parseInt(list.getJSONObject(list.length()-1).getString("Sign_count"));
+
+                        Log.d("idate", date);
+
+                        final Date myDate = new Date(date);
+
+                        uiHandler.post(new Runnable() {
+                            @Override
+                            public void run() {
+
+                                if((fmt.format(myDate).toString()).equals(fmt.format(new Date()).toString())){//格式化为相同格式
+
+                                    Glide.with(getActivity()).load(R.mipmap.sign_in).into(signInImg);
+                                    canSignIn = false;
+
+                                    if (canShow){
+
+                                        AlertDialog.Builder builder = new AlertDialog.Builder(getActivity(), R.style.AlertDialogCustom);
+
+                                        if (signCount != 0){
+
+
+                                            final AlertDialog alertDialog = builder.setTitle("您今天已经签过到了").setMessage("您已经连续签到"+signCount+"天")
+                                                    .setCancelable(true)
+                                                    .setNegativeButton("知道了", new DialogInterface.OnClickListener() {
+                                                        @Override
+                                                        public void onClick(DialogInterface dialogInterface, int i) {
+                                                            dialogInterface.dismiss();
+                                                        }
+                                                    })
+                                                    .create();
+
+                                            alertDialog.setCancelable(false);
+
+                                            alertDialog.show();
+                                        }else{
+
+                                            final AlertDialog alertDialog = builder.setTitle("您今天已经签过到了")
+                                                    .setCancelable(true)
+                                                    .setNegativeButton("知道了", new DialogInterface.OnClickListener() {
+                                                        @Override
+                                                        public void onClick(DialogInterface dialogInterface, int i) {
+                                                            dialogInterface.dismiss();
+                                                        }
+                                                    })
+                                                    .create();
+
+                                            alertDialog.setCancelable(false);
+
+                                            alertDialog.show();
+                                        }
+                                    }
+
+                                } else {
+
+
+                                    canSignIn = true;
+                                    Glide.with(getActivity()).load(R.mipmap.uncheck_sign_in).into(signInImg);
+
+                                }
+                            }
+                        });
+
+
+                        Log.d("signIn", jsonObject.toString());
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+        });
     }
 
     // 点击签到
     private void signIn(){
 
-        Utilities.popUpAlert(getActivity(), "签到成功");
-        Glide.with(getActivity()).load(R.mipmap.sign_in).into(signInImg);
+        random32 = Utilities.getStringRandom(32);
+        time10 = Utilities.get10Time();
+        key64 = Utilities.get64Key(random32);
+
+        String json = "{\n" +
+                "    \"validate_k\": \"1\",\n" +
+                "    \"params\": [\n" +
+                "   {\n" +
+                "    \"type\": \"Members_Integral\",\n" +
+                "    \"act\": \"Add\",\n" +
+                "    \"para\": {\n" +
+                "        \"params\": {\n" +
+                "            \"Integral\": \""+point+"\",\n" +
+                "            \"Kind\": \"1\",\n" +
+                "            \"Mid\": \""+mid+"\",\n" +
+                "            \"Oid\": \"-1\"\n" +
+                "        },\n" +
+                "        \"sign_valid\": {\n" +
+                "            \"source\": \"Android\",\n" +
+                "            \"non_str\": \""+random32+"\",\n" +
+                "            \"stamp\": \""+time10+"\",\n" +
+                "            \"signature\": \""+Utilities.encode("Integral="+point+"Kind=1"+"Mid="+mid+"Oid=-1"+"non_str="+random32+"stamp="+time10+"keySecret="+key64)+"\"\n" +
+                "        }\n" +
+                "    }\n" +
+                "    }"+
+                "    ]\n" +
+                "}";
+
+        OkHttpClient okHttpClient = new OkHttpClient();
+
+        RequestBody requestBody = RequestBody.create(JSON, json);
+
+        Request request = new Request.Builder().url(API.getAPI()).post(requestBody).build();
+
+        okHttpClient.newCall(request).enqueue(new Callback() {
+            @Override
+            public void onFailure(Call call, IOException e) {
+
+            }
+
+            @Override
+            public void onResponse(Call call, Response response) throws IOException {
+
+                if (response.body() != null){
+
+                    try {
+
+                        final JSONObject jsonObject = new JSONObject(response.body().string());
+
+                        final String error = jsonObject.getJSONArray("result").getJSONObject(0).getString("error");
+
+                        uiHandler.post(new Runnable() {
+                            @Override
+                            public void run() {
+
+                                if (error.equals("SUCCESS")){
+
+                                    Utilities.popUpAlert(getActivity(), "签到成功");
+                                    Glide.with(getActivity()).load(R.mipmap.sign_in).into(signInImg);
+
+                                    canSignIn = false;
+                                }
+                            }
+                        });
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+        });
+    }
+
+    // 获取积分
+    private void getPoint(){
+
+        random32 = Utilities.getStringRandom(32);
+        time10 = Utilities.get10Time();
+        key64 = Utilities.get64Key(random32);
+
+        String json = "{\n" +
+                "    \"validate_k\": \"1\",\n" +
+                "    \"params\": [\n" +
+                "        {\n" +
+                "            \"type\": \"Init\",\n" +
+                "            \"act\": \"getinfo\",\n" +
+                "            \"para\": {\n" +
+                "                \"params\": {\n" +
+                "                    \"Iid\": \"18\"\n" +
+                "                },\n" +
+                "                \"sign_valid\": {\n" +
+                "                    \"source\": \"Android\",\n" +
+                "                    \"non_str\": \""+random32+"\",\n" +
+                "                    \"stamp\": \""+time10+"\",\n" +
+                "                    \"signature\": \""+Utilities.encode("Iid=18"+"non_str="+random32+"stamp="+time10+"keySecret="+key64)+"\"\n" +
+                "                }\n" +
+                "            }\n" +
+                "        }\n" +
+                "    ]\n" +
+                "}";
+
+        OkHttpClient okHttpClient = new OkHttpClient();
+
+        RequestBody requestBody = RequestBody.create(JSON, json);
+
+        Request request = new Request.Builder().url(API.getAPI()).post(requestBody).build();
+
+        okHttpClient.newCall(request).enqueue(new Callback() {
+
+            @Override
+            public void onFailure(Call call, IOException e) {
+
+            }
+
+            @Override
+            public void onResponse(Call call, Response response) throws IOException {
+
+                if (response.body() != null){
+
+                    try {
+                        JSONObject jsonObject = new JSONObject(response.body().string());
+
+                        point = Integer.parseInt(jsonObject.getJSONArray("result").getJSONObject(0).getJSONObject("Iinfo").getString("Iinfo"));
+                        signIn();
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+        });
+
     }
 
     //获取banner图

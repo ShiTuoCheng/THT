@@ -39,19 +39,15 @@ public class MyScrollView extends NestedScrollView {
             int action = e.getAction();
             switch (action) {
                 case MotionEvent.ACTION_DOWN:
-                    super.onInterceptTouchEvent(e);
                     downX = (int) e.getRawX();
                     downY = (int) e.getRawY();
                     break;
                 case MotionEvent.ACTION_MOVE:
-                    super.onInterceptTouchEvent(e);
                     int moveY = (int) e.getRawY();
                     if (Math.abs(moveY - downY) > mTouchSlop) {
                         return true;
                     }
             }
-
-            return false;
+            return super.onInterceptTouchEvent(e);
         }
-
 }

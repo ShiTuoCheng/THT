@@ -1,7 +1,6 @@
 package tht.topu.com.tht.ui.activity;
 
 import android.content.Intent;
-import android.graphics.drawable.BitmapDrawable;
 import android.os.Handler;
 import android.os.Looper;
 import android.os.Message;
@@ -12,13 +11,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.ImageView;
-import android.widget.TextView;
 import android.widget.Toast;
-import android.widget.ViewSwitcher;
 
 import com.othershe.baseadapter.interfaces.OnLoadMoreListener;
 
@@ -29,10 +25,6 @@ import org.json.JSONObject;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Timer;
-import java.util.TimerTask;
-
-import cn.lemon.view.RefreshRecyclerView;
 import okhttp3.Call;
 import okhttp3.Callback;
 import okhttp3.MediaType;
@@ -252,9 +244,6 @@ public class DrawRecordActivity extends AppCompatActivity {
                     JSONObject jsonObject = new JSONObject(response.body().string());
                     JSONArray recordArr = jsonObject.getJSONArray("result").getJSONObject(0).getJSONArray("list");
 
-                    Log.d("jsonResult", jsonObject.toString());
-                    Log.d("json", json);
-
                     totalPage = jsonObject.getJSONArray("result").getJSONObject(0).getJSONObject("page").getInt("Pc");
                     Rank.Builder rankBuilder = new Rank.Builder();
 
@@ -276,25 +265,27 @@ public class DrawRecordActivity extends AppCompatActivity {
                         }
                     }
 
-                    uiHandler.post(new Runnable() {
-                        @Override
-                        public void run() {
-                            if (!isFirstLoad){
+                    if (uiHandler != null){
+                        uiHandler.post(new Runnable() {
+                            @Override
+                            public void run() {
+                                if (!isFirstLoad){
 
-                                rankRecyclerViewAdapter.setLoadMoreData(moreRanks);
+                                    rankRecyclerViewAdapter.setLoadMoreData(moreRanks);
+                                }
+                                rankRecyclerViewAdapter.notifyDataSetChanged();
+
+                                if (ranks.size() == 0){
+
+                                    rankRecyclerViewAdapter.loadEnd();
+                                }else if (currentPage >= totalPage){
+
+
+                                    rankRecyclerViewAdapter.loadEnd();
+                                }
                             }
-                            rankRecyclerViewAdapter.notifyDataSetChanged();
-
-                            if (ranks.size() == 0){
-
-                                rankRecyclerViewAdapter.loadEnd();
-                            }else if (currentPage >= totalPage){
-
-
-                                rankRecyclerViewAdapter.loadEnd();
-                            }
-                        }
-                    });
+                        });
+                    }
 
                 } catch (JSONException e) {
                     e.printStackTrace();
