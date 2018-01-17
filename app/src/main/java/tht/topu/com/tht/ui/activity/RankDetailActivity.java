@@ -529,6 +529,8 @@ public class RankDetailActivity extends BaseActivity {
             }
         }
 
+        Log.d("list", result);
+
         String json = "{\n" +
                 "    \"validate_k\": \"1\",\n" +
                 "    \"params\": [\n" +
@@ -543,11 +545,12 @@ public class RankDetailActivity extends BaseActivity {
                 "                    \"s_Keywords\": \"\",\n" +
                 "                    \"s_Kind\": \"\",\n" +
                 "                    \"s_Mid\": \"\",\n" +
+                "                    \"s_Mvid\": \"\",\n" +
                 "                    \"s_Oid\": \""+result+"\",\n" +
                 "                    \"s_Omid\": \"\",\n" +
                 "                    \"s_Order\": \"\",\n" +
                 "                    \"s_Ostatus\": \"6\",\n" +
-                "                    \"s_Total_parameter\": \"Omid,Oid,Order,Mid,Mdse,Kind,Bdate,Mtitle,Price,Amount,Cid,Ctitle\"\n" +
+                "                    \"s_Total_parameter\": \"Omid,Oid,Order,Mid,Mdse,Kind,Bdate,Mtitle,Price,Amount,Cid,Ctitle,Mvid,Vtitle\"\n" +
                 "                },\n" +
                 "                \"pages\": {\n" +
                 "                    \"p_c\": \"\",\n" +
@@ -569,7 +572,7 @@ public class RankDetailActivity extends BaseActivity {
                 "                    \"source\": \"Android\",\n" +
                 "                    \"non_str\": \""+random32+"\",\n" +
                 "                    \"stamp\": \""+time10+"\",\n" +
-                "                    \"signature\": \""+Utilities.encode("s_Cid="+"s_d1="+"s_d2="+"s_Keywords="+"s_Kind="+"s_Mid="+"s_Oid="+result+"s_Omid="+"s_Order="+"s_Ostatus=6"+"s_Total_parameter="+"Omid,Oid,Order,Mid,Mdse,Kind,Bdate,Mtitle,Price,Amount,Cid,Ctitle"+"non_str="+random32+"stamp="+time10+"keySecret="+key64)+"\"\n" +
+                "                    \"signature\": \""+Utilities.encode("s_Cid="+"s_d1="+"s_d2="+"s_Keywords="+"s_Kind="+"s_Mid="+"s_Mvid="+"s_Oid="+result+"s_Omid="+"s_Order="+"s_Ostatus=6"+"s_Total_parameter="+"Omid,Oid,Order,Mid,Mdse,Kind,Bdate,Mtitle,Price,Amount,Cid,Ctitle,Mvid,Vtitle"+"non_str="+random32+"stamp="+time10+"keySecret="+key64)+"\"\n" +
                 "                }\n" +
                 "            }\n" +
                 "        }\n" +

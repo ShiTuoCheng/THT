@@ -24,6 +24,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.jpay.JPay;
+import com.jpay.alipay.Alipay;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -151,6 +152,10 @@ public class ProductDetailActivity extends AppCompatActivity implements Activity
             }
         });
     }
+    @JavascriptInterface
+    public void aliPay() {
+
+    }
 
     //获取订单预支付id
     private void getPrePay(final String price, final String oid, final long oSerial){
@@ -254,6 +259,11 @@ public class ProductDetailActivity extends AppCompatActivity implements Activity
             public void onPayCancel() {
                 Toast.makeText(ProductDetailActivity.this, "取消了支付", Toast.LENGTH_SHORT).show();
             }
+
+            @Override
+            public void onUUPay(String s, String s1, String s2) {
+
+            }
         });
     }
 
@@ -261,7 +271,7 @@ public class ProductDetailActivity extends AppCompatActivity implements Activity
 
     private void launchAlipay (final String orderInfo) {
 
-        JPay.getIntance(this).toAliPay(orderInfo, new JPay.JPayListener() {
+        Alipay.getInstance(this).startAliPay(orderInfo, new JPay.JPayListener() {
             @Override
             public void onPaySuccess() {
 
@@ -274,6 +284,11 @@ public class ProductDetailActivity extends AppCompatActivity implements Activity
 
             @Override
             public void onPayCancel() {
+
+            }
+
+            @Override
+            public void onUUPay(String s, String s1, String s2) {
 
             }
         });

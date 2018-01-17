@@ -211,7 +211,7 @@ public class ForumContentFragment extends Fragment {
                 "                    \"p_PageStyle\": \"\",\n" +
                 "                    \"p_Pname\": \"\",\n" +
                 "                    \"p_Previous\": \"\",\n" +
-                "                    \"p_Ps\": \"10\",\n" +
+                "                    \"p_Ps\": \"5\",\n" +
                 "                    \"p_sk\": \"\",\n" +
                 "                    \"p_Tp\": \"\"\n" +
                 "                },\n" +
@@ -279,6 +279,8 @@ public class ForumContentFragment extends Fragment {
 
                                 swipeRefreshLayout.setRefreshing(false);
 
+                                forumRecyclerViewAdapter.notifyDataSetChanged();
+
                                 Log.d("forumSize", String.valueOf(forumList.size()));
 
                                 if (forumList.size() > 0) {
@@ -299,7 +301,7 @@ public class ForumContentFragment extends Fragment {
                                     forumRecyclerViewAdapter.setNewData(forumList);
                                 }
 
-//                                forumRecyclerViewAdapter.notifyDataSetChanged();
+                                forumRecyclerViewAdapter.notifyDataSetChanged();
                                 if (forumList.size() == 0) {
 
                                     forumRecyclerViewAdapter.loadEnd();
@@ -329,10 +331,9 @@ public class ForumContentFragment extends Fragment {
         public void onReceive(Context context, Intent intent) {
             flid = intent.getStringExtra("Flid");
 
-//            forumList.clear();
+            forumList.clear();
             initData(true, flid, "12");
             Log.d("接受广播", "接受广播");
-
 
             swipeRefreshLayout.post(new Runnable() {
                 @Override

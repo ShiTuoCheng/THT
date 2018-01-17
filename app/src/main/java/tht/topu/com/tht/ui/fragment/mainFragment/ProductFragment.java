@@ -428,7 +428,6 @@ public class ProductFragment extends Fragment {
                                 productRecyclerViewAdapter.reset();
                                 productRecyclerViewAdapter.setNewData(products);
                             }
-//                            productRecyclerViewAdapter.notifyDataSetChanged();
 
                             if (products.size() == 0){
 

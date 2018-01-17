@@ -514,6 +514,11 @@ public class CardActivity extends BaseActivity {
                 Toast.makeText(CardActivity.this, "取消了支付", Toast.LENGTH_SHORT).show();
                 progressDialog.cancel();
             }
+
+            @Override
+            public void onUUPay(String s, String s1, String s2) {
+
+            }
         });
     }
 

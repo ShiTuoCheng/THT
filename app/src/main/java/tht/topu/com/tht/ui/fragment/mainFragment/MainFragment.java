@@ -117,7 +117,7 @@ public class MainFragment extends Fragment {
     private boolean canSignIn = false;
 
     String mid;
-    int point;
+    String point;
 
     private static final String MID_KEY = "1x11";
 
@@ -339,73 +339,81 @@ public class MainFragment extends Fragment {
 
                         JSONArray list = jsonObject.getJSONArray("result").getJSONObject(0).getJSONArray("list");
 
-                        String date = list.getJSONObject(list.length()-1).getString("Idate").split(" ")[0];
-
-                        final int signCount = Integer.parseInt(list.getJSONObject(list.length()-1).getString("Sign_count"));
-
-                        Log.d("idate", date);
-
-                        final Date myDate = new Date(date);
-
-                        uiHandler.post(new Runnable() {
-                            @Override
-                            public void run() {
-
-                                if((fmt.format(myDate).toString()).equals(fmt.format(new Date()).toString())){//格式化为相同格式
-
-                                    Glide.with(getActivity()).load(R.mipmap.sign_in).into(signInImg);
-                                    canSignIn = false;
-
-                                    if (canShow){
-
-                                        AlertDialog.Builder builder = new AlertDialog.Builder(getActivity(), R.style.AlertDialogCustom);
-
-                                        if (signCount != 0){
+                        if (list.length() > 0) {
 
 
-                                            final AlertDialog alertDialog = builder.setTitle("您今天已经签过到了").setMessage("您已经连续签到"+signCount+"天")
-                                                    .setCancelable(true)
-                                                    .setNegativeButton("知道了", new DialogInterface.OnClickListener() {
-                                                        @Override
-                                                        public void onClick(DialogInterface dialogInterface, int i) {
-                                                            dialogInterface.dismiss();
-                                                        }
-                                                    })
-                                                    .create();
+                            String date = list.getJSONObject(list.length()-1).getString("Idate").split(" ")[0];
 
-                                            alertDialog.setCancelable(false);
+                            final int signCount = Integer.parseInt(list.getJSONObject(list.length()-1).getString("Sign_count"));
 
-                                            alertDialog.show();
-                                        }else{
+                            final Date myDate = new Date(date);
 
-                                            final AlertDialog alertDialog = builder.setTitle("您今天已经签过到了")
-                                                    .setCancelable(true)
-                                                    .setNegativeButton("知道了", new DialogInterface.OnClickListener() {
-                                                        @Override
-                                                        public void onClick(DialogInterface dialogInterface, int i) {
-                                                            dialogInterface.dismiss();
-                                                        }
-                                                    })
-                                                    .create();
+                            uiHandler.post(new Runnable() {
+                                @Override
+                                public void run() {
 
-                                            alertDialog.setCancelable(false);
+                                    if((fmt.format(myDate).toString()).equals(fmt.format(new Date()).toString())){//格式化为相同格式
 
-                                            alertDialog.show();
+                                        Glide.with(getActivity()).load(R.mipmap.sign_in).into(signInImg);
+                                        canSignIn = false;
+
+                                        if (canShow){
+
+                                            AlertDialog.Builder builder = new AlertDialog.Builder(getActivity(), R.style.AlertDialogCustom);
+
+                                            if (signCount != 0){
+
+
+                                                final AlertDialog alertDialog = builder.setTitle("您今天已经签过到了").setMessage("您已经连续签到"+signCount+"天")
+                                                        .setCancelable(true)
+                                                        .setNegativeButton("知道了", new DialogInterface.OnClickListener() {
+                                                            @Override
+                                                            public void onClick(DialogInterface dialogInterface, int i) {
+                                                                dialogInterface.dismiss();
+                                                            }
+                                                        })
+                                                        .create();
+
+                                                alertDialog.setCancelable(false);
+
+                                                alertDialog.show();
+                                            }else{
+
+                                                final AlertDialog alertDialog = builder.setTitle("您今天已经签过到了")
+                                                        .setCancelable(true)
+                                                        .setNegativeButton("知道了", new DialogInterface.OnClickListener() {
+                                                            @Override
+                                                            public void onClick(DialogInterface dialogInterface, int i) {
+                                                                dialogInterface.dismiss();
+                                                            }
+                                                        })
+                                                        .create();
+
+                                                alertDialog.setCancelable(false);
+
+                                                alertDialog.show();
+                                            }
                                         }
+
+                                    } else {
+
+                                        canSignIn = true;
+                                        Glide.with(getActivity()).load(R.mipmap.uncheck_sign_in).into(signInImg);
+
                                     }
+                                }
+                            });
+                        }else {
 
-                                } else {
-
+                            uiHandler.post(new Runnable() {
+                                @Override
+                                public void run() {
 
                                     canSignIn = true;
                                     Glide.with(getActivity()).load(R.mipmap.uncheck_sign_in).into(signInImg);
-
                                 }
-                            }
-                        });
-
-
-                        Log.d("signIn", jsonObject.toString());
+                            });
+                        }
                     } catch (JSONException e) {
                         e.printStackTrace();
                     }
@@ -430,15 +438,15 @@ public class MainFragment extends Fragment {
                 "    \"para\": {\n" +
                 "        \"params\": {\n" +
                 "            \"Integral\": \""+point+"\",\n" +
-                "            \"Kind\": \"1\",\n" +
+                "            \"Kind\": \"\",\n" +
                 "            \"Mid\": \""+mid+"\",\n" +
-                "            \"Oid\": \"-1\"\n" +
+                "            \"Oid\": \"\"\n" +
                 "        },\n" +
                 "        \"sign_valid\": {\n" +
                 "            \"source\": \"Android\",\n" +
                 "            \"non_str\": \""+random32+"\",\n" +
                 "            \"stamp\": \""+time10+"\",\n" +
-                "            \"signature\": \""+Utilities.encode("Integral="+point+"Kind=1"+"Mid="+mid+"Oid=-1"+"non_str="+random32+"stamp="+time10+"keySecret="+key64)+"\"\n" +
+                "            \"signature\": \""+Utilities.encode("Integral="+point+"Kind="+"Mid="+mid+"Oid="+"non_str="+random32+"stamp="+time10+"keySecret="+key64)+"\"\n" +
                 "        }\n" +
                 "    }\n" +
                 "    }"+
@@ -538,7 +546,9 @@ public class MainFragment extends Fragment {
                     try {
                         JSONObject jsonObject = new JSONObject(response.body().string());
 
-                        point = Integer.parseInt(jsonObject.getJSONArray("result").getJSONObject(0).getJSONObject("Iinfo").getString("Iinfo"));
+                        point = jsonObject.getJSONArray("result").getJSONObject(0).getJSONObject("Iinfo").getString("Iinfo");
+
+                        Log.d("fuckInfo", jsonObject.getJSONArray("result").getJSONObject(0).getJSONObject("Iinfo").getString("Iinfo"));
                         signIn();
                     } catch (JSONException e) {
                         e.printStackTrace();

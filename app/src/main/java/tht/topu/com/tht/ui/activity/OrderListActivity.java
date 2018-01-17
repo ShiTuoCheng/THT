@@ -228,6 +228,11 @@ public class OrderListActivity extends AppCompatActivity {
             public void onPayCancel() {
                 Toast.makeText(OrderListActivity.this, "取消了支付", Toast.LENGTH_SHORT).show();
             }
+
+            @Override
+            public void onUUPay(String s, String s1, String s2) {
+
+            }
         });
     }
 

@@ -405,6 +405,7 @@ public class DrawFragment extends Fragment {
                 try {
 
                     JSONObject jsonObject = new JSONObject(response.body().string());
+                    Log.d("tht", jsonObject.toString());
                     JSONArray recordArr = jsonObject.getJSONArray("result").getJSONObject(0).getJSONArray("list");
 
                     final String drawInfo = recordArr.getJSONObject(0).getString("Iinfo");

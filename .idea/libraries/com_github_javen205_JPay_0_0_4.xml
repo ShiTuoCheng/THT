@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="com.github.javen205:JPay-0.0.4">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/JPay-0.0.4.aar/980d3a2e2cd6134ea47837199a50c8fd/jars/libs/UPPayAssistEx.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/JPay-0.0.4.aar/980d3a2e2cd6134ea47837199a50c8fd/jars/libs/alipaySdk-20170922.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/JPay-0.0.4.aar/980d3a2e2cd6134ea47837199a50c8fd/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/JPay-0.0.4.aar/980d3a2e2cd6134ea47837199a50c8fd/jars/libs/UPPayPluginExPro.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/JPay-0.0.4.aar/980d3a2e2cd6134ea47837199a50c8fd/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

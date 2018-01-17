@@ -4,31 +4,32 @@ ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:2:1-18
 INJECTED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:2:1-182:12
 INJECTED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:2:1-182:12
 INJECTED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:2:1-182:12
-MERGED from [com.heinrichreimersoftware:material-intro:1.6.2] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/material-intro-1.6.2.aar/2d6b4e45c462baef9f66259ce07d5886/AndroidManifest.xml:25:1-35:12
-MERGED from [com.android.databinding:adapters:1.3.1] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/adapters-1.3.1.aar/199f3e2f5c3fcb973bab7fd13acf03e4/AndroidManifest.xml:17:1-26:12
-MERGED from [com.android.databinding:library:1.3.1] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/library-1.3.1.aar/78a53107312c72f358699be1721d1131/AndroidManifest.xml:17:1-26:12
-MERGED from [com.android.support:design:26.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/7c0de0b99150d51f18c2a28d7bf924a3/AndroidManifest.xml:17:1-31:12
-MERGED from [com.github.javen205.JPay:jpaysdk:0.0.3] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpaysdk-0.0.3.aar/6aa15cdce345809fa3bca6f8ef0dd15b/AndroidManifest.xml:2:1-17:12
-MERGED from [com.android.support:appcompat-v7:26.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/140e15e405b1ba6f2d5bdb18df06661c/AndroidManifest.xml:17:1-31:12
-MERGED from [com.android.support:animated-vector-drawable:26.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.1.0.aar/40c9f8fb444944e22e659213b5e43955/AndroidManifest.xml:17:1-28:12
-MERGED from [com.android.support:support-vector-drawable:26.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.1.0.aar/0cda6285e64911a8d779a3a6750128a3/AndroidManifest.xml:17:1-28:12
-MERGED from [com.android.support:transition:26.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/transition-26.1.0.aar/c106308f2029b44398f2fe8b7122745f/AndroidManifest.xml:17:1-28:12
-MERGED from [com.android.support:support-v4:26.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/b0f73a37c50e5b543868dbd4151c1894/AndroidManifest.xml:17:1-31:12
-MERGED from [jp.wasabeef:glide-transformations:3.0.1] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/glide-transformations-3.0.1.aar/23b7ab56f1ee14c71867e84496349f3e/AndroidManifest.xml:2:1-12:12
-MERGED from [com.youth.banner:banner:1.4.9] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/banner-1.4.9.aar/bf565c11c31c6fb634189ae103c04a4c/AndroidManifest.xml:2:1-11:12
-MERGED from [com.android.support:cardview-v7:26.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/cardview-v7-26.1.0.aar/7ac4dd141873e894b04ac5d28433c62b/AndroidManifest.xml:17:1-28:12
-MERGED from [cn.lemon:RefreshRecyclerView:1.2.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/RefreshRecyclerView-1.2.0.aar/3fb4b7ed587ac438da01a971e3974540/AndroidManifest.xml:2:1-11:12
-MERGED from [com.othershe:BaseAdapter:1.1.5] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/BaseAdapter-1.1.5.aar/580e30c1d621c287a6a82125d4b02b2e/AndroidManifest.xml:2:1-17:12
-MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.0.2.aar/4cc846827073c71d7dc14be3fa14f0bb/AndroidManifest.xml:2:1-11:12
-MERGED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/252df4397c76b793f08690b4c8308d12/AndroidManifest.xml:2:1-133:12
-MERGED from [cn.jiguang.sdk:jcore:1.1.8] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jcore-1.1.8.aar/2ec9aa46ba7e13321da7de7bc09c6064/AndroidManifest.xml:2:1-14:12
-MERGED from [com.android.support:support-media-compat:26.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/639eeca9bcd725a6458cddbd570bdf18/AndroidManifest.xml:17:1-31:12
-MERGED from [com.android.support:support-fragment:26.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/d1e45afb23683b49cc4c370b3f6bf6a4/AndroidManifest.xml:17:1-31:12
-MERGED from [com.android.support:support-core-utils:26.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.1.0.aar/55cf13ce326bfa2cbbf01c6b15ff7d41/AndroidManifest.xml:17:1-31:12
-MERGED from [com.android.support:recyclerview-v7:26.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-26.1.0.aar/3d172acb0bcd9bcc187ea0a080109b13/AndroidManifest.xml:17:1-28:12
-MERGED from [com.android.support:support-core-ui:26.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.1.0.aar/0c34ff3fec67ab760eecc5d50056c773/AndroidManifest.xml:17:1-31:12
-MERGED from [com.android.support:support-compat:26.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/86100515fc4e9419f7a13af5f465420f/AndroidManifest.xml:17:1-31:12
-MERGED from [android.arch.lifecycle:runtime:1.0.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/74b6d14a381e24f8cf57fc25017221eb/AndroidManifest.xml:17:1-30:12
+MERGED from [com.heinrichreimersoftware:material-intro:1.6.2] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/material-intro-1.6.2.aar/7e51b7137f8350b18d3a8190cf64b1f8/AndroidManifest.xml:25:1-35:12
+MERGED from [com.android.databinding:adapters:1.3.1] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/adapters-1.3.1.aar/3f804273ff83801a0960045f265116a8/AndroidManifest.xml:17:1-26:12
+MERGED from [com.android.databinding:library:1.3.1] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/library-1.3.1.aar/c83e1bb11dadde525088201467dc2c93/AndroidManifest.xml:17:1-26:12
+MERGED from [com.android.support:multidex:1.0.2] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/multidex-1.0.2.aar/56d888c6ad4470df39ccaf7bf3749b69/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:design:26.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/5b98eed32bcdebe03f297a48cfebe7a2/AndroidManifest.xml:17:1-31:12
+MERGED from [com.github.javen205:JPay:0.0.4] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/JPay-0.0.4.aar/980d3a2e2cd6134ea47837199a50c8fd/AndroidManifest.xml:2:1-17:12
+MERGED from [com.android.support:appcompat-v7:26.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/854d13a80bcc15b15fe7bdae9795c76e/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.1.0.aar/9ce68985d7a8f6a09a42a36279b13f93/AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:support-vector-drawable:26.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.1.0.aar/de1e79b92fca3cdc2336807aff7e5744/AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:transition:26.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/transition-26.1.0.aar/b01ca07392044460beacf502df2acc98/AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:support-v4:26.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/55c131417521cd93928064acb5d34cb5/AndroidManifest.xml:17:1-31:12
+MERGED from [jp.wasabeef:glide-transformations:3.0.1] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/glide-transformations-3.0.1.aar/0d64e5e4712988ec372181e724323b80/AndroidManifest.xml:2:1-12:12
+MERGED from [com.youth.banner:banner:1.4.9] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/banner-1.4.9.aar/f19a6f6e92f62440b4ee5c0bd878141c/AndroidManifest.xml:2:1-11:12
+MERGED from [com.android.support:cardview-v7:26.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/cardview-v7-26.1.0.aar/05dee64b97d3849f5f94c22632f6c17f/AndroidManifest.xml:17:1-28:12
+MERGED from [cn.lemon:RefreshRecyclerView:1.2.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/RefreshRecyclerView-1.2.0.aar/d069fcfce109f4ab0476671f3b3ab817/AndroidManifest.xml:2:1-11:12
+MERGED from [com.othershe:BaseAdapter:1.1.5] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/BaseAdapter-1.1.5.aar/ba4509c14daba4d98a9723aa62a307ca/AndroidManifest.xml:2:1-17:12
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.0.2.aar/3e507e38de33294e2b4ddf1aa81f7020/AndroidManifest.xml:2:1-11:12
+MERGED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/5fe83d725676ec1e36bdbbad77024d18/AndroidManifest.xml:2:1-133:12
+MERGED from [cn.jiguang.sdk:jcore:1.1.8] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jcore-1.1.8.aar/384f6ed111342dca08fa03c8287bc44f/AndroidManifest.xml:2:1-14:12
+MERGED from [com.android.support:support-media-compat:26.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/ca94b7376806c8e97b7b303fb4cc6141/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-fragment:26.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/32403b9414ea535d30f888e0dde2ee95/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-core-utils:26.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.1.0.aar/c033f98832ede7e173137798cb2b7ec9/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:recyclerview-v7:26.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-26.1.0.aar/c866374f62015af9192fe361fd38d70b/AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:support-core-ui:26.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.1.0.aar/d2925ce22ff787c0dbbbb113e6d89be3/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-compat:26.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/975af0fe95c90bfc1cce2342b9e9b34f/AndroidManifest.xml:17:1-31:12
+MERGED from [android.arch.lifecycle:runtime:1.0.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/59b9aecf3c05a0f59bb21b73d876f22e/AndroidManifest.xml:17:1-30:12
 INJECTED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:2:1-182:12
 INJECTED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:2:1-182:12
 INJECTED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:2:1-182:12
@@ -48,86 +49,86 @@ INJECTED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:2:1
 		ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:2:11-69
 permission#tht.topu.com.tht.permission.JPUSH_MESSAGE
 ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:5:5-7:47
-MERGED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/252df4397c76b793f08690b4c8308d12/AndroidManifest.xml:11:5-13:47
+MERGED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/5fe83d725676ec1e36bdbbad77024d18/AndroidManifest.xml:11:5-13:47
 	android:protectionLevel
 		ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:7:9-44
 	android:name
 		ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:6:9-65
 uses-permission#android.permission.INTERNET
 ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:9:5-67
-MERGED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/252df4397c76b793f08690b4c8308d12/AndroidManifest.xml:18:5-67
-MERGED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/252df4397c76b793f08690b4c8308d12/AndroidManifest.xml:18:5-67
+MERGED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/5fe83d725676ec1e36bdbbad77024d18/AndroidManifest.xml:18:5-67
+MERGED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/5fe83d725676ec1e36bdbbad77024d18/AndroidManifest.xml:18:5-67
 	android:name
 		ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:9:22-64
 uses-permission#android.permission.ACCESS_NETWORK_STATE
 ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:10:5-79
-MERGED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/252df4397c76b793f08690b4c8308d12/AndroidManifest.xml:26:5-79
-MERGED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/252df4397c76b793f08690b4c8308d12/AndroidManifest.xml:26:5-79
+MERGED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/5fe83d725676ec1e36bdbbad77024d18/AndroidManifest.xml:26:5-79
+MERGED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/5fe83d725676ec1e36bdbbad77024d18/AndroidManifest.xml:26:5-79
 	android:name
 		ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:10:22-76
 uses-permission#android.permission.ACCESS_WIFI_STATE
 ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:11:5-76
-MERGED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/252df4397c76b793f08690b4c8308d12/AndroidManifest.xml:27:5-76
-MERGED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/252df4397c76b793f08690b4c8308d12/AndroidManifest.xml:27:5-76
+MERGED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/5fe83d725676ec1e36bdbbad77024d18/AndroidManifest.xml:27:5-76
+MERGED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/5fe83d725676ec1e36bdbbad77024d18/AndroidManifest.xml:27:5-76
 	android:name
 		ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:11:22-73
 uses-permission#android.permission.READ_PHONE_STATE
 ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:12:5-75
-MERGED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/252df4397c76b793f08690b4c8308d12/AndroidManifest.xml:20:5-75
-MERGED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/252df4397c76b793f08690b4c8308d12/AndroidManifest.xml:20:5-75
+MERGED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/5fe83d725676ec1e36bdbbad77024d18/AndroidManifest.xml:20:5-75
+MERGED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/5fe83d725676ec1e36bdbbad77024d18/AndroidManifest.xml:20:5-75
 	android:name
 		ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:12:22-72
 uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
 ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:13:5-81
-MERGED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/252df4397c76b793f08690b4c8308d12/AndroidManifest.xml:21:5-81
-MERGED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/252df4397c76b793f08690b4c8308d12/AndroidManifest.xml:21:5-81
+MERGED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/5fe83d725676ec1e36bdbbad77024d18/AndroidManifest.xml:21:5-81
+MERGED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/5fe83d725676ec1e36bdbbad77024d18/AndroidManifest.xml:21:5-81
 	android:name
 		ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:13:22-78
 uses-permission#tht.topu.com.tht.permission.JPUSH_MESSAGE
 ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:14:5-81
-MERGED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/252df4397c76b793f08690b4c8308d12/AndroidManifest.xml:16:5-81
+MERGED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/5fe83d725676ec1e36bdbbad77024d18/AndroidManifest.xml:16:5-81
 	android:name
 		ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:14:22-78
 uses-permission#android.permission.RECEIVE_USER_PRESENT
 ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:15:5-79
-MERGED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/252df4397c76b793f08690b4c8308d12/AndroidManifest.xml:17:5-79
-MERGED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/252df4397c76b793f08690b4c8308d12/AndroidManifest.xml:17:5-79
+MERGED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/5fe83d725676ec1e36bdbbad77024d18/AndroidManifest.xml:17:5-79
+MERGED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/5fe83d725676ec1e36bdbbad77024d18/AndroidManifest.xml:17:5-79
 	android:name
 		ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:15:22-76
 uses-permission#android.permission.WAKE_LOCK
 ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:17:5-68
-MERGED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/252df4397c76b793f08690b4c8308d12/AndroidManifest.xml:19:5-68
-MERGED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/252df4397c76b793f08690b4c8308d12/AndroidManifest.xml:19:5-68
+MERGED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/5fe83d725676ec1e36bdbbad77024d18/AndroidManifest.xml:19:5-68
+MERGED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/5fe83d725676ec1e36bdbbad77024d18/AndroidManifest.xml:19:5-68
 	android:name
 		ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:17:22-65
 uses-permission#android.permission.READ_EXTERNAL_STORAGE
 ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:20:5-80
-MERGED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/252df4397c76b793f08690b4c8308d12/AndroidManifest.xml:22:5-80
-MERGED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/252df4397c76b793f08690b4c8308d12/AndroidManifest.xml:22:5-80
+MERGED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/5fe83d725676ec1e36bdbbad77024d18/AndroidManifest.xml:22:5-80
+MERGED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/5fe83d725676ec1e36bdbbad77024d18/AndroidManifest.xml:22:5-80
 	android:name
 		ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:20:22-77
 uses-permission#android.permission.VIBRATE
 ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:21:5-66
-MERGED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/252df4397c76b793f08690b4c8308d12/AndroidManifest.xml:24:5-66
-MERGED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/252df4397c76b793f08690b4c8308d12/AndroidManifest.xml:24:5-66
+MERGED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/5fe83d725676ec1e36bdbbad77024d18/AndroidManifest.xml:24:5-66
+MERGED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/5fe83d725676ec1e36bdbbad77024d18/AndroidManifest.xml:24:5-66
 	android:name
 		ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:21:22-63
 uses-permission#android.permission.MOUNT_UNMOUNT_FILESYSTEMS
 ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:22:5-84
-MERGED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/252df4397c76b793f08690b4c8308d12/AndroidManifest.xml:25:5-84
-MERGED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/252df4397c76b793f08690b4c8308d12/AndroidManifest.xml:25:5-84
+MERGED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/5fe83d725676ec1e36bdbbad77024d18/AndroidManifest.xml:25:5-84
+MERGED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/5fe83d725676ec1e36bdbbad77024d18/AndroidManifest.xml:25:5-84
 	android:name
 		ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:22:22-81
 uses-permission#android.permission.WRITE_SETTINGS
 ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:24:5-73
-MERGED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/252df4397c76b793f08690b4c8308d12/AndroidManifest.xml:23:5-73
-MERGED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/252df4397c76b793f08690b4c8308d12/AndroidManifest.xml:23:5-73
+MERGED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/5fe83d725676ec1e36bdbbad77024d18/AndroidManifest.xml:23:5-73
+MERGED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/5fe83d725676ec1e36bdbbad77024d18/AndroidManifest.xml:23:5-73
 	android:name
 		ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:24:22-70
 uses-permission#android.permission.CHANGE_NETWORK_STATE
 ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:31:5-79
-MERGED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/252df4397c76b793f08690b4c8308d12/AndroidManifest.xml:35:5-79
-MERGED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/252df4397c76b793f08690b4c8308d12/AndroidManifest.xml:35:5-79
+MERGED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/5fe83d725676ec1e36bdbbad77024d18/AndroidManifest.xml:35:5-79
+MERGED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/5fe83d725676ec1e36bdbbad77024d18/AndroidManifest.xml:35:5-79
 	android:name
 		ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:31:22-76
 uses-permission#org.simalliance.openmobileapi.SMARTCARD
@@ -144,44 +145,44 @@ ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:35:5-6
 		ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:35:19-58
 application
 ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:37:5-180:19
-MERGED from [com.android.support:design:26.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/7c0de0b99150d51f18c2a28d7bf924a3/AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:design:26.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/7c0de0b99150d51f18c2a28d7bf924a3/AndroidManifest.xml:25:5-29:19
-MERGED from [com.github.javen205.JPay:jpaysdk:0.0.3] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpaysdk-0.0.3.aar/6aa15cdce345809fa3bca6f8ef0dd15b/AndroidManifest.xml:11:5-15:19
-MERGED from [com.github.javen205.JPay:jpaysdk:0.0.3] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpaysdk-0.0.3.aar/6aa15cdce345809fa3bca6f8ef0dd15b/AndroidManifest.xml:11:5-15:19
-MERGED from [com.android.support:appcompat-v7:26.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/140e15e405b1ba6f2d5bdb18df06661c/AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:appcompat-v7:26.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/140e15e405b1ba6f2d5bdb18df06661c/AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:animated-vector-drawable:26.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.1.0.aar/40c9f8fb444944e22e659213b5e43955/AndroidManifest.xml:22:5-26:19
-MERGED from [com.android.support:animated-vector-drawable:26.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.1.0.aar/40c9f8fb444944e22e659213b5e43955/AndroidManifest.xml:22:5-26:19
-MERGED from [com.android.support:support-vector-drawable:26.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.1.0.aar/0cda6285e64911a8d779a3a6750128a3/AndroidManifest.xml:22:5-26:19
-MERGED from [com.android.support:support-vector-drawable:26.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.1.0.aar/0cda6285e64911a8d779a3a6750128a3/AndroidManifest.xml:22:5-26:19
-MERGED from [com.android.support:transition:26.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/transition-26.1.0.aar/c106308f2029b44398f2fe8b7122745f/AndroidManifest.xml:22:5-26:19
-MERGED from [com.android.support:transition:26.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/transition-26.1.0.aar/c106308f2029b44398f2fe8b7122745f/AndroidManifest.xml:22:5-26:19
-MERGED from [com.android.support:support-v4:26.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/b0f73a37c50e5b543868dbd4151c1894/AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:support-v4:26.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/b0f73a37c50e5b543868dbd4151c1894/AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:cardview-v7:26.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/cardview-v7-26.1.0.aar/7ac4dd141873e894b04ac5d28433c62b/AndroidManifest.xml:22:5-26:19
-MERGED from [com.android.support:cardview-v7:26.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/cardview-v7-26.1.0.aar/7ac4dd141873e894b04ac5d28433c62b/AndroidManifest.xml:22:5-26:19
-MERGED from [com.othershe:BaseAdapter:1.1.5] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/BaseAdapter-1.1.5.aar/580e30c1d621c287a6a82125d4b02b2e/AndroidManifest.xml:11:5-15:19
-MERGED from [com.othershe:BaseAdapter:1.1.5] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/BaseAdapter-1.1.5.aar/580e30c1d621c287a6a82125d4b02b2e/AndroidManifest.xml:11:5-15:19
-MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.0.2.aar/4cc846827073c71d7dc14be3fa14f0bb/AndroidManifest.xml:9:5-20
-MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.0.2.aar/4cc846827073c71d7dc14be3fa14f0bb/AndroidManifest.xml:9:5-20
-MERGED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/252df4397c76b793f08690b4c8308d12/AndroidManifest.xml:37:5-131:19
-MERGED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/252df4397c76b793f08690b4c8308d12/AndroidManifest.xml:37:5-131:19
-MERGED from [cn.jiguang.sdk:jcore:1.1.8] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jcore-1.1.8.aar/2ec9aa46ba7e13321da7de7bc09c6064/AndroidManifest.xml:11:5-12:19
-MERGED from [cn.jiguang.sdk:jcore:1.1.8] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jcore-1.1.8.aar/2ec9aa46ba7e13321da7de7bc09c6064/AndroidManifest.xml:11:5-12:19
-MERGED from [com.android.support:support-media-compat:26.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/639eeca9bcd725a6458cddbd570bdf18/AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:support-media-compat:26.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/639eeca9bcd725a6458cddbd570bdf18/AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:support-fragment:26.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/d1e45afb23683b49cc4c370b3f6bf6a4/AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:support-fragment:26.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/d1e45afb23683b49cc4c370b3f6bf6a4/AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:support-core-utils:26.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.1.0.aar/55cf13ce326bfa2cbbf01c6b15ff7d41/AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:support-core-utils:26.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.1.0.aar/55cf13ce326bfa2cbbf01c6b15ff7d41/AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:recyclerview-v7:26.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-26.1.0.aar/3d172acb0bcd9bcc187ea0a080109b13/AndroidManifest.xml:22:5-26:19
-MERGED from [com.android.support:recyclerview-v7:26.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-26.1.0.aar/3d172acb0bcd9bcc187ea0a080109b13/AndroidManifest.xml:22:5-26:19
-MERGED from [com.android.support:support-core-ui:26.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.1.0.aar/0c34ff3fec67ab760eecc5d50056c773/AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:support-core-ui:26.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.1.0.aar/0c34ff3fec67ab760eecc5d50056c773/AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:support-compat:26.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/86100515fc4e9419f7a13af5f465420f/AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:support-compat:26.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/86100515fc4e9419f7a13af5f465420f/AndroidManifest.xml:25:5-29:19
-MERGED from [android.arch.lifecycle:runtime:1.0.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/74b6d14a381e24f8cf57fc25017221eb/AndroidManifest.xml:24:5-28:19
-MERGED from [android.arch.lifecycle:runtime:1.0.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/74b6d14a381e24f8cf57fc25017221eb/AndroidManifest.xml:24:5-28:19
+MERGED from [com.android.support:design:26.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/5b98eed32bcdebe03f297a48cfebe7a2/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:design:26.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/5b98eed32bcdebe03f297a48cfebe7a2/AndroidManifest.xml:25:5-29:19
+MERGED from [com.github.javen205:JPay:0.0.4] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/JPay-0.0.4.aar/980d3a2e2cd6134ea47837199a50c8fd/AndroidManifest.xml:11:5-15:19
+MERGED from [com.github.javen205:JPay:0.0.4] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/JPay-0.0.4.aar/980d3a2e2cd6134ea47837199a50c8fd/AndroidManifest.xml:11:5-15:19
+MERGED from [com.android.support:appcompat-v7:26.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/854d13a80bcc15b15fe7bdae9795c76e/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:appcompat-v7:26.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/854d13a80bcc15b15fe7bdae9795c76e/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.1.0.aar/9ce68985d7a8f6a09a42a36279b13f93/AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.1.0.aar/9ce68985d7a8f6a09a42a36279b13f93/AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:support-vector-drawable:26.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.1.0.aar/de1e79b92fca3cdc2336807aff7e5744/AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:support-vector-drawable:26.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.1.0.aar/de1e79b92fca3cdc2336807aff7e5744/AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:transition:26.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/transition-26.1.0.aar/b01ca07392044460beacf502df2acc98/AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:transition:26.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/transition-26.1.0.aar/b01ca07392044460beacf502df2acc98/AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:support-v4:26.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/55c131417521cd93928064acb5d34cb5/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-v4:26.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/55c131417521cd93928064acb5d34cb5/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:cardview-v7:26.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/cardview-v7-26.1.0.aar/05dee64b97d3849f5f94c22632f6c17f/AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:cardview-v7:26.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/cardview-v7-26.1.0.aar/05dee64b97d3849f5f94c22632f6c17f/AndroidManifest.xml:22:5-26:19
+MERGED from [com.othershe:BaseAdapter:1.1.5] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/BaseAdapter-1.1.5.aar/ba4509c14daba4d98a9723aa62a307ca/AndroidManifest.xml:11:5-15:19
+MERGED from [com.othershe:BaseAdapter:1.1.5] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/BaseAdapter-1.1.5.aar/ba4509c14daba4d98a9723aa62a307ca/AndroidManifest.xml:11:5-15:19
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.0.2.aar/3e507e38de33294e2b4ddf1aa81f7020/AndroidManifest.xml:9:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.0.2.aar/3e507e38de33294e2b4ddf1aa81f7020/AndroidManifest.xml:9:5-20
+MERGED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/5fe83d725676ec1e36bdbbad77024d18/AndroidManifest.xml:37:5-131:19
+MERGED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/5fe83d725676ec1e36bdbbad77024d18/AndroidManifest.xml:37:5-131:19
+MERGED from [cn.jiguang.sdk:jcore:1.1.8] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jcore-1.1.8.aar/384f6ed111342dca08fa03c8287bc44f/AndroidManifest.xml:11:5-12:19
+MERGED from [cn.jiguang.sdk:jcore:1.1.8] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jcore-1.1.8.aar/384f6ed111342dca08fa03c8287bc44f/AndroidManifest.xml:11:5-12:19
+MERGED from [com.android.support:support-media-compat:26.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/ca94b7376806c8e97b7b303fb4cc6141/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-media-compat:26.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/ca94b7376806c8e97b7b303fb4cc6141/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-fragment:26.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/32403b9414ea535d30f888e0dde2ee95/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-fragment:26.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/32403b9414ea535d30f888e0dde2ee95/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-core-utils:26.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.1.0.aar/c033f98832ede7e173137798cb2b7ec9/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-core-utils:26.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.1.0.aar/c033f98832ede7e173137798cb2b7ec9/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:recyclerview-v7:26.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-26.1.0.aar/c866374f62015af9192fe361fd38d70b/AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:recyclerview-v7:26.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-26.1.0.aar/c866374f62015af9192fe361fd38d70b/AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:support-core-ui:26.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.1.0.aar/d2925ce22ff787c0dbbbb113e6d89be3/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-core-ui:26.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.1.0.aar/d2925ce22ff787c0dbbbb113e6d89be3/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-compat:26.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/975af0fe95c90bfc1cce2342b9e9b34f/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-compat:26.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/975af0fe95c90bfc1cce2342b9e9b34f/AndroidManifest.xml:25:5-29:19
+MERGED from [android.arch.lifecycle:runtime:1.0.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/59b9aecf3c05a0f59bb21b73d876f22e/AndroidManifest.xml:24:5-28:19
+MERGED from [android.arch.lifecycle:runtime:1.0.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/59b9aecf3c05a0f59bb21b73d876f22e/AndroidManifest.xml:24:5-28:19
 	android:supportsRtl
 		ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:44:9-35
 	android:label
@@ -200,10 +201,10 @@ MERGED from [android.arch.lifecycle:runtime:1.0.0] /Users/shitakusei/.gradle/cac
 		ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:38:9-43
 service#cn.jpush.android.service.PushService
 ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:47:9-57:19
-MERGED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/252df4397c76b793f08690b4c8308d12/AndroidManifest.xml:60:9-71:19
-MERGED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/252df4397c76b793f08690b4c8308d12/AndroidManifest.xml:60:9-71:19
+MERGED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/5fe83d725676ec1e36bdbbad77024d18/AndroidManifest.xml:60:9-71:19
+MERGED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/5fe83d725676ec1e36bdbbad77024d18/AndroidManifest.xml:60:9-71:19
 	android:process
-		ADDED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/252df4397c76b793f08690b4c8308d12/AndroidManifest.xml:64:13-40
+		ADDED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/5fe83d725676ec1e36bdbbad77024d18/AndroidManifest.xml:64:13-40
 	android:enabled
 		ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml:49:13-35
 	android:exported
@@ -456,60 +457,62 @@ uses-sdk
 INJECTED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml
 INJECTED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml
-MERGED from [com.heinrichreimersoftware:material-intro:1.6.2] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/material-intro-1.6.2.aar/2d6b4e45c462baef9f66259ce07d5886/AndroidManifest.xml:31:5-33:41
-MERGED from [com.heinrichreimersoftware:material-intro:1.6.2] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/material-intro-1.6.2.aar/2d6b4e45c462baef9f66259ce07d5886/AndroidManifest.xml:31:5-33:41
-MERGED from [com.android.databinding:adapters:1.3.1] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/adapters-1.3.1.aar/199f3e2f5c3fcb973bab7fd13acf03e4/AndroidManifest.xml:22:5-24:41
-MERGED from [com.android.databinding:adapters:1.3.1] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/adapters-1.3.1.aar/199f3e2f5c3fcb973bab7fd13acf03e4/AndroidManifest.xml:22:5-24:41
-MERGED from [com.android.databinding:library:1.3.1] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/library-1.3.1.aar/78a53107312c72f358699be1721d1131/AndroidManifest.xml:22:5-24:41
-MERGED from [com.android.databinding:library:1.3.1] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/library-1.3.1.aar/78a53107312c72f358699be1721d1131/AndroidManifest.xml:22:5-24:41
-MERGED from [com.android.support:design:26.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/7c0de0b99150d51f18c2a28d7bf924a3/AndroidManifest.xml:21:5-23:62
-MERGED from [com.android.support:design:26.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/7c0de0b99150d51f18c2a28d7bf924a3/AndroidManifest.xml:21:5-23:62
-MERGED from [com.github.javen205.JPay:jpaysdk:0.0.3] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpaysdk-0.0.3.aar/6aa15cdce345809fa3bca6f8ef0dd15b/AndroidManifest.xml:7:5-9:41
-MERGED from [com.github.javen205.JPay:jpaysdk:0.0.3] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpaysdk-0.0.3.aar/6aa15cdce345809fa3bca6f8ef0dd15b/AndroidManifest.xml:7:5-9:41
-MERGED from [com.android.support:appcompat-v7:26.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/140e15e405b1ba6f2d5bdb18df06661c/AndroidManifest.xml:21:5-23:78
-MERGED from [com.android.support:appcompat-v7:26.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/140e15e405b1ba6f2d5bdb18df06661c/AndroidManifest.xml:21:5-23:78
-MERGED from [com.android.support:animated-vector-drawable:26.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.1.0.aar/40c9f8fb444944e22e659213b5e43955/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:animated-vector-drawable:26.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.1.0.aar/40c9f8fb444944e22e659213b5e43955/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:26.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.1.0.aar/0cda6285e64911a8d779a3a6750128a3/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:26.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.1.0.aar/0cda6285e64911a8d779a3a6750128a3/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:transition:26.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/transition-26.1.0.aar/c106308f2029b44398f2fe8b7122745f/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:transition:26.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/transition-26.1.0.aar/c106308f2029b44398f2fe8b7122745f/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-v4:26.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/b0f73a37c50e5b543868dbd4151c1894/AndroidManifest.xml:21:5-23:54
-MERGED from [com.android.support:support-v4:26.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/b0f73a37c50e5b543868dbd4151c1894/AndroidManifest.xml:21:5-23:54
-MERGED from [jp.wasabeef:glide-transformations:3.0.1] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/glide-transformations-3.0.1.aar/23b7ab56f1ee14c71867e84496349f3e/AndroidManifest.xml:8:5-10:41
-MERGED from [jp.wasabeef:glide-transformations:3.0.1] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/glide-transformations-3.0.1.aar/23b7ab56f1ee14c71867e84496349f3e/AndroidManifest.xml:8:5-10:41
-MERGED from [com.youth.banner:banner:1.4.9] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/banner-1.4.9.aar/bf565c11c31c6fb634189ae103c04a4c/AndroidManifest.xml:7:5-9:41
-MERGED from [com.youth.banner:banner:1.4.9] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/banner-1.4.9.aar/bf565c11c31c6fb634189ae103c04a4c/AndroidManifest.xml:7:5-9:41
-MERGED from [com.android.support:cardview-v7:26.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/cardview-v7-26.1.0.aar/7ac4dd141873e894b04ac5d28433c62b/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:cardview-v7:26.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/cardview-v7-26.1.0.aar/7ac4dd141873e894b04ac5d28433c62b/AndroidManifest.xml:20:5-44
-MERGED from [cn.lemon:RefreshRecyclerView:1.2.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/RefreshRecyclerView-1.2.0.aar/3fb4b7ed587ac438da01a971e3974540/AndroidManifest.xml:7:5-9:41
-MERGED from [cn.lemon:RefreshRecyclerView:1.2.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/RefreshRecyclerView-1.2.0.aar/3fb4b7ed587ac438da01a971e3974540/AndroidManifest.xml:7:5-9:41
-MERGED from [com.othershe:BaseAdapter:1.1.5] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/BaseAdapter-1.1.5.aar/580e30c1d621c287a6a82125d4b02b2e/AndroidManifest.xml:7:5-9:41
-MERGED from [com.othershe:BaseAdapter:1.1.5] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/BaseAdapter-1.1.5.aar/580e30c1d621c287a6a82125d4b02b2e/AndroidManifest.xml:7:5-9:41
-MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.0.2.aar/4cc846827073c71d7dc14be3fa14f0bb/AndroidManifest.xml:5:5-7:41
-MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.0.2.aar/4cc846827073c71d7dc14be3fa14f0bb/AndroidManifest.xml:5:5-7:41
-MERGED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/252df4397c76b793f08690b4c8308d12/AndroidManifest.xml:7:5-9:41
-MERGED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/252df4397c76b793f08690b4c8308d12/AndroidManifest.xml:7:5-9:41
-MERGED from [cn.jiguang.sdk:jcore:1.1.8] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jcore-1.1.8.aar/2ec9aa46ba7e13321da7de7bc09c6064/AndroidManifest.xml:7:5-9:41
-MERGED from [cn.jiguang.sdk:jcore:1.1.8] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jcore-1.1.8.aar/2ec9aa46ba7e13321da7de7bc09c6064/AndroidManifest.xml:7:5-9:41
-MERGED from [com.android.support:support-media-compat:26.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/639eeca9bcd725a6458cddbd570bdf18/AndroidManifest.xml:21:5-23:63
-MERGED from [com.android.support:support-media-compat:26.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/639eeca9bcd725a6458cddbd570bdf18/AndroidManifest.xml:21:5-23:63
-MERGED from [com.android.support:support-fragment:26.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/d1e45afb23683b49cc4c370b3f6bf6a4/AndroidManifest.xml:21:5-23:60
-MERGED from [com.android.support:support-fragment:26.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/d1e45afb23683b49cc4c370b3f6bf6a4/AndroidManifest.xml:21:5-23:60
-MERGED from [com.android.support:support-core-utils:26.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.1.0.aar/55cf13ce326bfa2cbbf01c6b15ff7d41/AndroidManifest.xml:21:5-23:61
-MERGED from [com.android.support:support-core-utils:26.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.1.0.aar/55cf13ce326bfa2cbbf01c6b15ff7d41/AndroidManifest.xml:21:5-23:61
-MERGED from [com.android.support:recyclerview-v7:26.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-26.1.0.aar/3d172acb0bcd9bcc187ea0a080109b13/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:recyclerview-v7:26.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-26.1.0.aar/3d172acb0bcd9bcc187ea0a080109b13/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-ui:26.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.1.0.aar/0c34ff3fec67ab760eecc5d50056c773/AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support:support-core-ui:26.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.1.0.aar/0c34ff3fec67ab760eecc5d50056c773/AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support:support-compat:26.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/86100515fc4e9419f7a13af5f465420f/AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support:support-compat:26.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/86100515fc4e9419f7a13af5f465420f/AndroidManifest.xml:21:5-23:58
-MERGED from [android.arch.lifecycle:runtime:1.0.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/74b6d14a381e24f8cf57fc25017221eb/AndroidManifest.xml:20:5-22:41
-MERGED from [android.arch.lifecycle:runtime:1.0.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/74b6d14a381e24f8cf57fc25017221eb/AndroidManifest.xml:20:5-22:41
+MERGED from [com.heinrichreimersoftware:material-intro:1.6.2] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/material-intro-1.6.2.aar/7e51b7137f8350b18d3a8190cf64b1f8/AndroidManifest.xml:31:5-33:41
+MERGED from [com.heinrichreimersoftware:material-intro:1.6.2] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/material-intro-1.6.2.aar/7e51b7137f8350b18d3a8190cf64b1f8/AndroidManifest.xml:31:5-33:41
+MERGED from [com.android.databinding:adapters:1.3.1] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/adapters-1.3.1.aar/3f804273ff83801a0960045f265116a8/AndroidManifest.xml:22:5-24:41
+MERGED from [com.android.databinding:adapters:1.3.1] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/adapters-1.3.1.aar/3f804273ff83801a0960045f265116a8/AndroidManifest.xml:22:5-24:41
+MERGED from [com.android.databinding:library:1.3.1] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/library-1.3.1.aar/c83e1bb11dadde525088201467dc2c93/AndroidManifest.xml:22:5-24:41
+MERGED from [com.android.databinding:library:1.3.1] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/library-1.3.1.aar/c83e1bb11dadde525088201467dc2c93/AndroidManifest.xml:22:5-24:41
+MERGED from [com.android.support:multidex:1.0.2] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/multidex-1.0.2.aar/56d888c6ad4470df39ccaf7bf3749b69/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:multidex:1.0.2] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/multidex-1.0.2.aar/56d888c6ad4470df39ccaf7bf3749b69/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:design:26.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/5b98eed32bcdebe03f297a48cfebe7a2/AndroidManifest.xml:21:5-23:62
+MERGED from [com.android.support:design:26.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/5b98eed32bcdebe03f297a48cfebe7a2/AndroidManifest.xml:21:5-23:62
+MERGED from [com.github.javen205:JPay:0.0.4] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/JPay-0.0.4.aar/980d3a2e2cd6134ea47837199a50c8fd/AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.javen205:JPay:0.0.4] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/JPay-0.0.4.aar/980d3a2e2cd6134ea47837199a50c8fd/AndroidManifest.xml:7:5-9:41
+MERGED from [com.android.support:appcompat-v7:26.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/854d13a80bcc15b15fe7bdae9795c76e/AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:appcompat-v7:26.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/854d13a80bcc15b15fe7bdae9795c76e/AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.1.0.aar/9ce68985d7a8f6a09a42a36279b13f93/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.1.0.aar/9ce68985d7a8f6a09a42a36279b13f93/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:26.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.1.0.aar/de1e79b92fca3cdc2336807aff7e5744/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:26.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.1.0.aar/de1e79b92fca3cdc2336807aff7e5744/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:26.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/transition-26.1.0.aar/b01ca07392044460beacf502df2acc98/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:26.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/transition-26.1.0.aar/b01ca07392044460beacf502df2acc98/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:26.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/55c131417521cd93928064acb5d34cb5/AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-v4:26.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/55c131417521cd93928064acb5d34cb5/AndroidManifest.xml:21:5-23:54
+MERGED from [jp.wasabeef:glide-transformations:3.0.1] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/glide-transformations-3.0.1.aar/0d64e5e4712988ec372181e724323b80/AndroidManifest.xml:8:5-10:41
+MERGED from [jp.wasabeef:glide-transformations:3.0.1] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/glide-transformations-3.0.1.aar/0d64e5e4712988ec372181e724323b80/AndroidManifest.xml:8:5-10:41
+MERGED from [com.youth.banner:banner:1.4.9] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/banner-1.4.9.aar/f19a6f6e92f62440b4ee5c0bd878141c/AndroidManifest.xml:7:5-9:41
+MERGED from [com.youth.banner:banner:1.4.9] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/banner-1.4.9.aar/f19a6f6e92f62440b4ee5c0bd878141c/AndroidManifest.xml:7:5-9:41
+MERGED from [com.android.support:cardview-v7:26.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/cardview-v7-26.1.0.aar/05dee64b97d3849f5f94c22632f6c17f/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cardview-v7:26.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/cardview-v7-26.1.0.aar/05dee64b97d3849f5f94c22632f6c17f/AndroidManifest.xml:20:5-44
+MERGED from [cn.lemon:RefreshRecyclerView:1.2.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/RefreshRecyclerView-1.2.0.aar/d069fcfce109f4ab0476671f3b3ab817/AndroidManifest.xml:7:5-9:41
+MERGED from [cn.lemon:RefreshRecyclerView:1.2.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/RefreshRecyclerView-1.2.0.aar/d069fcfce109f4ab0476671f3b3ab817/AndroidManifest.xml:7:5-9:41
+MERGED from [com.othershe:BaseAdapter:1.1.5] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/BaseAdapter-1.1.5.aar/ba4509c14daba4d98a9723aa62a307ca/AndroidManifest.xml:7:5-9:41
+MERGED from [com.othershe:BaseAdapter:1.1.5] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/BaseAdapter-1.1.5.aar/ba4509c14daba4d98a9723aa62a307ca/AndroidManifest.xml:7:5-9:41
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.0.2.aar/3e507e38de33294e2b4ddf1aa81f7020/AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.0.2.aar/3e507e38de33294e2b4ddf1aa81f7020/AndroidManifest.xml:5:5-7:41
+MERGED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/5fe83d725676ec1e36bdbbad77024d18/AndroidManifest.xml:7:5-9:41
+MERGED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/5fe83d725676ec1e36bdbbad77024d18/AndroidManifest.xml:7:5-9:41
+MERGED from [cn.jiguang.sdk:jcore:1.1.8] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jcore-1.1.8.aar/384f6ed111342dca08fa03c8287bc44f/AndroidManifest.xml:7:5-9:41
+MERGED from [cn.jiguang.sdk:jcore:1.1.8] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jcore-1.1.8.aar/384f6ed111342dca08fa03c8287bc44f/AndroidManifest.xml:7:5-9:41
+MERGED from [com.android.support:support-media-compat:26.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/ca94b7376806c8e97b7b303fb4cc6141/AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-media-compat:26.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/ca94b7376806c8e97b7b303fb4cc6141/AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-fragment:26.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/32403b9414ea535d30f888e0dde2ee95/AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-fragment:26.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/32403b9414ea535d30f888e0dde2ee95/AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-core-utils:26.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.1.0.aar/c033f98832ede7e173137798cb2b7ec9/AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-core-utils:26.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.1.0.aar/c033f98832ede7e173137798cb2b7ec9/AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:recyclerview-v7:26.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-26.1.0.aar/c866374f62015af9192fe361fd38d70b/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:26.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-26.1.0.aar/c866374f62015af9192fe361fd38d70b/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:26.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.1.0.aar/d2925ce22ff787c0dbbbb113e6d89be3/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-ui:26.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.1.0.aar/d2925ce22ff787c0dbbbb113e6d89be3/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-compat:26.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/975af0fe95c90bfc1cce2342b9e9b34f/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-compat:26.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/975af0fe95c90bfc1cce2342b9e9b34f/AndroidManifest.xml:21:5-23:58
+MERGED from [android.arch.lifecycle:runtime:1.0.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/59b9aecf3c05a0f59bb21b73d876f22e/AndroidManifest.xml:20:5-22:41
+MERGED from [android.arch.lifecycle:runtime:1.0.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/59b9aecf3c05a0f59bb21b73d876f22e/AndroidManifest.xml:20:5-22:41
 INJECTED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml
 INJECTED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml
 	tools:overrideLibrary
-		ADDED from [com.android.support:design:26.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/7c0de0b99150d51f18c2a28d7bf924a3/AndroidManifest.xml:23:9-59
+		ADDED from [com.android.support:design:26.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/5b98eed32bcdebe03f297a48cfebe7a2/AndroidManifest.xml:23:9-59
 	android:targetSdkVersion
 		INJECTED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml
 		ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml
@@ -519,194 +522,194 @@ INJECTED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml
 		ADDED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml
 		INJECTED from /Users/shitakusei/Desktop/THT/app/src/main/AndroidManifest.xml
 meta-data#android.support.VERSION
-ADDED from [com.android.support:design:26.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/7c0de0b99150d51f18c2a28d7bf924a3/AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:appcompat-v7:26.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/140e15e405b1ba6f2d5bdb18df06661c/AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:appcompat-v7:26.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/140e15e405b1ba6f2d5bdb18df06661c/AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:animated-vector-drawable:26.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.1.0.aar/40c9f8fb444944e22e659213b5e43955/AndroidManifest.xml:23:9-25:38
-MERGED from [com.android.support:animated-vector-drawable:26.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.1.0.aar/40c9f8fb444944e22e659213b5e43955/AndroidManifest.xml:23:9-25:38
-MERGED from [com.android.support:support-vector-drawable:26.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.1.0.aar/0cda6285e64911a8d779a3a6750128a3/AndroidManifest.xml:23:9-25:38
-MERGED from [com.android.support:support-vector-drawable:26.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.1.0.aar/0cda6285e64911a8d779a3a6750128a3/AndroidManifest.xml:23:9-25:38
-MERGED from [com.android.support:transition:26.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/transition-26.1.0.aar/c106308f2029b44398f2fe8b7122745f/AndroidManifest.xml:23:9-25:38
-MERGED from [com.android.support:transition:26.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/transition-26.1.0.aar/c106308f2029b44398f2fe8b7122745f/AndroidManifest.xml:23:9-25:38
-MERGED from [com.android.support:support-v4:26.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/b0f73a37c50e5b543868dbd4151c1894/AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:support-v4:26.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/b0f73a37c50e5b543868dbd4151c1894/AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:cardview-v7:26.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/cardview-v7-26.1.0.aar/7ac4dd141873e894b04ac5d28433c62b/AndroidManifest.xml:23:9-25:38
-MERGED from [com.android.support:cardview-v7:26.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/cardview-v7-26.1.0.aar/7ac4dd141873e894b04ac5d28433c62b/AndroidManifest.xml:23:9-25:38
-MERGED from [com.android.support:support-media-compat:26.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/639eeca9bcd725a6458cddbd570bdf18/AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:support-media-compat:26.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/639eeca9bcd725a6458cddbd570bdf18/AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:support-fragment:26.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/d1e45afb23683b49cc4c370b3f6bf6a4/AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:support-fragment:26.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/d1e45afb23683b49cc4c370b3f6bf6a4/AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:support-core-utils:26.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.1.0.aar/55cf13ce326bfa2cbbf01c6b15ff7d41/AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:support-core-utils:26.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.1.0.aar/55cf13ce326bfa2cbbf01c6b15ff7d41/AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:recyclerview-v7:26.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-26.1.0.aar/3d172acb0bcd9bcc187ea0a080109b13/AndroidManifest.xml:23:9-25:38
-MERGED from [com.android.support:recyclerview-v7:26.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-26.1.0.aar/3d172acb0bcd9bcc187ea0a080109b13/AndroidManifest.xml:23:9-25:38
-MERGED from [com.android.support:support-core-ui:26.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.1.0.aar/0c34ff3fec67ab760eecc5d50056c773/AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:support-core-ui:26.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.1.0.aar/0c34ff3fec67ab760eecc5d50056c773/AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:support-compat:26.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/86100515fc4e9419f7a13af5f465420f/AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:support-compat:26.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/86100515fc4e9419f7a13af5f465420f/AndroidManifest.xml:26:9-28:38
+ADDED from [com.android.support:design:26.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/5b98eed32bcdebe03f297a48cfebe7a2/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:appcompat-v7:26.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/854d13a80bcc15b15fe7bdae9795c76e/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:appcompat-v7:26.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/854d13a80bcc15b15fe7bdae9795c76e/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.1.0.aar/9ce68985d7a8f6a09a42a36279b13f93/AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.1.0.aar/9ce68985d7a8f6a09a42a36279b13f93/AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:support-vector-drawable:26.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.1.0.aar/de1e79b92fca3cdc2336807aff7e5744/AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:support-vector-drawable:26.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.1.0.aar/de1e79b92fca3cdc2336807aff7e5744/AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:transition:26.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/transition-26.1.0.aar/b01ca07392044460beacf502df2acc98/AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:transition:26.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/transition-26.1.0.aar/b01ca07392044460beacf502df2acc98/AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:support-v4:26.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/55c131417521cd93928064acb5d34cb5/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-v4:26.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/55c131417521cd93928064acb5d34cb5/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:cardview-v7:26.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/cardview-v7-26.1.0.aar/05dee64b97d3849f5f94c22632f6c17f/AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:cardview-v7:26.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/cardview-v7-26.1.0.aar/05dee64b97d3849f5f94c22632f6c17f/AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:support-media-compat:26.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/ca94b7376806c8e97b7b303fb4cc6141/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-media-compat:26.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/ca94b7376806c8e97b7b303fb4cc6141/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-fragment:26.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/32403b9414ea535d30f888e0dde2ee95/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-fragment:26.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/32403b9414ea535d30f888e0dde2ee95/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-core-utils:26.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.1.0.aar/c033f98832ede7e173137798cb2b7ec9/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-core-utils:26.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.1.0.aar/c033f98832ede7e173137798cb2b7ec9/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:recyclerview-v7:26.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-26.1.0.aar/c866374f62015af9192fe361fd38d70b/AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:recyclerview-v7:26.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-26.1.0.aar/c866374f62015af9192fe361fd38d70b/AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:support-core-ui:26.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.1.0.aar/d2925ce22ff787c0dbbbb113e6d89be3/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-core-ui:26.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.1.0.aar/d2925ce22ff787c0dbbbb113e6d89be3/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-compat:26.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/975af0fe95c90bfc1cce2342b9e9b34f/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-compat:26.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/975af0fe95c90bfc1cce2342b9e9b34f/AndroidManifest.xml:26:9-28:38
 	android:value
-		ADDED from [com.android.support:design:26.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/7c0de0b99150d51f18c2a28d7bf924a3/AndroidManifest.xml:28:13-35
+		ADDED from [com.android.support:design:26.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/5b98eed32bcdebe03f297a48cfebe7a2/AndroidManifest.xml:28:13-35
 	android:name
-		ADDED from [com.android.support:design:26.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/7c0de0b99150d51f18c2a28d7bf924a3/AndroidManifest.xml:27:13-51
+		ADDED from [com.android.support:design:26.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/5b98eed32bcdebe03f297a48cfebe7a2/AndroidManifest.xml:27:13-51
 permission#${JPUSH_PKGNAME}.permission.JPUSH_MESSAGE
-MERGED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/252df4397c76b793f08690b4c8308d12/AndroidManifest.xml:11:5-13:47
+MERGED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/5fe83d725676ec1e36bdbbad77024d18/AndroidManifest.xml:11:5-13:47
 uses-permission#${JPUSH_PKGNAME}.permission.JPUSH_MESSAGE
-MERGED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/252df4397c76b793f08690b4c8308d12/AndroidManifest.xml:16:5-81
+MERGED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/5fe83d725676ec1e36bdbbad77024d18/AndroidManifest.xml:16:5-81
 uses-permission#android.permission.SYSTEM_ALERT_WINDOW
-ADDED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/252df4397c76b793f08690b4c8308d12/AndroidManifest.xml:30:5-78
+ADDED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/5fe83d725676ec1e36bdbbad77024d18/AndroidManifest.xml:30:5-78
 	android:name
-		ADDED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/252df4397c76b793f08690b4c8308d12/AndroidManifest.xml:30:22-75
+		ADDED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/5fe83d725676ec1e36bdbbad77024d18/AndroidManifest.xml:30:22-75
 uses-permission#android.permission.ACCESS_COARSE_LOCATION
-ADDED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/252df4397c76b793f08690b4c8308d12/AndroidManifest.xml:31:5-81
+ADDED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/5fe83d725676ec1e36bdbbad77024d18/AndroidManifest.xml:31:5-81
 	android:name
-		ADDED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/252df4397c76b793f08690b4c8308d12/AndroidManifest.xml:31:22-78
+		ADDED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/5fe83d725676ec1e36bdbbad77024d18/AndroidManifest.xml:31:22-78
 uses-permission#android.permission.CHANGE_WIFI_STATE
-ADDED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/252df4397c76b793f08690b4c8308d12/AndroidManifest.xml:32:5-76
+ADDED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/5fe83d725676ec1e36bdbbad77024d18/AndroidManifest.xml:32:5-76
 	android:name
-		ADDED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/252df4397c76b793f08690b4c8308d12/AndroidManifest.xml:32:22-73
+		ADDED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/5fe83d725676ec1e36bdbbad77024d18/AndroidManifest.xml:32:22-73
 uses-permission#android.permission.ACCESS_FINE_LOCATION
-ADDED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/252df4397c76b793f08690b4c8308d12/AndroidManifest.xml:33:5-79
+ADDED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/5fe83d725676ec1e36bdbbad77024d18/AndroidManifest.xml:33:5-79
 	android:name
-		ADDED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/252df4397c76b793f08690b4c8308d12/AndroidManifest.xml:33:22-76
+		ADDED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/5fe83d725676ec1e36bdbbad77024d18/AndroidManifest.xml:33:22-76
 uses-permission#android.permission.ACCESS_LOCATION_EXTRA_COMMANDS
-ADDED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/252df4397c76b793f08690b4c8308d12/AndroidManifest.xml:34:5-89
+ADDED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/5fe83d725676ec1e36bdbbad77024d18/AndroidManifest.xml:34:5-89
 	android:name
-		ADDED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/252df4397c76b793f08690b4c8308d12/AndroidManifest.xml:34:22-86
+		ADDED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/5fe83d725676ec1e36bdbbad77024d18/AndroidManifest.xml:34:22-86
 activity#cn.jpush.android.ui.PopWinActivity
-ADDED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/252df4397c76b793f08690b4c8308d12/AndroidManifest.xml:40:9-43:52
+ADDED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/5fe83d725676ec1e36bdbbad77024d18/AndroidManifest.xml:40:9-43:52
 	android:exported
-		ADDED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/252df4397c76b793f08690b4c8308d12/AndroidManifest.xml:42:13-37
+		ADDED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/5fe83d725676ec1e36bdbbad77024d18/AndroidManifest.xml:42:13-37
 	android:theme
-		ADDED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/252df4397c76b793f08690b4c8308d12/AndroidManifest.xml:43:13-49
+		ADDED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/5fe83d725676ec1e36bdbbad77024d18/AndroidManifest.xml:43:13-49
 	android:name
-		ADDED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/252df4397c76b793f08690b4c8308d12/AndroidManifest.xml:41:13-62
+		ADDED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/5fe83d725676ec1e36bdbbad77024d18/AndroidManifest.xml:41:13-62
 activity#cn.jpush.android.ui.PushActivity
-ADDED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/252df4397c76b793f08690b4c8308d12/AndroidManifest.xml:46:9-57:20
+ADDED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/5fe83d725676ec1e36bdbbad77024d18/AndroidManifest.xml:46:9-57:20
 	android:exported
-		ADDED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/252df4397c76b793f08690b4c8308d12/AndroidManifest.xml:49:13-37
+		ADDED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/5fe83d725676ec1e36bdbbad77024d18/AndroidManifest.xml:49:13-37
 	android:configChanges
-		ADDED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/252df4397c76b793f08690b4c8308d12/AndroidManifest.xml:48:13-63
+		ADDED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/5fe83d725676ec1e36bdbbad77024d18/AndroidManifest.xml:48:13-63
 	android:theme
-		ADDED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/252df4397c76b793f08690b4c8308d12/AndroidManifest.xml:50:13-60
+		ADDED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/5fe83d725676ec1e36bdbbad77024d18/AndroidManifest.xml:50:13-60
 	android:name
-		ADDED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/252df4397c76b793f08690b4c8308d12/AndroidManifest.xml:47:13-60
+		ADDED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/5fe83d725676ec1e36bdbbad77024d18/AndroidManifest.xml:47:13-60
 intent-filter#${JPUSH_PKGNAME}+android.intent.category.DEFAULT+cn.jpush.android.ui.PushActivity
-ADDED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/252df4397c76b793f08690b4c8308d12/AndroidManifest.xml:51:13-56:29
+ADDED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/5fe83d725676ec1e36bdbbad77024d18/AndroidManifest.xml:51:13-56:29
 intent-filter#android.intent.category.DEFAULT+cn.jpush.android.ui.PushActivity+tht.topu.com.tht
-ADDED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/252df4397c76b793f08690b4c8308d12/AndroidManifest.xml:51:13-56:29
+ADDED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/5fe83d725676ec1e36bdbbad77024d18/AndroidManifest.xml:51:13-56:29
 action#cn.jpush.android.ui.PushActivity
-ADDED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/252df4397c76b793f08690b4c8308d12/AndroidManifest.xml:52:17-75
+ADDED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/5fe83d725676ec1e36bdbbad77024d18/AndroidManifest.xml:52:17-75
 	android:name
-		ADDED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/252df4397c76b793f08690b4c8308d12/AndroidManifest.xml:52:25-72
+		ADDED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/5fe83d725676ec1e36bdbbad77024d18/AndroidManifest.xml:52:25-72
 category#android.intent.category.DEFAULT
-ADDED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/252df4397c76b793f08690b4c8308d12/AndroidManifest.xml:54:17-76
+ADDED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/5fe83d725676ec1e36bdbbad77024d18/AndroidManifest.xml:54:17-76
 	android:name
-		ADDED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/252df4397c76b793f08690b4c8308d12/AndroidManifest.xml:54:27-73
+		ADDED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/5fe83d725676ec1e36bdbbad77024d18/AndroidManifest.xml:54:27-73
 category#${JPUSH_PKGNAME}
-ADDED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/252df4397c76b793f08690b4c8308d12/AndroidManifest.xml:55:17-61
+ADDED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/5fe83d725676ec1e36bdbbad77024d18/AndroidManifest.xml:55:17-61
 	android:name
-		ADDED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/252df4397c76b793f08690b4c8308d12/AndroidManifest.xml:55:27-58
+		ADDED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/5fe83d725676ec1e36bdbbad77024d18/AndroidManifest.xml:55:27-58
 category#tht.topu.com.tht
-ADDED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/252df4397c76b793f08690b4c8308d12/AndroidManifest.xml:55:17-61
+ADDED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/5fe83d725676ec1e36bdbbad77024d18/AndroidManifest.xml:55:17-61
 	android:name
-		ADDED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/252df4397c76b793f08690b4c8308d12/AndroidManifest.xml:55:27-58
+		ADDED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/5fe83d725676ec1e36bdbbad77024d18/AndroidManifest.xml:55:27-58
 service#cn.jpush.android.service.DaemonService
-ADDED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/252df4397c76b793f08690b4c8308d12/AndroidManifest.xml:75:9-84:19
+ADDED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/5fe83d725676ec1e36bdbbad77024d18/AndroidManifest.xml:75:9-84:19
 	android:enabled
-		ADDED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/252df4397c76b793f08690b4c8308d12/AndroidManifest.xml:77:13-35
+		ADDED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/5fe83d725676ec1e36bdbbad77024d18/AndroidManifest.xml:77:13-35
 	android:exported
-		ADDED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/252df4397c76b793f08690b4c8308d12/AndroidManifest.xml:78:13-36
+		ADDED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/5fe83d725676ec1e36bdbbad77024d18/AndroidManifest.xml:78:13-36
 	android:name
-		ADDED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/252df4397c76b793f08690b4c8308d12/AndroidManifest.xml:76:13-66
+		ADDED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/5fe83d725676ec1e36bdbbad77024d18/AndroidManifest.xml:76:13-66
 intent-filter#${JPUSH_PKGNAME}+cn.jpush.android.intent.DaemonService
-ADDED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/252df4397c76b793f08690b4c8308d12/AndroidManifest.xml:79:13-83:29
+ADDED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/5fe83d725676ec1e36bdbbad77024d18/AndroidManifest.xml:79:13-83:29
 intent-filter#cn.jpush.android.intent.DaemonService+tht.topu.com.tht
-ADDED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/252df4397c76b793f08690b4c8308d12/AndroidManifest.xml:79:13-83:29
+ADDED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/5fe83d725676ec1e36bdbbad77024d18/AndroidManifest.xml:79:13-83:29
 action#cn.jpush.android.intent.DaemonService
-ADDED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/252df4397c76b793f08690b4c8308d12/AndroidManifest.xml:80:17-80
+ADDED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/5fe83d725676ec1e36bdbbad77024d18/AndroidManifest.xml:80:17-80
 	android:name
-		ADDED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/252df4397c76b793f08690b4c8308d12/AndroidManifest.xml:80:25-77
+		ADDED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/5fe83d725676ec1e36bdbbad77024d18/AndroidManifest.xml:80:25-77
 receiver#cn.jpush.android.service.PushReceiver
-ADDED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/252df4397c76b793f08690b4c8308d12/AndroidManifest.xml:87:9-106:20
+ADDED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/5fe83d725676ec1e36bdbbad77024d18/AndroidManifest.xml:87:9-106:20
 	android:enabled
-		ADDED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/252df4397c76b793f08690b4c8308d12/AndroidManifest.xml:89:13-35
+		ADDED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/5fe83d725676ec1e36bdbbad77024d18/AndroidManifest.xml:89:13-35
 	android:exported
-		ADDED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/252df4397c76b793f08690b4c8308d12/AndroidManifest.xml:90:13-37
+		ADDED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/5fe83d725676ec1e36bdbbad77024d18/AndroidManifest.xml:90:13-37
 	android:name
-		ADDED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/252df4397c76b793f08690b4c8308d12/AndroidManifest.xml:88:13-65
+		ADDED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/5fe83d725676ec1e36bdbbad77024d18/AndroidManifest.xml:88:13-65
 intent-filter#${JPUSH_PKGNAME}+cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY
-ADDED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/252df4397c76b793f08690b4c8308d12/AndroidManifest.xml:91:13-94:29
+ADDED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/5fe83d725676ec1e36bdbbad77024d18/AndroidManifest.xml:91:13-94:29
 	android:priority
-		ADDED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/252df4397c76b793f08690b4c8308d12/AndroidManifest.xml:91:28-51
+		ADDED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/5fe83d725676ec1e36bdbbad77024d18/AndroidManifest.xml:91:28-51
 intent-filter#cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY+tht.topu.com.tht
-ADDED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/252df4397c76b793f08690b4c8308d12/AndroidManifest.xml:91:13-94:29
+ADDED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/5fe83d725676ec1e36bdbbad77024d18/AndroidManifest.xml:91:13-94:29
 	android:priority
-		ADDED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/252df4397c76b793f08690b4c8308d12/AndroidManifest.xml:91:28-51
+		ADDED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/5fe83d725676ec1e36bdbbad77024d18/AndroidManifest.xml:91:28-51
 action#cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY
-ADDED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/252df4397c76b793f08690b4c8308d12/AndroidManifest.xml:92:17-94
+ADDED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/5fe83d725676ec1e36bdbbad77024d18/AndroidManifest.xml:92:17-94
 	android:name
-		ADDED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/252df4397c76b793f08690b4c8308d12/AndroidManifest.xml:92:25-91
+		ADDED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/5fe83d725676ec1e36bdbbad77024d18/AndroidManifest.xml:92:25-91
 intent-filter#android.intent.action.USER_PRESENT+android.net.conn.CONNECTIVITY_CHANGE
-ADDED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/252df4397c76b793f08690b4c8308d12/AndroidManifest.xml:95:13-98:29
+ADDED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/5fe83d725676ec1e36bdbbad77024d18/AndroidManifest.xml:95:13-98:29
 action#android.intent.action.USER_PRESENT
-ADDED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/252df4397c76b793f08690b4c8308d12/AndroidManifest.xml:96:17-77
+ADDED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/5fe83d725676ec1e36bdbbad77024d18/AndroidManifest.xml:96:17-77
 	android:name
-		ADDED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/252df4397c76b793f08690b4c8308d12/AndroidManifest.xml:96:25-74
+		ADDED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/5fe83d725676ec1e36bdbbad77024d18/AndroidManifest.xml:96:25-74
 action#android.net.conn.CONNECTIVITY_CHANGE
-ADDED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/252df4397c76b793f08690b4c8308d12/AndroidManifest.xml:97:17-79
+ADDED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/5fe83d725676ec1e36bdbbad77024d18/AndroidManifest.xml:97:17-79
 	android:name
-		ADDED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/252df4397c76b793f08690b4c8308d12/AndroidManifest.xml:97:25-76
+		ADDED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/5fe83d725676ec1e36bdbbad77024d18/AndroidManifest.xml:97:25-76
 intent-filter#android.intent.action.PACKAGE_ADDED+android.intent.action.PACKAGE_REMOVED
-ADDED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/252df4397c76b793f08690b4c8308d12/AndroidManifest.xml:100:13-105:29
+ADDED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/5fe83d725676ec1e36bdbbad77024d18/AndroidManifest.xml:100:13-105:29
 action#android.intent.action.PACKAGE_ADDED
-ADDED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/252df4397c76b793f08690b4c8308d12/AndroidManifest.xml:101:17-78
+ADDED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/5fe83d725676ec1e36bdbbad77024d18/AndroidManifest.xml:101:17-78
 	android:name
-		ADDED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/252df4397c76b793f08690b4c8308d12/AndroidManifest.xml:101:25-75
+		ADDED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/5fe83d725676ec1e36bdbbad77024d18/AndroidManifest.xml:101:25-75
 action#android.intent.action.PACKAGE_REMOVED
-ADDED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/252df4397c76b793f08690b4c8308d12/AndroidManifest.xml:102:17-80
+ADDED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/5fe83d725676ec1e36bdbbad77024d18/AndroidManifest.xml:102:17-80
 	android:name
-		ADDED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/252df4397c76b793f08690b4c8308d12/AndroidManifest.xml:102:25-77
+		ADDED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/5fe83d725676ec1e36bdbbad77024d18/AndroidManifest.xml:102:25-77
 data
-ADDED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/252df4397c76b793f08690b4c8308d12/AndroidManifest.xml:104:17-50
+ADDED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/5fe83d725676ec1e36bdbbad77024d18/AndroidManifest.xml:104:17-50
 	android:scheme
-		ADDED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/252df4397c76b793f08690b4c8308d12/AndroidManifest.xml:104:23-47
+		ADDED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/5fe83d725676ec1e36bdbbad77024d18/AndroidManifest.xml:104:23-47
 receiver#cn.jpush.android.service.AlarmReceiver
-ADDED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/252df4397c76b793f08690b4c8308d12/AndroidManifest.xml:109:9-111:40
+ADDED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/5fe83d725676ec1e36bdbbad77024d18/AndroidManifest.xml:109:9-111:40
 	android:exported
-		ADDED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/252df4397c76b793f08690b4c8308d12/AndroidManifest.xml:111:13-37
+		ADDED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/5fe83d725676ec1e36bdbbad77024d18/AndroidManifest.xml:111:13-37
 	android:name
-		ADDED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/252df4397c76b793f08690b4c8308d12/AndroidManifest.xml:110:13-66
+		ADDED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/5fe83d725676ec1e36bdbbad77024d18/AndroidManifest.xml:110:13-66
 provider#cn.jpush.android.service.DataProvider
-ADDED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/252df4397c76b793f08690b4c8308d12/AndroidManifest.xml:113:9-116:40
+ADDED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/5fe83d725676ec1e36bdbbad77024d18/AndroidManifest.xml:113:9-116:40
 	android:authorities
-		ADDED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/252df4397c76b793f08690b4c8308d12/AndroidManifest.xml:115:13-64
+		ADDED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/5fe83d725676ec1e36bdbbad77024d18/AndroidManifest.xml:115:13-64
 	android:exported
-		ADDED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/252df4397c76b793f08690b4c8308d12/AndroidManifest.xml:116:13-37
+		ADDED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/5fe83d725676ec1e36bdbbad77024d18/AndroidManifest.xml:116:13-37
 	android:name
-		ADDED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/252df4397c76b793f08690b4c8308d12/AndroidManifest.xml:114:13-65
+		ADDED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/5fe83d725676ec1e36bdbbad77024d18/AndroidManifest.xml:114:13-65
 provider#cn.jpush.android.service.DownloadProvider
-ADDED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/252df4397c76b793f08690b4c8308d12/AndroidManifest.xml:118:9-121:39
+ADDED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/5fe83d725676ec1e36bdbbad77024d18/AndroidManifest.xml:118:9-121:39
 	android:authorities
-		ADDED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/252df4397c76b793f08690b4c8308d12/AndroidManifest.xml:120:13-68
+		ADDED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/5fe83d725676ec1e36bdbbad77024d18/AndroidManifest.xml:120:13-68
 	android:exported
-		ADDED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/252df4397c76b793f08690b4c8308d12/AndroidManifest.xml:121:13-36
+		ADDED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/5fe83d725676ec1e36bdbbad77024d18/AndroidManifest.xml:121:13-36
 	android:name
-		ADDED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/252df4397c76b793f08690b4c8308d12/AndroidManifest.xml:119:13-69
+		ADDED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/5fe83d725676ec1e36bdbbad77024d18/AndroidManifest.xml:119:13-69
 meta-data#JPUSH_CHANNEL
-ADDED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/252df4397c76b793f08690b4c8308d12/AndroidManifest.xml:124:9-126:48
+ADDED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/5fe83d725676ec1e36bdbbad77024d18/AndroidManifest.xml:124:9-126:48
 	android:value
-		ADDED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/252df4397c76b793f08690b4c8308d12/AndroidManifest.xml:126:13-45
+		ADDED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/5fe83d725676ec1e36bdbbad77024d18/AndroidManifest.xml:126:13-45
 	android:name
-		ADDED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/252df4397c76b793f08690b4c8308d12/AndroidManifest.xml:125:13-41
+		ADDED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/5fe83d725676ec1e36bdbbad77024d18/AndroidManifest.xml:125:13-41
 meta-data#JPUSH_APPKEY
-ADDED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/252df4397c76b793f08690b4c8308d12/AndroidManifest.xml:127:9-129:47
+ADDED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/5fe83d725676ec1e36bdbbad77024d18/AndroidManifest.xml:127:9-129:47
 	android:value
-		ADDED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/252df4397c76b793f08690b4c8308d12/AndroidManifest.xml:129:13-44
+		ADDED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/5fe83d725676ec1e36bdbbad77024d18/AndroidManifest.xml:129:13-44
 	android:name
-		ADDED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/252df4397c76b793f08690b4c8308d12/AndroidManifest.xml:128:13-40
+		ADDED from [cn.jiguang.sdk:jpush:3.1.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/jpush-3.1.0.aar/5fe83d725676ec1e36bdbbad77024d18/AndroidManifest.xml:128:13-40
 meta-data#android.arch.lifecycle.VERSION
-ADDED from [android.arch.lifecycle:runtime:1.0.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/74b6d14a381e24f8cf57fc25017221eb/AndroidManifest.xml:25:9-27:47
+ADDED from [android.arch.lifecycle:runtime:1.0.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/59b9aecf3c05a0f59bb21b73d876f22e/AndroidManifest.xml:25:9-27:47
 	android:value
-		ADDED from [android.arch.lifecycle:runtime:1.0.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/74b6d14a381e24f8cf57fc25017221eb/AndroidManifest.xml:27:13-44
+		ADDED from [android.arch.lifecycle:runtime:1.0.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/59b9aecf3c05a0f59bb21b73d876f22e/AndroidManifest.xml:27:13-44
 	android:name
-		ADDED from [android.arch.lifecycle:runtime:1.0.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/74b6d14a381e24f8cf57fc25017221eb/AndroidManifest.xml:26:13-58
+		ADDED from [android.arch.lifecycle:runtime:1.0.0] /Users/shitakusei/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/59b9aecf3c05a0f59bb21b73d876f22e/AndroidManifest.xml:26:13-58

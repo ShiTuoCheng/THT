@@ -9,6 +9,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.webkit.JavascriptInterface;
 import android.webkit.WebChromeClient;
 import android.webkit.WebResourceRequest;
 import android.webkit.WebSettings;
@@ -42,7 +43,6 @@ public class ServiceActivity extends AppCompatActivity {
         String mid = sharedPreferences.getString(MID_KEY, "");
 
         serviceWebView.loadUrl("http://chat.taohuantang.com.cn?cid="+mid+"&from=2");
-//        serviceWebView.loadUrl("http://chat.taohuantang.com.cn/chat?cid=6&bid=-1&sort=14");
 
         Log.d("service", "http://chat.taohuantang.com.cn?cid="+mid);
 
@@ -55,7 +55,12 @@ public class ServiceActivity extends AppCompatActivity {
         });
     }
 
-    @SuppressLint("SetJavaScriptEnabled")
+    @JavascriptInterface
+    public void closeServer() {
+        ServiceActivity.this.finish();
+    }
+
+    @SuppressLint({"SetJavaScriptEnabled", "JavascriptInterface"})
     private void initView() {
 
         serviceWebView = (WebView)findViewById(R.id.serviceWebView);
@@ -70,6 +75,7 @@ public class ServiceActivity extends AppCompatActivity {
         serviceWebView.getSettings().setAppCacheEnabled(true);
         serviceWebView.getSettings().setDomStorageEnabled(true);
         serviceWebView.setWebViewClient(new WebViewClient());
+        serviceWebView.addJavascriptInterface(this, "server");
         back = (ImageView)findViewById(R.id.userFavoriteBack);
     }
 }
